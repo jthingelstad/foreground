@@ -8,7 +8,7 @@ It uses the Zurb Foundation (http://foundation.zurb.com) CSS framework.
 
 Clone this repository to your `skins` directory and add the following line to your `LocalSettings.php` file.
 
-    require_once($IP.'/skins/wikiwonders-foreground/foregorund.php');
+    require_once($IP.'/skins/wikiwonders-foreground/foreground.php');
 
 Now find the `$wgDefaultSkin` variable and set it to `foreground`.
 
