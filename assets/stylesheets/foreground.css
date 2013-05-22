@@ -1,0 +1,46 @@
+
+div.small-10 .row {
+	margin: 1em 0 0 0;
+}
+
+div.small-9.columns textarea {
+	margin-bottom: 0.25em;
+}
+
+input[type='file'] {
+	margin-top: 0.4em;
+}
+
+input[type='text'], textarea, p.meta {
+  margin-bottom: 4px;
+}
+
+ul {list-style-type: none;}
+
+li label.inline {
+	margin-bottom: 2px;
+	padding: 0;
+}
+
+div.small-9.columns label,
+div.small-10.columns label {
+  font-weight: normal;
+}
+
+.columns li { float:left;width: 45%;}
+
+small {
+  font-size: 80%;
+}
+
+legend {
+font-size: 0.875em;
+color: #4d4d4d;
+cursor: pointer;
+display: block;
+font-weight: 500;
+}
+
+thead tr th {
+  cursor: pointer;
+}
