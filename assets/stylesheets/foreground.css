@@ -1,4 +1,19 @@
 
+button, .button {
+  margin: 0.5em 0;
+  padding: 0.3em 0.75em 0.4em 0.75em;
+}
+
+footer.row {
+  margin-top: 3em;
+  text-align: center;
+  font-size: 80%;
+  color: grey;
+
+}
+
+footer.row ul.columns li { display: inline;float:none;}
+
 div.small-10 .row {
 	margin: 1em 0 0 0;
 }

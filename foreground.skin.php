@@ -33,16 +33,33 @@ class ForegroundTemplate extends BaseTemplate {
 		    		<ul class="left">
 		 						<li class="divider"></li>
 
-		 						<li class="has-dropdown active"><a href="#">Toolbox</a>
-									<ul class="dropdown">
-		          			<?php foreach ($this->getToolbox() as $key => $item): ?>
-										<?php echo $this->makeListItem($key, $item); ?>
-										<?php endforeach; ?>
-										<?php wfRunHooks('SkinTemplateToolboxEnd', array(&$this)); ?>
-									</ul>
-		 						</li>
-								<li class="divider"></li>
+									<?php foreach ( $this->getSidebar() as $boxName => $box ) { ?>
+									<li class="has-dropdown active"  id='<?php echo Sanitizer::escapeId( $box['id'] ) ?>'<?php echo Linker::tooltip( $box['id'] ) ?>>
+											<a href="#"><?php echo htmlspecialchars( $box['header'] ); ?></a>
+											<?php if ( is_array( $box['content'] ) ) { ?>
+												<ul class="dropdown">
+													<?php foreach ( $box['content'] as $key => $item ) { ?>
+                					<?php echo $this->makeListItem( $key, $item ); ?>
+ 													<?php } ?>
+        								</ul>
+											<?php } ?>
+									</li>
+									<li class="divider"></li>
+									<?php } ?>
+
+							<?php if ($wgUser->isLoggedIn()): ?>
+							<li class="divider"></li>
+							<li class="has-dropdown active"><a href="#">Personal</a>
+								<ul class="dropdown">
+								<?php foreach ( $this->getPersonalTools() as $key => $item ) { ?>
+        				<?php echo $this->makeListItem($key, $item); ?>
+ 								<?php } ?>
+								</ul>
+							</li>
+							<?php endif; ?>
 		    		</ul>
+
+
 
 		        <ul class="right">
 			      <li class="has-form">
@@ -75,9 +92,14 @@ class ForegroundTemplate extends BaseTemplate {
 		     </section>
 		</nav>
 
+	<?php if ( $this->data['sitenotice'] ) { ?><div id="siteNotice" class="row notice large-12 columns"><?php $this->html( 'sitenotice' ); ?></div><?php } ?>
+	<?php if ( $this->data['newtalk'] ) { ?><div class="usermessage row notice large-12 columns"><?php $this->html( 'newtalk' ); ?></div><?php } ?>
+	<div id="mw-js-message" style="display:none;"></div>
+
 		<div class="row">
 				<div class="large-12 columns">
 					<h3><?php $this->html('title') ?></h3>
+					<h5><?php $this->html('subtitle') ?></h5>
 					<?php $this->html('bodytext') ?>
 		    	<div class="group"><?php $this->html('catlinks'); ?></div>
 		    	<?php $this->html('dataAfterContent'); ?>
@@ -89,6 +111,13 @@ class ForegroundTemplate extends BaseTemplate {
 		<?php foreach ( $this->getFooterLinks( "flat" ) as $key ) { ?>
 		        <li><?php $this->html( $key ) ?></li>
 		<?php } ?>
+		</ul>
+		<ul> <?php foreach ( $this->getFooterIcons( "nocopyright" ) as $blockName => $footerIcons ) { ?>
+        <li><?php foreach ( $footerIcons as $icon ) { ?>
+            <?php echo $this->getSkin()->makeFooterIcon( $icon, 'withoutImage' ); ?>
+ 						<?php } ?>
+        </li>
+				<?php } ?>
 		</ul>
 		</footer>
 
