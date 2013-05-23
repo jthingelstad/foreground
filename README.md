@@ -6,11 +6,15 @@ It uses the Zurb Foundation (http://foundation.zurb.com) CSS framework.
 
 ## Installation
 
-Clone this repository to your `skins` directory and add the following line to your `LocalSettings.php` file.
+Clone this repository to your `skins` directory and create a symlink to the main skin file.
 
-    require_once($IP.'/skins/wikiwonders-foreground/foreground.php');
+    ln -s Foreground/foreground.php Foreground.php
 
-Now find the `$wgDefaultSkin` variable and set it to `foreground`.
+Then add the following line to your `LocalSettings.php` file.
+
+    require_once($IP.'/skins/Foreground/foreground.php');
+
+Now find the `$wgDefaultSkin` variable and set it to `Foreground`.
 
 ## License
 
