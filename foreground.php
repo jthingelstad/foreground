@@ -1,7 +1,7 @@
 <?php
 
 /**
- * foreground.com foundation wiki skin.
+ * WikiWonders Foreground Skin
  *
  * @file
  * @ingroup Skins
@@ -16,13 +16,13 @@ if( ! defined( 'MEDIAWIKI' ))
 
 $wgExtensionCredits['skin'][] = array(
     'path'			 => __FILE__,
-    'name'			 => 'Foreground',
+    'name'			 => 'foreground',
     'url'			 => 'http://wikiwonders.net/wiki/Foreground',
-    'author'		 => 'Garrick van Buren',
+    'author'		 => 'WikiWonders',
     'descriptionmsg' => 'A MediaWiki skin that focuses on putting your content in the foreground.',
 );
 
-$wgValidSkinNames['foreground'] = 'Foreground';
+$wgValidSkinNames['foreground'] = 'foreground';
 $wgAutoloadClasses['Skinforeground'] = __DIR__.'/foreground.skin.php';
 $wgExtensionMessagesFiles['foreground'] = __DIR__.'/foreground.i18n.php';
 
