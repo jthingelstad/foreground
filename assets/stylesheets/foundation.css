@@ -14,7 +14,7 @@ body {
   color: #222222;
   padding: 0;
   margin: 0;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !important;
   font-weight: normal;
   font-style: normal;
   line-height: 1;
@@ -1574,7 +1574,6 @@ span.postfix {
   border-bottom-right-radius: 1000px; }
 
 /* We use this to get basic styling on all basic form elements */
-input,
 input[type="text"],
 input[type="password"],
 input[type="date"],

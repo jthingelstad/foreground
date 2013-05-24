@@ -1,7 +1,28 @@
+body {
+  line-height: 1.6em%;
+}
 
-button, .button {
-  margin: 0.5em 0;
-  padding: 0.3em 0.75em 0.4em 0.75em;
+p {
+  margin-bottom: 0.25em;
+}
+
+code {
+  font-weight: normal;
+  color: #222222;
+}
+
+small {
+  font-size: 80%;
+}
+
+/* LAYOUT */
+
+div.small-10 .row {
+  margin: 1em 0 0 0;
+}
+
+div.small-9.columns textarea {
+  margin-bottom: 0.25em;
 }
 
 footer.row {
@@ -9,32 +30,91 @@ footer.row {
   text-align: center;
   font-size: 80%;
   color: grey;
-
 }
+
+/* LISTS */
+ul {list-style-type: none;}
+
+.columns li { float:left;width: 45%;}
+
+.columns ul.special li : float:none {width: 100%}
+
+.mw-specialpages-table td ul.columns li {width: 50%;}
+
+#mw-content-text .columns li {float:none;width:90%;}
 
 footer.row ul.columns li { display: inline;float:none;}
 
-div.small-10 .row {
-	margin: 1em 0 0 0;
+
+
+/* HEADERS */
+
+h1,h2,h3,h4,h5,h6 {
+  margin-bottom: 0;
 }
 
-div.small-9.columns textarea {
-	margin-bottom: 0.25em;
+h2 {
+  font-size: 2em;
+}
+
+h2 .editsection {
+  font-weight: normal;
+  font-size: 0.3em;
+}
+
+
+/* TABLES */
+
+table {
+  width: 100%;
+}
+
+td.mw-label {
+  width: 20%;
+}
+
+td.mw-input {
+  width: 80%;
+}
+
+thead tr th {
+  cursor: pointer;
+}
+
+table.formtable th {
+  text-align: right;
+  padding-top: 1.5em;
+}
+
+td.smwpropname, th.smwpropname, td.smwspecname { text-align:left; }
+
+table.wikitable > * > tr > td {
+  padding: 0.6em;
+}
+
+table tbody tr td, table tr td {
+  line-height: 1.6em;
+}
+
+
+/* FORMS, INPUTS, FIELDSETS */
+
+input[type="radio"],
+input[type="checkbox"] {
+  display:inline;
 }
 
 input[type='file'] {
-	margin-top: 0.4em;
+  margin-top: 0.4em;
 }
 
 input[type='text'], textarea, p.meta {
   margin-bottom: 4px;
 }
 
-ul {list-style-type: none;}
-
 li label.inline {
-	margin-bottom: 2px;
-	padding: 0;
+  margin-bottom: 2px;
+  padding: 0;
 }
 
 div.small-9.columns label,
@@ -42,20 +122,17 @@ div.small-10.columns label {
   font-weight: normal;
 }
 
-.columns li { float:left;width: 45%;}
-
-small {
-  font-size: 80%;
+button, .button {
+  margin: 0.5em 0;
+  padding: 0.3em 0.75em 0.4em 0.75em;
 }
 
 legend {
-font-size: 0.875em;
-color: #4d4d4d;
-cursor: pointer;
-display: block;
-font-weight: 500;
+  font-size: 0.875em;
+  color: #4d4d4d;
+  cursor: pointer;
+  display: block;
+  font-weight: 500;
 }
 
-thead tr th {
-  cursor: pointer;
-}
+fieldset {line-height: 1.6em;}
