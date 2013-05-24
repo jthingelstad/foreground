@@ -75,9 +75,6 @@ textarea {
   height: auto;
   min-height: 50px; }
 
-select {
-  width: 100%; }
-
 /* Grid HTML Classes */
 .row {
   width: 100%;
@@ -1574,7 +1571,7 @@ span.postfix {
   border-bottom-right-radius: 1000px; }
 
 /* We use this to get basic styling on all basic form elements */
-input[type="text"],
+input, input[type="text"],
 input[type="password"],
 input[type="date"],
 input[type="datetime"],
@@ -1596,10 +1593,8 @@ textarea {
   color: rgba(0, 0, 0, 0.75);
   display: block;
   font-size: 0.875em;
-  margin: 0 0 1em 0;
+  margin: 0;
   padding: 0.5em;
-  height: 2.3125em;
-  width: 100%;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;

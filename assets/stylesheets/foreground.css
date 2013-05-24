@@ -1,9 +1,15 @@
 body {
-  line-height: 1.6em%;
+  line-height: 1.6em;
 }
 
 p {
   margin-bottom: 0.25em;
+}
+
+td.mw-submit a,
+.htmlform-tip,
+#mw-upload-permitted p {
+  font-size: 90%;
 }
 
 code {
@@ -32,12 +38,44 @@ footer.row {
   color: grey;
 }
 
+div {
+  line-height: 1.60em;
+}
+
+
+/* NOTICES, ALERTS, WARNINGS */
+div#userloginprompt, p#userloginlink {
+  font-size: 80%;
+
+}
+
+
 /* LISTS */
-ul {list-style-type: none;}
+#mw-content-text ul,
+footer.row ul {
+  list-style-type: none;
+  margin: .5em 1.25em;
+}
 
-.columns li { float:left;width: 45%;}
+.columns li {
+  float:left;
+  width: 45%;
+}
 
-.columns ul.special li : float:none {width: 100%}
+.columns ul.special li {
+  float:none;
+  width: 100%;
+}
+
+.columns div#uploadtext ul {
+  list-style-type: disc;
+}
+
+.columns div#uploadtext ul li {
+ float: none;
+ width: 95%;
+ margin-left: 2em;
+}
 
 .mw-specialpages-table td ul.columns li {width: 50%;}
 
@@ -50,7 +88,11 @@ footer.row ul.columns li { display: inline;float:none;}
 /* HEADERS */
 
 h1,h2,h3,h4,h5,h6 {
-  margin-bottom: 0;
+  margin-bottom: 0em;
+}
+
+.page-Special_SpecialPages h2 {
+  margin-bottom: 0.5em;
 }
 
 h2 {
@@ -62,6 +104,17 @@ h2 .editsection {
   font-size: 0.3em;
 }
 
+h3 {
+  font-weight: normal;
+  font-size:1em;
+}
+
+.ns-subject h3,
+.ns-special h3,
+.page-Main_Page h3 {
+  font-weight: bold;
+  font-size: 2em;
+}
 
 /* TABLES */
 
@@ -88,16 +141,49 @@ table.formtable th {
 
 td.smwpropname, th.smwpropname, td.smwspecname { text-align:left; }
 
-table.wikitable > * > tr > td {
-  padding: 0.6em;
-}
 
 table tbody tr td, table tr td {
   line-height: 1.6em;
 }
 
+table.wikitable {
+  margin: 0em 0 1em 0;
+}
+
+table.wikitable > tr > th,
+table.wikitable > * > tr > th {
+  text-align: left;
+}
+
+table.wikitable > tr > th,
+table.wikitable > tr > td,
+table.wikitable > * > tr > th,
+table.wikitable > * > tr > td {
+  border: 3px #fff solid;
+  padding: 0.6em;
+}
 
 /* FORMS, INPUTS, FIELDSETS */
+
+
+/* MW doesn't seem to add type="text" to input fields, so we're styling them here. */
+input#wpName1 {
+  background-color: white;
+  font-family: inherit;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.75);
+  display: block;
+  font-size: 0.875em;
+  margin: 0 0 0;
+  padding: 0.5em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.15s linear;
+  -moz-transition: all 0.15s linear;
+  transition: all 0.15s linear; }
 
 input[type="radio"],
 input[type="checkbox"] {
@@ -111,6 +197,10 @@ input[type='file'] {
 input[type='text'], textarea, p.meta {
   margin-bottom: 4px;
 }
+
+label { display: inline;}
+
+.mw-input label { font-weight: normal; }
 
 li label.inline {
   margin-bottom: 2px;
@@ -127,6 +217,17 @@ button, .button {
   padding: 0.3em 0.75em 0.4em 0.75em;
 }
 
+input[type="submit"] {
+    background-color: #5da423;
+    border-color: #457a1a;
+    color: white;
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+    -webkit-transition: background-color 300ms ease-out;
+    -moz-transition: background-color 300ms ease-out;
+    transition: background-color 300ms ease-out;
+}
+
 legend {
   font-size: 0.875em;
   color: #4d4d4d;
@@ -135,4 +236,11 @@ legend {
   font-weight: 500;
 }
 
-fieldset {line-height: 1.6em;}
+fieldset {
+  line-height: 1.6em;
+  padding: 0.25em 1.25em 1em 1.25em;
+}
+
+
+/* MW still generates a label column for checkboxes, this minimizes is */
+div.mw-htmlform-field-HTMLCheckField div.mw-label { height:0; }
