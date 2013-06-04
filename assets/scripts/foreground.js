@@ -1,9 +1,4 @@
 jQuery(document).ready(function() {
-
-  /* INITIATE PLACEHOLDERS */
-  $('input, textarea').placeholder();
-
-  /* INITIATE TOOLTIPS */
-  $(this).tooltips();
-
+  jQuery(document).foundation();
+  alert('ready for action');
 });

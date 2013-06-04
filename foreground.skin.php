@@ -15,6 +15,15 @@ class SkinForeground extends SkinTemplate {
 		$out->addModuleStyles('skins.foreground');
 	}
 
+	public function initPage( OutputPage $out ) {
+		global $wgLocalStylePath;
+		parent::initPage($out);
+
+		$viewport_meta = 'width=device-width, user-scalable=yes, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0';
+	  $out->addMeta('viewport', $viewport_meta);
+		$out->addModuleScripts('skins.foreground');
+	}
+
 }
 class ForegroundTemplate extends BaseTemplate {
 	public function execute() {
