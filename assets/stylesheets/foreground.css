@@ -167,7 +167,7 @@ table.wikitable > * > tr > td {
 
 
 /* MW doesn't seem to add type="text" to input fields, so we're styling them here. */
-input#wpName1 {
+input:not([type]) {
   background-color: white;
   font-family: inherit;
   border: 1px solid #cccccc;
@@ -194,7 +194,7 @@ input[type='file'] {
   margin-top: 0.4em;
 }
 
-input[type='text'], textarea, p.meta {
+input:not([type]), textarea, p.meta {
   margin-bottom: 4px;
 }
 
@@ -244,3 +244,6 @@ fieldset {
 
 /* MW still generates a label column for checkboxes, this minimizes is */
 div.mw-htmlform-field-HTMLCheckField div.mw-label { height:0; }
+
+/* UNTIL I CAN DETERMINE WHY toolboxend GENERATES AN EMPTY <li> IN THE MENU, I'M HIDING IT */
+#p-toolboxend { display:none;}

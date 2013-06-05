@@ -45,30 +45,30 @@ class ForegroundTemplate extends BaseTemplate {
 									<?php foreach ( $this->getSidebar() as $boxName => $box ) { ?>
 									<li class="has-dropdown active"  id='<?php echo Sanitizer::escapeId( $box['id'] ) ?>'<?php echo Linker::tooltip( $box['id'] ) ?>>
 											<a href="#"><?php echo htmlspecialchars( $box['header'] ); ?></a>
-											<?php if ( is_array( $box['content'] ) ) { ?>
+											<?php print_r($box); if ( is_array( $box['content'] ) ) { ?>
 												<ul class="dropdown">
-													<?php foreach ( $box['content'] as $key => $item ) { ?>
-                					<?php echo $this->makeListItem( $key, $item ); ?>
- 													<?php } ?>
+													<?php foreach ( $box['content'] as $key => $item ) { echo $this->makeListItem( $key, $item ); } ?>
         								</ul>
-											<?php } ?>
+											<?php }  ?>
 									</li>
-									<li class="divider"></li>
 									<?php } ?>
 
 							<?php if ($wgUser->isLoggedIn()): ?>
 							<li class="divider"></li>
+							<li class="has-dropdown active"><a href="#"><?php $this->msg('views') ?></a>
+								<ul class="dropdown">
+								<?php foreach( $this->data['content_actions'] as $key => $item ) { echo $this->makeListItem($key, $item); } ?>
+								</ul>
+							</li>
+
+							<li class="divider"></li>
 							<li class="has-dropdown active"><a href="#">Personal</a>
 								<ul class="dropdown">
-								<?php foreach ( $this->getPersonalTools() as $key => $item ) { ?>
-        				<?php echo $this->makeListItem($key, $item); ?>
- 								<?php } ?>
+								<?php foreach ( $this->getPersonalTools() as $key => $item ) { echo $this->makeListItem($key, $item); } ?>
 								</ul>
 							</li>
 							<?php endif; ?>
 		    		</ul>
-
-
 
 		        <ul class="right">
 			      <li class="has-form">
