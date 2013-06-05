@@ -19,7 +19,7 @@ class SkinForeground extends SkinTemplate {
 		global $wgLocalStylePath;
 		parent::initPage($out);
 
-		$viewport_meta = 'width=device-width, user-scalable=yes, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0';
+		$viewport_meta = 'width=device-width, user-scalable=yes, initial-scale=1.0';
 	  $out->addMeta('viewport', $viewport_meta);
 		$out->addModuleScripts('skins.foreground');
 	}
@@ -33,12 +33,12 @@ class ForegroundTemplate extends BaseTemplate {
 ?>
 <!-- START FOREGROUNDTEMPLATE -->
 		<nav class="top-bar">
-		    <section class="top-bar-section">
 						<ul class="title-area">
 							<li class="name"><h1><a href="<?php echo $this->data['nav_urls']['mainpage']['href']; ?>"><?php echo $this->text('sitename'); ?></a></h1></li>
 						   <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
 						</ul>
 
+						<section class="top-bar-section">
 		    		<ul class="left">
 		 						<li class="divider"></li>
 

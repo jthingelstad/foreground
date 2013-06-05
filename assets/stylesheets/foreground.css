@@ -183,7 +183,16 @@ input:not([type]) {
   box-sizing: border-box;
   -webkit-transition: all 0.15s linear;
   -moz-transition: all 0.15s linear;
-  transition: all 0.15s linear; }
+  transition: all 0.15s linear;
+}
+
+
+input:not([type]):focus {
+  -webkit-box-shadow: 0 0 5px #999999;
+  -moz-box-shadow: 0 0 5px #999999;
+  box-shadow: 0 0 5px #999999;
+  border-color: #999999;
+}
 
 input[type="radio"],
 input[type="checkbox"] {
@@ -247,3 +256,5 @@ div.mw-htmlform-field-HTMLCheckField div.mw-label { height:0; }
 
 /* UNTIL I CAN DETERMINE WHY toolboxend GENERATES AN EMPTY <li> IN THE MENU, I'M HIDING IT */
 #p-toolboxend { display:none;}
+y {background-color: green;}
+}

@@ -30,12 +30,12 @@ $wgExtensionMessagesFiles['foreground'] = __DIR__.'/foreground.i18n.php';
 
 $wgResourceModules['skins.foreground'] = array(
 	'styles'         => array(
-    	'foreground/assets/stylesheets/normalize.css' => array('media' => 'screen'),
-    	'foreground/assets/stylesheets/foundation.css' => array('media' => 'screen'),
-    	'foreground/assets/stylesheets/foreground.css' => array('media' => 'screen'),
-        'foreground/assets/stylesheets/foreground-print.css' => array('media' => 'print'),
-    	'foreground/assets/stylesheets/jquery.autocomplete.css' => array('media' => 'screen'),
-    	'foreground/assets/stylesheets/responsive-tables.css' => array('media' => 'screen')
+    	'foreground/assets/stylesheets/normalize.css',
+    	'foreground/assets/stylesheets/foundation.css',
+    	'foreground/assets/stylesheets/foreground.css',
+        'foreground/assets/stylesheets/foreground-print.css',
+    	'foreground/assets/stylesheets/jquery.autocomplete.css',
+    	'foreground/assets/stylesheets/responsive-tables.css'
     ),
     'scripts'        => array(
         'foreground/assets/scripts/vendor/custom.modernizr.js',
@@ -52,6 +52,3 @@ $wgResourceModules['skins.foreground'] = array(
     'remoteBasePath' => &$GLOBALS['wgStylePath'],
     'localBasePath'  => &$GLOBALS['wgStyleDirectory']
 );
-
-
-//$wgHooks['BeforePageDisplay'][] = 'SkinForeground::Foreground_Skin_Setup';
