@@ -1641,6 +1641,7 @@ span.postfix {
   border-bottom-right-radius: 1000px; }
 
 /* We use this to get basic styling on all basic form elements */
+input:not([type]),
 input[type="text"],
 input[type="password"],
 input[type="date"],
@@ -1665,7 +1666,6 @@ textarea {
   font-size: 0.875em;
   margin: 0 0 1em 0;
   padding: 0.5em;
-  height: 2.3125em;
   width: 100%;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -1673,6 +1673,8 @@ textarea {
   -webkit-transition: -webkit-box-shadow 0.45s, border-color 0.45s ease-in-out;
   -moz-transition: -moz-box-shadow 0.45s, border-color 0.45s ease-in-out;
   transition: box-shadow 0.45s, border-color 0.45s ease-in-out; }
+
+  input:not([type]):focus,
   input[type="text"]:focus,
   input[type="password"]:focus,
   input[type="date"]:focus,
@@ -1691,6 +1693,8 @@ textarea {
     -moz-box-shadow: 0 0 5px #999999;
     box-shadow: 0 0 5px #999999;
     border-color: #999999; }
+
+  input:not([type]):focus,
   input[type="text"]:focus,
   input[type="password"]:focus,
   input[type="date"]:focus,
@@ -1708,6 +1712,8 @@ textarea {
     background: #fafafa;
     border-color: #999999;
     outline: none; }
+
+  input:not([type])[disabled],
   input[type="text"][disabled],
   input[type="password"][disabled],
   input[type="date"][disabled],

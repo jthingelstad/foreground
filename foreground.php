@@ -30,24 +30,24 @@ $wgExtensionMessagesFiles['foreground'] = __DIR__.'/foreground.i18n.php';
 
 $wgResourceModules['skins.foreground'] = array(
 	'styles'         => array(
-    	'foreground/assets/stylesheets/normalize.css',
-    	'foreground/assets/stylesheets/foundation.css',
-    	'foreground/assets/stylesheets/foreground.css',
-        'foreground/assets/stylesheets/foreground-print.css',
-    	'foreground/assets/stylesheets/jquery.autocomplete.css',
-    	'foreground/assets/stylesheets/responsive-tables.css'
+    	'Foreground/assets/stylesheets/normalize.css',
+    	'Foreground/assets/stylesheets/foundation.css',
+    	'Foreground/assets/stylesheets/foreground.css',
+        'Foreground/assets/stylesheets/foreground-print.css',
+    	'Foreground/assets/stylesheets/jquery.autocomplete.css',
+    	'Foreground/assets/stylesheets/responsive-tables.css'
     ),
     'scripts'        => array(
-        'foreground/assets/scripts/vendor/custom.modernizr.js',
-        'foreground/assets/scripts/foundation/foundation.js',
-        'foreground/assets/scripts/foundation/foundation.topbar.js',
-        'foreground/assets/scripts/foundation/foundation.section.js',
-        'foreground/assets/scripts/foundation/foundation.clearing.js',
-        'foreground/assets/scripts/foundation/foundation.cookie.js',
-        'foreground/assets/scripts/foundation/foundation.placeholder.js',
-        'foreground/assets/scripts/foundation/foundation.forms.js',
-        'foreground/assets/scripts/foundation/foundation.alerts.js',
-        'foreground/assets/scripts/foreground.js'
+        'Foreground/assets/scripts/vendor/custom.modernizr.js',
+        'Foreground/assets/scripts/foundation/foundation.js',
+        'Foreground/assets/scripts/foundation/foundation.topbar.js',
+        'Foreground/assets/scripts/foundation/foundation.section.js',
+        'Foreground/assets/scripts/foundation/foundation.clearing.js',
+        'Foreground/assets/scripts/foundation/foundation.cookie.js',
+        'Foreground/assets/scripts/foundation/foundation.placeholder.js',
+        'Foreground/assets/scripts/foundation/foundation.forms.js',
+        'Foreground/assets/scripts/foundation/foundation.alerts.js',
+        'Foreground/assets/scripts/foreground.js'
     ),
     'remoteBasePath' => &$GLOBALS['wgStylePath'],
     'localBasePath'  => &$GLOBALS['wgStyleDirectory']
