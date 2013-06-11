@@ -1304,7 +1304,7 @@ blockquote p {
 
   .show-for-print {
     display: inherit !important; } }
-button, .button {
+button, .button, .multipleTemplateAdder {
   border-style: solid;
   border-width: 1px;
   cursor: pointer;
@@ -1437,7 +1437,7 @@ button, .button {
       button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert:hover, .button[disabled].alert:focus {
         background-color: #c60f13; }
 
-button, .button {
+button, .button, .multipleTemplateAdder {
   padding-top: 0.8125em;
   padding-bottom: 0.75em; }
   button.tiny, .button.tiny {
@@ -1451,7 +1451,7 @@ button, .button {
     padding-bottom: 1.03125em; }
 
 @media only screen {
-  button, .button {
+  button, .button, .multipleTemplateAdder {
     -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
     -webkit-transition: background-color 300ms ease-out;
@@ -1467,7 +1467,7 @@ button, .button {
       -webkit-border-radius: 1000px;
       border-radius: 1000px; } }
 @media only screen and (min-width: 768px) {
-  button, .button {
+  button, .button, .multipleTemplateAdder {
     display: inline-block; } }
 /* Standard Forms */
 form {

@@ -27,12 +27,16 @@ h3 small.label {
   width:6em;
 }
 
+
+.large-2 {
+  text-align: right;
+}
+
 .large-2 strong, .large-2 b {
   font-size: 0.875em;
   color: #4d4d4d;
   display: block;
   font-weight: 500;
-  text-align: right;
 }
 
 /* LAYOUT */
@@ -106,6 +110,9 @@ footer.row ul.columns li { display: inline;float:none;}
   width: auto;
 }
 
+#mw-normal-catlinks a.new {
+  color: white;
+}
 
 /* HEADERS */
 
@@ -204,11 +211,29 @@ table.wikitable > * > tr > td {
 
 /* FORMS, INPUTS, FIELDSETS */
 
+.multipleTemplateInstance {
+  background-color: none;
+  border: none;
+  border-bottom: 1px dashed #999999;
+}
+
+.multipleTemplateInstance table {
+  border: none;
+}
+
+ .novalue {
+  color: #999999;
+  font-style:italic;
+  font-size:small;
+}
+
+.inputSpan select.createboxInput
+.dateInput select.monthInput,
 .dateInput input.dayInput,
-.dateInput input.monthInput,
 .dateInput input.yearInput {
-  width: auto !important;
+  width: auto;
   float: left;
+  margin-right: 1em;
 }
 
 input.createboxInput {
@@ -217,6 +242,7 @@ input.createboxInput {
 
 
 .action-view .large-12.columns form {
+  margin: -2em 0 0 0;
   float:right;
   cursor: pointer;
   border: none;
