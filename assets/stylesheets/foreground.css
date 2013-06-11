@@ -21,6 +21,18 @@ small {
   font-size: 80%;
 }
 
+h3 small {
+  font-size: small;
+  margin-right: 1em;
+}
+
+.section strong {
+  font-size: 0.875em;
+  color: #4d4d4d;
+  display: block;
+  font-weight: 500;
+}
+
 /* LAYOUT */
 
 div.small-10 .row {
