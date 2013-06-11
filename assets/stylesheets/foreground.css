@@ -95,6 +95,10 @@ footer.row ul {
 
 footer.row ul.columns li { display: inline;float:none;}
 
+.columns #mw-normal-catlinks ul li {
+  float: none;
+  width: auto;
+}
 
 
 /* HEADERS */
@@ -126,6 +130,10 @@ h3 {
 .page-Main_Page h3 {
   font-weight: bold;
   font-size: 2em;
+}
+
+p.title {
+  padding: 0.9375em;
 }
 
 /* TABLES */
