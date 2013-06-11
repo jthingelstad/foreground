@@ -159,7 +159,7 @@ table.formtable {
 table.formedit tr.even,
 table.formedit tr.alt,
 table.formedit tr:nth-of-type(even) {
-  background-color: transparent;
+  background: transparent;
 }
 
 
@@ -212,7 +212,7 @@ table.wikitable > * > tr > td {
 /* FORMS, INPUTS, FIELDSETS */
 
 .multipleTemplateInstance {
-  background-color: none !important;
+  background-color: white !important;
   border: none !important;
   border-bottom: 1px dashed #999999 !important;
 }
@@ -248,7 +248,7 @@ label.checkboxLabel {
   margin-right: 0.5em;
 }
 
-span.edit_with_form {
+.edit_with_form {
   margin: -2em 0 0 0;
   float:right;
 }
