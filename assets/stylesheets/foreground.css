@@ -27,14 +27,19 @@ h3 small.label {
   width:6em;
 }
 
-.section strong {
+.large-2 strong, .large-2 b {
   font-size: 0.875em;
   color: #4d4d4d;
   display: block;
   font-weight: 500;
+  text-align: right;
 }
 
 /* LAYOUT */
+
+.row .row {
+  margin-bottom: 0.9em;
+}
 
 div.small-10 .row {
   margin: 1em 0 0 0;
@@ -70,10 +75,10 @@ footer.row ul {
   margin: .5em 1.25em;
 }
 
-.columns li {
+/*.columns li {
   float:left;
   width: 45%;
-}
+}*/
 
 .columns ul.special li {
   float:none;
@@ -198,6 +203,17 @@ table.wikitable > * > tr > td {
 }
 
 /* FORMS, INPUTS, FIELDSETS */
+
+.action-view form {
+  float:right;
+  cursor: pointer;
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  font-weight: normal;
+  background-color: #5da423;
+  border-color: #457a1a;
+}
 
 input[type="radio"],
 input[type="checkbox"] {
