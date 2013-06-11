@@ -21,9 +21,10 @@ small {
   font-size: 80%;
 }
 
-h3 small {
+h3 small.label {
   font-size: small;
-  margin-right: 1em;
+  display:block;
+  width:6em;
 }
 
 .section strong {
