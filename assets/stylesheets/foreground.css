@@ -204,7 +204,19 @@ table.wikitable > * > tr > td {
 
 /* FORMS, INPUTS, FIELDSETS */
 
-.action-view form {
+.dateInput input.dayInput,
+.dateInput input.monthInput,
+.dateInput input.yearInput {
+  width: auto !important;
+  float: left;
+}
+
+input.createboxInput {
+  width: 100%;
+}
+
+
+.action-view .large-12.columns form {
   float:right;
   cursor: pointer;
   border: none;
