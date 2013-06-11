@@ -32,7 +32,7 @@ h3 small.label {
   text-align: right;
 }
 
-.large-2 strong, .large-2 b {
+.large-2 strong, .large-2 b, table th {
   font-size: 0.875em;
   color: #4d4d4d;
   display: block;
@@ -212,13 +212,13 @@ table.wikitable > * > tr > td {
 /* FORMS, INPUTS, FIELDSETS */
 
 .multipleTemplateInstance {
-  background-color: none;
-  border: none;
-  border-bottom: 1px dashed #999999;
+  background-color: none !important;
+  border: none !important;
+  border-bottom: 1px dashed #999999 !important;
 }
 
 .multipleTemplateInstance table {
-  border: none;
+  border: none !important;
 }
 
  .novalue {
@@ -227,7 +227,7 @@ table.wikitable > * > tr > td {
   font-size:small;
 }
 
-.inputSpan select.createboxInput
+.inputSpan select.createboxInput,
 .dateInput select.monthInput,
 .dateInput input.dayInput,
 .dateInput input.yearInput {
@@ -240,17 +240,17 @@ input.createboxInput {
   width: 100%;
 }
 
+input[type="checkbox"].createboxInput {
+  width: auto;
+}
 
-.action-view .large-12.columns form {
+label.checkboxLabel {
+  margin-right: 0.5em;
+}
+
+span.edit_with_form {
   margin: -2em 0 0 0;
   float:right;
-  cursor: pointer;
-  border: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  font-weight: normal;
-  background-color: #5da423;
-  border-color: #457a1a;
 }
 
 input[type="radio"],
