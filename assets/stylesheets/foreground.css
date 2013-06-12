@@ -79,6 +79,10 @@ footer.row ul {
   margin: .5em 1.25em;
 }
 
+footer.row ul.views.columns li {
+  margin-right: 1em;
+}
+
 /*.columns li {
   float:left;
   width: 45%;

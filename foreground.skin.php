@@ -52,22 +52,6 @@ class ForegroundTemplate extends BaseTemplate {
 											<?php }  ?>
 									</li>
 									<?php } ?>
-
-							<?php if ($wgUser->isLoggedIn()): ?>
-							<li class="divider"></li>
-							<li class="has-dropdown active"><a href="#"><?php $this->msg('views') ?></a>
-								<ul class="dropdown">
-								<?php foreach( $this->data['content_actions'] as $key => $item ) { echo $this->makeListItem($key, $item); } ?>
-								</ul>
-							</li>
-
-							<li class="divider"></li>
-							<li class="has-dropdown active"><a href="#">Personal</a>
-								<ul class="dropdown">
-								<?php foreach ( $this->getPersonalTools() as $key => $item ) { echo $this->makeListItem($key, $item); } ?>
-								</ul>
-							</li>
-							<?php endif; ?>
 		    		</ul>
 
 		        <ul class="right">
@@ -84,10 +68,16 @@ class ForegroundTemplate extends BaseTemplate {
 		        </li>
 		         <li class="divider show-for-small"></li>
 		         <li class="has-form">
-						<li>
+
 							<?php if ($wgUser->isLoggedIn()): ?>
-								<a href=""><?php echo Linker::link(Title::newFromText('Special:UserLogout'), 'Sign Out'); ?></a>
+								<li class="has-dropdown active"><a href="#">Personal</a>
+									<ul class="dropdown">
+									<?php foreach ( $this->getPersonalTools() as $key => $item ) { echo $this->makeListItem($key, $item); } ?>
+									</ul>
+								</li>
+
 							<?php else: ?>
+							<li>
 								<?php if (isset($this->data['personal_urls']['anonlogin'])): ?>
 									<a href="<?php echo $this->data['personal_urls']['anonlogin']['href']; ?>">Sign In</a>
 								<?php elseif (isset($this->data['personal_urls']['login'])): ?>
@@ -95,8 +85,10 @@ class ForegroundTemplate extends BaseTemplate {
 								<?php else: ?>
 									<?php echo Linker::link(Title::newFromText('Special:UserLogin'), 'Sign In'); ?>
 								<?php endif; ?>
+							</li>
+
 							<?php endif; ?>
-						</li>
+
 		       </ul>
 		     </section>
 		</nav>
@@ -116,6 +108,13 @@ class ForegroundTemplate extends BaseTemplate {
 		</div>
 
 		<footer class="row">
+
+		<?php if ($wgUser->isLoggedIn()): ?>
+		<ul class="views large-12 columns">
+			<?php foreach( $this->data['content_actions'] as $key => $item ) { echo $this->makeListItem($key, $item); } ?>
+		</ul>
+		<?php endif; ?>
+
 		<ul class="large-12 columns">
 		<?php foreach ( $this->getFooterLinks( "flat" ) as $key ) { ?>
 		        <li><?php $this->html( $key ) ?></li>
