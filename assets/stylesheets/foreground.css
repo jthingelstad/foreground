@@ -24,7 +24,10 @@ small {
 h3 small.label {
   font-size: small;
   display:block;
-  width:6em;
+}
+
+.clear_both {
+  clear:both;
 }
 
 
@@ -128,11 +131,8 @@ h1,h2,h3,h4,h5,h6 {
   margin-bottom: 0.5em;
 }
 
-h2 {
-  font-size: 2em;
-}
 
-h2 .editsection {
+.editsection {
   font-weight: normal;
   font-size: 0.3em;
 }
