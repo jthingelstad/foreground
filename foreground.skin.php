@@ -48,7 +48,6 @@ class ForegroundTemplate extends BaseTemplate {
 											<?php if ( is_array( $box['content'] ) ) { ?>
 												<ul class="dropdown">
 													<?php foreach ( $box['content'] as $key => $item ) { echo $this->makeListItem( $key, $item ); } ?>
-													<?php wfRunHooks( SkinTemplateToolboxEnd, array( &$this, true ) );  ?>
         								</ul>
 											<?php }  ?>
 									</li>
