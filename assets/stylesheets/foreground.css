@@ -35,10 +35,13 @@ h2 small.label {
   text-align: right;
 }
 
+.large-2 strong, .large-2 b {
+  display: block;
+}
+
 .large-2 strong, .large-2 b, table th {
   font-size: 0.875em;
   color: #4d4d4d;
-  display: block;
   font-weight: 500;
 }
 
