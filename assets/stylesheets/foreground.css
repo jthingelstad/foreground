@@ -21,7 +21,7 @@ small {
   font-size: 80%;
 }
 
-h3 small.label {
+h2 small.label {
   font-size: small;
   display:block;
 }
