@@ -48,6 +48,7 @@ class ForegroundTemplate extends BaseTemplate {
 											<?php if ( is_array( $box['content'] ) ) { ?>
 												<ul class="dropdown">
 													<?php foreach ( $box['content'] as $key => $item ) { echo $this->makeListItem( $key, $item ); } ?>
+													<?php wfRunHooks( SkinTemplateToolboxEnd, array( &$this, true ) );  ?>
         								</ul>
 											<?php }  ?>
 									</li>
@@ -112,6 +113,7 @@ class ForegroundTemplate extends BaseTemplate {
 		<?php if ($wgUser->isLoggedIn()): ?>
 		<ul class="views large-12 columns">
 			<?php foreach( $this->data['content_actions'] as $key => $item ) { echo $this->makeListItem($key, $item); } ?>
+			<?php wfRunHooks( SkinTemplateToolboxEnd, array( &$this, true ) );  ?>
 		</ul>
 		<?php endif; ?>
 
