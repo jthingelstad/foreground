@@ -310,11 +310,16 @@ input[type="submit"] {
     background-color: #5da423;
     border-color: #457a1a;
     color: white;
+    display: block;
     -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
     -webkit-transition: background-color 300ms ease-out;
     -moz-transition: background-color 300ms ease-out;
     transition: background-color 300ms ease-out;
+}
+
+.editButtons input[type="submit"] {
+  display: inline-block;
 }
 
 legend {
