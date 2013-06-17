@@ -135,6 +135,7 @@ footer.row ul.columns li { display: inline;float:none;}
 /* HEADERS */
 
 h1,h2,h3,h4,h5,h6 {
+  margin-top: 0em;
   margin-bottom: 0em;
 }
 
@@ -250,6 +251,8 @@ table.wikitable > * > tr > td {
   float: left;
   margin-right: 1em;
 }
+
+select {width:auto;}
 
 input.createboxInput {
   width: 100%;
