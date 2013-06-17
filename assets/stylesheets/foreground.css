@@ -26,10 +26,10 @@ h2 small.label {
   display:inline-block;
 }
 
-h2 small.label:after,
-h2 small.label::after {
+h2 span {
   clear:both;
 }
+
 
 .clear_both {
   clear:both;
@@ -246,8 +246,14 @@ table.wikitable > * > tr > td {
 
 .inputSpan select.createboxInput,
 .dateInput select.monthInput,
+input.hourInput,
+input.minuteInput,
+input.secondInput,
 input.dayInput,
-input.yearInput {
+input.yearInput,
+input[name='Website[Founded date][hour]'],
+input[name='Website[Founded date][minute]'],
+input[name='Website[Founded date][second]'] {
   width: auto;
   float: left;
   margin-right: 1em;
@@ -310,7 +316,6 @@ input[type="submit"] {
     background-color: #5da423;
     border-color: #457a1a;
     color: white;
-    display: block;
     -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
     -webkit-transition: background-color 300ms ease-out;
