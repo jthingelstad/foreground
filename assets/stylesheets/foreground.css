@@ -23,7 +23,11 @@ small {
 
 h2 small.label {
   font-size: small;
-  display:block;
+  display:inline-block;
+}
+
+h2 small.label:after {
+  clear:both;
 }
 
 .clear_both {
