@@ -251,9 +251,9 @@ input.minuteInput,
 input.secondInput,
 input.dayInput,
 input.yearInput,
-input[name='Website[Founded date][hour]'],
-input[name='Website[Founded date][minute]'],
-input[name='Website[Founded date][second]'] {
+input[name="Website[Founded date][hour]"],
+input[name="Website[Founded date][minute]"],
+input[name="Website[Founded date][second]"] {
   width: auto;
   float: left;
   margin-right: 1em;
