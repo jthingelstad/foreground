@@ -246,8 +246,8 @@ table.wikitable > * > tr > td {
 
 .inputSpan select.createboxInput,
 .dateInput select.monthInput,
-.dateInput input.dayInput,
-.dateInput input.yearInput {
+input.dayInput,
+input.yearInput {
   width: auto;
   float: left;
   margin-right: 1em;
