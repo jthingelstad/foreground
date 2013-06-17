@@ -1,3 +1,4 @@
+
 body {
   line-height: 1.6em;
 }
@@ -76,7 +77,11 @@ div#userloginprompt, p#userloginlink {
 
 
 /* LISTS */
-#mw-content-text ul,
+#mw-content-text ul {
+  list-style-type: disc;
+  margin: .5em 1.25em;
+}
+
 footer.row ul {
   list-style-type: none;
   margin: .5em 1.25em;
@@ -328,3 +333,16 @@ div.mw-htmlform-field-HTMLCheckField div.mw-label { height:0; }
 #p-toolboxend { display:none;}
 y {background-color: green;}
 }
+
+/* hide some page titles that seem redundant */
+body.page-Main_Page h1.firstHeading,
+body.page-Main_Page #siteSub,
+body.page-Extension_Main_Page h1.firstHeading,
+body.page-Extension_Main_Page #siteSub,
+body.page-Skin_Main_Page h1.firstHeading,
+body.page-Skin_Main_Page #siteSub,
+body.page-Farm_Main_Page h1.firstHeading,
+body.page-Farm_Main_Page #siteSub {
+  display:none;
+}
+
