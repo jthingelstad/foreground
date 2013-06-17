@@ -330,4 +330,3 @@ div.mw-htmlform-field-HTMLCheckField div.mw-label { height:0; }
 
 /* UNTIL I CAN DETERMINE WHY toolboxend GENERATES AN EMPTY <li> IN THE MENU, I'M HIDING IT */
 #p-toolboxend { display:none;}
-
