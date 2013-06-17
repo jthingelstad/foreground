@@ -26,7 +26,8 @@ h2 small.label {
   display:inline-block;
 }
 
-h2 small.label:after {
+h2 small.label:after,
+h2 small.label::after {
   clear:both;
 }
 
