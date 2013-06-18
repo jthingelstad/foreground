@@ -6,6 +6,11 @@ p {
   margin-bottom: 0.25em;
 }
 
+a.label:hover,
+a.label:focus {
+  color: white;
+}
+
 td.mw-submit a,
 .htmlform-tip,
 #mw-upload-permitted p {
@@ -28,7 +33,6 @@ h2 small.label {
 
 h2 span {
   display:block;
-  clear:both;
 }
 
 
@@ -148,7 +152,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .editsection {
   font-weight: normal;
-  font-size: 0.3em;
+  font-size: 0.4em;
 }
 
 h3 {
@@ -172,6 +176,8 @@ p.title {
 table.formtable {
   border: none;
 }
+
+table td.right {text-align: right;}
 
 /* TURN OFF TABLE STRIPING FOR EDITFORMS */
 table.formedit tr.even,
