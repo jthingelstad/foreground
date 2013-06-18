@@ -99,8 +99,8 @@ class ForegroundTemplate extends BaseTemplate {
 
 		<div class="row">
 				<div class="large-12 columns">
-					<h2><?php $this->html('title') ?></h2>
-					<h5><?php $this->html('subtitle') ?></h5>
+					<h2 class="title"><?php $this->html('title') ?></h2>
+					<h5 class="subtitle"><?php $this->html('subtitle') ?></h5>
 					<?php $this->html('bodytext') ?>
 		    	<div class="group"><?php $this->html('catlinks'); ?></div>
 		    	<?php $this->html('dataAfterContent'); ?>

@@ -27,6 +27,7 @@ h2 small.label {
 }
 
 h2 span {
+  display:block;
   clear:both;
 }
 
@@ -137,7 +138,7 @@ footer.row ul.columns li { display: inline;float:none;}
 
 h1,h2,h3,h4,h5,h6 {
   margin-top: 0em;
-  margin-bottom: 0em;
+  line-height: 1em;
 }
 
 .page-Special_SpecialPages h2 {
