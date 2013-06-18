@@ -40,11 +40,6 @@ h2 span {
   clear:both;
 }
 
-
-.large-2 {
-  text-align: right;
-}
-
 .large-2 strong, .large-2 b {
   display: block;
 }
@@ -103,11 +98,6 @@ footer.row ul.views.columns li {
   margin-right: 1em;
 }
 
-/*.columns li {
-  float:left;
-  width: 45%;
-}*/
-
 .columns ul.special li {
   float:none;
   width: 100%;
@@ -122,6 +112,8 @@ footer.row ul.views.columns li {
  width: 95%;
  margin-left: 2em;
 }
+
+.catlinks li {border-left:none;}
 
 .mw-specialpages-table td ul.columns li {width: 50%;}
 
@@ -243,6 +235,11 @@ table.wikitable > * > tr > td {
 
 .multipleTemplateInstance table {
   border: none !important;
+}
+
+.multipleTemplateAdder {
+  font-size: 0.9em;
+  padding: 0.4125em 0.5em 0.55em 0.5em;
 }
 
  .novalue {
