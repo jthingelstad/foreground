@@ -177,7 +177,7 @@ table.formtable {
   border: none;
 }
 
-table td.right {text-align: right;}
+table td[align="right"] {text-align: right;}
 
 /* TURN OFF TABLE STRIPING FOR EDITFORMS */
 table.formedit tr.even,
