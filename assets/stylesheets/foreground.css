@@ -275,6 +275,10 @@ input[name="*[* date][second]"] {
   width: 100%;
 }
 
+button.ui-button-icon-only {
+  height: 2.24em;
+}
+
 select {width:auto;}
 
 input.createboxInput {
