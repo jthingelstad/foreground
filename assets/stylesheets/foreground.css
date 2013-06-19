@@ -130,6 +130,8 @@ footer.row ul.columns li { display: inline;float:none;}
   color: white;
 }
 
+ul.vcard { padding: 0.5em 0.5em 0.55em 0.5em; }
+
 /* HEADERS */
 
 h1,h2,h3,h4,h5,h6 {
@@ -255,12 +257,22 @@ input.minuteInput,
 input.secondInput,
 input.dayInput,
 input.yearInput,
-input[name="Website[Founded date][hour]"],
-input[name="Website[Founded date][minute]"],
-input[name="Website[Founded date][second]"] {
+input[name="*[* date][hour]"],
+input[name="*[* date][minute]"],
+input[name="*[* date][second]"] {
   width: auto;
   float: left;
   margin-right: 1em;
+}
+
+.inputSpan button,
+.inputSpan .button {
+  margin: -4px 0 0 0;
+  padding:0.37em 0.75em 0.6em 0.70em;
+}
+
+.ms-selectabel input[type="text"] {
+  width: 100%;
 }
 
 select {width:auto;}
@@ -319,6 +331,17 @@ button, .button {
 input[type="submit"] {
     background-color: #5da423;
     border-color: #457a1a;
+    color: white;
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+    -webkit-transition: background-color 300ms ease-out;
+    -moz-transition: background-color 300ms ease-out;
+    transition: background-color 300ms ease-out;
+}
+
+input[type="button"] {
+    background-color: #e9e9e9;
+    border-color: #d0d0d0;
     color: white;
     -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
