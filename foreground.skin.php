@@ -64,6 +64,7 @@ class ForegroundTemplate extends BaseTemplate {
 		        			 <div class="small-4 columns">
 		        				<button type="submit" calass="alert button">Search</button>
 		        			</div>
+		        		</div>
 		        	</form>
 		        </li>
 		         <li class="divider show-for-small"></li>
