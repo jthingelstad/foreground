@@ -319,8 +319,12 @@ label { display: inline;}
 
 .mw-input label { font-weight: normal; }
 
-ul.SFI_timepicker_hours { list-style-type: none; }
-ul.SFI_timepicker_hours li {
+#mw-content-text ul.SFI_timepicker_hours,
+#mw-content-text ul.SFI_timepicker_minutes {
+  list-style-type: none;
+}
+
+#mw-content-text ul.SFI_timepicker_hours li {
   margin: 2px 2px;
   padding: 4px;
 }
