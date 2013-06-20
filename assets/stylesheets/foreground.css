@@ -276,7 +276,7 @@ input[name="*[* date][second]"] {
 }
 
 button.ui-button-icon-only {
-  height: 2.24em;
+  height: 2.24em !important;
 }
 
 select {width:auto;}
@@ -312,6 +312,8 @@ textarea,
 p.meta {
   margin-bottom: 4px;
 }
+
+textarea { width: 87%;}
 
 label { display: inline;}
 
