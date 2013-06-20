@@ -271,7 +271,7 @@ input[name="*[* date][second]"] {
   padding:0.37em 0.75em 0.6em 0.70em;
 }
 
-.ms-selectabel input[type="text"] {
+.ms-selectable input[type="text"] {
   width: 100%;
 }
 
@@ -316,6 +316,17 @@ p.meta {
 label { display: inline;}
 
 .mw-input label { font-weight: normal; }
+
+ul.SFI_timepicker_hours { list-style-type: none; }
+ul.SFI_timepicker_hours li {
+  margin: 2px 2px;
+  padding: 4px;
+}
+
+.sminput.sminput-googlemaps3 p button {
+  padding-top: 0.35em;
+  padding-bottom: 0.6em;
+}
 
 li label.inline {
   margin-bottom: 2px;
