@@ -11,6 +11,8 @@ a.label:focus {
   color: white;
 }
 
+a.button.dropdown { float:right;}
+
 td.mw-submit a,
 .htmlform-tip,
 #mw-upload-permitted p {

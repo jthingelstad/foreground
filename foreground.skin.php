@@ -100,6 +100,13 @@ class ForegroundTemplate extends BaseTemplate {
 
 		<div class="row">
 				<div class="large-12 columns">
+					<?php if ($wgUser->isLoggedIn()): ?>
+						<a href="#" data-dropdown="drop1" class="button dropdown small secondary radius">This Page</a>
+						<ul id="drop1" class="views large-12 columns f-dropdown">
+							<?php foreach( $this->data['content_actions'] as $key => $item ) { echo $this->makeListItem($key, $item); } ?>
+							<?php wfRunHooks( SkinTemplateToolboxEnd, array( &$this, true ) );  ?>
+						</ul>
+					<?php endif; ?>
 					<h2 class="title"><?php $this->html('title') ?></h2>
 					<h5 class="subtitle"><?php $this->html('subtitle') ?></h5>
 					<?php $this->html('bodytext') ?>
@@ -109,13 +116,6 @@ class ForegroundTemplate extends BaseTemplate {
 		</div>
 
 		<footer class="row">
-
-		<?php if ($wgUser->isLoggedIn()): ?>
-		<ul class="views large-12 columns">
-			<?php foreach( $this->data['content_actions'] as $key => $item ) { echo $this->makeListItem($key, $item); } ?>
-			<?php wfRunHooks( SkinTemplateToolboxEnd, array( &$this, true ) );  ?>
-		</ul>
-		<?php endif; ?>
 
 		<ul class="large-12 columns">
 		<?php foreach ( $this->getFooterLinks( "flat" ) as $key ) { ?>

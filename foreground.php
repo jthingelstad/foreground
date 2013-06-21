@@ -41,6 +41,7 @@ $wgResourceModules['skins.foreground'] = array(
         'Foreground/assets/scripts/vendor/custom.modernizr.js',
         'Foreground/assets/scripts/foundation/foundation.js',
         'Foreground/assets/scripts/foundation/foundation.topbar.js',
+        'Foreground/assets/scripts/foundation/foundation.dropdown.js',
         'Foreground/assets/scripts/foundation/foundation.section.js',
         'Foreground/assets/scripts/foundation/foundation.clearing.js',
         'Foreground/assets/scripts/foundation/foundation.cookie.js',
