@@ -31,6 +31,7 @@ $wgExtensionMessagesFiles['foreground'] = __DIR__.'/foreground.i18n.php';
 $wgResourceModules['skins.foreground'] = array(
 	'styles'         => array(
     	'Foreground/assets/stylesheets/normalize.css',
+        'Foreground/assets/stylesheets/font-awesome.css',
     	'Foreground/assets/stylesheets/foundation.css',
     	'Foreground/assets/stylesheets/foreground.css',
         'Foreground/assets/stylesheets/foreground-print.css',
