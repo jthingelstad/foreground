@@ -33,6 +33,10 @@ h2 small.label {
   display:inline-block;
 }
 
+.label {
+  padding-bottom: 0.39em;
+}
+
 h2 span {
   display:block;
 }
@@ -86,6 +90,15 @@ div#userloginprompt, p#userloginlink {
 
 
 /* LISTS */
+
+ul#drop1.f-dropdown {
+  margin-left:0;
+  margin-top:.5em;
+  margin-bottom:.25em;
+  padding:.25em;
+}
+
+
 #mw-content-text ul {
   list-style-type: disc;
   margin: .5em 1.25em;
@@ -349,6 +362,11 @@ div.small-10.columns label {
 button, .button {
   margin: 0.5em 0;
   padding: 0.3em 0.75em 0.4em 0.75em;
+}
+
+.top-bar .button.search {
+  top: 1px;
+  text-align: left;
 }
 
 input[type="submit"] {

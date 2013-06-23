@@ -62,7 +62,7 @@ class ForegroundTemplate extends BaseTemplate {
 		        				<?php echo $this->makeSearchInput(array('placeholder' => 'Search...', 'id' => 'searchInput') ); ?>
 		        			</div>
 		        			 <div class="small-4 columns">
-		        				<button type="submit" calass="alert button">Search</button>
+		        				<button type="submit" class="button search">Search</button>
 		        			</div>
 		        		</div>
 		        	</form>
