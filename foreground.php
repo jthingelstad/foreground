@@ -40,6 +40,7 @@ $wgResourceModules['skins.foreground'] = array(
     ),
     'scripts'        => array(
         'Foreground/assets/scripts/vendor/custom.modernizr.js',
+        'Foreground/assets/scripts/vendor/fastclick.js',
         'Foreground/assets/scripts/foundation/foundation.js',
         'Foreground/assets/scripts/foundation/foundation.topbar.js',
         'Foreground/assets/scripts/foundation/foundation.dropdown.js',
