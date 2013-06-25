@@ -8,13 +8,13 @@ It uses the Zurb Foundation (http://foundation.zurb.com) CSS framework.
 
 Clone this repository to your `skins` directory and create a symlink to the main skin file.
 
-    ln -s Foreground/foreground.php Foreground.php
+    ln -s foreground/foreground.php foreground.php
 
 Then add the following line to your `LocalSettings.php` file.
 
-    require_once($IP.'/skins/Foreground/foreground.php');
+    require_once($IP.'/skins/foreground/foreground.php');
 
-Now find the `$wgDefaultSkin` variable and set it to `Foreground`.
+Now find the `$wgDefaultSkin` variable and set it to `foreground`.
 
 ## License
 

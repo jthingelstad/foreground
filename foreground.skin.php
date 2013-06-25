@@ -7,8 +7,8 @@
  * @ingroup Skins
  */
 
-class SkinForeground extends SkinTemplate {
-	public $skinname = 'foreground', $stylename = 'foreground', $template = 'ForegroundTemplate', $useHeadElement = true;
+class Skinforeground extends SkinTemplate {
+	public $skinname = 'foreground', $stylename = 'foreground', $template = 'foregroundTemplate', $useHeadElement = true;
 
 	public function setupSkinUserCss(OutputPage $out) {
 		parent::setupSkinUserCss($out);
@@ -25,7 +25,7 @@ class SkinForeground extends SkinTemplate {
 	}
 
 }
-class ForegroundTemplate extends BaseTemplate {
+class foregroundTemplate extends BaseTemplate {
 	public function execute() {
 		global $wgUser;
 		wfSuppressWarnings();

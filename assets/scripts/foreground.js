@@ -7,10 +7,12 @@ jQuery(document).ready(function() {
   jQuery('li#ca-nstab-user a').addClass('icon-user').text(' ' + jQuery('li#ca-nstab-user a').text());
   jQuery('li#ca-talk a').addClass('icon-comments').text(' ' + jQuery('li#ca-talk a').text());
   jQuery('li#ca-edit a').addClass('icon-edit').text(' ' + jQuery('li#ca-edit a').text());
+  jQuery('li#ca-form_edit a').addClass('icon-edit-sign').text(' ' + jQuery('li#ca-form_edit a').text());
   jQuery('li#ca-history a').addClass('icon-archive').text(' ' + jQuery('li#ca-history a').text());
   jQuery('li#ca-delete a').addClass('icon-remove').text(' ' + jQuery('li#ca-delete a').text());
   jQuery('li#ca-move a').addClass('icon-truck').text(' ' + jQuery('li#ca-move a').text());
   jQuery('li#ca-protect a').addClass('icon-shield').text(' ' + jQuery('li#ca-protect a').text());
+  jQuery('li#ca-unprotect a').addClass('icon-shield').text(' ' + jQuery('li#ca-unprotect a').text());
   jQuery('li#ca-watch a').addClass('icon-star').text(' ' + jQuery('li#ca-watch a').text());
   jQuery('li#ca-purge a').addClass('icon-refresh').text(' ' + jQuery('li#ca-purge a').text());
   jQuery('li#t-smwbrowselink a').addClass('icon-eye-open').text(' ' + jQuery('li#t-smwbrowselink a').text());
