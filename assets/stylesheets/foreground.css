@@ -359,11 +359,6 @@ li label.inline {
   padding: 0;
 }
 
-div.small-9.columns label,
-div.small-10.columns label {
-  font-weight: normal;
-}
-
 button, .button {
   margin: 0.5em 0;
   padding: 0.3em 0.75em 0.4em 0.75em;
