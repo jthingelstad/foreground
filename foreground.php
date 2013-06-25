@@ -14,6 +14,7 @@ if( ! defined( 'MEDIAWIKI' ))
 	die("Wiki Wonders What You're Doing");
 }
 
+
 $wgExtensionCredits['skin'][] = array(
     'path'			 => __FILE__,
     'name'			 => 'Foreground',
@@ -55,3 +56,14 @@ $wgResourceModules['skins.foreground'] = array(
     'remoteBasePath' => &$GLOBALS['wgStylePath'],
     'localBasePath'  => &$GLOBALS['wgStyleDirectory']
 );
+
+
+function FoundationSidebar() {
+    global $wgUser, $wgParser;
+    $opt = ParserOptions::newFromUser($wgUser);
+    $title = Title::newFromText( 'Sidebar', NS_MEDIAWIKI );
+    $article = new Article($title);
+    $html = $wgParser->parse( $article->fetchContent(), $title, $opt, true, true )->getText();
+    print_r($html);
+}
+

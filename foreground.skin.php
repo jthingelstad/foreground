@@ -25,6 +25,7 @@ class Skinforeground extends SkinTemplate {
 	}
 
 }
+
 class foregroundTemplate extends BaseTemplate {
 	public function execute() {
 		global $wgUser;
@@ -41,7 +42,6 @@ class foregroundTemplate extends BaseTemplate {
 						<section class="top-bar-section">
 		    		<ul class="left">
 		 						<li class="divider"></li>
-
 									<?php foreach ( $this->getSidebar() as $boxName => $box ) { ?>
 									<li class="has-dropdown active"  id='<?php echo Sanitizer::escapeId( $box['id'] ) ?>'<?php echo Linker::tooltip( $box['id'] ) ?>>
 											<a href="#"><?php echo htmlspecialchars( $box['header'] ); ?></a>
