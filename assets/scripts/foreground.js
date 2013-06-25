@@ -12,8 +12,8 @@ jQuery(document).ready(function() {
   jQuery('li#ca-move a').addClass('icon-truck').text(' ' + jQuery('li#ca-move a').text());
   jQuery('li#ca-protect a').addClass('icon-shield').text(' ' + jQuery('li#ca-protect a').text());
   jQuery('li#ca-unprotect a').addClass('icon-shield').text(' ' + jQuery('li#ca-unprotect a').text());
-  jQuery('li#ca-watch a').addClass('icon-star').text(' ' + jQuery('li#ca-watch a').text());
-  jQuery('li#ca-unwatch a').addClass('icon-star').text(' ' + jQuery('li#ca-watch a').text());
+  jQuery('li#ca-watch a').addClass('icon-star-empty').text(' ' + jQuery('li#ca-watch a').text());
+  jQuery('li#ca-unwatch a').addClass('icon-star').text(' ' + jQuery('li#ca-unwatch a').text());
   jQuery('li#ca-purge a').addClass('icon-refresh').text(' ' + jQuery('li#ca-purge a').text());
   jQuery('li#t-smwbrowselink a').addClass('icon-eye-open').text(' ' + jQuery('li#t-smwbrowselink a').text());
 
