@@ -57,13 +57,3 @@ $wgResourceModules['skins.foreground'] = array(
     'localBasePath'  => &$GLOBALS['wgStyleDirectory']
 );
 
-
-function FoundationSidebar() {
-    global $wgUser, $wgParser;
-    $opt = ParserOptions::newFromUser($wgUser);
-    $title = Title::newFromText( 'Sidebar', NS_MEDIAWIKI );
-    $article = new Article($title);
-    $html = $wgParser->parse( $article->fetchContent(), $title, $opt, true, true )->getText();
-    print_r($html);
-}
-
