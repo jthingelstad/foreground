@@ -13,6 +13,9 @@ a.label:focus {
 
 a.button.dropdown { float:right;}
 
+/* Hide the page actions button for special pages (cuz there's nothing in it */
+.mw-special-FormEdit a.button.dropdown { display:none; }
+
 td.mw-submit a,
 .htmlform-tip,
 #mw-upload-permitted p {
@@ -280,6 +283,10 @@ input[name="*[* date][second]"] {
   margin-right: 1em;
 }
 
+.inputSpan input.createboxInput {
+  width: 100%;
+}
+
 .inputSpan button,
 .inputSpan .button {
   margin: -4px 0 0 0;
@@ -325,9 +332,10 @@ p.meta {
   margin-bottom: 4px;
 }
 
-textarea { width: 87%;}
-
-label { display: inline;}
+label {
+  display: inline;
+  font-weight: normal;
+}
 
 .mw-input label { font-weight: normal; }
 
