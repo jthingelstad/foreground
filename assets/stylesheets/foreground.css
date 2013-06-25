@@ -11,6 +11,8 @@ a.label:focus {
   color: white;
 }
 
+a.label.new { background-color: #d0d0d0; }
+
 a.button.dropdown { float:right;}
 
 /* Hide the page actions button for special pages (cuz there's nothing in it */
