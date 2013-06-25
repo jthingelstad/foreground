@@ -3,8 +3,7 @@ jQuery(document).ready(function() {
     console.log(response.errors);
   });
 
-  jQuery('li#ca-nstab-main a').addClass('icon-file').text(' ' + jQuery('li#ca-nstab-main a').text());
-  jQuery('li#ca-nstab-user a').addClass('icon-user').text(' ' + jQuery('li#ca-nstab-user a').text());
+  jQuery('[id^=ca-nstab] a').addClass('icon-file').text(' ' + jQuery('[id^=ca-nstab]  a').text());
   jQuery('li#ca-talk a').addClass('icon-comments').text(' ' + jQuery('li#ca-talk a').text());
   jQuery('li#ca-edit a').addClass('icon-edit').text(' ' + jQuery('li#ca-edit a').text());
   jQuery('li#ca-form_edit a').addClass('icon-edit-sign').text(' ' + jQuery('li#ca-form_edit a').text());
