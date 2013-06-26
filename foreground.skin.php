@@ -75,7 +75,7 @@ class foregroundTemplate extends BaseTemplate {
 		         <li class="has-form">
 
 							<?php if ($wgUser->isLoggedIn()): ?>
-								<li class="has-dropdown active"><a href="#">Personal</a>
+								<li class="has-dropdown active"><a href="#"><i class="icon-user"></i></a>
 									<ul class="dropdown">
 									<?php foreach ( $this->getPersonalTools() as $key => $item ) { echo $this->makeListItem($key, $item); } ?>
 									</ul>
