@@ -26,7 +26,6 @@ class Skinforeground extends SkinTemplate {
 
 }
 
-
 class foregroundTemplate extends BaseTemplate {
 	public function execute() {
 		global $wgUser;
@@ -106,8 +105,8 @@ class foregroundTemplate extends BaseTemplate {
 		     </section>
 		</nav>
 
-	<?php if ( $this->data['sitenotice'] ) { ?><div id="siteNotice" class="row notice large-12 columns"><?php $this->html( 'sitenotice' ); ?></div><?php } ?>
-	<?php if ( $this->data['newtalk'] ) { ?><div class="usermessage row notice large-12 columns"><?php $this->html( 'newtalk' ); ?></div><?php } ?>
+	<?php if ( $this->data['sitenotice'] ) { ?><div id="siteNotice" class="panel callout radius"><?php $this->html( 'sitenotice' ); ?></div><?php } ?>
+	<?php if ( $this->data['newtalk'] ) { ?><div id="usermessage" class="panel callout radius"><?php $this->html( 'newtalk' ); ?></div><?php } ?>
 	<div id="mw-js-message" style="display:none;"></div>
 
 		<div class="row">
