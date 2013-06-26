@@ -270,6 +270,13 @@ table.wikitable > * > tr > td {
   font-size:small;
 }
 
+input[type="file"],
+input[type="checkbox"],
+input[type="radio"],
+select {
+  padding: 5px;
+}
+
 .inputSpan select.createboxInput,
 .dateInput select.monthInput,
 input.hourInput,
