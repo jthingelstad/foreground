@@ -56,4 +56,3 @@ $wgResourceModules['skins.foreground'] = array(
     'remoteBasePath' => &$GLOBALS['wgStylePath'],
     'localBasePath'  => &$GLOBALS['wgStyleDirectory']
 );
-

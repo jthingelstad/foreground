@@ -26,6 +26,7 @@ class Skinforeground extends SkinTemplate {
 
 }
 
+
 class foregroundTemplate extends BaseTemplate {
 	public function execute() {
 		global $wgUser;
@@ -45,14 +46,14 @@ class foregroundTemplate extends BaseTemplate {
 
 		    		<ul class="left">
 		 						<li class="divider"></li>
-									<?php foreach ( $this->getSidebar() as $boxName => $box ) { ?>
+									<?php foreach ( $this->getSidebar() as $boxName => $box ) { if ($box['header'] != "Toolbox") { ?>
 									<li class="has-dropdown active"  id='<?php echo Sanitizer::escapeId( $box['id'] ) ?>'<?php echo Linker::tooltip( $box['id'] ) ?>>
 											<a href="#"><?php echo htmlspecialchars( $box['header'] ); ?></a>
 											<?php if ( is_array( $box['content'] ) ) { ?>
 												<ul class="dropdown">
 													<?php foreach ( $box['content'] as $key => $item ) { echo $this->makeListItem( $key, $item ); } ?>
         								</ul>
-											<?php }  ?>
+											<?php } } ?>
 									</li>
 									<?php } ?>
 		    		</ul>
@@ -75,7 +76,9 @@ class foregroundTemplate extends BaseTemplate {
 
 								<li class="has-dropdown active"><a href="#"><i class="icon-cogs"></i></a>
 									<ul class="dropdown">
-									<?php foreach ( $this->getToolbox() as $key => $item ) { echo $this->makeListItem($key, $item); } ?>
+										<?php foreach ( $this->getToolbox() as $key => $item ) { echo $this->makeListItem($key, $item); } ?>
+										<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges">Recent Changes</a></li>
+										<li id="n-help"><a href="/wiki/Help:Contents">Help</a></li>
 									</ul>
 								</li>
 
