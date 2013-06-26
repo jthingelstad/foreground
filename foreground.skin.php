@@ -73,14 +73,14 @@ class foregroundTemplate extends BaseTemplate {
 		         <li class="divider show-for-small"></li>
 		         <li class="has-form">
 
-								<li class="has-dropdown active"><a href="#"><i class="icon-cogs"> Toolbox</i></a>
+								<li class="has-dropdown active"><a href="#"><i class="icon-cogs"></i></a>
 									<ul class="dropdown">
 									<?php foreach ( $this->getToolbox() as $key => $item ) { echo $this->makeListItem($key, $item); } ?>
 									</ul>
 								</li>
 
 							<?php if ($wgUser->isLoggedIn()): ?>
-								<li class="has-dropdown active"><a href="#"><i class="icon-user"> Personal</i></a>
+								<li class="has-dropdown active"><a href="#"><i class="icon-user"></i></a>
 									<ul class="dropdown">
 									<?php foreach ( $this->getPersonalTools() as $key => $item ) { echo $this->makeListItem($key, $item); } ?>
 									</ul>
@@ -110,7 +110,7 @@ class foregroundTemplate extends BaseTemplate {
 		<div class="row">
 				<div class="large-12 columns">
 					<?php if ($wgUser->isLoggedIn()): ?>
-						<a href="#" data-dropdown="drop1" class="button dropdown small secondary radius"><i class="icon-cog"><span class="show-for-medium-up">&nbsp;Page Actions<span></i></a>
+						<a href="#" data-dropdown="drop1" class="button dropdown small secondary radius"><i class="icon-cog"><span class="show-for-medium-up">&nbsp;Actions<span></i></a>
 						<ul id="drop1" class="views large-12 columns f-dropdown">
 							<?php foreach( $this->data['content_actions'] as $key => $item ) { echo $this->makeListItem($key, $item); } ?>
 							<?php wfRunHooks( SkinTemplateToolboxEnd, array( &$this, true ) );  ?>
