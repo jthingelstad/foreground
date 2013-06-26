@@ -37,8 +37,7 @@ class foregroundTemplate extends BaseTemplate {
 							<section class="top-bar-section">
 
 							<ul class="title-area">
-							<li class="has-dropdown active"><a href="<?php echo $this->data['nav_urls']['mainpage']['href']; ?>" class="name"><?php echo $this->text('sitename'); ?></a>
-								<ul class="dropdown"><li><a href="/wiki/Special:RecentChanges">Recent Changes</a></li></ul>
+							<li class="name"><h1><a href="<?php echo $this->data['nav_urls']['mainpage']['href']; ?>" class="name"><?php echo $this->text('sitename'); ?></h1></a>
 							</li>
 						   <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
 						</ul>
@@ -74,8 +73,14 @@ class foregroundTemplate extends BaseTemplate {
 		         <li class="divider show-for-small"></li>
 		         <li class="has-form">
 
+								<li class="has-dropdown active"><a href="#"><i class="icon-cogs"> Toolbox</i></a>
+									<ul class="dropdown">
+									<?php foreach ( $this->getToolbox() as $key => $item ) { echo $this->makeListItem($key, $item); } ?>
+									</ul>
+								</li>
+
 							<?php if ($wgUser->isLoggedIn()): ?>
-								<li class="has-dropdown active"><a href="#">Personal</a>
+								<li class="has-dropdown active"><a href="#"><i class="icon-user"> Personal</i></a>
 									<ul class="dropdown">
 									<?php foreach ( $this->getPersonalTools() as $key => $item ) { echo $this->makeListItem($key, $item); } ?>
 									</ul>
