@@ -105,7 +105,7 @@ class foregroundTemplate extends BaseTemplate {
 		<div class="row">
 				<div class="large-12 columns">
 					<?php if ($wgUser->isLoggedIn()): ?>
-						<a href="#" data-dropdown="drop1" class="button dropdown small secondary radius"><i class="icon-cog"><span class="show-for-medium-up">&nbsp;Page Actions<span></i></a>
+						<a href="#" data-dropdown="drop1" class="button dropdown small secondary radius"><i class="icon-cog"><span class="show-for-medium-up">&nbsp;Actions<span></i></a>
 						<ul id="drop1" class="views large-12 columns f-dropdown">
 							<?php foreach( $this->data['content_actions'] as $key => $item ) { echo $this->makeListItem($key, $item); } ?>
 							<?php wfRunHooks( SkinTemplateToolboxEnd, array( &$this, true ) );  ?>
