@@ -34,11 +34,10 @@ class foregroundTemplate extends BaseTemplate {
 ?>
 <!-- START FOREGROUNDTEMPLATE -->
 		<nav class="top-bar">
-							<section class="top-bar-section">
+						<section class="top-bar-section">
 
-							<ul class="title-area">
-							<li class="name"><h1><a href="<?php echo $this->data['nav_urls']['mainpage']['href']; ?>" class="name"><?php echo $this->text('sitename'); ?></h1></a>
-							</li>
+						<ul class="title-area">
+							<li class="name"><h1><a href="<?php echo $this->data['nav_urls']['mainpage']['href']; ?>"><?php echo $this->text('sitename'); ?></a></h1></li>
 						   <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
 						</ul>
 
