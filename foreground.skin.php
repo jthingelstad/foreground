@@ -105,9 +105,14 @@ class foregroundTemplate extends BaseTemplate {
 		     </section>
 		</nav>
 
-	<?php if ( $this->data['sitenotice'] ) { ?><div id="siteNotice" class="panel callout radius"><?php $this->html( 'sitenotice' ); ?></div><?php } ?>
-	<?php if ( $this->data['newtalk'] ) { ?><div id="usermessage" class="panel callout radius"><?php $this->html( 'newtalk' ); ?></div><?php } ?>
-	<div id="mw-js-message" style="display:none;"></div>
+		<div class="row">
+				<div class="large-12 columns">
+				<?php if ( $this->data['sitenotice'] ) { ?><div id="siteNotice" class="sitenotice panel radius"><?php $this->html( 'sitenotice' ); ?></div><?php } ?>
+				<?php if ( $this->data['newtalk'] ) { ?><div id="usermessage" class="newtalk panel radius"><?php $this->html( 'newtalk' ); ?></div><?php } ?>
+				</div>
+		</div>
+
+		<div id="mw-js-message" style="display:none;"></div>
 
 		<div class="row">
 				<div class="large-12 columns">
