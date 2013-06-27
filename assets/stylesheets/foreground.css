@@ -298,10 +298,11 @@ input[name="*[* date][second]"] {
   margin-right: 1em;
 }
 
+/*
 .inputSpan input.createboxInput {
   width: 100%;
 }
-
+*/
 .inputSpan button,
 .inputSpan .button {
   margin: -4px 0 0 0;
