@@ -46,6 +46,16 @@ h2 span {
   display:block;
 }
 
+h2.title {
+  margin-bottom: 0.1em;
+}
+
+h3#siteSub {
+  font-style: italic;
+  font-size: small;
+  margin-bottom: 0.5em;
+  color: #6f6f6f;
+}
 
 .clear_both {
   clear:both;

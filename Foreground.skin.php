@@ -127,6 +127,7 @@ class foregroundTemplate extends BaseTemplate {
 						</ul>
 					<?php endif; ?>
 					<h2 class="title"><?php $this->html('title') ?></h2>
+					<?php if ( $this->data['isarticle'] ) { ?><h3 id="siteSub"><?php $this->msg( 'tagline' ) ?></h3><?php } ?>
 					<h5 class="subtitle"><?php $this->html('subtitle') ?></h5>
 					<?php $this->html('bodytext') ?>
 		    	<div class="group"><?php $this->html('catlinks'); ?></div>
