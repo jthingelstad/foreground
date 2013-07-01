@@ -6,13 +6,13 @@
  * @file
  * @ingroup Skins
  */
- 
+
 $messages = array();
 
 /** English
  * @author WikiWonders
  */
 $messages['en'] = array(
-	'skinname-wwfoundation' => 'wwfounadtion',
-	'wwfoundation-desc' => 'WikiWonders base skin.'
+	'skinname-foreground' => 'Foreground',
+	'foreground-desc' => 'A MediaWiki skin that focuses on putting your content in the foreground.'
 );

@@ -25,9 +25,9 @@ $wgExtensionCredits['skin'][] = array(
 
 $wgValidSkinNames['foreground'] = 'Foreground';
 
-$wgAutoloadClasses['Skinforeground'] = __DIR__.'/foreground.skin.php';
+$wgAutoloadClasses['SkinForeground'] = __DIR__.'/Foreground.skin.php';
 
-$wgExtensionMessagesFiles['foreground'] = __DIR__.'/foreground.i18n.php';
+$wgExtensionMessagesFiles['SkinForeground'] = __DIR__.'/Foreground.i18n.php';
 
 $wgResourceModules['skins.foreground'] = array(
 	'styles'         => array(

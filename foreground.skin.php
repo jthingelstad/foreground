@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Skin file for skin WWFoundation.
+ * Skin file for skin WikiWonders' Foreground
  *
  * @file
  * @ingroup Skins
@@ -25,6 +25,10 @@ class Skinforeground extends SkinTemplate {
 	}
 
 }
+
+// public static function foregroundHTMLUpdate( OutputPage &$out, &$text ) {
+// 	print_r($out);
+// }
 
 class foregroundTemplate extends BaseTemplate {
 	public function execute() {
