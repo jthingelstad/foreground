@@ -131,6 +131,7 @@ class foregroundTemplate extends BaseTemplate {
 					<?php $this->html('bodytext') ?>
 		    	<div class="group"><?php $this->html('catlinks'); ?></div>
 		    	<?php $this->html('dataAfterContent'); ?>
+		    	<div class="clear_both"></div>
 		    </div>
 		</div>
 
