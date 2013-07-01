@@ -448,15 +448,17 @@ body.page-Farm_Main_Page #siteSub {
   display:none;
 }
 
-/* Don't like the black top bar? Change the color here: */
+/* Don't like the black top bar? Copy this into your Common.css and change the colors */
 .top-bar,
-.top-bar-section li a:not(.button),
+.top-bar-section ul,
 .top-bar-section ul li.active > a,
+.top-bar-section li a:not(.button),
 .top-bar-section .has-form {
    background: black;
    color: white;
 }
 
-.top-bar-section > ul > .divider, .top-bar-section > ul > [role="separator"] {
+.top-bar-section > ul > .divider,
+.top-bar-section > ul > [role="separator"] {
   border-color: black;
 }
