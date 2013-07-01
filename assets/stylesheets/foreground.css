@@ -465,11 +465,11 @@ body.page-Farm_Main_Page #siteSub {
 .top-bar-section li a:not(.button),
 .top-bar-section .has-form,
 .top-bar.expanded .title-area  {
-   background: orange;
+   background: black;
    color: white;
 }
 
 .top-bar-section > ul > .divider,
 .top-bar-section > ul > [role="separator"] {
-  border-color: orange;
+  border-color: black;
 }
