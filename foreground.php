@@ -23,7 +23,7 @@ $wgExtensionCredits['skin'][] = array(
     'descriptionmsg' => 'A MediaWiki skin that focuses on putting your content in the foreground.',
 );
 
-$wgValidSkinNames['foreground'] = 'foreground';
+$wgValidSkinNames['foreground'] = 'Foreground';
 
 $wgAutoloadClasses['Skinforeground'] = __DIR__.'/foreground.skin.php';
 
