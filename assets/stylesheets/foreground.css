@@ -145,7 +145,7 @@ footer.row ul.views.columns li {
 
 .mw-specialpages-table td ul.columns li {width: 50%;}
 
-#mw-content-text .columns li {float:none;width:90%;}
+/*#mw-content-text .columns li {float:none;width:90%;}*/
 
 footer.row ul.columns li { display: inline;float:none;}
 
