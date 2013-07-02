@@ -547,20 +547,19 @@ div.mw-htmlform-field-HTMLCheckField div.mw-label { height:0; }
 .lt-ie9 .hide-for-small { display: block !important; }
 
 /* TOP NAV */
-/*.lt-ie9 .top-bar-section {
+.lt-ie9 .top-bar-section {
   display:block;
-}*/
+}
 
-/*.lt-ie9 .top-bar-section ul {
+.lt-ie9 .top-bar-section ul {
   height: auto;
   width: 100%;
-}*/
+}
 
-.lt-ie9 .top-bar .top-bar-section ul {
-    li {
-        float: left;
-        display: inline;
-    }
+.lt-ie9 .top-bar .top-bar-section ul,
+.lt-ie9 .top-bar .top-bar-section ul li {
+  float: left;
+  display: inline;
 }
 /* END OTHER IE8 FIXES */
 
