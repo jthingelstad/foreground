@@ -456,8 +456,8 @@ span.smwttactiveinline span.smwbuiltin {
 div.mw-htmlform-field-HTMLCheckField div.mw-label { height:0; }
 
 
-/* ZUBR IE8 GRID */
-/* https://gist.github.com/zurbchris/5068210 */
+/* ZUBR IE8 FIXES */
+/* GRID: https://gist.github.com/zurbchris/5068210 */
 .lt-ie9 .row { width: 940px; max-width: 100%; min-width: 768px; margin: 0 auto; }
 .lt-ie9 .row .row { width: auto; max-width: none; min-width: 0; margin: 0 -15px; }
 .lt-ie9 .row.large-collapse .column,
@@ -543,6 +543,26 @@ div.mw-htmlform-field-HTMLCheckField div.mw-label { height:0; }
 .lt-ie9 .row:before, .row:after { content: " "; display: table; }
 .lt-ie9 .row:after { clear: both; }
 /* END IE8 GRID */
+
+.lt-ie9 .hide-for-small { display: block !important; }
+
+/* TOP NAV */
+/*.lt-ie9 .top-bar-section {
+  display:block;
+}*/
+
+/*.lt-ie9 .top-bar-section ul {
+  height: auto;
+  width: 100%;
+}*/
+
+.lt-ie9 .top-bar .top-bar-section ul {
+    li {
+        float: left;
+        display: inline;
+    }
+}
+/* END OTHER IE8 FIXES */
 
 /* UNTIL I CAN DETERMINE WHY toolboxend GENERATES AN EMPTY <li> IN THE MENU, I'M HIDING IT */
 #p-toolboxend { display:none;}

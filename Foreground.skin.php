@@ -12,6 +12,7 @@ class Skinforeground extends SkinTemplate {
 
 	public function setupSkinUserCss(OutputPage $out) {
 		parent::setupSkinUserCss($out);
+		$out->addHeadItem('ie-meta', '<meta http-equiv="X-UA-Compatible" content="IE=edge" />');
 		$out->addModuleStyles('skins.foreground');
 	}
 
@@ -25,10 +26,6 @@ class Skinforeground extends SkinTemplate {
 	}
 
 }
-
-// public static function foregroundHTMLUpdate( OutputPage &$out, &$text ) {
-// 	print_r($out);
-// }
 
 class foregroundTemplate extends BaseTemplate {
 	public function execute() {
