@@ -195,6 +195,16 @@ p.title {
 
 /* TABLES */
 
+.mw-content-ltr table#toc {
+  float:right;
+  width: auto;
+}
+
+.mw-content-rtl table#toc {
+  float:left;
+  width: auto;
+}
+
 table.formtable {
   border: none;
 }
