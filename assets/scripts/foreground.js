@@ -1,4 +1,9 @@
+
 jQuery(document).ready(function() {
+  // Add the 'less than IE9' class to appropriate version of IE by checking for their support of cssFloat (true in v9)
+  if (!jQuery.support.cssFloat) { jQuery('html').addClass('lt-ie9').addClass('no-js'); }
+
+
   jQuery(document).foundation(function (response) {
     console.log(response.errors);
   });
