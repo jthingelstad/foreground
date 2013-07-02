@@ -393,6 +393,10 @@ button, .button {
   text-align: left;
 }
 
+.top-bar-section .dropdown {
+  z-index: 100;
+}
+
 input[type="submit"] {
     background-color: #5da423;
     border-color: #457a1a;
