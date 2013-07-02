@@ -454,7 +454,8 @@ body.page-Extension_Main_Page #siteSub,
 body.page-Skin_Main_Page h1.firstHeading,
 body.page-Skin_Main_Page #siteSub,
 body.page-Farm_Main_Pageh1.firstHeading,
-body.page-Farm_Main_Page #siteSub {
+body.page-Farm_Main_Page #siteSub,
+body.mw-special-Userlogin h2.title {
   display:none;
 }
 
