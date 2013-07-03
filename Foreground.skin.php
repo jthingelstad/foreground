@@ -106,7 +106,7 @@ class foregroundTemplate extends BaseTemplate {
 
 		<div class="row">
 				<div class="large-12 columns">
-				<!--[if gt IE 9]>
+				<!--[if gt IE9]>
 				<div id="siteNotice" class="sitenotice panel radius"><?php echo $this->text('sitename'); ?> may not look as expected in your version of Internet Explorer. We recommend you upgrade to a newer version of Internet Explorer or switch to a browser like Firefox or Chrome.</div>
 				<!--<![endif]-->
 
