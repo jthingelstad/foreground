@@ -580,7 +580,7 @@ body.mw-special-Userlogin h2.title {
   display:none;
 }
 
-/* Don't like the black top bar? Copy this into your Common.css and change the colors */
+/* Don't like the black top bar? Copy this into your Common.css and change the colors
 .top-bar,
 .top-bar-section ul,
 .top-bar-section ul li.active > a,
@@ -595,4 +595,4 @@ body.mw-special-Userlogin h2.title {
 .top-bar-section > ul > [role="separator"] {
   border-color: black;
 }
-
+*/
