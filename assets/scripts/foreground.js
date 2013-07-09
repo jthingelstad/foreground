@@ -24,9 +24,12 @@ jQuery(document).ready(function() {
 
 
 
-  // If We're not in ns-0, split the namespace title into a title and a label
-  //var $title = jQuery("h2.title:contains(':')").not(":contains('\"')").not(":contains('as of')").text().split(":");
-  //jQuery("h2.title:contains(':')").not(":contains('\"')").not(":contains('as of')").html('<small class="label">' + $title[0] + '</small><span>' + $title[1] + '</span>');
+  // Remove Namespaces from Pages Titles
+  if ( jQuery("h4.namespace").length) {
+    var $namespace = jQuery("h4.namespace").text() + ":";
+    jQuery('h2.title').text( jQuery('h2.title').text().replace($namespace,'') );
+  }
+
 
   // Turn categories into labels
   jQuery('#mw-normal-catlinks ul li a').addClass('label');

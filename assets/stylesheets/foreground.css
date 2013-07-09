@@ -36,7 +36,7 @@ small {
   font-size: 80%;
 }
 
-h2 small.label {
+h4.namespace.label {
   font-size: small;
   display:inline-block;
 }
