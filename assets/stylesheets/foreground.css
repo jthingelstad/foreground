@@ -16,7 +16,7 @@ a.label.new { background-color: #d0d0d0; }
 a.button.dropdown { float:right;}
 
 /* Hide the page actions button for special pages (cuz there's nothing in it) */
-.mw-special-FormEdit a.button.dropdown { display:none; }
+.mw-special-FormEdit a.button.dropdown, .ns-special a.button.dropdown { display:none; }
 
 /* Hide some rows on form-edit (e.g. a thing's title) */
 body.action-formedit .row.hide-on-form-edit { display: none;}
