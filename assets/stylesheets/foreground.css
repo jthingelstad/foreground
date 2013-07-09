@@ -312,7 +312,6 @@ input[name="*[* date][hour]"],
 input[name="*[* date][minute]"],
 input[name="*[* date][second]"] {
   width: auto;
-  float: left;
   margin-right: 1em;
 }
 
