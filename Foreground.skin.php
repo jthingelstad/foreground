@@ -126,6 +126,7 @@ class foregroundTemplate extends BaseTemplate {
 							<?php wfRunHooks( SkinTemplateToolboxEnd, array( &$this, true ) );  ?>
 						</ul>
 					<?php endif; ?>
+					<h4 class="namespace"><?php print $this->getSkin()->getTitle()->getNsText(); ?></h4>
 					<h2 class="title"><?php $this->html('title') ?></h2>
 					<?php if ( $this->data['isarticle'] ) { ?><h3 id="siteSub"><?php $this->msg( 'tagline' ) ?></h3><?php } ?>
 					<h5 class="subtitle"><?php $this->html('subtitle') ?></h5>
