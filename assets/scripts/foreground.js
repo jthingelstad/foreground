@@ -23,14 +23,6 @@ jQuery(document).ready(function() {
   jQuery('li#t-smwbrowselink a').addClass('icon-eye-open').text(' ' + jQuery('li#t-smwbrowselink a').text());
 
 
-
-  // Remove Namespaces from Pages Titles
-  if ( jQuery("h4.namespace").length) {
-    var $namespace = jQuery("h4.namespace").text() + ":";
-    jQuery('h2.title').text( jQuery('h2.title').text().replace($namespace,'') );
-  }
-
-
   // Turn categories into labels
   jQuery('#mw-normal-catlinks ul li a').addClass('label');
 
