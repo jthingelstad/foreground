@@ -75,8 +75,8 @@ class foregroundTemplate extends BaseTemplate {
 								<li class="has-dropdown active"><a href="#"><i class="icon-cogs"></i></a>
 									<ul class="dropdown">
 										<?php foreach ( $this->getToolbox() as $key => $item ) { echo $this->makeListItem($key, $item); } ?>
-										<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges">Recent Changes</a></li>
-										<li id="n-help"><a href="/wiki/Help:Contents">Help</a></li>
+										<li id="n-recentchanges" <?php echo Linker::tooltip('recentchanges') ?>><a href="/wiki/Special:RecentChanges">Recent Changes</a></li>
+										<li id="n-help" <?php echo Linker::tooltip('help') ?>><a href="/wiki/Help:Contents">Help</a></li>
 									</ul>
 								</li>
 
@@ -128,13 +128,13 @@ class foregroundTemplate extends BaseTemplate {
 					<?php endif;
 					$namespace = str_replace('_', ' ', $this->getSkin()->getTitle()->getNsText());
 					$displaytitle = $this->data['title'];
-					if (!empty($namespace)) { 
+					if (!empty($namespace)) {
 						$pagetitle = $this->getSkin()->getTitle();
 						$newtitle = str_replace($namespace.':', '', $pagetitle);
 						$displaytitle = str_replace($pagetitle, $newtitle, $displaytitle);
 					?><h4 class="namespace label"><?php print $namespace; ?></h4><?php } ?>
 					<h2 class="title"><?php print $displaytitle; ?></h2>
-					<?php if ( $this->data['isarticle'] ) { ?><h3 id="siteSub"><?php $this->msg( 'tagline' ) ?></h3><?php } ?>
+					<?php if ( $this->data['isarticle'] ) { ?><h3 id="tagline"><?php $this->msg( 'tagline' ) ?></h3><?php } ?>
 					<h5 class="subtitle"><?php $this->html('subtitle') ?></h5>
 					<div class="clear_both"></div>
 					<?php $this->html('bodytext') ?>
