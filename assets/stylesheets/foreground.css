@@ -445,7 +445,8 @@ legend {
 
 fieldset {
   line-height: 1.6em;
-  padding: 0.25em 1.25em 1em 1.25em;
+  padding: 0 1.25em 1em 1.25em;
+  margin-top: 0;
 }
 
 span.smwbuiltin,
