@@ -27,6 +27,8 @@ td.mw-submit a,
   font-size: 90%;
 }
 
+alert.label a {color: pink;}
+
 code {
   font-weight: normal;
   color: #222222;
