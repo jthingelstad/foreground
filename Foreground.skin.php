@@ -147,12 +147,12 @@ class foregroundTemplate extends BaseTemplate {
 
 		<ul class="large-12 columns">
 		<?php foreach ( $this->getFooterLinks( "flat" ) as $key ) { ?>
-		        <li><?php $this->html( $key ) ?></li>
+			<li id="footer-<?php echo $key ?>"><?php $this->html( $key ) ?></li>
 		<?php } ?>
 		</ul>
 		<ul> <?php foreach ( $this->getFooterIcons( "nocopyright" ) as $blockName => $footerIcons ) { ?>
-        <li><?php foreach ( $footerIcons as $icon ) { ?>
-            <?php echo $this->getSkin()->makeFooterIcon( $icon, 'withoutImage' ); ?>
+	<li class="<?php echo $blockName ?>"><?php foreach ( $footerIcons as $icon ) { ?>
+	    <?php echo $this->getSkin()->makeFooterIcon( $icon, 'withoutImage' ); ?>
  						<?php } ?>
         </li>
 				<?php } ?>
