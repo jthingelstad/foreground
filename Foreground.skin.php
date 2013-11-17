@@ -44,7 +44,7 @@ class foregroundTemplate extends BaseTemplate {
 
 		    		<ul class="left">
 		 						<li class="divider"></li>
-									<?php foreach ( $this->getSidebar() as $boxName => $box ) { if ($box['header'] != "Toolbox") { ?>
+									<?php foreach ( $this->getSidebar() as $boxName => $box ) { if ( ($box['header'] != "Toolbox") && ($box['header'] != "Tools") ) { ?>
 									<li class="has-dropdown active"  id='<?php echo Sanitizer::escapeId( $box['id'] ) ?>'<?php echo Linker::tooltip( $box['id'] ) ?>>
 											<a href="#"><?php echo htmlspecialchars( $box['header'] ); ?></a>
 											<?php if ( is_array( $box['content'] ) ) { ?>
