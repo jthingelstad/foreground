@@ -16,11 +16,11 @@ if( ! defined( 'MEDIAWIKI' ))
 
 
 $wgExtensionCredits['skin'][] = array(
-    'path'			 => __FILE__,
-    'name'			 => 'Foreground',
-    'url'			 => 'http://foreground.wikiwonders.net/',
-    'author'		 => 'WikiWonders',
-    'descriptionmsg' => 'A MediaWiki skin that focuses on putting your content in the foreground.',
+	'path'		 => __FILE__,
+	'name'		 => 'Foreground',
+	'url'		 => 'http://foreground.wikiwonders.net/',
+	'author'	 => 'WikiWonders',
+	'descriptionmsg' => 'foreground-desc',
 );
 
 $wgValidSkinNames['foreground'] = 'Foreground';
