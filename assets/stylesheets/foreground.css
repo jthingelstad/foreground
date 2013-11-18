@@ -601,3 +601,13 @@ body.mw-special-Userlogin h2.title {
   border-color: black;
 }
 */
+
+/* Add styling for the Echo extension */
+.mw-echo-notifications-badge {
+  width: 30px !important;
+  height: 35px !important;
+  text-align: center !important;
+  border-radius: 6px !important;
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+}

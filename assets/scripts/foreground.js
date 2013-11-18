@@ -35,4 +35,8 @@ jQuery(document).ready(function() {
     jQuery('ul#drop1').removeClass('open').css('top', '-9999px').css('left', '785px');
   });
 
+  // The Echo extension puts an item in personal tools that Foreground really should have in the top menu
+  // to make this easier, we move it here
+  jQuery("#pt-notifications").prependTo("#top-bar-right");
+
 });

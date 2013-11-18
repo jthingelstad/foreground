@@ -42,7 +42,7 @@ class foregroundTemplate extends BaseTemplate {
 
 						<section class="top-bar-section">
 
-		    		<ul class="left">
+		    		<ul id="top-bar-left" class="left">
 		 						<li class="divider"></li>
 									<?php foreach ( $this->getSidebar() as $boxName => $box ) { if ( ($box['header'] != "Toolbox") && ($box['header'] != "Tools") ) { ?>
 									<li class="has-dropdown active"  id='<?php echo Sanitizer::escapeId( $box['id'] ) ?>'<?php echo Linker::tooltip( $box['id'] ) ?>>
@@ -56,7 +56,7 @@ class foregroundTemplate extends BaseTemplate {
 									<?php } ?>
 		    		</ul>
 
-		        <ul class="right">
+		        <ul id="top-bar-right" class="right">
 			      <li class="has-form">
 		        	<form action="<?php $this->text( 'wgScript' ); ?>" id="searchform" class="mw-search">
 		        		<div class="row collapse">
@@ -81,7 +81,7 @@ class foregroundTemplate extends BaseTemplate {
 								</li>
 
 							<?php if ($wgUser->isLoggedIn()): ?>
-								<li class="has-dropdown active"><a href="#"><i class="icon-user"></i></a>
+								<li id="personal-tools-dropdown" class="has-dropdown active"><a href="#"><i class="icon-user"></i></a>
 									<ul class="dropdown">
 									<?php foreach ( $this->getPersonalTools() as $key => $item ) { echo $this->makeListItem($key, $item); } ?>
 									</ul>
