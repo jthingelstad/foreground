@@ -75,7 +75,7 @@ class foregroundTemplate extends BaseTemplate {
 								<li class="has-dropdown active"><a href="#"><i class="icon-cogs"></i></a>
 									<ul class="dropdown">
 										<?php foreach ( $this->getToolbox() as $key => $item ) { echo $this->makeListItem($key, $item); } ?>
-										<li id="n-recentchanges" <?php echo Linker::tooltip('recentchanges') ?>><a href="/wiki/Special:RecentChanges">Recent Changes</a></li>
+										<li id="n-recentchanges"><?php echo Linker::specialLink('Recentchanges') ?></li>
 										<li id="n-help" <?php echo Linker::tooltip('help') ?>><a href="/wiki/Help:Contents">Help</a></li>
 									</ul>
 								</li>
@@ -118,7 +118,7 @@ class foregroundTemplate extends BaseTemplate {
 		<div id="mw-js-message" style="display:none;"></div>
 
 		<div class="row">
-				<div class="large-12 columns">
+				<div id="p-cactions" class="large-12 columns">
 					<?php if ($wgUser->isLoggedIn()): ?>
 						<a href="#" data-dropdown="drop1" class="button dropdown small secondary radius"><i class="icon-cog"><span class="show-for-medium-up">&nbsp;Actions</span></i></a>
 						<ul id="drop1" class="views large-12 columns f-dropdown">
