@@ -44,7 +44,7 @@ class foregroundTemplate extends BaseTemplate {
 
 		    		<ul id="top-bar-left" class="left">
 		 						<li class="divider"></li>
-									<?php foreach ( $this->getSidebar() as $boxName => $box ) { if ( ($box['header'] != "Toolbox") && ($box['header'] != "Tools") ) { ?>
+									<?php foreach ( $this->getSidebar() as $boxName => $box ) { if ( ($box['header'] != wfMessage( 'toolbox' )->text())  ) { ?>
 									<li class="has-dropdown active"  id='<?php echo Sanitizer::escapeId( $box['id'] ) ?>'<?php echo Linker::tooltip( $box['id'] ) ?>>
 											<a href="#"><?php echo htmlspecialchars( $box['header'] ); ?></a>
 											<?php if ( is_array( $box['content'] ) ) { ?>
@@ -64,7 +64,7 @@ class foregroundTemplate extends BaseTemplate {
 		        				<?php echo $this->makeSearchInput(array('placeholder' => 'Search...', 'id' => 'searchInput') ); ?>
 		        			</div>
 		        			 <div class="small-4 columns">
-		        				<button type="submit" class="button search">Search</button>
+		        				<button type="submit" class="button search"><?php echo wfMessage( 'search' )->text() ?></button>
 		        			</div>
 		        		</div>
 		        	</form>
@@ -76,7 +76,7 @@ class foregroundTemplate extends BaseTemplate {
 									<ul class="dropdown">
 										<?php foreach ( $this->getToolbox() as $key => $item ) { echo $this->makeListItem($key, $item); } ?>
 										<li id="n-recentchanges"><?php echo Linker::specialLink('Recentchanges') ?></li>
-										<li id="n-help" <?php echo Linker::tooltip('help') ?>><a href="/wiki/Help:Contents">Help</a></li>
+										<li id="n-help" <?php echo Linker::tooltip('help') ?>><a href="/wiki/Help:Contents"><?php echo wfMessage( 'help' )->text() ?></a></li>
 									</ul>
 								</li>
 
@@ -92,7 +92,7 @@ class foregroundTemplate extends BaseTemplate {
 								<?php if (isset($this->data['personal_urls']['anonlogin'])): ?>
 									<a href="<?php echo $this->data['personal_urls']['anonlogin']['href']; ?>">Sign In</a>
 								<?php elseif (isset($this->data['personal_urls']['login'])): ?>
-									<a href="<?php echo $this->data['personal_urls']['login']['href']; ?>">Sign In</a>
+									<a href="<?php echo htmlspecialchars($this->data['personal_urls']['login']['href']); ?>"><?php echo wfMessage( 'login' )->text() ?></a>
 								<?php else: ?>
 									<?php echo Linker::link(Title::newFromText('Special:UserLogin'), 'Sign In'); ?>
 								<?php endif; ?>
@@ -120,7 +120,7 @@ class foregroundTemplate extends BaseTemplate {
 		<div class="row">
 				<div id="p-cactions" class="large-12 columns">
 					<?php if ($wgUser->isLoggedIn()): ?>
-						<a href="#" data-dropdown="drop1" class="button dropdown small secondary radius"><i class="icon-cog"><span class="show-for-medium-up">&nbsp;Actions</span></i></a>
+						<a href="#" data-dropdown="drop1" class="button dropdown small secondary radius"><i class="icon-cog"><span class="show-for-medium-up">&nbsp;<?php echo wfMessage( 'actions' )->text() ?></span></i></a>
 						<ul id="drop1" class="views large-12 columns f-dropdown">
 							<?php foreach( $this->data['content_actions'] as $key => $item ) { echo $this->makeListItem($key, $item); } ?>
 							<?php wfRunHooks( SkinTemplateToolboxEnd, array( &$this, true ) );  ?>
@@ -158,8 +158,6 @@ class foregroundTemplate extends BaseTemplate {
 				<?php } ?>
 		</ul>
 		</footer>
-
-		<div id="mw-js-message" style="display:none;"></div>
 
 		<?php $this->printTrail(); ?>
 
