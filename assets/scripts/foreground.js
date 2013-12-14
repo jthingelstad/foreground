@@ -22,6 +22,10 @@ jQuery(document).ready(function() {
   jQuery('li#ca-unwatch a').addClass('icon-star').text(' ' + jQuery('li#ca-unwatch a').text());
   jQuery('li#ca-purge a').addClass('icon-refresh').text(' ' + jQuery('li#ca-purge a').text());
   jQuery('li#t-smwbrowselink a').addClass('icon-eye-open').text(' ' + jQuery('li#t-smwbrowselink a').text());
+  jQuery('li#ca-ask_delete_permanently a').addClass('icon-cut').text(' ' + jQuery('li#ca-ask_delete_permanently a').text());
+  if ( jQuery( '#ca-addsection' ).length ) {
+        jQuery('li#ca-addsection a').addClass('icon-plus-sign').text(' ' + jQuery('li#ca-addsection a').attr('title').replace(/\[.+/g,""));
+  }
 
 
   // Turn categories into labels
