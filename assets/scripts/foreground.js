@@ -10,6 +10,7 @@ jQuery(document).ready(function() {
 
   jQuery('[id^=ca-nstab] a').addClass('icon-file').text(' ' + jQuery('[id^=ca-nstab] a').text());
   jQuery('li#ca-talk a').addClass('icon-comments').text(' ' + jQuery('li#ca-talk a').text());
+  jQuery('li#ca-talk.new a').addClass('icon-comments-alt').text(' ' + jQuery('li#ca-talk.new a').text());
   jQuery('li#ca-edit a').addClass('icon-edit').text(' ' + jQuery('li#ca-edit a').text());
   jQuery('li#ca-viewsource a').addClass('icon-book').text(' ' + jQuery('li#ca-viewsource a').text());
   jQuery('li#ca-form_edit a').addClass('icon-edit-sign').text(' ' + jQuery('li#ca-form_edit a').text());
