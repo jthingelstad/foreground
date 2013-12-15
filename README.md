@@ -56,6 +56,6 @@ You may also want to allow users to set a User CSS if they want to tweak things 
     # Allow User CSS, mostly for skin testing
     $wgAllowUserCss = true;
 
-## Wikis Using Foreground
+## Using Foreground
 
-You can see a list of wikis with [Foreground installed at WikiApiary](http://wikiapiary.com/wiki/Skin:Foreground).
+There is a [mailing list to discuss Foreground](http://lists.thingelstad.com/cgi-bin/mailman/listinfo/foreground-l). Please join to connect with others and explore questions about using Foreground on your wiki. You can see a list of wikis with [Foreground installed at WikiApiary](http://wikiapiary.com/wiki/Skin:Foreground).
