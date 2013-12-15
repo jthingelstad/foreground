@@ -28,6 +28,20 @@ To activate Foreground for all users and anonymous visitors, you need to set the
 
     $wgDefaultSkin = "foreground";
 
+## Configuration
+
+Use following features in `LocalSettings.php` to change the behavior. 
+
+- `showActionsForAnon => true` displays page actions for non-logged-in visitors.
+- `makeNavFixed => true` menu will be fixed on top. 
+
+These are the default values:
+
+    $wgForegroundFeatures = array(
+      'showActionsForAnon' => true,
+      'makeNavFixed' => false,
+    );
+
 ### Notes on other skins
 
 As you build a wiki out with Foreground you will likely use the responsive grid from Foundation. This is key to making a responsive wiki, and is one of the largest _migration_ requirements when you want to move a wiki that ppreviously used Vector (and likely a lot of tables for layout) to Foreground. Once you do this, the ability of a user to select whatever skin will be removed. If you take full advantage of Foreground in your templates the lack of the Foundation grid will make viewing the wiki using [Vector](http://wikiapiary.com/wiki/Skin:Vector) or [MonoBook](http://wikiapiary.com/wiki/Skin:MonoBook) very difficult.

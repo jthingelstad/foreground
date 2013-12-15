@@ -6,6 +6,7 @@
  * @file
  * @ingroup Skins
  */
+ 
 
 class Skinforeground extends SkinTemplate {
 	public $skinname = 'foreground', $stylename = 'foreground', $template = 'foregroundTemplate', $useHeadElement = true;
@@ -30,8 +31,19 @@ class Skinforeground extends SkinTemplate {
 class foregroundTemplate extends BaseTemplate {
 	public function execute() {
 		global $wgUser;
+		global $wgForegroundFeatures;
 		wfSuppressWarnings();
 		$this->html('headelement');
+		$wgForegroundFeaturesDefaults = array(
+			'showActionsForAnon' => true,
+			'makeNavFixed' => false,
+		);
+		foreach ($wgForegroundFeaturesDefaults as $fgOption => $fgOptionValue) {
+			if ( !isset($wgForegroundFeatures[$fgOption]) ) {
+				$wgForegroundFeatures[$fgOption] = $fgOptionValue;
+			}
+		}
+		if ($wgForegroundFeatures['makeNavFixed']) echo "<div class='fixed'>";
 ?>
 <!-- START FOREGROUNDTEMPLATE -->
 		<nav class="top-bar">
@@ -103,7 +115,7 @@ class foregroundTemplate extends BaseTemplate {
 		       </ul>
 		     </section>
 		</nav>
-
+		<?php if ($wgForegroundFeatures['makeNavFixed']) echo "</div>"; ?>
 		<div class="row">
 				<div class="large-12 columns">
 				<!--[if lt IE 9]>
@@ -119,7 +131,7 @@ class foregroundTemplate extends BaseTemplate {
 
 		<div class="row">
 				<div id="p-cactions" class="large-12 columns">
-					<?php if ($wgUser->isLoggedIn()): ?>
+					<?php if ($wgUser->isLoggedIn() || $wgForegroundFeatures['showActionsForAnon']): ?>
 						<a href="#" data-dropdown="drop1" class="button dropdown small secondary radius"><i class="icon-cog"><span class="show-for-medium-up">&nbsp;<?php echo wfMessage( 'actions' )->text() ?></span></i></a>
 						<ul id="drop1" class="views large-12 columns f-dropdown">
 							<?php foreach( $this->data['content_actions'] as $key => $item ) { echo $this->makeListItem($key, $item); } ?>
