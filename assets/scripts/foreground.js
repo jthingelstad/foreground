@@ -5,7 +5,8 @@ jQuery(document).ready(function() {
 
 
   jQuery(document).foundation(function (response) {
-    console.log(response.errors);
+    // console.log(response.errors); < this line will produce error in ie9!
+    if (window.console) console.log(response.errors);
   });
 
   jQuery('[id^=ca-nstab] a').addClass('icon-file').text(' ' + jQuery('[id^=ca-nstab] a').text());
