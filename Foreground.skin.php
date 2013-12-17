@@ -13,7 +13,28 @@ class Skinforeground extends SkinTemplate {
 
 	public function setupSkinUserCss(OutputPage $out) {
 		parent::setupSkinUserCss($out);
-		$out->addHeadItem('ie-meta', '<meta http-equiv="X-UA-Compatible" content="IE=edge" />');
+		global $wgForegroundFeatures;
+		$wgForegroundFeaturesDefaults = array(
+			'showActionsForAnon' => true,
+			'NavWrapperType' => 'divonly',
+			'showHelpUnderTools' => true,
+			'showRecentChangesUnderTools' => true,
+			'IeEdgeCode' => 1
+		);
+		foreach ($wgForegroundFeaturesDefaults as $fgOption => $fgOptionValue) {
+			if ( !isset($wgForegroundFeatures[$fgOption]) ) {
+				$wgForegroundFeatures[$fgOption] = $fgOptionValue;
+			}
+		}
+		switch ($wgForegroundFeatures['IeEdgeCode']) {
+			case 1:
+				$out->addHeadItem('ie-meta', '<meta http-equiv="X-UA-Compatible" content="IE=edge" />');
+				break;
+			case 2:
+				if (isset($_SERVER['HTTP_USER_AGENT']) && (strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE') !== false))
+					header('X-UA-Compatible: IE=edge');
+				break;
+		}
 		$out->addModuleStyles('skins.foreground');
 	}
 
@@ -34,22 +55,22 @@ class foregroundTemplate extends BaseTemplate {
 		global $wgForegroundFeatures;
 		wfSuppressWarnings();
 		$this->html('headelement');
-		$wgForegroundFeaturesDefaults = array(
-			'showActionsForAnon' => true,
-			'makeNavFixed' => false,
-		);
-		foreach ($wgForegroundFeaturesDefaults as $fgOption => $fgOptionValue) {
-			if ( !isset($wgForegroundFeatures[$fgOption]) ) {
-				$wgForegroundFeatures[$fgOption] = $fgOptionValue;
-			}
+		switch ($wgForegroundFeatures['NavWrapperType']) {
+			case '0':
+				break;
+			case 'divonly':
+				echo "<div id='navwrapper'>";
+				break;
+			default:
+				echo "<div id='navwrapper' class='". $wgForegroundFeatures['NavWrapperType']. "'>";
+				break;
 		}
-		if ($wgForegroundFeatures['makeNavFixed']) echo "<div class='fixed'>";
 ?>
 <!-- START FOREGROUNDTEMPLATE -->
 		<nav class="top-bar">
 						<ul class="title-area">
 							<li class="name"><h1><a href="<?php echo $this->data['nav_urls']['mainpage']['href']; ?>"><?php echo $this->text('sitename'); ?></a></h1></li>
-						   <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+						   <li class="toggle-topbar menu-icon"><a href="#"><span><?php echo wfMessage( 'foreground-menutitle' )->text(); ?></span></a></li>
 						</ul>
 
 						<section class="top-bar-section">
@@ -64,7 +85,6 @@ class foregroundTemplate extends BaseTemplate {
 													<?php foreach ( $box['content'] as $key => $item ) { echo $this->makeListItem( $key, $item ); } ?>
         								</ul>
 											<?php } } ?>
-									</li>
 									<?php } ?>
 		    		</ul>
 
@@ -73,7 +93,7 @@ class foregroundTemplate extends BaseTemplate {
 		        	<form action="<?php $this->text( 'wgScript' ); ?>" id="searchform" class="mw-search">
 		        		<div class="row collapse">
 		            	<div class="small-8 columns">
-		        				<?php echo $this->makeSearchInput(array('placeholder' => 'Search...', 'id' => 'searchInput') ); ?>
+		        				<?php echo $this->makeSearchInput(array('placeholder' => wfMessage('searchsuggest-search')->text(), 'id' => 'searchInput') ); ?>
 		        			</div>
 		        			 <div class="small-4 columns">
 		        				<button type="submit" class="button search"><?php echo wfMessage( 'search' )->text() ?></button>
@@ -87,8 +107,8 @@ class foregroundTemplate extends BaseTemplate {
 								<li class="has-dropdown active"><a href="#"><i class="icon-cogs"></i></a>
 									<ul class="dropdown">
 										<?php foreach ( $this->getToolbox() as $key => $item ) { echo $this->makeListItem($key, $item); } ?>
-										<li id="n-recentchanges"><?php echo Linker::specialLink('Recentchanges') ?></li>
-										<li id="n-help" <?php echo Linker::tooltip('help') ?>><a href="/wiki/Help:Contents"><?php echo wfMessage( 'help' )->text() ?></a></li>
+										<?php if ($wgForegroundFeatures['showRecentChangesUnderTools']): ?><li id="n-recentchanges"><?php echo Linker::specialLink('Recentchanges') ?></li><?php endif; ?>
+										<?php if ($wgForegroundFeatures['showHelpUnderTools']): ?><li id="n-help" <?php echo Linker::tooltip('help') ?>><a href="/wiki/Help:Contents"><?php echo wfMessage( 'help' )->text() ?></a></li><?php endif; ?>
 									</ul>
 								</li>
 
@@ -102,11 +122,11 @@ class foregroundTemplate extends BaseTemplate {
 							<?php else: ?>
 							<li>
 								<?php if (isset($this->data['personal_urls']['anonlogin'])): ?>
-									<a href="<?php echo $this->data['personal_urls']['anonlogin']['href']; ?>">Sign In</a>
+									<a href="<?php echo $this->data['personal_urls']['anonlogin']['href']; ?>"><?php echo wfMessage( 'login' )->text() ?></a>
 								<?php elseif (isset($this->data['personal_urls']['login'])): ?>
 									<a href="<?php echo htmlspecialchars($this->data['personal_urls']['login']['href']); ?>"><?php echo wfMessage( 'login' )->text() ?></a>
 								<?php else: ?>
-									<?php echo Linker::link(Title::newFromText('Special:UserLogin'), 'Sign In'); ?>
+									<?php echo Linker::link(Title::newFromText('Special:UserLogin'), wfMessage( 'login' )->text()); ?>
 								<?php endif; ?>
 							</li>
 
@@ -115,11 +135,11 @@ class foregroundTemplate extends BaseTemplate {
 		       </ul>
 		     </section>
 		</nav>
-		<?php if ($wgForegroundFeatures['makeNavFixed']) echo "</div>"; ?>
+		<?php if ($wgForegroundFeatures['NavWrapperType'] != '0') echo "</div>"; ?>
 		<div class="row">
 				<div class="large-12 columns">
 				<!--[if lt IE 9]>
-				<div id="siteNotice" class="sitenotice panel radius"><?php echo $this->text('sitename'); ?> may not look as expected in this version of Internet Explorer. We recommend you upgrade to a newer version of Internet Explorer or switch to a browser like Firefox or Chrome.</div>
+				<div id="siteNotice" class="sitenotice panel radius"><?php echo $this->text('sitename') . ' '. wfMessage( 'foreground-browsermsg' )->text(); ?></div>
 				<![endif]-->
 
 				<?php if ( $this->data['sitenotice'] ) { ?><div id="siteNotice" class="sitenotice panel radius"><?php $this->html( 'sitenotice' ); ?></div><?php } ?>
@@ -134,7 +154,7 @@ class foregroundTemplate extends BaseTemplate {
 					<?php if ($wgUser->isLoggedIn() || $wgForegroundFeatures['showActionsForAnon']): ?>
 						<a href="#" data-dropdown="drop1" class="button dropdown small secondary radius"><i class="icon-cog"><span class="show-for-medium-up">&nbsp;<?php echo wfMessage( 'actions' )->text() ?></span></i></a>
 						<ul id="drop1" class="views large-12 columns f-dropdown">
-							<?php foreach( $this->data['content_actions'] as $key => $item ) { echo $this->makeListItem($key, $item); } ?>
+							<?php foreach( $this->data['content_actions'] as $key => $item ) { echo preg_replace(array('/\sprimary="1"/','/\scontext="[a-z]+"/','/\srel="archives"/'),'',$this->makeListItem($key, $item)); } ?>
 							<?php wfRunHooks( SkinTemplateToolboxEnd, array( &$this, true ) );  ?>
 						</ul>
 					<?php endif;
