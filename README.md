@@ -33,14 +33,39 @@ To activate Foreground for all users and anonymous visitors, you need to set the
 Use following features in `LocalSettings.php` to change the behavior. 
 
 - `showActionsForAnon => true` displays page actions for non-logged-in visitors.
-- `makeNavFixed => true` menu will be fixed on top. 
+- `NavWrapperType => 'divonly'`: only a div with id `navwrapper` will be created. `0` - no div will be created (old behavior), other values will be used as class. 
+- `showHelpUnderTools => true` a Link to "Help" will be created under "Tools".
+- `showRecentChangesUnderTools => true` a Link to "recent changes" will be created under "Tools".
+- `IeEdgeCode => 1` will produce a meta tag with "X-UA-Compatible" content="IE=edge", `2` will sent a header, `0` nothing will be done
 
 These are the default values:
 
     $wgForegroundFeatures = array(
       'showActionsForAnon' => true,
-      'makeNavFixed' => false,
+      'NavWrapperType' => 'divonly',
+      'showHelpUnderTools' => true,
+      'showRecentChangesUnderTools' => true,
+      'IeEdgeCode' => 1
     );
+
+### Usage of NavWrapperType
+
+With a setting like:
+
+    'NavWrapperType' => 'divonly'
+
+and the created div called `navwrapper` anonymous visitors can change the setting of navbar (fixed or sticky) by 
+User-Script (Firefox-extensions like greasemonkey or scriptish), users can take a gadget or their JavaScript, CSS ... :
+
+    $('#navwrapper').addClass('sticky');
+
+
+Or you set class in LocalSettings.php with:
+
+    'NavWrapperType' => 'contain-to-grid fixed'
+
+and visitors will be able to remove this class by their own JavaScript or gadget ...
+
 
 ### Notes on other skins
 
