@@ -21,6 +21,15 @@ a.button.dropdown { float:right;}
 /* Hide some rows on form-edit (e.g. a thing's title) */
 body.action-formedit .row.hide-on-form-edit { display: none;}
 
+/* Move the MediaWiki notification area so it isn't on top of the Action menu */
+.mw-notification-area {
+  margin-top: 2em;
+}
+/* Also adjust z-index of action menu to force it on top */
+#p-cactions #drop1 {
+  z-index: 100000;
+}
+
 td.mw-submit a,
 .htmlform-tip,
 #mw-upload-permitted p {
