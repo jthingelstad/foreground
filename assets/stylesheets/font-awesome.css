@@ -27,8 +27,8 @@
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('/w/skins/foreground/assets/font/fontawesome-webfont.eot');
-  src: url('/w/skins/foreground/assets/font/fontawesome-webfont.eot?#') format('embedded-opentype'), url('/w/skins/foreground/assets/font/fontawesome-webfont.ttf') format('truetype');
+  src: url('/wiki/skins/foreground/assets/font/fontawesome-webfont.eot');
+  src: url('/wiki/skins/foreground/assets/font/fontawesome-webfont.eot?#') format('embedded-opentype'), url('/wiki/skins/foreground/assets/font/fontawesome-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
