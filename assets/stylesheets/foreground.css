@@ -57,7 +57,7 @@ h4.namespace.label {
 }
 
 h2 span {
-  display:block;
+  display: inline-block;
 }
 
 h2.title {
