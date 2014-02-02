@@ -10,7 +10,7 @@
 $messages = array();
 
 /** English
- * @author WikiWonders
+ * @author Garrick Van Buren
  */
 $messages['en'] = array(
 	'skinname-foreground' => 'Foreground',

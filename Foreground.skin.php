@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Skin file for skin WikiWonders' Foreground
+ * Skin file for Foreground
  *
  * @file
  * @ingroup Skins

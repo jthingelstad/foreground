@@ -1,11 +1,11 @@
 <?php
 
 /**
- * WikiWonders foreground Skin
+ * Foreground Skin
  *
  * @file
  * @ingroup Skins
- * @author WikiWonders <skins@wikiwonders.net>
+ * @author Garrick Van Buren, Jamie Thingelstad
  * @license 2-clause BSD
  */
 
@@ -18,8 +18,8 @@ if( ! defined( 'MEDIAWIKI' ))
 $wgExtensionCredits['skin'][] = array(
 	'path'		 => __FILE__,
 	'name'		 => 'Foreground',
-	'url'		 => 'http://foreground.wikiwonders.net/',
-	'author'	 => 'WikiWonders',
+	'url'		 => 'http://foreground.thingelstad.com/',
+	'author'	 => 'Garrick Van Buren, Jamie Thingelstad, Others...',
 	'descriptionmsg' => 'foreground-desc',
 );
 
