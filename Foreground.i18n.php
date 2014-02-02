@@ -28,3 +28,13 @@ $messages['de'] = array(
 	'foreground-browsermsg' => 'sieht in dieser Version des Internet Explorers nicht wie gewünscht aus. Es wird ein Upgrade des Internet Explorers oder der Umstieg auf einen Browser wie Firefox oder Chrome empfohlen.',
 	'foreground-menutitle' => 'Menü'
 );
+
+/** Spanish (español)
+ * @author Manuel Rubio 
+ */
+$messages['es'] = array(
+	'skinname-foreground' => 'Foreground',
+	'foreground-desc' => 'Provee una plantilla que se centra en resaltar en primer plano el contenido.',
+	'foreground-browsermsg' => 'puede verse diferente a lo esperado en esta versión de Internet Explorer le recomendamos que se actualice a una versión más reciente, o cambie a un navegador como Firefox o Chrome.',
+	'foreground-menutitle' => 'Menu'
+);
