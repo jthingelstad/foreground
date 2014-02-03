@@ -136,6 +136,8 @@ class foregroundTemplate extends BaseTemplate {
 		     </section>
 		</nav>
 		<?php if ($wgForegroundFeatures['NavWrapperType'] != '0') echo "</div>"; ?>
+		
+		<div id="page-content">
 		<div class="row">
 				<div class="large-12 columns">
 				<!--[if lt IE 9]>
@@ -191,6 +193,8 @@ class foregroundTemplate extends BaseTemplate {
 		</ul>
 		</footer>
 
+		</div>
+		
 		<?php $this->printTrail(); ?>
 
 		</body>
