@@ -19,12 +19,12 @@ $wgExtensionCredits['skin'][] = array(
 	'path'		 => __FILE__,
 	'name'		 => 'Foreground',
 	'url'		 => 'http://foreground.thingelstad.com/',
-	'author'	 => array (
+	'author'	 => array(
 		'Garrick Van Buren',
 		'Jamie Thingelstad',
 		'...'
-		)
-	'descriptionmsg' => 'foreground-desc',
+		),
+	'descriptionmsg' => 'foreground-desc'
 );
 
 $wgValidSkinNames['foreground'] = 'Foreground';
