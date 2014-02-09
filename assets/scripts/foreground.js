@@ -42,8 +42,8 @@ jQuery(document).ready(function() {
   jQuery('li#t-permalink a').addClass('fa fa-dot-circle-o').text(' ' + jQuery('li#t-permalink a').text());
   jQuery('li#t-info a').addClass('fa fa-info').text(' ' + jQuery('li#t-info a').text());
 
-  jQuery('li#n-recentchanges a').addClass('fa fa-tasks').text(' ' + jQuery('li#n-recentchanges a').text());
-  jQuery('li#n-help a').addClass('fa fa-question').text(' ' + jQuery('li#n-help a').text());
+  jQuery('ul#toolbox-dropdown.dropdown>li#n-recentchanges a').addClass('fa fa-tasks').text(' ' + jQuery('ul#toolbox-dropdown.dropdown>li#n-recentchanges a').text());
+  jQuery('ul#toolbox-dropdown.dropdown>li#n-help a').addClass('fa fa-question').text(' ' + jQuery('ul#toolbox-dropdown.dropdown>li#n-help a').text());
 
 
   // Turn categories into labels

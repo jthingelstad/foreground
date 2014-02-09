@@ -105,7 +105,7 @@ class foregroundTemplate extends BaseTemplate {
 		         <li class="has-form">
 
 								<li class="has-dropdown active"><a href="#"><i class="fa fa-cogs"></i></a>
-									<ul class="dropdown">
+									<ul id="toolbox-dropdown" class="dropdown">
 										<?php foreach ( $this->getToolbox() as $key => $item ) { echo $this->makeListItem($key, $item); } ?>
 										<?php if ($wgForegroundFeatures['showRecentChangesUnderTools']): ?><li id="n-recentchanges"><?php echo Linker::specialLink('Recentchanges') ?></li><?php endif; ?>
 										<?php if ($wgForegroundFeatures['showHelpUnderTools']): ?><li id="n-help" <?php echo Linker::tooltip('help') ?>><a href="/wiki/Help:Contents"><?php echo wfMessage( 'help' )->text() ?></a></li><?php endif; ?>

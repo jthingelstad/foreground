@@ -30,6 +30,10 @@ body.action-formedit .row.hide-on-form-edit { display: none;}
   z-index: 100000;
   white-space: nowrap;
 }
+/* Make sure top bar is even more z-indx! */
+#toolbox-dropdown {
+  z-index: 10000000;
+}
 
 td.mw-submit a,
 .htmlform-tip,
