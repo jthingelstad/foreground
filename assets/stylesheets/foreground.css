@@ -28,6 +28,7 @@ body.action-formedit .row.hide-on-form-edit { display: none;}
 /* Also adjust z-index of action menu to force it on top */
 #p-cactions #drop1 {
   z-index: 100000;
+  white-space: nowrap;
 }
 
 td.mw-submit a,

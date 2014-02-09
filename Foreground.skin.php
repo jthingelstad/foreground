@@ -104,7 +104,7 @@ class foregroundTemplate extends BaseTemplate {
 		         <li class="divider show-for-small"></li>
 		         <li class="has-form">
 
-								<li class="has-dropdown active"><a href="#"><i class="icon-cogs"></i></a>
+								<li class="has-dropdown active"><a href="#"><i class="fa fa-cogs"></i></a>
 									<ul class="dropdown">
 										<?php foreach ( $this->getToolbox() as $key => $item ) { echo $this->makeListItem($key, $item); } ?>
 										<?php if ($wgForegroundFeatures['showRecentChangesUnderTools']): ?><li id="n-recentchanges"><?php echo Linker::specialLink('Recentchanges') ?></li><?php endif; ?>
@@ -113,7 +113,7 @@ class foregroundTemplate extends BaseTemplate {
 								</li>
 
 							<?php if ($wgUser->isLoggedIn()): ?>
-								<li id="personal-tools-dropdown" class="has-dropdown active"><a href="#"><i class="icon-user"></i></a>
+								<li id="personal-tools-dropdown" class="has-dropdown active"><a href="#"><i class="fa fa-user"></i></a>
 									<ul class="dropdown">
 									<?php foreach ( $this->getPersonalTools() as $key => $item ) { echo $this->makeListItem($key, $item); } ?>
 									</ul>
@@ -154,7 +154,7 @@ class foregroundTemplate extends BaseTemplate {
 		<div class="row">
 				<div id="p-cactions" class="large-12 columns">
 					<?php if ($wgUser->isLoggedIn() || $wgForegroundFeatures['showActionsForAnon']): ?>
-						<a href="#" data-dropdown="drop1" class="button dropdown small secondary radius"><i class="icon-cog"><span class="show-for-medium-up">&nbsp;<?php echo wfMessage( 'actions' )->text() ?></span></i></a>
+						<a href="#" data-dropdown="drop1" class="button dropdown small secondary radius"><i class="fa fa-cog"><span class="show-for-medium-up">&nbsp;<?php echo wfMessage( 'actions' )->text() ?></span></i></a>
 						<ul id="drop1" class="views large-12 columns f-dropdown">
 							<?php foreach( $this->data['content_actions'] as $key => $item ) { echo preg_replace(array('/\sprimary="1"/','/\scontext="[a-z]+"/','/\srel="archives"/'),'',$this->makeListItem($key, $item)); } ?>
 							<?php wfRunHooks( SkinTemplateToolboxEnd, array( &$this, true ) );  ?>
