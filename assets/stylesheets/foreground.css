@@ -34,6 +34,9 @@ body.action-formedit .row.hide-on-form-edit { display: none;}
 #toolbox-dropdown {
   z-index: 10000000;
 }
+#personal-tools-dropdown {
+  z-index: 10000000;
+}
 
 td.mw-submit a,
 .htmlform-tip,
