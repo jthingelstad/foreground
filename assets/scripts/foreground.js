@@ -26,7 +26,7 @@ jQuery(document).ready(function() {
   jQuery('li#ca-purge a').addClass('fa fa-refresh fa-fw').text(' ' + jQuery('li#ca-purge a').text());
   jQuery('li#ca-ask_delete_permanently a').addClass('fa fa-cut fa-fw').text(' ' + jQuery('li#ca-ask_delete_permanently a').text());
   if ( jQuery( '#ca-addsection' ).length ) {
-        jQuery('li#ca-addsection a').addClass('fa fa-plus-sign fa-fw').text(' ' + jQuery('li#ca-addsection a').attr('title').replace(/\[.+/g,""));
+        jQuery('li#ca-addsection a').addClass('fa fa-plus fa-fw').text(' ' + jQuery('li#ca-addsection a').attr('title').replace(/\[.+/g,""));
   }
 
   jQuery('li#t-smwbrowselink a').addClass('fa fa-eye').text(' ' + jQuery('li#t-smwbrowselink a').text());
