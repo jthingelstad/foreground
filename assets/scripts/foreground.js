@@ -29,6 +29,14 @@ jQuery(document).ready(function() {
         jQuery('li#ca-addsection a').addClass('fa fa-plus fa-fw').text(' ' + jQuery('li#ca-addsection a').attr('title').replace(/\[.+/g,""));
   }
 
+  jQuery('li#pt-userpage a').addClass('fa fa-user').text(' ' + jQuery('li#pt-userpage a').text());
+  jQuery('li#pt-mytalk a').addClass('fa fa-comments').text(' ' + jQuery('li#pt-mytalk a').text());
+  jQuery('li#pt-adminlinks a').addClass('fa fa-bolt').text(' ' + jQuery('li#pt-adminlinks a').text());
+  jQuery('li#pt-preferences a').addClass('fa fa-ellipsis-h').text(' ' + jQuery('li#pt-preferences a').text());
+  jQuery('li#pt-watchlist a').addClass('fa fa-th-list').text(' ' + jQuery('li#pt-watchlist a').text());
+  jQuery('li#pt-mycontris a').addClass('fa fa-smile-o').text(' ' + jQuery('li#pt-mycontris a').text());
+  jQuery('li#pt-logout a').addClass('fa fa-power-off').text(' ' + jQuery('li#pt-logout a').text());
+
   jQuery('li#t-smwbrowselink a').addClass('fa fa-eye').text(' ' + jQuery('li#t-smwbrowselink a').text());
   jQuery('li#t-whatlinkshere a').addClass('fa fa-arrows').text(' ' + jQuery('li#t-whatlinkshere a').text());
   jQuery('li#t-blockip a').addClass('fa fa-ban').text(' ' + jQuery('li#t-blockip a').text());
