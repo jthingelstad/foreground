@@ -17,6 +17,7 @@ jQuery(document).ready(function() {
   jQuery('li#ca-form_edit a').addClass('fa fa-pencil-square fa-fw').text(' ' + jQuery('li#ca-form_edit a').text());
   jQuery('li#ca-history a').addClass('fa fa-archive fa-fw').text(' ' + jQuery('li#ca-history a').text());
   jQuery('li#ca-delete a').addClass('fa fa-trash-o fa-fw').text(' ' + jQuery('li#ca-delete a').text());
+  jQuery('li#ca-undelete a').addClass('fa fa-undo fa-fw').text(' ' + jQuery('li#ca-undelete a').text());
   jQuery('li#ca-move a').addClass('fa fa-truck fa-fw').text(' ' + jQuery('li#ca-move a').text());
   jQuery('li#ca-protect a').addClass('fa fa-shield fa-fw').text(' ' + jQuery('li#ca-protect a').text());
   jQuery('li#ca-unprotect a').addClass('fa fa-shield fa-fw').text(' ' + jQuery('li#ca-unprotect a').text());
