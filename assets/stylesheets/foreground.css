@@ -30,6 +30,11 @@ body.action-formedit .row.hide-on-form-edit { display: none;}
   z-index: 100000;
   white-space: nowrap;
 }
+#p-cactions #drop1 a {
+  width: 100%;
+  text-align: left;
+}
+
 /* Make sure top bar is even more z-indx! */
 #toolbox-dropdown {
   z-index: 10000000;
