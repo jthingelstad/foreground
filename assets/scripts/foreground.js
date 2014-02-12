@@ -8,6 +8,12 @@ jQuery(document).ready(function() {
     // console.log(response.errors); < this line will produce error in ie9!
     if (window.console) console.log(response.errors);
   });
+  
+  // The Echo extension puts an item in personal tools that Foreground really should have in the top menu
+  // to make this easier, we move it here and loaded earlier to speed up transform
+  jQuery("#pt-notifications").prependTo("#echo-notifications");
+  
+  // Add classes for font-awesome
 
   jQuery('[id^=ca-nstab] a').addClass('fa fa-file fa-fw').text(' ' + jQuery('[id^=ca-nstab] a').text());
   jQuery('li#ca-talk a').addClass('fa fa-comments fa-fw').text(' ' + jQuery('li#ca-talk a').text());
@@ -65,9 +71,5 @@ jQuery(document).ready(function() {
   jQuery('ul#drop1').mouseleave(function(){
     jQuery('ul#drop1').removeClass('open').css('top', '-9999px').css('left', '785px');
   });
-
-  // The Echo extension puts an item in personal tools that Foreground really should have in the top menu
-  // to make this easier, we move it here
-  jQuery("#pt-notifications").prependTo("#top-bar-right");
 
 });

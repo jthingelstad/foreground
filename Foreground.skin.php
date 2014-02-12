@@ -159,6 +159,9 @@ class foregroundTemplate extends BaseTemplate {
 							<?php foreach( $this->data['content_actions'] as $key => $item ) { echo preg_replace(array('/\sprimary="1"/','/\scontext="[a-z]+"/','/\srel="archives"/'),'',$this->makeListItem($key, $item)); } ?>
 							<?php wfRunHooks( SkinTemplateToolboxEnd, array( &$this, true ) );  ?>
 						</ul>
+						<?php if ($wgUser->isLoggedIn()): ?>
+							<div id="echo-notifications"></div>
+						<?php endif; ?>
 					<?php endif;
 					$namespace = str_replace('_', ' ', $this->getSkin()->getTitle()->getNsText());
 					$displaytitle = $this->data['title'];
