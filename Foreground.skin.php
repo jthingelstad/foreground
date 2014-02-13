@@ -6,7 +6,7 @@
  * @file
  * @ingroup Skins
  */
- 
+
 
 class Skinforeground extends SkinTemplate {
 	public $skinname = 'foreground', $stylename = 'foreground', $template = 'foregroundTemplate', $useHeadElement = true;
@@ -67,7 +67,7 @@ class foregroundTemplate extends BaseTemplate {
 		}
 ?>
 <!-- START FOREGROUNDTEMPLATE -->
-		<nav class="top-bar">
+		<nav class="top-bar" data-topbar>
 						<ul class="title-area">
 							<li class="name"><h1><a href="<?php echo $this->data['nav_urls']['mainpage']['href']; ?>"><?php echo $this->text('sitename'); ?></a></h1></li>
 						   <li class="toggle-topbar menu-icon"><a href="#"><span><?php echo wfMessage( 'foreground-menutitle' )->text(); ?></span></a></li>
@@ -78,7 +78,7 @@ class foregroundTemplate extends BaseTemplate {
 		    		<ul id="top-bar-left" class="left">
 		 						<li class="divider"></li>
 									<?php foreach ( $this->getSidebar() as $boxName => $box ) { if ( ($box['header'] != wfMessage( 'toolbox' )->text())  ) { ?>
-									<li class="has-dropdown active"  id='<?php echo Sanitizer::escapeId( $box['id'] ) ?>'<?php echo Linker::tooltip( $box['id'] ) ?>>
+									<li class="has-dropdown"  id='<?php echo Sanitizer::escapeId( $box['id'] ) ?>'<?php echo Linker::tooltip( $box['id'] ) ?>>
 											<a href="#"><?php echo htmlspecialchars( $box['header'] ); ?></a>
 											<?php if ( is_array( $box['content'] ) ) { ?>
 												<ul class="dropdown">
@@ -96,7 +96,7 @@ class foregroundTemplate extends BaseTemplate {
 		        				<?php echo $this->makeSearchInput(array('placeholder' => wfMessage('searchsuggest-search')->text(), 'id' => 'searchInput') ); ?>
 		        			</div>
 		        			 <div class="small-4 columns">
-		        				<button type="submit" class="button search"><?php echo wfMessage( 'search' )->text() ?></button>
+		        				<button type="submit" class="alert button expand"><?php echo wfMessage( 'search' )->text() ?></button>
 		        			</div>
 		        		</div>
 		        	</form>
@@ -104,7 +104,7 @@ class foregroundTemplate extends BaseTemplate {
 		         <li class="divider show-for-small"></li>
 		         <li class="has-form">
 
-								<li class="has-dropdown active"><a href="#"><i class="fa fa-cogs"></i></a>
+								<li class="has-dropdown"><a href="#"><i class="fa fa-cogs"></i></a>
 									<ul id="toolbox-dropdown" class="dropdown">
 										<?php foreach ( $this->getToolbox() as $key => $item ) { echo $this->makeListItem($key, $item); } ?>
 										<?php if ($wgForegroundFeatures['showRecentChangesUnderTools']): ?><li id="n-recentchanges"><?php echo Linker::specialLink('Recentchanges') ?></li><?php endif; ?>
@@ -113,7 +113,7 @@ class foregroundTemplate extends BaseTemplate {
 								</li>
 
 							<?php if ($wgUser->isLoggedIn()): ?>
-								<li id="personal-tools-dropdown" class="has-dropdown active"><a href="#"><i class="fa fa-user"></i></a>
+								<li id="personal-tools-dropdown" class="has-dropdown"><a href="#"><i class="fa fa-user"></i></a>
 									<ul class="dropdown">
 									<?php foreach ( $this->getPersonalTools() as $key => $item ) { echo $this->makeListItem($key, $item); } ?>
 									</ul>
@@ -136,7 +136,7 @@ class foregroundTemplate extends BaseTemplate {
 		     </section>
 		</nav>
 		<?php if ($wgForegroundFeatures['NavWrapperType'] != '0') echo "</div>"; ?>
-		
+
 		<div id="page-content">
 		<div class="row">
 				<div class="large-12 columns">
@@ -194,9 +194,8 @@ class foregroundTemplate extends BaseTemplate {
 		</footer>
 
 		</div>
-		
 		<?php $this->printTrail(); ?>
-
+  	<script type="text/javascript">$(document).foundation();</script>
 		</body>
 		</html>
 
