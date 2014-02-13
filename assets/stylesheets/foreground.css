@@ -665,6 +665,7 @@ body.mw-special-Userlogin h2.title {
   top: 30px;
   left: -1px;
 }
+
 #echo-notifications .mw-echo-overlay {
   left: -185px;
   width: 300px;
@@ -682,6 +683,7 @@ body.mw-special-Userlogin h2.title {
 #echo-notifications a.mw-echo-short-link .mw-badge {
   margin-left: 0;
 }
+>>>>>>> a442d1c14d07df1c38c0932bae6a345eab07c2a8
 
 #echo-notifications #mw-echo-overlay-pref-link {
   background-image:none;
