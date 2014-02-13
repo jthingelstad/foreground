@@ -13,6 +13,9 @@ a.label.new { background-color: #d0d0d0; }
 
 a.button.dropdown { float:right;}
 
+/* Force FontAwesome to load in the top-nav, Foundation is overriding it with Helvetica. Ban Helvetica */
+.fa { font-family: 'FontAwesome' !important;  }
+
 /* Hide the page actions button for special pages (cuz there's nothing in it) */
 .mw-special-FormEdit a.button.dropdown, .ns-special a.button.dropdown { display:none; }
 
