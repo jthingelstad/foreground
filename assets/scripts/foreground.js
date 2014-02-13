@@ -53,6 +53,8 @@ jQuery(document).ready(function() {
   jQuery('ul#toolbox-dropdown.dropdown>li#n-recentchanges a').addClass('fa fa-tasks').text(' ' + jQuery('ul#toolbox-dropdown.dropdown>li#n-recentchanges a').text());
   jQuery('ul#toolbox-dropdown.dropdown>li#n-help a').addClass('fa fa-question').text(' ' + jQuery('ul#toolbox-dropdown.dropdown>li#n-help a').text());
 
+  // Add Button class to submit buttons with the page body//
+  jQuery('#page-content input[type="submit"]').addClass('button');
 
   // Turn categories into labels
   jQuery('#mw-normal-catlinks ul li a').addClass('label');
