@@ -43,7 +43,6 @@ $wgResourceModules['skins.foreground'] = array(
     	'foreground/assets/stylesheets/jquery.autocomplete.css'
     ),
     'scripts'        => array(
-        'foreground/assets/scripts/foreground.js',
         'foreground/assets/scripts/vendor/jquery.cookie.js',
         'foreground/assets/scripts/vendor/modernizr.js',
         'foreground/assets/scripts/vendor/fastclick.js',
@@ -62,7 +61,8 @@ $wgResourceModules['skins.foreground'] = array(
         'foreground/assets/scripts/foundation/foundation.clearing.js',
         'foreground/assets/scripts/foundation/foundation.alert.js',
         'foreground/assets/scripts/foundation/foundation.accordion.js',
-        'foreground/assets/scripts/foundation/foundation.abide.js'
+        'foreground/assets/scripts/foundation/foundation.abide.js',
+        'foreground/assets/scripts/foreground.js',
     ),
     'remoteBasePath' => &$GLOBALS['wgStylePath'],
     'localBasePath'  => &$GLOBALS['wgStyleDirectory']

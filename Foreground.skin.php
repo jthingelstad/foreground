@@ -198,7 +198,6 @@ class foregroundTemplate extends BaseTemplate {
 
 		</div>
 		<?php $this->printTrail(); ?>
-  	<script type="text/javascript">$(document).foundation();</script>
 		</body>
 		</html>
 

@@ -1,20 +1,14 @@
+jQuery(document).foundation();
 
 jQuery(document).ready(function() {
   // Add the 'less than IE9' class to appropriate version of IE by checking for their support of cssFloat (true in v9)
   if (!jQuery.support.cssFloat) { jQuery('html').addClass('lt-ie9').addClass('no-js'); }
 
-
-  jQuery(document).foundation(function (response) {
-    // console.log(response.errors); < this line will produce error in ie9!
-    if (window.console) console.log(response.errors);
-  });
-  
   // The Echo extension puts an item in personal tools that Foreground really should have in the top menu
   // to make this easier, we move it here and loaded earlier to speed up transform
   jQuery("#pt-notifications").prependTo("#echo-notifications");
-  
-  // Add classes for font-awesome
 
+  // Add classes for font-awesome
   jQuery('[id^=ca-nstab] a').addClass('fa fa-file fa-fw').text(' ' + jQuery('[id^=ca-nstab] a').text());
   jQuery('li#ca-talk a').addClass('fa fa-comments fa-fw').text(' ' + jQuery('li#ca-talk a').text());
   jQuery('li#ca-talk.new a').addClass('fa fa-comments-o fa-fw').text(' ' + jQuery('li#ca-talk.new a').text());
@@ -34,7 +28,6 @@ jQuery(document).ready(function() {
   if ( jQuery( '#ca-addsection' ).length ) {
         jQuery('li#ca-addsection a').addClass('fa fa-plus fa-fw').text(' ' + jQuery('li#ca-addsection a').attr('title').replace(/\[.+/g,""));
   }
-
   jQuery('li#pt-userpage a').addClass('fa fa-user').text(' ' + jQuery('li#pt-userpage a').text());
   jQuery('li#pt-mytalk a').addClass('fa fa-comments').text(' ' + jQuery('li#pt-mytalk a').text());
   jQuery('li#pt-adminlinks a').addClass('fa fa-bolt').text(' ' + jQuery('li#pt-adminlinks a').text());
