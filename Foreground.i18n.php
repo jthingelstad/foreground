@@ -48,3 +48,13 @@ $messages['nl'] = array(
 		'foreground-browsermsg' => 'wordt mogelijk niet goed weergegeven in deze versie van Internet Explorer. Aanbevolen wordt te upgraden naar een nieuwere versie van Internet Explorer of om te schakelen naar een browser zoals Firefox of Chrome.',
 		'foreground-menutitle' => 'Menu'
 );
+
+/** Arabic
+ * @author النعيمي باشا
+ */
+$messages['en'] = array(
+	'skinname-foreground' => 'Foreground',
+	'foreground-desc' => 'نوفر مظهر يركز على وضع محتواك في المقدمة',
+	'foreground-browsermsg' => 'ربما يظهر بشكل غير مقبول في هذه النسخة من انترنت اكسبلورر. ننصحك بالترقية إلى إصدار أحدث لانترنت اكسبلورر أو التغير إلى متصفح مثل فايرفوكس أو كروم.',
+	'foreground-menutitle' => 'قائمة'
+);
