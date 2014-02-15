@@ -38,3 +38,13 @@ $messages['es'] = array(
 	'foreground-browsermsg' => 'puede verse diferente a lo esperado en esta versión de Internet Explorer le recomendamos que se actualice a una versión más reciente, o cambie a un navegador como Firefox o Chrome.',
 	'foreground-menutitle' => 'Menu'
 );
+
+/** Dutch (nederlands)
+ * @author Marijke Stuivenberg
+ */
+$messages['nl'] = array(
+		'skinname-foreground' => 'Foreground',
+		'foreground-desc' => 'Biedt een uiterlijk dat er voor zorgt dat de inhoud op de voorgrond wordt weergegeven',
+		'foreground-browsermsg' => 'wordt mogelijk niet goed weergegeven in deze versie van Internet Explorer. Aanbevolen wordt te upgraden naar een nieuwere versie van Internet Explorer of om te schakelen naar een browser zoals Firefox of Chrome.',
+		'foreground-menutitle' => 'Menu'
+);
