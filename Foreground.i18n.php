@@ -52,7 +52,7 @@ $messages['nl'] = array(
 /** Arabic
  * @author النعيمي باشا
  */
-$messages['en'] = array(
+$messages['ar'] = array(
 	'skinname-foreground' => 'Foreground',
 	'foreground-desc' => 'نوفر مظهر يركز على وضع محتواك في المقدمة',
 	'foreground-browsermsg' => 'ربما يظهر بشكل غير مقبول في هذه النسخة من انترنت اكسبلورر. ننصحك بالترقية إلى إصدار أحدث لانترنت اكسبلورر أو التغير إلى متصفح مثل فايرفوكس أو كروم.',
