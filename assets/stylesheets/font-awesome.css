@@ -6,8 +6,8 @@
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('/w/skins/foreground/assets/fonts/fontawesome-webfont.eot?v=4.0.3');
-  src: url('/w/skins/foreground/assets/fonts/fontawesome-webfont.eot?#iefix&v=4.0.3') format('embedded-opentype'), url('/w/skins/foreground/assets/fonts/fontawesome-webfont.woff?v=4.0.3') format('woff'), url('/w/skins/foreground/assets/fonts/fontawesome-webfont.ttf?v=4.0.3') format('truetype'), url('/w/skins/foreground/assets/fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular') format('svg');
+  src: url('/mw/skins/foreground/assets/fonts/fontawesome-webfont.eot?v=4.0.3');
+  src: url('/mw/skins/foreground/assets/fonts/fontawesome-webfont.eot?#iefix&v=4.0.3') format('embedded-opentype'), url('/mw/skins/foreground/assets/fonts/fontawesome-webfont.woff?v=4.0.3') format('woff'), url('/mw/skins/foreground/assets/fonts/fontawesome-webfont.ttf?v=4.0.3') format('truetype'), url('/mw/skins/foreground/assets/fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
