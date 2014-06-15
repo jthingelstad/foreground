@@ -358,7 +358,7 @@ input[name="*[* date][second]"] {
   width: 100%;
 }
 
-nav.top-bar .button { margin-top: 0; }
+nav.top-bar .button { margin-top: 0; font-size: 0.75rem;}
 nav.top-bar #searchInput { height: auto; padding:0.35rem 0.444rem; margin:0px; font-size: 0.75rem;}
 
 button.ui-button-icon-only {
