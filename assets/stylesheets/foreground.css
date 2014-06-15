@@ -35,6 +35,8 @@ body.action-formedit .row.hide-on-form-edit { display: none;}
   width: 100%;
   text-align: left;
 }
+#p-cactions > a.button {
+float:right; }
 
 /* Make sure top bar is even more z-indx! */
 #toolbox-dropdown {
