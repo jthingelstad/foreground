@@ -59,12 +59,4 @@ jQuery(document).ready(function() {
   // Turn categories into labels
   jQuery('#mw-normal-catlinks ul li a').addClass('label');
 
-  // Make the Page Action button respond to hover
-  jQuery('a.button.dropdown').mouseenter(function(){
-    jQuery('ul#drop1').addClass('open').addClass('right').css('top', '32px').css('left', '785px');
-  });
-  jQuery('ul#drop1').mouseleave(function(){
-    jQuery('ul#drop1').removeClass('open').css('top', '-9999px').css('left', '785px');
-  });
-
 });
