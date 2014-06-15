@@ -149,7 +149,7 @@ ul#drop1.f-dropdown {
 
 footer.row ul {
   list-style-type: none;
-  margin: .5em 1.25em;
+  margin: .5em 0em;
 }
 
 footer.row ul.views.columns li {
