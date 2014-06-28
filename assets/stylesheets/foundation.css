@@ -2760,7 +2760,7 @@ form.custom {
     background: #090909;
     color: white; }
   .top-bar-section .has-form {
-    padding: 15px; }
+    padding: 0px; }
   .top-bar-section .has-dropdown {
     position: relative; }
     .top-bar-section .has-dropdown > a:after {
@@ -2836,7 +2836,8 @@ form.custom {
       height: 2em;
       padding: 0 10px;
       position: relative;
-      top: 8px; }
+      top: 8px; 
+	  margin: 0;}
     .top-bar.expanded {
       background: #111111; }
 

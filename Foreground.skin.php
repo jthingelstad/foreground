@@ -95,8 +95,8 @@ class foregroundTemplate extends BaseTemplate {
 		            	<div class="small-8 columns">
 		        				<?php echo $this->makeSearchInput(array('placeholder' => wfMessage('searchsuggest-search')->text(), 'id' => 'searchInput') ); ?>
 		        			</div>
-		        			 <div class="small-4 columns">
-		        				<button type="submit" class="button search"><?php echo wfMessage( 'search' )->text() ?></button>
+		        			 <div class="small-4 columns" style="padding-left:16px">
+		        				<button type="submit" class="button search" style="margin:0"><i class="fa fa-search fa-lg"></i></button>								
 		        			</div>
 		        		</div>
 		        	</form>
