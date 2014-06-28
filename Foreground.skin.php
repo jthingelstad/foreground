@@ -19,6 +19,7 @@ class Skinforeground extends SkinTemplate {
 			'NavWrapperType' => 'divonly',
 			'showHelpUnderTools' => true,
 			'showRecentChangesUnderTools' => true,
+			'useForegroundTabs' => true,
 			'IeEdgeCode' => 1
 		);
 		foreach ($wgForegroundFeaturesDefaults as $fgOption => $fgOptionValue) {
@@ -65,6 +66,23 @@ class foregroundTemplate extends BaseTemplate {
 				echo "<div id='navwrapper' class='". $wgForegroundFeatures['NavWrapperType']. "'>";
 				break;
 		}
+		switch ($wgForegroundFeatures['useForegroundTabs']) {
+			case 'true':
+			    ob_start();
+				$this->html('bodytext'); 
+				$out = ob_get_contents();
+				ob_end_clean();
+				$markers   = array("&lt;a", "&lt;/a", "&gt;");
+				$tags   = array("<a", "</a", ">");
+				$body = str_replace($markers, $tags, $out);
+				break;	
+			default:
+				break;
+		}
+				
+
+		
+		
 ?>
 <!-- START FOREGROUNDTEMPLATE -->
 		<nav class="top-bar" data-topbar>
@@ -154,8 +172,8 @@ class foregroundTemplate extends BaseTemplate {
 		<div class="row">
 				<div id="p-cactions" class="large-12 columns">
 					<?php if ($wgUser->isLoggedIn() || $wgForegroundFeatures['showActionsForAnon']): ?>
-						<a href="#" data-dropdown="drop1" class="button dropdown small secondary radius"><i class="fa fa-cog"><span class="show-for-medium-up">&nbsp;<?php echo wfMessage( 'actions' )->text() ?></span></i></a>
-						<ul id="drop1" class="views large-12 columns f-dropdown">
+						<a href="#" data-dropdown="drop1" class="button small secondary radius" data-options="is_hover:true"><i class="fa fa-cog"><span class="show-for-medium-up">&nbsp;<?php echo wfMessage( 'actions' )->text() ?></span></i></a>
+						<ul id="drop1" class="f-dropdown" data-dropdown-content>
 							<?php foreach( $this->data['content_actions'] as $key => $item ) { echo preg_replace(array('/\sprimary="1"/','/\scontext="[a-z]+"/','/\srel="archives"/'),'',$this->makeListItem($key, $item)); } ?>
 							<?php wfRunHooks( SkinTemplateToolboxEnd, array( &$this, true ) );  ?>
 						</ul>
@@ -174,7 +192,17 @@ class foregroundTemplate extends BaseTemplate {
 					<?php if ( $this->data['isarticle'] ) { ?><h3 id="tagline"><?php $this->msg( 'tagline' ) ?></h3><?php } ?>
 					<h5 class="subtitle"><?php $this->html('subtitle') ?></h5>
 					<div class="clear_both"></div>
-					<?php $this->html('bodytext') ?>
+					<?php 
+					switch ($wgForegroundFeatures['useForegroundTabs']) {
+						case 'true':
+							echo $body;
+							ob_flush();
+							break;
+						default:
+							$this->html('bodytext'); 
+							break;
+					}
+					 ?>
 		    	<div class="group"><?php $this->html('catlinks'); ?></div>
 		    	<?php $this->html('dataAfterContent'); ?>
 		    </div>

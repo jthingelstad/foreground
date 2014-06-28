@@ -35,6 +35,8 @@ body.action-formedit .row.hide-on-form-edit { display: none;}
   width: 100%;
   text-align: left;
 }
+#p-cactions > a.button {
+float:right; }
 
 /* Make sure top bar is even more z-indx! */
 #toolbox-dropdown {
@@ -147,7 +149,7 @@ ul#drop1.f-dropdown {
 
 footer.row ul {
   list-style-type: none;
-  margin: .5em 1.25em;
+  margin: .5em 0em;
 }
 
 footer.row ul.views.columns li {
@@ -358,8 +360,8 @@ input[name="*[* date][second]"] {
   width: 100%;
 }
 
-nav.top-bar .button { margin-top: 0; }
-nav.top-bar #searchInput { height: 28px;}
+nav.top-bar .button { margin-top: 0; font-size: 0.75rem;}
+nav.top-bar #searchInput { height: auto; padding:0.35rem 0.444rem; margin:0px; font-size: 0.75rem;}
 
 button.ui-button-icon-only {
   height: 2.24em !important;
