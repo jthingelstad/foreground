@@ -147,6 +147,16 @@ class foregroundTemplate extends BaseTemplate {
 									<?php echo Linker::link(Title::newFromText('Special:UserLogin'), wfMessage( 'login' )->text()); ?>
 								<?php endif; ?>
 							</li>
+							
+							<li>
+								<?php if (isset($this->data['personal_urls']['anonlogin'])): ?>
+									<a href="<?php echo $this->data['personal_urls']['anonlogin']['href']; ?>"><?php echo wfMessage( 'createaccount' )->text() ?></a>
+								<?php elseif (isset($this->data['personal_urls']['login'])): ?>
+									<a href="<?php echo htmlspecialchars($this->data['personal_urls']['login']['href']); ?>"><?php echo wfMessage( 'createaccount' )->text() ?></a>
+								<?php else: ?>
+									<?php echo Linker::link(Title::newFromText('Special:UserLogin&type=signup'), wfMessage( 'createaccount' )->text()); ?>
+								<?php endif; ?>
+							</li>
 
 							<?php endif; ?>
 
