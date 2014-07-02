@@ -190,6 +190,16 @@ footer.row ul.columns li { display: inline;float:none;}
 
 ul.vcard { padding: 0.5em 0.5em 0.55em 0.5em; }
 
+/* TABS */
+
+#mw-content-text ul.tabs {
+  margin: 0
+}
+
+#mw-content-text ul.tabs.vertical {
+  margin: 0
+}
+
 /* HEADERS */
 
 h1,h2,h3,h4,h5,h6 {
