@@ -20,7 +20,7 @@ All new features for Foreground should PR against the `develop` branch. If you w
 4. When you are ready to issue a PR against the `develop` branch of Foreground, please use `[feature]` as a tag at the beginning of the PR's title.
 5. Please reference the issue# in the PR's description and include any information for testing the feature.
 
-It is very important to *note all b/c(backwards compatibility) changes* in a proposed new feature. A feature which will break b/c will not be merged into a current release version. It will create a new release version if excepted.
+It is very important to **note all b/c(backwards compatibility) changes** in a proposed new feature. A feature which will break b/c will not be merged into a current release version. It will create a new release version if excepted.
 
 ## Proposed Feature Branches
 
