@@ -43,6 +43,12 @@ body.action-formedit .row.hide-on-form-edit { display: none;}
   z-index: 10000000;
 }
 
+/* Dropdown Icon Alignment */
+div.drop-icon {
+  display: inline;
+  margin-right: 4px;
+}
+
 td.mw-submit a,
 .htmlform-tip,
 #mw-upload-permitted p {
