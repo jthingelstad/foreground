@@ -58,3 +58,17 @@ $messages['ar'] = array(
 	'foreground-browsermsg' => 'ربما يظهر بشكل غير مقبول في هذه النسخة من انترنت اكسبلورر. ننصحك بالترقية إلى إصدار أحدث لانترنت اكسبلورر أو التغير إلى متصفح مثل فايرفوكس أو كروم.',
 	'foreground-menutitle' => 'قائمة'
 );
+<<<<<<< HEAD
+=======
+
+/** Russian
+ *  @author HiRolla
+ */
+$messages['ru'] = array(
+	'skinname-foreground' => 'Foreground',
+	'foreground-desc' => 'Оформление, которое выводит на передний план именно содержимое страниц, минимизируя интерфейс сайта',
+	'foreground-browsermsg' => 'Возможны непредвиденные изменения вида в Internet Explorer. Рекомендуем обновить Internet Explorer или пользоваться такими браузерами, как Firefox или Chrome.',
+	'foreground-menutitle' => 'Меню'
+);
+
+>>>>>>> refs/heads/master
