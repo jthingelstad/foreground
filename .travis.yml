@@ -1,9 +1,21 @@
 language: php
 
-php:
-  - 5.3
-  - 5.4
-  - 5.5
+env:
+  - THENEEDFORTHIS=FAIL
 
-before_script:
-  - composer self-update
+matrix:
+  include:
+    - env: DB=mysql; MW=master
+      php: 5.6
+    - env: DB=mysql; MW=1.23.0
+      php: 5.4
+	- env: DB=mysql; MW=1.19.0
+      php: 5.4
+  exclude:
+    - env: THENEEDFORTHIS=FAIL
+
+install:
+  - bash ./build/travis/install-mediawiki.sh
+
+script:
+  - bash ./build/travis/run-tests.sh
