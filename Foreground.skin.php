@@ -174,7 +174,10 @@ class foregroundTemplate extends BaseTemplate {
 					<?php if ( $this->data['isarticle'] ) { ?><h3 id="tagline"><?php $this->msg( 'tagline' ) ?></h3><?php } ?>
 					<h5 class="subtitle"><?php $this->html('subtitle') ?></h5>
 					<div class="clear_both"></div>
-					<?php $this->html('bodytext') ?>
+					<div class="mw-bodytext">
+						<?php $this->html('bodytext') ?>
+						<div class="clear_both"></div>
+					</div>
 		    	<div class="group"><?php $this->html('catlinks'); ?></div>
 		    	<?php $this->html('dataAfterContent'); ?>
 		    </div>
