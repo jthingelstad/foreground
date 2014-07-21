@@ -46,6 +46,12 @@ float:right; }
   z-index: 10000000;
 }
 
+/* Dropdown Icon Alignment */
+div.drop-icon {
+  display: inline;
+  margin-right: 4px;
+}
+
 td.mw-submit a,
 .htmlform-tip,
 #mw-upload-permitted p {
