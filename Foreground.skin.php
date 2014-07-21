@@ -20,6 +20,7 @@ class Skinforeground extends SkinTemplate {
 			'showHelpUnderTools' => true,
 			'showRecentChangesUnderTools' => true,
 			'wikiName' => &$GLOBALS['wgSitename'],
+			'navbarIcon' => false,
 			'IeEdgeCode' => 1
 		);
 		foreach ($wgForegroundFeaturesDefaults as $fgOption => $fgOptionValue) {
@@ -73,7 +74,9 @@ class foregroundTemplate extends BaseTemplate {
 				<li class="name">
 					<h1 class="title-name">
 					<a href="<?php echo $this->data['nav_urls']['mainpage']['href']; ?>">
-					<img alt="<?php echo $this->text('sitename'); ?>" src="<?php echo $this->text('logopath') ?>" style="max-width: 64px;height:auto; max-height:36px; display: inline-block; vertical-align:middle;">
+					<?php if ($wgForegroundFeatures['navbarIcon'] != '0') { ?>
+						<img alt="<?php echo $this->text('sitename'); ?>" src="<?php echo $this->text('logopath') ?>" style="max-width: 64px;height:auto; max-height:36px; display: inline-block; vertical-align:middle;">
+					<?php } ?>					
 					<div class="title-name" style="display: inline-block;"><?php echo $wgForegroundFeatures['wikiName']; ?></div>
 					</a>
 					</h1>
