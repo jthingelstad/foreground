@@ -431,8 +431,26 @@ button, .button {
 }
 
 .top-bar .button.search {
-  top: 1px;
-  text-align: left;
+  top: 0px;
+}
+
+.top-bar .button.search {
+  margin-left: 10px;
+}
+
+.top-bar-section .has-form {
+  padding: 0 5px;
+}
+
+.top-bar input {
+  top: 0px;
+}
+
+@media only screen and (min-width: 768px) {
+.top-bar .button.search {
+  top: 1px; }
+.top-bar .button.search {
+  margin-left: -4px; }
 }
 
 .top-bar-section .dropdown {
