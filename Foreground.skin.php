@@ -21,7 +21,9 @@ class Skinforeground extends SkinTemplate {
 			'showRecentChangesUnderTools' => true,
 			'wikiName' => &$GLOBALS['wgSitename'],
 			'navbarIcon' => false,
-			'IeEdgeCode' => 1
+			'IeEdgeCode' => 1,
+			'showFooterIcons' => 0,
+			'addThisPUBID' => ''
 		);
 		foreach ($wgForegroundFeaturesDefaults as $fgOption => $fgOptionValue) {
 			if ( !isset($wgForegroundFeatures[$fgOption]) ) {
@@ -65,6 +67,20 @@ class foregroundTemplate extends BaseTemplate {
 				break;
 			default:
 				echo "<div id='navwrapper' class='". $wgForegroundFeatures['NavWrapperType']. "'>";
+				break;
+		}
+		switch ($wgForegroundFeatures['showFooterIcons']) {
+			case '0':
+				$footerLeftClass = 'small-8 large-centered columns text-center';
+				$footerRightClass = 'large-12 small-12 columns';
+				$poweredbyType = "nocopyright";
+				$poweredbyMakeType = 'withoutImage';
+				break;	
+			case '1':
+				$footerLeftClass = 'large-8 small-12 columns';
+				$footerRightClass = 'large-4 small-12 columns';
+				$poweredbyType = "icononly";
+				$poweredbyMakeType = 'withImage';
 				break;
 		}
 ?>
@@ -196,21 +212,34 @@ class foregroundTemplate extends BaseTemplate {
 		    </div>
 		</div>
 
-		<footer class="row">
-
-		<ul class="large-12 columns">
-		<?php foreach ( $this->getFooterLinks( "flat" ) as $key ) { ?>
-			<li id="footer-<?php echo $key ?>"><?php $this->html( $key ) ?></li>
-		<?php } ?>
-		</ul>
-		<ul> <?php foreach ( $this->getFooterIcons( "nocopyright" ) as $blockName => $footerIcons ) { ?>
-	<li class="<?php echo $blockName ?>"><?php foreach ( $footerIcons as $icon ) { ?>
-	    <?php echo $this->getSkin()->makeFooterIcon( $icon, 'withoutImage' ); ?>
- 						<?php } ?>
-        </li>
-				<?php } ?>
-		</ul>
-		</footer>
+			<footer class="row">
+				<div id="footer">
+					<div class="social-footer large-12 small-12 columns">
+					<?php if ($wgForegroundFeatures['addThisPUBID'] != '') { ?>		
+						<!-- Go to www.addthis.com/dashboard to customize your tools -->
+						<div class="addthis_horizontal_follow_toolbox"></div>
+						<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=<?php echo $wgForegroundFeatures['addThisPUBID'];?>"></script>
+					<?php } ?>
+					</div>
+					<div id="footer-left" class="<?php echo $footerLeftClass;?>">
+					<ul id="footer-left">
+						<?php foreach ( $this->getFooterLinks( "flat" ) as $key ) { ?>
+							<li id="footer-<?php echo $key ?>"><?php $this->html( $key ) ?></li>
+						<?php } ?>									
+					</ul>
+					</div>	
+					<div id="footer-right-icons" class="<?php echo $footerRightClass;?>">
+					<ul id="poweredby">
+						<?php foreach ( $this->getFooterIcons( $poweredbyType ) as $blockName => $footerIcons ) { ?>
+							<li class="<?php echo $blockName ?>"><?php foreach ( $footerIcons as $icon ) { ?>
+								<?php echo $this->getSkin()->makeFooterIcon( $icon, $poweredbyMakeType ); ?>
+								<?php } ?>
+							</li>
+						<?php } ?>
+					</ul>
+					</div>								
+				</div>
+			</footer>
 
 		</div>
 		
