@@ -162,14 +162,29 @@ margin: 0;
 list-style-type: none;
 }
 
-.social-footer p {
-display: none;
-}
-
+/* Make social footer center need overflow:hidden and other div classes */
 .social-footer {
 margin: 0 0 1em;
 font-size: 90%;
+overflow: hidden;
 }
+/* Hide all text in p elements */
+.social-footer p {
+display: none;
+}
+/* Outer wrap */
+.social-links {
+position: relative;
+left: 50%;
+float: left;
+}
+/* addThis container (inner wrap) */
+.addthis_horizontal_follow_toolbox {
+position: relative;
+left: -50%;
+float: left;
+}
+/* end social footer classes */
 
 #footer-left {
 font-size: 90%;
