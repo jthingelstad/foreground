@@ -1,8 +1,10 @@
-body { line-height: 1.6em; }
+body {
+  line-height: 1.6em;
+}
 
-p { margin-bottom: 0.25em; }
-
-div#page-content { margin-top: 1.5rem; }
+p {
+  margin-bottom: 0.25em;
+}
 
 a.label:hover,
 a.label:focus {
@@ -12,9 +14,6 @@ a.label:focus {
 a.label.new { background-color: #d0d0d0; }
 
 a.button.dropdown { float:right;}
-
-/* Force FontAwesome to load in the top-nav, Foundation is overriding it with Helvetica. Ban Helvetica */
-.fa { font-family: 'FontAwesome' !important;  }
 
 /* Hide the page actions button for special pages (cuz there's nothing in it) */
 .mw-special-FormEdit a.button.dropdown, .ns-special a.button.dropdown { display:none; }
@@ -35,8 +34,6 @@ body.action-formedit .row.hide-on-form-edit { display: none;}
   width: 100%;
   text-align: left;
 }
-#p-cactions > a.button {
-float:right; }
 
 /* Make sure top bar is even more z-indx! */
 #toolbox-dropdown {
@@ -122,9 +119,7 @@ div.small-9.columns textarea {
 }
 
 footer.row {
-  margin-top: 3em;
-  text-align: center;
-  font-size: 80%;
+  margin-top: 2em;
   color: grey;
 }
 
@@ -155,11 +150,86 @@ ul#drop1.f-dropdown {
 
 footer.row ul {
   list-style-type: none;
-  margin: .5em 0em;
+  margin: 0 0 1em 0;
 }
 
 footer.row ul.views.columns li {
   margin-right: 1em;
+}
+
+#footer footer.row ul {
+margin: 0;
+list-style-type: none;
+}
+
+/* Make social footer center need overflow:hidden and other div classes */
+.social-footer {
+margin: 0 0 1em;
+font-size: 90%;
+overflow: hidden;
+}
+/* Hide all text in p elements */
+.social-footer p {
+display: none;
+}
+/* Outer wrap */
+.social-links {
+position: relative;
+left: 50%;
+float: left;
+}
+/* addThis container (inner wrap) */
+.addthis_horizontal_follow_toolbox {
+position: relative;
+left: -50%;
+float: left;
+}
+/* end social footer classes */
+
+#footer-left {
+font-size: 90%;
+text-align: left;
+}
+#footer-right-icons {
+font-size: 85%;
+text-align: center;
+}
+
+#footer-right-icons li {
+display: inline-block;
+text-align: center;
+margin: 0 0 .5em .5em;
+}
+
+li#footer-privacy {
+float: left;
+margin-right: 2em;
+}
+
+li#footer-about {
+float: left;
+margin-right: 2em;
+}
+
+li#footer-disclaimer {
+float: left;
+margin-right: 2em;
+}
+
+.text-center #footer-left li {
+float: none;
+margin: 0;
+}
+.text-center #footer-left {
+text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+#footer-left { font-size: 85%; text-align: center;}
+#footer-right-icons { font-size: 80%;}
+li#footer-privacy { float: none; margin-right: 0;}
+li#footer-about { float: none; margin-right: 0;}
+li#footer-disclaimer { float: none; margin-right: 0;}
 }
 
 .columns ul.special li {
@@ -279,7 +349,6 @@ td.smwpropname, th.smwpropname, td.smwspecname {
   text-align:left;
 }
 
-
 table tbody tr td, table tr td {
   line-height: 1.6em;
 }
@@ -366,8 +435,8 @@ input[name="*[* date][second]"] {
   width: 100%;
 }
 
-nav.top-bar .button { margin-top: 0; font-size: 0.75rem;}
-nav.top-bar #searchInput { height: auto; padding:0.35rem 0.444rem; margin:0px; font-size: 0.75rem;}
+nav.top-bar .button { margin-top: 0; font-size: 0.75rem;} 
+nav.top-bar #searchInput { height: auto; padding:0.35rem 0.444rem; margin:0px; font-size: 0.75rem;} 
 
 button.ui-button-icon-only {
   height: 2.24em !important;
@@ -440,21 +509,17 @@ button, .button {
   top: 0px;
 }
 
-
 .top-bar .button.search {
   margin-left: 10px;
 }
-
 
 .top-bar-section .has-form {
   padding: 0 5px;
 }
 
-
 .top-bar input {
   top: 0px;
 }
-
 
 @media only screen and (min-width: 768px) {
 .top-bar .button.search {
@@ -462,7 +527,6 @@ button, .button {
 .top-bar .button.search {
   margin-left: -4px; }
 }
-
 
 .top-bar-section .dropdown {
   z-index: 100;
@@ -697,7 +761,6 @@ body.mw-special-Userlogin h2.title {
   top: 30px;
   left: -1px;
 }
-
 #echo-notifications .mw-echo-overlay {
   left: -185px;
   width: 300px;
@@ -715,7 +778,6 @@ body.mw-special-Userlogin h2.title {
 #echo-notifications a.mw-echo-short-link .mw-badge {
   margin-left: 0;
 }
->>>>>>> a442d1c14d07df1c38c0932bae6a345eab07c2a8
 
 #echo-notifications #mw-echo-overlay-pref-link {
   background-image:none;
@@ -752,4 +814,3 @@ body.mw-special-Userlogin h2.title {
 #echo-notifications #mw-echo-overlay-pref-link { padding: 10px 0 10px 30px; }
 #echo-notifications #mw-echo-overlay-link { border-right: 1px solid #DDDDDD; margin-right: 2em; }
 }
-
