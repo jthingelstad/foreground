@@ -183,6 +183,7 @@ float: left;
 position: relative;
 left: -50%;
 float: left;
+z-index: 100000;
 }
 /* end social footer classes */
 
