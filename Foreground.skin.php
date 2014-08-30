@@ -125,7 +125,8 @@ class foregroundTemplate extends BaseTemplate {
 							<?php echo $this->makeSearchInput(array('placeholder' => wfMessage('searchsuggest-search')->text(), 'id' => 'searchInput') ); ?>
 							<button type="submit" class="button search"><?php echo wfMessage( 'search' )->text() ?></button>
 						</div>
-						</form>
+						</div>
+					</form>
 				</li>
 				<li class="divider show-for-small"></li>
 				<li class="has-form">
