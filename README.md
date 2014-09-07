@@ -39,12 +39,12 @@ Use following features in `LocalSettings.php` to change the behavior.
 - `wikiName => 'Alternate WikiName'` sets top navbar name to a different output of the wiki's name. Useful if your `$wgSitename` is long but need to keep it for other purposes.
 - `navbarIcon => true` to display an icon in the top navbar. See below for more information.
 - `IeEdgeCode => 1` will produce a meta tag with "X-UA-Compatible" content="IE=edge", `2` will sent a header, `0` nothing will be done
-- `showFooterIcons => 0 suppresses the output of footer icons. Set to `true` or `1` to display them.
+- `showFooterIcons => 0` suppresses the output of footer icons. Set to `true` or `1` to display them.
 - `addThisFollowPUBID => 'your-id'` add an id to display Follow Us horizontal bar of icons from various social media sites available on [addThis](http://addthis.com).
 
 These are the default values:
 
-    $wgForegroundFeaturesDefaults = array(      
+    $wgForegroundFeatures = array(      
       'showActionsForAnon' => true,
       'NavWrapperType' => 'divonly',
       'showHelpUnderTools' => true,
@@ -90,7 +90,7 @@ With a setting like:
 
     'addThisFollowPUBID' => 'yourAddThis-PubID'
 
-Important, this feature uses the free or paid version of the http://addthis.com horizontal Follow Buttons only. Choose which social media FollowUs buttons(Twitter, Facebook, YouTube, etc.) and at the bottom of the screen locate the script. Within the script you will see something similar `...#pubid=ra-5378f4902d02197">`. Everything after the `=` sign is up to the `">` is your Publisher ID. To turn on social follow icons, insert your publisher id:
+Important, this feature uses the free or paid version of the http://addthis.com horizontal Follow Buttons only. Choose which social media FollowUs buttons(Twitter, Facebook, YouTube, etc.) and at the bottom of the screen locate the script. Within the script you will see something similar `...#pubid=ra-5378f4902d02197">`. Everything after the `=` sign and up to the `">` is your Publisher ID. To turn on social follow icons, insert your publisher id:
 
     'addThisFollowPUBID' => 'ra-5378f4902d02197'
 
