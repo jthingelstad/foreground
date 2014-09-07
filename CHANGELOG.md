@@ -10,3 +10,4 @@
 * [feature] i18n json update/create shim, i18n.php file for localization deprecated in MW 1.23 and being removed in MW 1.24, and shim is backwards compatable to MW 1.17
 * Added CONTRIBUTING.md file
 * Update to README.md
+* Added COPYING file
