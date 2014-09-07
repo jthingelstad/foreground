@@ -5,7 +5,7 @@
  *
  * @file
  * @ingroup Skins
- * @author Garrick Van Buren, Jamie Thingelstad
+ * @author Garrick Van Buren, Jamie Thingelstad, Tom Hutchison
  * @license 2-clause BSD
  */
 
@@ -22,6 +22,7 @@ $wgExtensionCredits['skin'][] = array(
 	'author'	 => array(
 		'Garrick Van Buren',
 		'Jamie Thingelstad',
+		'Tom Hutchison',
 		'...'
 		),
 	'descriptionmsg' => 'foreground-desc'
