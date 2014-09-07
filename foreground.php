@@ -9,11 +9,9 @@
  * @license 2-clause BSD
  */
 
-if( ! defined( 'MEDIAWIKI' ))
-{
-	die("Wiki Wonders What You're Doing");
+if( !defined( 'MEDIAWIKI' ) ) {
+   die( 'This is a skin to the MediaWiki package and cannot be run standalone.' );
 }
-
 
 $wgExtensionCredits['skin'][] = array(
 	'path'		 => __FILE__,
@@ -31,9 +29,10 @@ $wgExtensionCredits['skin'][] = array(
 
 $wgValidSkinNames['foreground'] = 'Foreground';
 
-$wgAutoloadClasses['SkinForeground'] = __DIR__.'/Foreground.skin.php';
+$wgAutoloadClasses['SkinForeground'] = __DIR__ . '/Foreground.skin.php';
 
-$wgExtensionMessagesFiles['SkinForeground'] = __DIR__.'/Foreground.i18n.php';
+$wgMessagesDirs['SkinForeground'] = __DIR__ . '/i18n';
+$wgExtensionMessagesFiles['SkinForeground'] = __DIR__ . '/Foreground.i18n.php';
 
 $wgResourceModules['skins.foreground'] = array(
 	'styles'         => array(

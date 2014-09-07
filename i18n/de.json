@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kghbln"
+		]
+	},
+	"skinname-foreground": "Foreground",
+	"foreground-desc": "Stellt eine Benutzeroberfläche bereit, die die Inhalte des Wikis betont",
+	"foreground-browsermsg": "sieht in dieser Version des Internet Explorers nicht wie gewünscht aus. Es wird eine Aktualisierung des Internet Explorers oder der Umstieg auf einen Browser wie bspw. Firefox oder Chrome empfohlen.",
+	"foreground-menutitle": "Menü"
+}
