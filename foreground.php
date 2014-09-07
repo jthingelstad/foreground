@@ -26,7 +26,6 @@ $wgExtensionCredits['skin'][] = array(
 		'Tom Hutchison',
 		'...'
 		),
-		'version' => 1.1,
 	'descriptionmsg' => 'foreground-desc'
 );
 
