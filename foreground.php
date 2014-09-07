@@ -24,6 +24,7 @@ $wgExtensionCredits['skin'][] = array(
 		'Tom Hutchison',
 		'...'
 		),
+	'license-name' => 'BSD-2-Clause',
 	'descriptionmsg' => 'foreground-desc'
 );
 
