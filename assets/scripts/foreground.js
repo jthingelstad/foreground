@@ -19,7 +19,7 @@ jQuery(document).ready(function() {
   jQuery('li#ca-edit a').prepend('<div class="drop-icon"><i class="fa fa-pencil-square-o fa-fw"></i></div>')
   jQuery('li#ca-viewsource a').prepend('<div class="drop-icon"><i class="fa fa-book fa-fw"></i></div>')
   jQuery('li#ca-form_edit a').prepend('<div class="drop-icon"><i class="fa fa-pencil-square fa-fw"></i></div>')
-  jQuery('li#ca-history a').prepend('<div class="drop-icon"><i class="fa fa-archive fa-fw"></i></div>')
+  jQuery('li#ca-history a').prepend('<div class="drop-icon"><i class="fa fa-history fa-fw"></i></div>')
   jQuery('li#ca-delete a').prepend('<div class="drop-icon"><i class="fa fa-trash-o fa-fw"></i></div>')
   jQuery('li#ca-move a').prepend('<div class="drop-icon"><i class="fa fa-truck fa-fw"></i></div>')
   jQuery('li#ca-protect a').prepend('<div class="drop-icon"><i class="fa fa-shield fa-fw"></i></div>')
