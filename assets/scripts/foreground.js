@@ -34,7 +34,7 @@ if ( jQuery( '#ca-addsection' ).length ) {
   jQuery('li#ca-addsection a').html('<div class="drop-icon"><i class="fa fa-plus fa-fw"></i></div>' + jQuery('li#ca-addsection a').attr('title').replace(/\[.+/g,""))
 }
 
-  jQuery('li#pt-uls a').prepend('<div class="drop-icon"><i class="fa fa-book fa-fw"></i></div>')
+  jQuery('li#pt-uls a').prepend('<div class="drop-icon"><i class="fa fa-language fa-fw"></i></div>')
   jQuery('li#pt-userpage a').prepend('<div class="drop-icon"><i class="fa fa-user fa-fw"></i></div>')
   jQuery('li#pt-mytalk a').prepend('<div class="drop-icon"><i class="fa fa-comments fa-fw"></i></div>')
   jQuery('li#pt-adminlinks a').prepend('<div class="drop-icon"><i class="fa fa-bolt fa-fw"></i></div>')
