@@ -69,19 +69,20 @@ class foregroundTemplate extends BaseTemplate {
 				echo "<div id='navwrapper' class='". $wgForegroundFeatures['NavWrapperType']. "'>";
 				break;
 		}
+		// Set default variables for footer and switch them if 'showFooterIcons' => true
+		$footerLeftClass = 'small-8 large-centered columns text-center';
+		$footerRightClass = 'large-12 small-12 columns';
+		$poweredbyType = "nocopyright";
+		$poweredbyMakeType = 'withoutImage';
 		switch ($wgForegroundFeatures['showFooterIcons']) {
-			case '0':
-				$footerLeftClass = 'small-8 large-centered columns text-center';
-				$footerRightClass = 'large-12 small-12 columns';
-				$poweredbyType = "nocopyright";
-				$poweredbyMakeType = 'withoutImage';
-				break;	
-			case '1':
+			case true:
 				$footerLeftClass = 'large-8 small-12 columns';
 				$footerRightClass = 'large-4 small-12 columns';
 				$poweredbyType = "icononly";
 				$poweredbyMakeType = 'withImage';
 				break;
+			default:
+				break;	
 		}
 ?>
 <!-- START FOREGROUNDTEMPLATE -->
@@ -171,7 +172,7 @@ class foregroundTemplate extends BaseTemplate {
 				<div id="siteNotice" class="sitenotice panel radius"><?php echo $this->text('sitename') . ' '. wfMessage( 'foreground-browsermsg' )->text(); ?></div>
 				<![endif]-->
 
-				<?php if ( $this->data['sitenotice'] ) { ?><div id="siteNotice" class="sitenotice panel radius"><?php $this->html( 'sitenotice' ); ?></div><?php } ?>
+				<?php if ( $this->data['sitenotice'] ) { ?><div id="siteNotice" class="sitenotice"><?php $this->html( 'sitenotice' ); ?></div><?php } ?>
 				<?php if ( $this->data['newtalk'] ) { ?><div id="usermessage" class="newtalk panel radius"><?php $this->html( 'newtalk' ); ?></div><?php } ?>
 				</div>
 		</div>
