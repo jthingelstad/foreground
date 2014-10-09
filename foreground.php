@@ -18,21 +18,22 @@ $wgExtensionCredits['skin'][] = array(
 	'path'		 => __FILE__,
 	'name'		 => 'Foreground',
 	'url'		 => 'http://foreground.thingelstad.com/',
+	'version' => '2.0.0 beta 4',
 	'author'	 => array(
 		'Garrick Van Buren',
 		'Jamie Thingelstad',
+		'Tom Hutchison',
 		'...'
 		),
-	'version' => '2.0.0 beta 4',
 	'descriptionmsg' => 'foreground-desc'
 );
 
 $wgValidSkinNames['foreground'] = 'Foreground';
 
-$wgAutoloadClasses['SkinForeground'] = __DIR__.'/Foreground.skin.php';
+$wgAutoloadClasses['SkinForeground'] = __DIR__ . '/Foreground.skin.php';
 
 $wgMessagesDirs['SkinForeground'] = __DIR__ . '/i18n';
-$wgExtensionMessagesFiles['SkinForeground'] = __DIR__.'/Foreground.i18n.php';
+$wgExtensionMessagesFiles['SkinForeground'] = __DIR__ . '/Foreground.i18n.php';
 
 $wgResourceModules['skins.foreground'] = array(
 	'styles'         => array(
