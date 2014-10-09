@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Marijke Stuivenberg"
+		]
+	},
+	"skinname-foreground": "Foreground",
+	"foreground-desc": "Biedt een uiterlijk dat er voor zorgt dat de inhoud op de voorgrond wordt weergegeven",
+	"foreground-browsermsg": "wordt mogelijk niet goed weergegeven in deze versie van Internet Explorer. Aanbevolen wordt te upgraden naar een nieuwere versie van Internet Explorer of om te schakelen naar een browser zoals Firefox of Chrome.",
+	"foreground-menutitle": "Menu"
+}
