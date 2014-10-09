@@ -13,7 +13,6 @@ if( !defined( 'MEDIAWIKI' ) ) {
    die( 'This is a skin to the MediaWiki package and cannot be run standalone.' );
 }
 
-
 $wgExtensionCredits['skin'][] = array(
 	'path'		 => __FILE__,
 	'name'		 => 'Foreground',
