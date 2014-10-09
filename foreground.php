@@ -5,13 +5,12 @@
  *
  * @file
  * @ingroup Skins
- * @author Garrick Van Buren, Jamie Thingelstad
+ * @author Garrick Van Buren, Jamie Thingelstad, Tom Hutchison
  * @license 2-clause BSD
  */
 
-if( ! defined( 'MEDIAWIKI' ))
-{
-	die("Wiki Wonders What You're Doing");
+if( !defined( 'MEDIAWIKI' ) ) {
+   die( 'This is a skin to the MediaWiki package and cannot be run standalone.' );
 }
 
 
