@@ -5,34 +5,34 @@
  *
  * @file
  * @ingroup Skins
- * @author Garrick Van Buren, Jamie Thingelstad
+ * @author Garrick Van Buren, Jamie Thingelstad, Tom Hutchison
  * @license 2-clause BSD
  */
 
-if( ! defined( 'MEDIAWIKI' ))
-{
-	die("Wiki Wonders What You're Doing");
+if( !defined( 'MEDIAWIKI' ) ) {
+   die( 'This is a skin to the MediaWiki package and cannot be run standalone.' );
 }
-
 
 $wgExtensionCredits['skin'][] = array(
 	'path'		 => __FILE__,
 	'name'		 => 'Foreground',
 	'url'		 => 'http://foreground.thingelstad.com/',
+	'version' => '2.0.0 beta 4',
 	'author'	 => array(
 		'Garrick Van Buren',
 		'Jamie Thingelstad',
+		'Tom Hutchison',
 		'...'
 		),
-	'version' => '2.0.0 beta 3',
 	'descriptionmsg' => 'foreground-desc'
 );
 
 $wgValidSkinNames['foreground'] = 'Foreground';
 
-$wgAutoloadClasses['SkinForeground'] = __DIR__.'/Foreground.skin.php';
+$wgAutoloadClasses['SkinForeground'] = __DIR__ . '/Foreground.skin.php';
 
-$wgExtensionMessagesFiles['SkinForeground'] = __DIR__.'/Foreground.i18n.php';
+$wgMessagesDirs['SkinForeground'] = __DIR__ . '/i18n';
+$wgExtensionMessagesFiles['SkinForeground'] = __DIR__ . '/Foreground.i18n.php';
 
 $wgResourceModules['skins.foreground'] = array(
 	'styles'         => array(
