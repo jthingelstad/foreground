@@ -44,7 +44,7 @@ body.action-formedit .row.hide-on-form-edit { display: none;}
 }
 
 /* Dropdown Icon Alignment */
-div.drop-icon {
+.drop-icon {
   display: inline;
   margin-right: 4px;
 }
