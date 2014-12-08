@@ -83,20 +83,20 @@ class foregroundTemplate extends BaseTemplate {
 			default:
 				break;
 		}
-		
+		// Set default variables for footer and switch them if 'showFooterIcons' => true
+		$footerLeftClass = 'small-8 large-centered columns text-center';
+		$footerRightClass = 'large-12 small-12 columns';
+		$poweredbyType = "nocopyright";
+		$poweredbyMakeType = 'withoutImage';
 		switch ($wgForegroundFeatures['showFooterIcons']) {
-			case '0':
-				$footerLeftClass = 'small-8 large-centered columns text-center';
-				$footerRightClass = 'large-12 small-12 columns';
-				$poweredbyType = "nocopyright";
-				$poweredbyMakeType = 'withoutImage';
-				break;	
-			case '1':
+			case true:
 				$footerLeftClass = 'large-8 small-12 columns';
 				$footerRightClass = 'large-4 small-12 columns';
 				$poweredbyType = "icononly";
 				$poweredbyMakeType = 'withImage';
 				break;
+			default:
+				break;	
 		}
 ?>
 <!-- START FOREGROUNDTEMPLATE -->
