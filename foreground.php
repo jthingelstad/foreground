@@ -5,15 +5,13 @@
  *
  * @file
  * @ingroup Skins
- * @author Garrick Van Buren, Jamie Thingelstad
+ * @author Garrick Van Buren, Jamie Thingelstad, Tom Hutchison
  * @license 2-clause BSD
  */
 
-if( ! defined( 'MEDIAWIKI' ))
-{
-	die("Wiki Wonders What You're Doing");
+if( !defined( 'MEDIAWIKI' ) ) {
+   die( 'This is a skin to the MediaWiki package and cannot be run standalone.' );
 }
-
 
 $wgExtensionCredits['skin'][] = array(
 	'path'		 => __FILE__,
@@ -22,6 +20,7 @@ $wgExtensionCredits['skin'][] = array(
 	'author'	 => array(
 		'Garrick Van Buren',
 		'Jamie Thingelstad',
+		'Tom Hutchison',
 		'...'
 		),
 	'version' => '2.0.0 beta 3',
