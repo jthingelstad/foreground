@@ -1,6 +1,6 @@
 ## Version 1.2
 
-* [upgrade] Upgrade to foundation 4.3.3.
+* [upgrade] Upgrade to foundation 4.3.2.
 * [feature] Other new features.
 * [bug fix] Add missing indicator.gif file.
 * [bug fix] Other bug fixes.
