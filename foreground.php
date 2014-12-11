@@ -17,7 +17,7 @@ $wgExtensionCredits['skin'][] = array(
 	'path'		 => __FILE__,
 	'name'		 => 'Foreground',
 	'url'		 => 'http://foreground.thingelstad.com/',
-	'version'	 => '1.2-alpha-1',
+	'version'	 => '1.2-alpha',
 	'author'	 => array(
 		'Garrick Van Buren',
 		'Jamie Thingelstad',
@@ -50,6 +50,7 @@ $wgResourceModules['skins.foreground'] = array(
         'foreground/assets/scripts/vendor/responsive-tables.js',
         'foreground/assets/scripts/foundation/foundation.js',
         'foreground/assets/scripts/foundation/foundation.topbar.js',
+        'foreground/assets/scripts/foundation/foundation.abide.js',
         'foreground/assets/scripts/foundation/foundation.dropdown.js',
         'foreground/assets/scripts/foundation/foundation.section.js',
         'foreground/assets/scripts/foundation/foundation.clearing.js',
