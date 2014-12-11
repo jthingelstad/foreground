@@ -50,6 +50,7 @@ $wgResourceModules['skins.foreground'] = array(
         'foreground/assets/scripts/vendor/responsive-tables.js',
         'foreground/assets/scripts/foundation/foundation.js',
         'foreground/assets/scripts/foundation/foundation.topbar.js',
+        'foreground/assets/scripts/foundation/foundation.abide.js',
         'foreground/assets/scripts/foundation/foundation.dropdown.js',
         'foreground/assets/scripts/foundation/foundation.section.js',
         'foreground/assets/scripts/foundation/foundation.clearing.js',
