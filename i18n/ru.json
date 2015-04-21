@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"HiRolla"
+		]
+	},
+	"skinname-foreground": "Foreground",
+	"foreground-desc": "Оформление, которое выводит на передний план именно содержимое страниц, минимизируя интерфейс сайта",
+	"foreground-browsermsg": "Возможны непредвиденные изменения вида в Internet Explorer. Рекомендуем обновить Internet Explorer или пользоваться такими браузерами, как Firefox или Chrome.",
+	"foreground-menutitle": "Меню"
+}
