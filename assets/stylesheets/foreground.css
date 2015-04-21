@@ -278,22 +278,10 @@ h1,h2,h3,h4,h5,h6 {
   margin-bottom: 0.5em;
 }
 
-
-.editsection {
+.mw-editsection,
+.mw-editsection-like {
   font-weight: normal;
   font-size: 0.4em;
-}
-
-h3 {
-  font-weight: normal;
-  font-size:1em;
-}
-
-.ns-subject h3,
-.ns-special h3,
-.page-Main_Page h3 {
-  font-weight: bold;
-  font-size: 2em;
 }
 
 p.title {
@@ -695,15 +683,16 @@ div.mw-htmlform-field-HTMLCheckField div.mw-label { height:0; }
 
 
 /* Jamie's Header Hider */
-body.page-Main_Page h1.firstHeading,
+body.page-Main_Page h2.firstHeading,
 body.page-Main_Page #siteSub,
-body.page-Extension_Main_Page h1.firstHeading,
+body.page-Extension_Main_Page h2.firstHeading,
 body.page-Extension_Main_Page #siteSub,
-body.page-Skin_Main_Page h1.firstHeading,
+body.page-Skin_Main_Page h2.firstHeading,
 body.page-Skin_Main_Page #siteSub,
-body.page-Farm_Main_Pageh1.firstHeading,
+body.page-Farm_Main_Page h2.firstHeading,
 body.page-Farm_Main_Page #siteSub,
-body.mw-special-Userlogin h2.title {
+body.mw-special-Userlogin h2.title,
+body.page-Main_Page h3#tagline {
   display:none;
 }
 
