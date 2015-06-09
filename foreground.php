@@ -23,7 +23,7 @@ $wgExtensionCredits['skin'][] = array(
 		'Jamie Thingelstad',
 		'Tom Hutchison',
 		'...'
-		),
+	),
 	'descriptionmsg' => 'foreground-desc'
 );
 
@@ -35,7 +35,8 @@ $wgMessagesDirs['SkinForeground'] = __DIR__ . '/i18n';
 $wgExtensionMessagesFiles['SkinForeground'] = __DIR__ . '/Foreground.i18n.php';
 
 $wgResourceModules['skins.foreground'] = array(
-	'styles'         => array(
+    'position' => 'top',
+    'styles'         => array(
     	'foreground/assets/stylesheets/normalize.css',
         'foreground/assets/stylesheets/font-awesome.css',
     	'foreground/assets/stylesheets/foundation.css',
