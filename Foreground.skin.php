@@ -217,8 +217,6 @@ class foregroundTemplate extends BaseTemplate {
 						$newtitle = str_replace($namespace.':', '', $pagetitle);
 						$displaytitle = str_replace($pagetitle, $newtitle, $displaytitle);
 					?><h4 class="namespace label"><?php print $namespace; ?></h4><?php } ?>
-					<div id="content">
-					<h2  id="firstHeading" class="title"><?php print $displaytitle; ?></h2>
 					<h2 id="firstHeading" class="firstHeading" lang="<?php
 					$this->data['pageLanguage'] =
 					    $this->getSkin()->getTitle()->getPageViewLanguage()->getHtmlCode();
@@ -243,7 +241,6 @@ class foregroundTemplate extends BaseTemplate {
 					</div>
 		    	<div class="group"><?php $this->html('catlinks'); ?></div>
 		    	<?php $this->html('dataAfterContent'); ?>
-		    	</div>
 		    </div>
 		</div>
 
