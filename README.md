@@ -2,6 +2,8 @@
 
 [MediaWiki](http://www.mediawiki.org) skin that focuses on putting your content in the *foreground*. Supports responsive layouts and has classes predefined for [Semantic MediaWiki](http://semantic-mediawiki.org/wiki/Semantic_MediaWiki). Built on the [Zurb Foundation](http://foundation.zurb.com) CSS framework.
 
+[![Build Status](http://img.shields.io/travis/thingelstad/foreground/develop.svg?style=flat)](https://travis-ci.org/thingelstad/foreground) [![Scrutinizer](http://img.shields.io/scrutinizer/g/thingelstad/foreground.svg)](https://scrutinizer-ci.com/g/thingelstad/foreground/)
+
 ## Download
 
 First, copy the Foreground source files into your MediaWiki skins directory (see [skinning](https://www.mediawiki.org/wiki/Manual:Skinning) for general information on MediaWiki skins). You can either download the files and extract them from:
