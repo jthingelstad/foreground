@@ -199,11 +199,13 @@ class foregroundTemplate extends BaseTemplate {
 		<div class="row">
 				<div id="p-cactions" class="large-12 columns">
 					<?php if ($wgUser->isLoggedIn() || $wgForegroundFeatures['showActionsForAnon']): ?>
-						<a href="#" data-dropdown="drop1" class="button dropdown small secondary radius"><i class="fa fa-cog"><span class="show-for-medium-up">&nbsp;<?php echo wfMessage( 'actions' )->text() ?></span></i></a>
-						<ul id="drop1" class="views large-12 columns f-dropdown">
+						<a href="#" class="button dropdown small secondary radius"><i class="fa fa-cog"><span class="show-for-medium-up">&nbsp;<?php echo wfMessage( 'actions' )->text() ?></span></i></a>
+						<!--RTL -->
+						<ul id="drop1" class="views large-12 columns left f-dropdown">
 							<?php foreach( $this->data['content_actions'] as $key => $item ) { echo preg_replace(array('/\sprimary="1"/','/\scontext="[a-z]+"/','/\srel="archives"/'),'',$this->makeListItem($key, $item)); } ?>
 							<?php wfRunHooks( SkinTemplateToolboxEnd, array( &$this, true ) );  ?>
 						</ul>
+						<!--RTL -->
 						<?php if ($wgUser->isLoggedIn()): ?>
 							<div id="echo-notifications"></div>
 						<?php endif; ?>
@@ -221,9 +223,9 @@ class foregroundTemplate extends BaseTemplate {
 					$this->text( 'pageLanguage' );
 					?>"><?php print $displaytitle; ?></h2>
 					<?php if ( $this->data['isarticle'] ) { ?><h3 id="tagline"><?php $this->msg( 'tagline' ) ?></h3><?php } ?>
-					<h5 class="subtitle"><?php $this->html('subtitle') ?></h5>
-					<div class="clear_both"></div>
-					<div class="mw-bodytext">
+					<h5 id="siteSub" class="subtitle"><?php $this->html('subtitle') ?></h5>
+					<div id="contentSub" class="clear_both"></div>
+					<div id="bodyContent" class="mw-bodytext">
 						<?php 
 					        switch ($wgForegroundFeatures['useForegroundTabs']) {
 					         	case 'true':
