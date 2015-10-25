@@ -13,6 +13,8 @@ class Skinforeground extends SkinTemplate {
 
 	public function setupSkinUserCss(OutputPage $out) {
 		parent::setupSkinUserCss($out);
+
+		$styles = array( 'mediawiki.skinning.interface', 'skins.foreground' );
 		global $wgForegroundFeatures;
 		$wgForegroundFeaturesDefaults = array(
 			'showActionsForAnon' => true,
@@ -40,7 +42,8 @@ class Skinforeground extends SkinTemplate {
 					header('X-UA-Compatible: IE=edge');
 				break;
 		}
-		$out->addModuleStyles('skins.foreground');
+		wfRunHooks( 'SkinVectorStyleModules', array( $this, &$styles ) );
+		$out->addModuleStyles( $styles );
 	}
 
 	public function initPage( OutputPage $out ) {
@@ -212,7 +215,11 @@ class foregroundTemplate extends BaseTemplate {
 						$newtitle = str_replace($namespace.':', '', $pagetitle);
 						$displaytitle = str_replace($pagetitle, $newtitle, $displaytitle);
 					?><h4 class="namespace label"><?php print $namespace; ?></h4><?php } ?>
-					<h2 class="title"><?php print $displaytitle; ?></h2>
+					<h2 id="firstHeading" class="firstHeading" lang="<?php
+					$this->data['pageLanguage'] =
+					    $this->getSkin()->getTitle()->getPageViewLanguage()->getHtmlCode();
+					$this->text( 'pageLanguage' );
+					?>"><?php print $displaytitle; ?></h2>
 					<?php if ( $this->data['isarticle'] ) { ?><h3 id="tagline"><?php $this->msg( 'tagline' ) ?></h3><?php } ?>
 					<h5 class="subtitle"><?php $this->html('subtitle') ?></h5>
 					<div class="clear_both"></div>

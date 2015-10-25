@@ -6,7 +6,7 @@
 
 First, copy the Foreground source files into your MediaWiki skins directory (see [skinning](https://www.mediawiki.org/wiki/Manual:Skinning) for general information on MediaWiki skins). You can either download the files and extract them from:
 
-    https://github.com/thingles/foreground/archive/master.zip
+    https://github.com/thingles/foreground/archive/develop.zip
 
 You should extract that into a folder named `foreground` in your `skins` directory.
 
