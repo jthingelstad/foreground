@@ -813,3 +813,8 @@ body.mw-special-Userlogin h2.title {
 #echo-notifications #mw-echo-overlay-pref-link { padding: 10px 0 10px 30px; }
 #echo-notifications #mw-echo-overlay-link { border-right: 1px solid #DDDDDD; margin-right: 2em; }
 }
+
+/*Fix ULS CSS */
+#pt-uls a.uls-trigger {
+  padding-left:15px !important;
+}

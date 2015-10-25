@@ -19,7 +19,7 @@ jQuery(document).ready(function() {
   jQuery('li#ca-edit a').prepend('<div class="drop-icon"><i class="fa fa-pencil-square-o fa-fw"></i></div>')
   jQuery('li#ca-viewsource a').prepend('<div class="drop-icon"><i class="fa fa-book fa-fw"></i></div>')
   jQuery('li#ca-form_edit a').prepend('<div class="drop-icon"><i class="fa fa-pencil-square fa-fw"></i></div>')
-  jQuery('li#ca-history a').prepend('<div class="drop-icon"><i class="fa fa-archive fa-fw"></i></div>')
+  jQuery('li#ca-history a').prepend('<div class="drop-icon"><i class="fa fa-history fa-fw"></i></div>')
   jQuery('li#ca-delete a').prepend('<div class="drop-icon"><i class="fa fa-trash-o fa-fw"></i></div>')
   jQuery('li#ca-move a').prepend('<div class="drop-icon"><i class="fa fa-truck fa-fw"></i></div>')
   jQuery('li#ca-protect a').prepend('<div class="drop-icon"><i class="fa fa-shield fa-fw"></i></div>')
@@ -34,7 +34,7 @@ if ( jQuery( '#ca-addsection' ).length ) {
   jQuery('li#ca-addsection a').html('<div class="drop-icon"><i class="fa fa-plus fa-fw"></i></div>' + jQuery('li#ca-addsection a').attr('title').replace(/\[.+/g,""))
 }
 
-  jQuery('li#pt-uls a').prepend('<div class="drop-icon"><i class="fa fa-book fa-fw"></i></div>')
+  jQuery('li#pt-uls a').prepend('<div class="drop-icon"><i class="fa fa-language fa-fw"></i></div>')
   jQuery('li#pt-userpage a').prepend('<div class="drop-icon"><i class="fa fa-user fa-fw"></i></div>')
   jQuery('li#pt-mytalk a').prepend('<div class="drop-icon"><i class="fa fa-comments fa-fw"></i></div>')
   jQuery('li#pt-adminlinks a').prepend('<div class="drop-icon"><i class="fa fa-bolt fa-fw"></i></div>')
