@@ -35,6 +35,7 @@ $wgMessagesDirs['SkinForeground'] = __DIR__ . '/i18n';
 $wgExtensionMessagesFiles['SkinForeground'] = __DIR__ . '/Foreground.i18n.php';
 
 $wgResourceModules['skins.foreground'] = array(
+	'position'       => 'top',
 	'styles'         => array(
 		'foreground/assets/stylesheets/normalize.css',
 		'foreground/assets/stylesheets/font-awesome.css',
@@ -61,5 +62,4 @@ $wgResourceModules['skins.foreground'] = array(
 	),
 	'remoteBasePath' => &$GLOBALS['wgStylePath'],
 	'localBasePath'  => &$GLOBALS['wgStyleDirectory'],
-	'position'       => 'bottom'
 );
