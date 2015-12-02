@@ -9,8 +9,15 @@
  * @license 2-clause BSD
  */
 
-if( !defined( 'MEDIAWIKI' ) ) {
-   die( 'This is a skin to the MediaWiki package and cannot be run standalone.' );
+if ( function_exists( 'wfLoadSkin' ) ) {
+	wfLoadSkin( 'foreground' );
+	// Keep i18n globals so mergeMessageFileList.php doesn't break
+	$wgMessagesDirs['SkinForeground'] = __DIR__ . '/i18n';
+	/* wfWarn(
+		'Deprecated PHP entry point used for foreground skin. Please use wfLoadSkin instead, ' .
+		'see https://www.mediawiki.org/wiki/Extension_registration for more details.'
+	); */
+	return;
 }
 
 $wgExtensionCredits['skin'][] = array(
