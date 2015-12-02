@@ -34,7 +34,8 @@ $wgAutoloadClasses['SkinForeground'] = __DIR__ . '/Foreground.skin.php';
 $wgMessagesDirs['SkinForeground'] = __DIR__ . '/i18n';
 $wgExtensionMessagesFiles['SkinForeground'] = __DIR__ . '/Foreground.i18n.php';
 
-$wgResourceModules['skins.foreground'] = array(
+$wgResourceModules['skins.foreground.styles'] = array(
+	'position'       => 'top',
 	'styles'         => array(
 		'foreground/assets/stylesheets/normalize.css',
 		'foreground/assets/stylesheets/font-awesome.css',
@@ -44,6 +45,12 @@ $wgResourceModules['skins.foreground'] = array(
 		'foreground/assets/stylesheets/jquery.autocomplete.css',
 		'foreground/assets/stylesheets/responsive-tables.css'
 	),
+	'remoteBasePath' => &$GLOBALS['wgStylePath'],
+	'localBasePath'  => &$GLOBALS['wgStyleDirectory']
+);
+
+$wgResourceModules['skins.foreground.js'] = array(
+	'position'       => 'bottom',
 	'scripts'        => array(
 		'foreground/assets/scripts/vendor/custom.modernizr.js',
 		'foreground/assets/scripts/vendor/fastclick.js',
@@ -60,6 +67,6 @@ $wgResourceModules['skins.foreground'] = array(
 		'foreground/assets/scripts/foreground.js'
 	),
 	'remoteBasePath' => &$GLOBALS['wgStylePath'],
-	'localBasePath'  => &$GLOBALS['wgStyleDirectory'],
-	'position'       => 'bottom'
+	'localBasePath'  => &$GLOBALS['wgStyleDirectory']
 );
+
