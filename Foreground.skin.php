@@ -39,7 +39,7 @@ class Skinforeground extends SkinTemplate {
 					header('X-UA-Compatible: IE=edge');
 				break;
 		}
-		$out->addModuleStyles('skins.foreground');
+		$out->addModuleStyles('skins.foreground.styles');
 	}
 
 	public function initPage( OutputPage $out ) {
@@ -48,7 +48,7 @@ class Skinforeground extends SkinTemplate {
 
 		$viewport_meta = 'width=device-width, user-scalable=yes, initial-scale=1.0';
 	  $out->addMeta('viewport', $viewport_meta);
-		$out->addModuleScripts('skins.foreground');
+		$out->addModuleScripts('skins.foreground.js');
 	}
 
 }
