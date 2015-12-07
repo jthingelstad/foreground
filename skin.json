@@ -22,7 +22,7 @@
 		"SkinForeground": "Foreground.skin.php"
 	},
 	"ResourceModules": {
-		"skins.foreground": {
+		"skins.foreground.styles": {
 			"position": "top",
 			"styles": [
 				"assets/stylesheets/normalize.css",
@@ -32,7 +32,10 @@
 				"assets/stylesheets/foreground-print.css",
 				"assets/stylesheets/jquery.autocomplete.css",
 				"assets/stylesheets/responsive-tables.css"
-			],
+			]
+		},
+		"skins.foreground.js": {
+			"position": "bottom",
 			"scripts": [
 				"assets/scripts/vendor/custom.modernizr.js",
 				"assets/scripts/vendor/fastclick.js",
