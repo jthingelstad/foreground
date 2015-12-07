@@ -35,7 +35,7 @@
 			]
 		},
 		"skins.foreground.js": {
-			"position": "bottom",
+			"position": "top",
 			"scripts": [
 				"assets/scripts/vendor/custom.modernizr.js",
 				"assets/scripts/vendor/fastclick.js",
