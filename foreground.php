@@ -57,7 +57,7 @@ $wgResourceModules['skins.foreground.styles'] = array(
 );
 
 $wgResourceModules['skins.foreground.js'] = array(
-	'position'       => 'bottom',
+	'position'       => 'top',
 	'scripts'        => array(
 		'foreground/assets/scripts/vendor/custom.modernizr.js',
 		'foreground/assets/scripts/vendor/fastclick.js',
