@@ -254,7 +254,6 @@ class foregroundTemplate extends BaseTemplate {
 		</html>
 
 <?php
-		wfRestoreWarnings();
 	}
 }
 ?>
