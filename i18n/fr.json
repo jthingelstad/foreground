@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Marc Antoine Thevenet"
+		]
+	},
+	"skinname-foreground": "Foreground",
+	"foreground-desc": "Propose une skin visant à mettre votre contenu au premier plan",
+	"foreground-browsermsg": "Il est possible que l'affichage ne soit pas correct avec cette version d'Internet Explorer. Nous vous recommandons de le mettre à jour vers une version plus récente d'Internet Explorer ou de passer à un navigateur comme Firefox ou Chrome.",
+	"foreground-menutitle": "Menu"
+}
