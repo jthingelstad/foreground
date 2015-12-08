@@ -14,7 +14,7 @@ class Skinforeground extends SkinTemplate {
 	public function setupSkinUserCss(OutputPage $out) {
 		parent::setupSkinUserCss($out);
 
-		$styles = array( 'mediawiki.skinning.interface', 'skins.foreground' );
+		$styles = array( 'mediawiki.skinning.interface', 'skins.foreground.styles' );
 		global $wgForegroundFeatures;
 		$wgForegroundFeaturesDefaults = array(
 			'showActionsForAnon' => true,
@@ -52,7 +52,7 @@ class Skinforeground extends SkinTemplate {
 
 		$viewport_meta = 'width=device-width, user-scalable=yes, initial-scale=1.0';
 	  $out->addMeta('viewport', $viewport_meta);
-		$out->addModuleScripts('skins.foreground');
+		$out->addModuleScripts('skins.foreground.js');
 	}
 
 }
