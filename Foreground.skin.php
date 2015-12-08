@@ -48,7 +48,7 @@ class Skinforeground extends SkinTemplate {
 
 		$viewport_meta = 'width=device-width, user-scalable=yes, initial-scale=1.0';
 	  $out->addMeta('viewport', $viewport_meta);
-		$out->addModuleScripts('skins.foreground.js');
+		$out->addModules('skins.foreground.js');
 	}
 
 }
