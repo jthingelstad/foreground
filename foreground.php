@@ -20,11 +20,13 @@ if ( function_exists( 'wfLoadSkin' ) ) {
 	return;
 }
 
+// Note: Doin't forget when updating to update the skin.json file with the same change.
+
 $wgExtensionCredits['skin'][] = array(
 	'path'		 => __FILE__,
 	'name'		 => 'Foreground',
 	'url'		 => 'http://foreground.thingelstad.com/',
-	'version'	 => '1.2-alpha',
+	'version'	 => '1.2',
 	'author'	 => array(
 		'Garrick Van Buren',
 		'Jamie Thingelstad',
