@@ -9,8 +9,15 @@
  * @license 2-clause BSD
  */
 
-if( !defined( 'MEDIAWIKI' ) ) {
-   die( 'This is a skin to the MediaWiki package and cannot be run standalone.' );
+if ( function_exists( 'wfLoadSkin' ) ) {
+	wfLoadSkin( 'foreground' );
+	// Keep i18n globals so mergeMessageFileList.php doesn't break
+	$wgMessagesDirs['SkinForeground'] = __DIR__ . '/i18n';
+	/* wfWarn(
+		'Deprecated PHP entry point used for foreground skin. Please use wfLoadSkin instead, ' .
+		'see https://www.mediawiki.org/wiki/Extension_registration for more details.'
+	); */
+	return;
 }
 
 $wgExtensionCredits['skin'][] = array(
@@ -23,7 +30,7 @@ $wgExtensionCredits['skin'][] = array(
 		'Jamie Thingelstad',
 		'Tom Hutchison',
 		'...'
-		),
+	),
 	'descriptionmsg' => 'foreground-desc'
 );
 
@@ -34,7 +41,8 @@ $wgAutoloadClasses['SkinForeground'] = __DIR__ . '/Foreground.skin.php';
 $wgMessagesDirs['SkinForeground'] = __DIR__ . '/i18n';
 $wgExtensionMessagesFiles['SkinForeground'] = __DIR__ . '/Foreground.i18n.php';
 
-$wgResourceModules['skins.foreground'] = array(
+$wgResourceModules['skins.foreground.styles'] = array(
+	'position'       => 'top',
 	'styles'         => array(
 		'foreground/assets/stylesheets/normalize.css',
 		'foreground/assets/stylesheets/font-awesome.css',
@@ -44,6 +52,12 @@ $wgResourceModules['skins.foreground'] = array(
 		'foreground/assets/stylesheets/jquery.autocomplete.css',
 		'foreground/assets/stylesheets/responsive-tables.css'
 	),
+	'remoteBasePath' => &$GLOBALS['wgStylePath'],
+	'localBasePath'  => &$GLOBALS['wgStyleDirectory']
+);
+
+$wgResourceModules['skins.foreground.js'] = array(
+	'position'       => 'top',
 	'scripts'        => array(
 		'foreground/assets/scripts/vendor/custom.modernizr.js',
 		'foreground/assets/scripts/vendor/fastclick.js',
@@ -60,6 +74,5 @@ $wgResourceModules['skins.foreground'] = array(
 		'foreground/assets/scripts/foreground.js'
 	),
 	'remoteBasePath' => &$GLOBALS['wgStylePath'],
-	'localBasePath'  => &$GLOBALS['wgStyleDirectory'],
-	'position'       => 'bottom'
+	'localBasePath'  => &$GLOBALS['wgStyleDirectory']
 );
