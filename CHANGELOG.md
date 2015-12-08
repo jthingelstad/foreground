@@ -2,6 +2,7 @@
 
 * [compatibility] Update skin for skin registration on MW 1.25 and higher
 * [compatibility] Backwards compatibility with MediaWiki Versions prior to 1.25
+* [bug] Fixed Echo extension compatibility with recent release
 * [documentation] Update Readme.md
 * [language] Update Fr-fr translation string
 * [development] Addition of Travis and Scrutinizer
