@@ -21,7 +21,7 @@ After that, you can issue `git pull` to update the code at anytime.
 
 ## Setup
 
-Once the skin is in place add the following line to your `LocalSettings.php` file.
+Once the skin is in place add one the following lines to your `LocalSettings.php` file depending on the version of MediaWiki you are using.
 
     require_once "$IP/skins/foreground/foreground.php"; //MW versions < 1.25.x
 	
