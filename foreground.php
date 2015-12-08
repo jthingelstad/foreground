@@ -9,8 +9,15 @@
  * @license 2-clause BSD
  */
 
-if( !defined( 'MEDIAWIKI' ) ) {
-   die( 'This is a skin to the MediaWiki package and cannot be run standalone.' );
+if ( function_exists( 'wfLoadSkin' ) ) {
+	wfLoadSkin( 'foreground' );
+	// Keep i18n globals so mergeMessageFileList.php doesn't break
+	$wgMessagesDirs['SkinForeground'] = __DIR__ . '/i18n';
+	/* wfWarn(
+		'Deprecated PHP entry point used for foreground skin. Please use wfLoadSkin instead, ' .
+		'see https://www.mediawiki.org/wiki/Extension_registration for more details.'
+	); */
+	return;
 }
 
 $wgExtensionCredits['skin'][] = array(
@@ -22,8 +29,8 @@ $wgExtensionCredits['skin'][] = array(
 		'Jamie Thingelstad',
 		'Tom Hutchison',
 		'...'
-		),
-	'version' => '2.0.0 beta 5',
+	),
+	'version' => '2.0.0 beta 6',
 	'descriptionmsg' => 'foreground-desc'
 );
 
@@ -34,7 +41,8 @@ $wgAutoloadClasses['SkinForeground'] = __DIR__ . '/Foreground.skin.php';
 $wgMessagesDirs['SkinForeground'] = __DIR__ . '/i18n';
 $wgExtensionMessagesFiles['SkinForeground'] = __DIR__ . '/Foreground.i18n.php';
 
-$wgResourceModules['skins.foreground'] = array(
+$wgResourceModules['skins.foreground.styles'] = array(
+	'position'       => 'top',
 	'styles'         => array(
 		'foreground/assets/stylesheets/normalize.css',
 		'foreground/assets/stylesheets/font-awesome.css',
@@ -43,6 +51,10 @@ $wgResourceModules['skins.foreground'] = array(
 		'foreground/assets/stylesheets/foreground-print.css',
 		'foreground/assets/stylesheets/jquery.autocomplete.css'
 	),
+);
+
+$wgResourceModules['skins.foreground.js'] = array(
+	'position'       => 'top',
 	'scripts'        => array(
 		'foreground/assets/scripts/vendor/jquery.cookie.foreground.js',
 		'foreground/assets/scripts/vendor/modernizr.js',
@@ -67,10 +79,6 @@ $wgResourceModules['skins.foreground'] = array(
 		'foreground/assets/scripts/foundation/foundation.abide.js',
 		'foreground/assets/scripts/foreground.js',
 	),
-	'dependencies' => array(
-		'jquery.cookie.js',
-	),
 	'remoteBasePath' => &$GLOBALS['wgStylePath'],
-	'localBasePath'  => &$GLOBALS['wgStyleDirectory'],
-	'position'       => 'bottom'
+	'localBasePath'  => &$GLOBALS['wgStyleDirectory']
 );
