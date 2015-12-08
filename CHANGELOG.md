@@ -1,3 +1,9 @@
+## Version 1.2
+
+* [compatibility] Update skin for skin registration on MW 1.25 and higher
+* [compatibility] Backwards compatibility with MediaWiki Versions prior to 1.25
+
+
 ## Version 1.1
 
 * [feature] Addition of Social Media Follow Icons using AddThis horizontal follow bar
