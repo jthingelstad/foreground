@@ -186,7 +186,7 @@ class foregroundTemplate extends BaseTemplate {
 						<!--RTL -->
 						<ul id="drop1" class="views large-12 columns right f-dropdown">
 							<?php foreach( $this->data['content_actions'] as $key => $item ) { echo preg_replace(array('/\sprimary="1"/','/\scontext="[a-z]+"/','/\srel="archives"/'),'',$this->makeListItem($key, $item)); } ?>
-							<?php wfRunHooks( SkinTemplateToolboxEnd, array( &$this, true ) );  ?>
+							<?php wfRunHooks( 'SkinTemplateToolboxEnd', array( &$this, true ) );  ?>
 						</ul>
 						<!--RTL -->
 						<?php if ($wgUser->isLoggedIn()): ?>
