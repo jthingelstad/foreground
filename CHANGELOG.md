@@ -1,6 +1,21 @@
 ## Version 2.0
 * [new] upgraded foundation from foundation 4 to foundation 5.
 
+## Version 1.2
+
+* [compatibility] Update skin for skin registration on MW 1.25 and higher
+* [compatibility] Backwards compatibility with MediaWiki Versions prior to 1.25
+* [bug] Fixed Echo extension compatibility with recent release
+* [documentation] Update Readme.md
+* [language] Update Fr-fr translation string
+* [development] Addition of Travis and Scrutinizer
+* [code] Resource module position explicitly set
+* [code] Fixes for execution paths
+* [feature] Support for Visual Editor
+* [icons] Font Awesome update to 4.2, better icons for ULS and page history
+* [code] CSS fix for invasive ULS CSS, removed style for SiteNotice now user controlled
+* [language] Update to language files, now uses .json files to load translations
+
 ## Version 1.1
 
 * [feature] Addition of Social Media Follow Icons using AddThis horizontal follow bar
@@ -14,3 +29,4 @@
 * Added CONTRIBUTING.md file
 * Update to README.md
 * Added COPYING file
+

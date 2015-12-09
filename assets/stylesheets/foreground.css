@@ -721,7 +721,8 @@ body.page-Main_Page h3#tagline {
   margin: .5em 1em;
 }
 
-#echo-notifications #pt-notifications {
+#echo-notifications #pt-notifications,
+#echo-notifications #pt-notifications-alert {
   position: relative;
   list-style: none;
 }
@@ -736,13 +737,25 @@ body.page-Main_Page h3#tagline {
   padding:6px;
 }
 
-#echo-notifications #pt-notifications a.mw-echo-short-link .mw-badge
+#echo-notifications #pt-notifications-alert .mw-echo-notifications-badge
+{
+  width: 50px;
+  height: 30px;
+  text-align: center;
+  border-radius: 6px;
+  margin: 0;
+}
+
+#echo-notifications #pt-notifications a.mw-echo-short-link .mw-badge,
+#echo-notifications #pt-notifications-alert a.mw-echo-short-link .mw-badge
 {
   margin:0;
   padding:6px;
 }
 
-#echo-notifications #pt-notifications .mw-badge-content {
+#echo-notifications #pt-notifications .mw-badge-content,
+#echo-notifications #pt-notifications-alert .mw-badge-content
+{
   font-size: 1.3em;
   line-height: 1.1;
 }
