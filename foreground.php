@@ -20,7 +20,7 @@ if ( function_exists( 'wfLoadSkin' ) ) {
 	return;
 }
 
-// Note: Doin't forget when updating to update the skin.json file with the same change.
+// Note: Don't forget when updating to update the skin.json file with the same change.
 
 $wgExtensionCredits['skin'][] = array(
 	'path'		 => __FILE__,
