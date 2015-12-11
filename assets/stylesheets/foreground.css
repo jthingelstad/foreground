@@ -285,18 +285,6 @@ h1,h2,h3,h4,h5,h6 {
   font-size: 0.4em;
 }
 
-h3 {
-  font-weight: normal;
-  font-size:1em;
-}
-
-.ns-subject h3,
-.ns-special h3,
-.page-Main_Page h3 {
-  font-weight: bold;
-  font-size: 2em;
-}
-
 p.title {
   padding: 0.9375em;
 }
@@ -730,7 +718,8 @@ body.mw-special-Userlogin h2.title {
   margin: .5em 1em;
 }
 
-#echo-notifications #pt-notifications {
+#echo-notifications #pt-notifications,
+#echo-notifications #pt-notifications-alert {
   position: relative;
   list-style: none;
 }
@@ -745,13 +734,25 @@ body.mw-special-Userlogin h2.title {
   padding:6px;
 }
 
-#echo-notifications #pt-notifications a.mw-echo-short-link .mw-badge
+#echo-notifications #pt-notifications-alert .mw-echo-notifications-badge
+{
+  width: 50px;
+  height: 30px;
+  text-align: center;
+  border-radius: 6px;
+  margin: 0;
+}
+
+#echo-notifications #pt-notifications a.mw-echo-short-link .mw-badge,
+#echo-notifications #pt-notifications-alert a.mw-echo-short-link .mw-badge
 {
   margin:0;
   padding:6px;
 }
 
-#echo-notifications #pt-notifications .mw-badge-content {
+#echo-notifications #pt-notifications .mw-badge-content,
+#echo-notifications #pt-notifications-alert .mw-badge-content
+{
   font-size: 1.3em;
   line-height: 1.1;
 }

@@ -2,6 +2,9 @@
 
 [MediaWiki](http://www.mediawiki.org) skin that focuses on putting your content in the *foreground*. Supports responsive layouts and has classes predefined for [Semantic MediaWiki](http://semantic-mediawiki.org/wiki/Semantic_MediaWiki). Built on the [Zurb Foundation](http://foundation.zurb.com) CSS framework.
 
+[![Build Status](https://travis-ci.org/thingles/foreground.svg?branch=develop)](https://travis-ci.org/thingles/foreground) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/thingles/foreground/badges/quality-score.png?b=develop)](https://scrutinizer-ci.com/g/thingles/foreground/?branch=develop)
+
+
 ## Download
 
 First, copy the Foreground source files into your MediaWiki skins directory (see [skinning](https://www.mediawiki.org/wiki/Manual:Skinning) for general information on MediaWiki skins). You can either download the files and extract them from:
@@ -18,9 +21,11 @@ After that, you can issue `git pull` to update the code at anytime.
 
 ## Setup
 
-Once the skin is in place add the following line to your `LocalSettings.php` file.
+Once the skin is in place add one the following lines to your `LocalSettings.php` file depending on the version of MediaWiki you are using.
 
-    require_once "$IP/skins/foreground/foreground.php";
+    require_once "$IP/skins/foreground/foreground.php"; //MW versions < 1.25.x
+	
+	wfLoadSkin( 'foreground' ); //MW versions 1.25 and higher
 
 This will activate Foreground in your installation. At this point you can select it as a user skin in your user preferences.
 

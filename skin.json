@@ -1,0 +1,63 @@
+{
+	"@Note": "Note: Don't forget when updating to update the foreground.php file with the same change.",
+	"name": "Foreground",
+	"version": "1.2.0",
+	"author": [
+		"Garrick Van Buren",
+		"Jamie Thingelstad",
+		"Tom Hutchison",
+		"..."
+	],
+	"url": "http://foreground.thingelstad.com",
+	"descriptionmsg": "foreground-desc",
+	"type": "skin",
+	"ValidSkinNames": {
+		"foreground": "Foreground"
+	},
+	"MessagesDirs": {
+		"SkinForeground": [
+			"i18n"
+		]
+	},
+	"AutoloadClasses": {
+		"SkinForeground": "Foreground.skin.php"
+	},
+	"ResourceModules": {
+		"skins.foreground.styles": {
+			"position": "top",
+			"styles": [
+				"assets/stylesheets/normalize.css",
+				"assets/stylesheets/font-awesome.css",
+				"assets/stylesheets/foundation.css",
+				"assets/stylesheets/foreground.css",
+				"assets/stylesheets/foreground-print.css",
+				"assets/stylesheets/jquery.autocomplete.css",
+				"assets/stylesheets/responsive-tables.css"
+			]
+		},
+		"skins.foreground.js": {
+			"position": "top",
+			"scripts": [
+				"assets/scripts/vendor/custom.modernizr.js",
+				"assets/scripts/vendor/fastclick.js",
+				"assets/scripts/vendor/responsive-tables.js",
+				"assets/scripts/foundation/foundation.js",
+				"assets/scripts/foundation/foundation.topbar.js",
+				"assets/scripts/foundation/foundation.dropdown.js",
+				"assets/scripts/foundation/foundation.section.js",
+				"assets/scripts/foundation/foundation.clearing.js",
+				"assets/scripts/foundation/foundation.cookie.js",
+				"assets/scripts/foundation/foundation.placeholder.js",
+				"assets/scripts/foundation/foundation.forms.js",
+				"assets/scripts/foundation/foundation.alerts.js",
+				"assets/scripts/foreground.js"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteSkinPath": "foreground"
+	},
+	"config": {},
+	"manifest_version": 1
+}
