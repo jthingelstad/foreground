@@ -1,6 +1,7 @@
 {
+	"@Note": "Note: Don't forget when updating to update the foreground.php file with the same change.",
 	"name": "Foreground",
-	"version": "1.2-rc",
+	"version": "1.2.0",
 	"author": [
 		"Garrick Van Buren",
 		"Jamie Thingelstad",
