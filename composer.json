@@ -4,13 +4,13 @@
 	},
 	"scripts": {
 		"test": [
-			"parallel-lint . --exclude vendor",
+			"parallel-lint . --exclude vendor"
+		],
         "post-install-cmd": [
             "bower install"
         ],
         "post-update-cmd": [
             "bower install"
         ]
-		]
 	}
 }
