@@ -47,20 +47,20 @@ jQuery( document ).ready( function () {
 	jQuery( 'li#pt-mycontris a' ).prepend( '<div class="drop-icon"><i class="fa fa-smile-o fa-fw"></i></div>' );
 	jQuery( 'li#pt-logout a' ).prepend( '<div class="drop-icon"><i class="fa fa-power-off fa-fw"></i></div>' );
 
-	jQuery( 'li#t-smwbrowselink a').prepend( '<div class="drop-icon"><i class="fa fa-eye fa-fw"></i></div>' );
-	jQuery( 'li#t-whatlinkshere a').prepend( '<div class="drop-icon"><i class="fa fa-arrows fa-fw"></i></div>' );
-	jQuery( 'li#t-blockip a').prepend( '<div class="drop-icon"><i class="fa fa-ban fa-fw"></i></div>' );
-	jQuery( 'li#t-recentchangeslinked a').prepend( '<div class="drop-icon"><i class="fa fa-bars fa-fw"></i></div>' );
-	jQuery( 'li#t-contributions a').prepend( '<div class="drop-icon"><i class="fa fa-smile-o fa-fw"></i></div>' );
-	jQuery( 'li#t-log a').prepend( '<div class="drop-icon"><i class="fa fa-bars fa-fw"></i></div>' );
-	jQuery( 'li#t-emailuser a').prepend( '<div class="drop-icon"><i class="fa fa-envelope fa-fw"></i></div>' );
-	jQuery( 'li#t-userrights a').prepend( '<div class="drop-icon"><i class="fa fa-gavel fa-fw"></i></div>' );
-	jQuery( 'li#t-upload a').prepend( '<div class="drop-icon"><i class="fa fa-upload fa-fw"></i></div>' );
-	jQuery( 'li#t-specialpages a').prepend( '<div class="drop-icon"><i class="fa fa-magic fa-fw"></i></div>' );
-	jQuery( 'li#t-print a').prepend( '<div class="drop-icon"><i class="fa fa-print fa-fw"></i></div>' );
-	jQuery( 'li#t-permalink a').prepend( '<div class="drop-icon"><i class="fa fa-dot-circle-o fa-fw"></i></div>' );
-	jQuery( 'li#t-info a').prepend( '<div class="drop-icon"><i class="fa fa-info fa-fw"></i></div>' );
-	jQuery( 'li#feedlinks a').prepend( '<div class="drop-icon"><i class="fa fa-rss fa-fw"></i></div>' );
+	jQuery( 'li#t-smwbrowselink a' ).prepend( '<div class="drop-icon"><i class="fa fa-eye fa-fw"></i></div>' );
+	jQuery( 'li#t-whatlinkshere a' ).prepend( '<div class="drop-icon"><i class="fa fa-arrows fa-fw"></i></div>' );
+	jQuery( 'li#t-blockip a' ).prepend( '<div class="drop-icon"><i class="fa fa-ban fa-fw"></i></div>' );
+	jQuery( 'li#t-recentchangeslinked a' ).prepend( '<div class="drop-icon"><i class="fa fa-bars fa-fw"></i></div>' );
+	jQuery( 'li#t-contributions a' ).prepend( '<div class="drop-icon"><i class="fa fa-smile-o fa-fw"></i></div>' );
+	jQuery( 'li#t-log a' ).prepend( '<div class="drop-icon"><i class="fa fa-bars fa-fw"></i></div>' );
+	jQuery( 'li#t-emailuser a' ).prepend( '<div class="drop-icon"><i class="fa fa-envelope fa-fw"></i></div>' );
+	jQuery( 'li#t-userrights a' ).prepend( '<div class="drop-icon"><i class="fa fa-gavel fa-fw"></i></div>' );
+	jQuery( 'li#t-upload a' ).prepend( '<div class="drop-icon"><i class="fa fa-upload fa-fw"></i></div>' );
+	jQuery( 'li#t-specialpages a' ).prepend( '<div class="drop-icon"><i class="fa fa-magic fa-fw"></i></div>' );
+	jQuery( 'li#t-print a' ).prepend( '<div class="drop-icon"><i class="fa fa-print fa-fw"></i></div>' );
+	jQuery( 'li#t-permalink a' ).prepend( '<div class="drop-icon"><i class="fa fa-dot-circle-o fa-fw"></i></div>' );
+	jQuery( 'li#t-info a' ).prepend( '<div class="drop-icon"><i class="fa fa-info fa-fw"></i></div>' );
+	jQuery( 'li#feedlinks a' ).prepend( '<div class="drop-icon"><i class="fa fa-rss fa-fw"></i></div>' );
 
 	jQuery( 'ul#toolbox-dropdown.dropdown>li#n-recentchanges a' ).prepend( '<div class="drop-icon"><i class="fa fa-tasks fa-fw"></i></div>' );
 	jQuery( 'ul#toolbox-dropdown.dropdown>li#n-help a' ).prepend( '<div class="drop-icon"><i class="fa fa-question fa-fw"></i></div>' );
