@@ -63,9 +63,7 @@ jQuery( document ).ready( function () {
 	jQuery( 'li#feedlinks a' ).prepend( '<div class="drop-icon"><i class="fa fa-rss fa-fw"></i></div>' );
 
 	jQuery( 'ul#toolbox-dropdown.dropdown>li#n-recentchanges a' ).prepend( '<div class="drop-icon"><i class="fa fa-tasks fa-fw"></i></div>' );
-	
 	jQuery( 'ul#toolbox-dropdown.dropdown>li#n-help a' ).prepend( '<div class="drop-icon"><i class="fa fa-question fa-fw"></i></div>' );
-
 
 	// Turn categories into labels
 	jQuery( '#mw-normal-catlinks ul li a' ).addClass( 'label' );
