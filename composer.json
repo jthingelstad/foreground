@@ -6,11 +6,11 @@
 		"test": [
 			"parallel-lint . --exclude vendor"
 		],
-        "post-install-cmd": [
-            "npm install"
-        ],
-        "post-update-cmd": [
-            "npm install"
-        ]
+		"post-install-cmd": [
+			"npm install"
+		],
+		"post-update-cmd": [
+			"npm install"
+		]
 	}
 }
