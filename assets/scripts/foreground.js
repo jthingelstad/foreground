@@ -5,10 +5,10 @@ jQuery( document ).ready( function () {
 		jQuery( 'html' ).addClass( 'lt-ie9' ).addClass( 'no-js' );
 	}
 
-	jQuery(document).foundation(function (response) {
+	jQuery( document ).foundation( function ( response ) {
 		// window.console.log(response.errors); < this line will produce error in ie9!
 		if ( window.console ) {
-			window.console.log(response.errors);
+			window.console.log( response.errors );
 		}
 	} );
 
