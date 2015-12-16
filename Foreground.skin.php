@@ -140,25 +140,11 @@ class foregroundTemplate extends BaseTemplate {
 					</ul>
 				</li>
 
-				<?php if ($wgUser->isLoggedIn()): ?>
 				<li id="personal-tools-dropdown" class="has-dropdown active"><a href="#"><i class="fa fa-user"></i></a>
 					<ul class="dropdown">
 						<?php foreach ( $this->getPersonalTools() as $key => $item ) { echo $this->makeListItem($key, $item); } ?>
 					</ul>
 				</li>
-
-						<?php else: ?>
-							<li>
-								<?php if (isset($this->data['personal_urls']['anonlogin'])): ?>
-								<a href="<?php echo $this->data['personal_urls']['anonlogin']['href']; ?>"><?php echo wfMessage( 'login' )->text() ?></a>
-								<?php elseif (isset($this->data['personal_urls']['login'])): ?>
-									<a href="<?php echo htmlspecialchars($this->data['personal_urls']['login']['href']); ?>"><?php echo wfMessage( 'login' )->text() ?></a>
-									<?php else: ?>
-										<?php echo Linker::link(Title::newFromText('Special:UserLogin'), wfMessage( 'login' )->text()); ?>
-									<?php endif; ?>
-							</li>
-
-				<?php endif; ?>
 
 			</ul>
 		</section>
