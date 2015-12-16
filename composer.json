@@ -4,7 +4,8 @@
 	},
 	"scripts": {
 		"test": [
-			"parallel-lint . --exclude vendor"
+			"parallel-lint . --exclude vendor",
+			"npm test"
 		],
 		"post-install-cmd": [
 			"npm install"
