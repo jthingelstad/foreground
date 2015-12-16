@@ -1,0 +1,4 @@
+node_modules
+vendor
+assets/scripts/foundation/
+assets/scripts/vendor/
