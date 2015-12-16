@@ -17,7 +17,7 @@ class Skinforeground extends SkinTemplate {
 		$wgForegroundFeaturesDefaults = array(
 			'showActionsForAnon' => true,
 			'NavWrapperType' => 'divonly',
-			'showHelpUnderTools' => true,		
+			'showHelpUnderTools' => true,
 			'showRecentChangesUnderTools' => true,
 			'wikiName' => &$GLOBALS['wgSitename'],
 			'navbarIcon' => false,
