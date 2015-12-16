@@ -1,4 +1,7 @@
 {
+	"require": {
+		"koala-framework/composer-extra-assets": "dev-master"
+	},
 	"require-dev": {
 		"jakub-onderka/php-parallel-lint": "0.9"
 	},
@@ -6,5 +9,10 @@
 		"test": [
 			"parallel-lint . --exclude vendor"
 		]
-	}
+	},
+    "extra": {
+        "require-bower": {
+            "jquery": "*"
+        }
+    }
 }
