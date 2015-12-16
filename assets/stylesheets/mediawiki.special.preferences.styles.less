@@ -1,0 +1,86 @@
+
+		&:first-child {
+			margin-left: 1px;
+		}
+
+		&.selected {
+			a {
+				background-color: #fafafa;
+				border-style: solid;
+				border-width: 1px;
+				border-image: linear-gradient(to top, #ccc, rgba(0, 0, 0, 0)) 1 100%;
+				margin: -1px;
+				background-position: bottom;
+				background-repeat: repeat-x;
+				color: #333;
+			}
+		}
+	}
+
+	a,
+	a:active {
+		display: inline-block;
+		position: relative;
+		color: #0645ad;
+		padding: 0.5em;
+		text-decoration: none;
+		background-image: none;
+		font-size: 0.9em;
+	}
+
+	a:hover,
+	a:focus {
+		text-decoration: underline;
+	}
+}
+
+.client-js #preferences {
+	float: left;
+	width: 100%;
+	margin: 0;
+	clear: both;
+	border: solid 1px #ccc;
+	background-color: #fafafa;
+
+	fieldset {
+		border: none;
+		border-top: solid 1px #ccc;
+	}
+
+	>fieldset {
+		border: none;
+		padding: 0;
+		margin: 1em;
+
+		>legend {
+			display: none;
+		}
+	}
+
+	legend {
+		color: #666;
+	}
+
+	td {
+		padding-left: 0.5em;
+		padding-right: 0.5em;
+	}
+
+	div.mw-prefs-buttons {
+		padding: 1em;
+
+		input {
+			margin-right: 0.25em;
+		}
+	}
+}
+
+.htmlform-tip {
+	font-size: x-small;
+	padding: .2em 2em;
+	color: #666;
+}
+
+fieldset legend {
+	background: none !important;
+}
