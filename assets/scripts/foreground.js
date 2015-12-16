@@ -35,7 +35,7 @@ jQuery( document ).ready( function () {
 	jQuery( 'li#ca-ask_delete_permanently a' ).prepend( '<div class="drop-icon"><i class="fa fa-cut fa-fw"></i></div>' );
 
 	if ( jQuery( '#ca-addsection' ).length ) {
-		jQuery( 'li#ca-addsection a' ).html( '<div class="drop-icon"><i class="fa fa-plus fa-fw"></i></div>' + jQuery( 'li#ca-addsection a' ).attr( 'title' ).replace( /\[.+/g,"" ) );
+		jQuery( 'li#ca-addsection a' ).html( '<div class="drop-icon"><i class="fa fa-plus fa-fw"></i></div>' + jQuery( 'li#ca-addsection a' ).attr( 'title' ).replace( /\[.+/g, "" ) );
 	}
 
 	jQuery( 'li#pt-uls a' ).prepend( '<div class="drop-icon"><i class="fa fa-language fa-fw"></i></div>' );
@@ -63,6 +63,7 @@ jQuery( document ).ready( function () {
 	jQuery( 'li#feedlinks a' ).prepend( '<div class="drop-icon"><i class="fa fa-rss fa-fw"></i></div>' );
 
 	jQuery( 'ul#toolbox-dropdown.dropdown>li#n-recentchanges a' ).prepend( '<div class="drop-icon"><i class="fa fa-tasks fa-fw"></i></div>' );
+	
 	jQuery( 'ul#toolbox-dropdown.dropdown>li#n-help a' ).prepend( '<div class="drop-icon"><i class="fa fa-question fa-fw"></i></div>' );
 
 
