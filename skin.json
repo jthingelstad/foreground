@@ -58,6 +58,11 @@
 		"localBasePath": "",
 		"remoteSkinPath": "foreground"
 	},
+	"ResourceModuleSkinStyles": {
+		"foreground": {
+			"+mediawiki.special.preferences.styles": "assets/stylesheets/mediawiki.special.preferences.styles.less"
+		}
+	},
 	"config": {},
 	"manifest_version": 1
 }
