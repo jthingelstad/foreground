@@ -78,3 +78,11 @@ $wgResourceModules['skins.foreground.js'] = array(
 	'remoteBasePath' => &$GLOBALS['wgStylePath'],
 	'localBasePath'  => &$GLOBALS['wgStyleDirectory']
 );
+
+$wgResourceModuleSkinStyles['foreground'] = array(
+	'+mediawiki.special.preferences.styles' => array(
+		'assets/stylesheets/mediawiki.special.preferences.styles.less'
+	),
+	'remoteBasePath' => &$GLOBALS['wgStylePath'],
+	'localBasePath'  => &$GLOBALS['wgStyleDirectory']
+);
