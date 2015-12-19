@@ -1,0 +1,6 @@
+Hooks provided by the foreground skin.
+
+'SkinforegroundStyleModules': Called when defining the list of module styles to be
+loaded by the foreground skin.
+$skin: Skinforeground object
+&$styles: Array of module names whose style will be loaded for the skin

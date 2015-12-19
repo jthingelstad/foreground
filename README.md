@@ -88,6 +88,9 @@ A top navbar icon will be set using the current image set by `$wgLogo` in `Local
 
 The icon will be resized to fit into a maximum width of 64px x 36px wide or a 16:9 ratio.
 
+### Show Help under Tools
+This will add the help link under tools. To control what the help link will link to use the message page, `MediaWiki:Helppage` to set the link target. The link target can be a local page, Help:Contents, or an external URL, https://www.mediawiki.org/wiki/Help:Contents.
+
 ### AddThis Buttons
 
 With a setting like:
