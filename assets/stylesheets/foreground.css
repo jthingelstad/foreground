@@ -819,3 +819,10 @@ body.mw-special-Userlogin h2.title {
 #pt-uls a.uls-trigger {
   padding-left:15px !important;
 }
+
+@media only screen and (min-width: 550px) {
+#p-cactions {
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+}
+}
