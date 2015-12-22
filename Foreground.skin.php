@@ -47,7 +47,7 @@ class Skinforeground extends SkinTemplate {
 		parent::initPage($out);
 
 		$viewport_meta = 'width=device-width, user-scalable=yes, initial-scale=1.0';
-	  $out->addMeta('viewport', $viewport_meta);
+		$out->addMeta('viewport', $viewport_meta);
 		$out->addModules('skins.foreground.js');
 	}
 
@@ -86,7 +86,7 @@ class foregroundTemplate extends BaseTemplate {
 		}
 ?>
 <!-- START FOREGROUNDTEMPLATE -->
-		<nav class="top-bar">
+		<nav class="top-bar" data-topbar role="navigation">
 			<ul class="title-area">
 				<li class="name">
 					<h1 class="title-name">
@@ -121,7 +121,7 @@ class foregroundTemplate extends BaseTemplate {
 			<ul id="top-bar-right" class="right">
 				<li class="has-form">
 					<form action="<?php $this->text( 'wgScript' ); ?>" id="searchform" class="mw-search">
-						<div class="row">
+						<div class="row collapse">
 						<div class="small-12 columns">
 							<?php echo $this->makeSearchInput(array('placeholder' => wfMessage('searchsuggest-search')->text(), 'id' => 'searchInput') ); ?>
 							<button type="submit" class="button search"><?php echo wfMessage( 'search' )->text() ?></button>
@@ -130,7 +130,6 @@ class foregroundTemplate extends BaseTemplate {
 					</form>
 				</li>
 				<li class="divider show-for-small"></li>
-				<li class="has-form">
 
 				<li class="has-dropdown active"><a href="#"><i class="fa fa-cogs"></i></a>
 					<ul id="toolbox-dropdown" class="dropdown">

@@ -4,9 +4,9 @@ jQuery(document).ready(function() {
   if (!jQuery.support.cssFloat) { jQuery('html').addClass('lt-ie9').addClass('no-js'); }
 
 
-  jQuery(document).foundation(function (response) {
-    // console.log(response.errors); < this line will produce error in ie9!
-    if (window.console) console.log(response.errors);
+  jQuery(document).foundation(function ( response ) {
+    // console.log(errors); < this line will produce error in ie9!
+    if (window.console) window.console.log( response.errors );
   });
   
   // The Echo extension puts an item in personal tools that Foreground really should have in the top menu
@@ -67,11 +67,11 @@ if ( jQuery( '#ca-addsection' ).length ) {
   jQuery('#mw-normal-catlinks ul li a').addClass('label');
 
   // Make the Page Action button respond to hover
-  jQuery('a.button.dropdown').mouseenter(function(){
-    jQuery('ul#drop1').addClass('open').addClass('right').css('top', '32px').css('left', '785px');
-  });
-  jQuery('ul#drop1').mouseleave(function(){
-    jQuery('ul#drop1').removeClass('open').css('top', '-9999px').css('left', '785px');
-  });
+  // jQuery('a.button.dropdown').mouseenter(function(){
+  //  jQuery('ul#drop1').addClass('open').addClass('right').css('top', '32px').css('left', '785px');
+  // });
+  // jQuery('ul#drop1').mouseleave(function(){
+  // jQuery('ul#drop1').removeClass('open').css('top', '-9999px').css('left', '785px');
+  // });
 
 });

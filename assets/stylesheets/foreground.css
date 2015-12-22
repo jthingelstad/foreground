@@ -6,6 +6,10 @@ p {
   margin-bottom: 0.25em;
 }
 
+#page-content {
+    margin: 2rem 0 0;
+}
+
 a.label:hover,
 a.label:focus {
   color: white;
@@ -500,10 +504,6 @@ button, .button {
   margin-left: 10px;
 }
 
-.top-bar-section .has-form {
-  padding: 0 5px;
-}
-
 .top-bar input {
   top: 0px;
 }
@@ -693,7 +693,7 @@ body.mw-special-Userlogin h2.title {
   display:none;
 }
 
-/* Don't like the black top bar? Copy this into your Common.css and change the colors
+/* Don't like the black top bar? Copy this into your Foreground.css and change the colors
 .top-bar,
 .top-bar-section ul,
 .top-bar-section ul li.active > a,
@@ -709,6 +709,17 @@ body.mw-special-Userlogin h2.title {
   border-color: black;
 }
 */
+
+
+.top-bar-section li.active:not(.has-form) a:not(.button),
+.top-bar-section li.active:not(.has-form) a:hover:not(.button) {
+	background: inherit;
+}
+
+.top-bar input {
+    width: auto;
+    display: inline;
+}
 
 /* Add improved styling for the Echo extension */
 
