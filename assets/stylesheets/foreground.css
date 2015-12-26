@@ -10,6 +10,10 @@ p {
     margin: 2rem 0 0;
 }
 
+.row {
+	max-width: 75em;
+}
+
 a.label:hover,
 a.label:focus {
   color: white;
@@ -17,10 +21,10 @@ a.label:focus {
 
 a.label.new { background-color: #d0d0d0; }
 
-a.button.dropdown { float:right;}
+a#actions-button { float:right; z-index: 499; }
 
 /* Hide the page actions button for special pages (cuz there's nothing in it) */
-.mw-special-FormEdit a.button.dropdown, .ns-special a.button.dropdown { display:none; }
+.mw-special-FormEdit a#actions-button, .ns-special a#actions-button { display:none; }
 
 /* Hide some rows on form-edit (e.g. a thing's title) */
 body.action-formedit .row.hide-on-form-edit { display: none;}
@@ -31,21 +35,21 @@ body.action-formedit .row.hide-on-form-edit { display: none;}
 }
 
 /* Also adjust z-index of action menu to force it on top */
-#p-cactions #drop1 {
-  z-index: 100000;
+#p-cactions #actions {
+  z-index: 500;
   white-space: nowrap;
 }
-#p-cactions #drop1 a {
+#p-cactions #actions a {
   width: 100%;
   text-align: left;
 }
 
 /* Make sure top bar is even more z-indx! */
 #toolbox-dropdown {
-  z-index: 10000000;
+  z-index: 601;
 }
 #personal-tools-dropdown {
-  z-index: 10000000;
+  z-index: 601;
 }
 
 /* Dropdown Icon Alignment */
@@ -139,10 +143,9 @@ div#userloginprompt, p#userloginlink {
 
 }
 
-
 /* LISTS */
 
-ul#drop1.f-dropdown {
+ul#actions.f-dropdown {
   margin-left:0;
   margin-top:.5em;
   margin-bottom:.25em;
@@ -230,7 +233,7 @@ margin: 0;
 text-align: center;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 641px) {
 #footer-left { font-size: 85%; text-align: center;}
 #footer-right-icons { font-size: 80%;}
 li#footer-privacy { float: none; margin-right: 0;}
@@ -381,7 +384,7 @@ table.wikitable > * > tr > td {
   padding: 0.4125em 0.5em 0.55em 0.5em;
 }
 
- .novalue {
+.novalue {
   color: #999999;
   font-style:italic;
   font-size:small;
@@ -496,8 +499,21 @@ button, .button {
   padding: 0.3em 0.75em 0.4em 0.75em;
 }
 
+.top-bar-logo {
+	max-width: 100%;
+	height:auto;
+	max-height:2.8125rem; /* Important! max-height must not be higher than line-height */
+	display: inline-block;
+	vertical-align:middle;
+}
+
 .top-bar .button.search {
-  top: 0px;
+	top: 0px;
+}
+
+.top-bar .button, .top-bar button {
+	padding-top: .35rem;
+	padding-bottom: .35rem;
 }
 
 .top-bar .button.search {
@@ -508,15 +524,17 @@ button, .button {
   top: 0px;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 641px) {
 .top-bar .button.search {
-  top: 1px; }
+  top: 0px; }
 .top-bar .button.search {
   margin-left: -4px; }
+.top-bar {
+	height: auto; }
 }
 
 .top-bar-section .dropdown {
-  z-index: 100;
+  z-index: 600;
 }
 
 input[type="submit"] {
@@ -710,6 +728,12 @@ body.mw-special-Userlogin h2.title {
 }
 */
 
+.vertical-divider {
+    width: 100%;
+    display: block;
+    background: #1A1A1A;
+    height: 1px;
+}
 
 .top-bar-section li.active:not(.has-form) a:not(.button),
 .top-bar-section li.active:not(.has-form) a:hover:not(.button) {
@@ -723,6 +747,10 @@ body.mw-special-Userlogin h2.title {
 
 /* Add improved styling for the Echo extension */
 
+#echo-notifications .mw-echo-ui-notificationBadgeButtonPopupWidget > .oo-ui-popupWidget  {
+    font-size: 80%;
+}
+
 #echo-notifications {
   float: right;
   display: inline-block;
@@ -730,15 +758,17 @@ body.mw-special-Userlogin h2.title {
 }
 
 #echo-notifications #pt-notifications,
-#echo-notifications #pt-notifications-alert {
+#echo-notifications #pt-notifications-alert,
+#echo-notifications #pt-notifications-message {
   position: relative;
   list-style: none;
+  border-radius: 6px;
+  background-color: #E7E7E7;
+  z-index: 499;
 }
 
 #echo-notifications #pt-notifications .mw-echo-notifications-badge
 {
-  width: 30px;
-  height: 35px;
   text-align: center;
   border-radius: 6px;
   margin: 0;
@@ -747,8 +777,6 @@ body.mw-special-Userlogin h2.title {
 
 #echo-notifications #pt-notifications-alert .mw-echo-notifications-badge
 {
-  width: 50px;
-  height: 30px;
   text-align: center;
   border-radius: 6px;
   margin: 0;
@@ -821,7 +849,7 @@ body.mw-special-Userlogin h2.title {
 /* Make Echo extension more mobile friendly on small widths */
 
 @media only screen and (min-width: 550px) {
-#echo-notifications .mw-echo-overlay { left: -420px; width: 450px; }
+#echo-notifications .mw-echo-overlay { left: -420px; width: 350px; }
 #echo-notifications #mw-echo-overlay-pref-link { padding: 10px 0 10px 30px; }
 #echo-notifications #mw-echo-overlay-link { border-right: 1px solid #DDDDDD; margin-right: 2em; }
 }
@@ -829,4 +857,17 @@ body.mw-special-Userlogin h2.title {
 /*Fix ULS CSS */
 #pt-uls a.uls-trigger {
   padding-left:15px !important;
+}
+
+/*Fixes Visual Editor */
+#content .oo-ui-widget {
+    height: 45px;
+}
+
+#content .oo-ui-toolbar-tools {
+    font-size: 90%;
+}
+
+#content .oo-ui-toolbar-actions > .oo-ui-buttonElement.oo-ui-labelElement > .oo-ui-buttonElement-button > .oo-ui-labelElement-label {
+    line-height: 2.75em !important;
 }

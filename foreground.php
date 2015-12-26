@@ -30,7 +30,7 @@ $wgExtensionCredits['skin'][] = array(
 		'Tom Hutchison',
 		'...'
 	),
-	'version' => '2.0.0 beta 6',
+	'version' => '2.0.0 (Albert)',
 	'descriptionmsg' => 'foreground-desc'
 );
 
@@ -70,19 +70,19 @@ $wgResourceModules['skins.foreground.js'] = array(
 		'foreground/assets/scripts/vendor/fastclick.js',
 		'foreground/assets/scripts/vendor/placeholder.js',
 		'foreground/assets/scripts/foundation/foundation.js',
+		'foreground/assets/scripts/foundation/foundation.topbar.js',
+		'foreground/assets/scripts/foundation/foundation.dropdown.js',
+		'foreground/assets/scripts/foundation/foundation.joyride.js',
 		'foreground/assets/scripts/foundation/foundation.accordion.js',
 		'foreground/assets/scripts/foundation/foundation.alert.js',
 		'foreground/assets/scripts/foundation/foundation.clearing.js',
-		'foreground/assets/scripts/foundation/foundation.dropdown.js',
 		'foreground/assets/scripts/foundation/foundation.equalizer.js',
 		'foreground/assets/scripts/foundation/foundation.interchange.js',
-		'foreground/assets/scripts/foundation/foundation.joyride.js',
 		'foreground/assets/scripts/foundation/foundation.offcanvas.js',
 		'foreground/assets/scripts/foundation/foundation.orbit.js',
 		'foreground/assets/scripts/foundation/foundation.reveal.js',
 		'foreground/assets/scripts/foundation/foundation.tab.js',
 		'foreground/assets/scripts/foundation/foundation.tooltip.js',
-		'foreground/assets/scripts/foundation/foundation.topbar.js',
 		'foreground/assets/scripts/foreground.js',
 	),
 	'dependencies'   => array(

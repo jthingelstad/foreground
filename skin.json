@@ -1,6 +1,6 @@
 {
 	"name": "Foreground",
-	"version": "2.0.0 beta 6",
+	"version": "2.0.0 (Albert)",
 	"author": [
 		"Garrick Van Buren",
 		"Jamie Thingelstad",
@@ -45,19 +45,19 @@
 				"assets/scripts/vendor/fastclick.js",
 				"assets/scripts/vendor/placeholder.js",
 				"assets/scripts/foundation/foundation.js",
+				"assets/scripts/foundation/foundation.topbar.js",
+				"assets/scripts/foundation/foundation.dropdown.js",
+				"assets/scripts/foundation/foundation.joyride.js",
 				"assets/scripts/foundation/foundation.accordion.js",
+				"assets/scripts/foundation/foundation.offcanvas.js",
 				"assets/scripts/foundation/foundation.alert.js",
 				"assets/scripts/foundation/foundation.clearing.js",
-				"assets/scripts/foundation/foundation.dropdown.js",
 				"assets/scripts/foundation/foundation.equalizer.js",
 				"assets/scripts/foundation/foundation.interchange.js",
-				"assets/scripts/foundation/foundation.joyride.js",
-				"assets/scripts/foundation/foundation.offcanvas.js",
 				"assets/scripts/foundation/foundation.orbit.js",
 				"assets/scripts/foundation/foundation.reveal.js",
 				"assets/scripts/foundation/foundation.tab.js",
 				"assets/scripts/foundation/foundation.tooltip.js",
-				"assets/scripts/foundation/foundation.topbar.js",
 				"assets/scripts/foreground.js"
 			],
 			"dependencies": [
