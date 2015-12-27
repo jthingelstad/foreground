@@ -76,8 +76,9 @@ small {
 }
 
 h4.namespace.label {
-  font-size: small;
-  display:inline-block;
+	font-size: 1rem;
+	display:inline-block;
+	margin-bottom: 0.5rem;
 }
 
 .label {
@@ -254,6 +255,19 @@ li#footer-disclaimer { float: none; margin-right: 0;}
  float: none;
  width: 95%;
  margin-left: 2em;
+}
+
+#catlinks {
+    border: 1px solid #aaa;
+    padding: 0.25rem;
+}
+
+#catlinks .label {
+    font-size: .9rem;
+}
+
+#catlinks a.label.new {
+    background-color: #BA0F2A;
 }
 
 .catlinks li {border-left:none;}

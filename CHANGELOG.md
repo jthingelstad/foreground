@@ -1,6 +1,8 @@
 ## Version 2.0
 
-* [feature] Upgrade to Foundation 5.5.3
+* [feature] [b/c break] Upgrade to Foundation 5.5.3 (Foundation Tabs have a coding change to build tabs on pages)
+* [code] [b/c break] Use the help page set with MediaWiki:Helppage
+* [feature] [code] Remove "Login" word for annon users, dropdown for log in and create account links
 * [icons] Update to Font Awesome 4.5
 * [icons] Missing icons for Visual Editor, CiteThisPage, et al were added
 * [feature] Support of more menu items in top-bar, flows automatically

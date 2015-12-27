@@ -46,7 +46,11 @@ if ( jQuery( '#ca-addsection' ).length ) {
   jQuery('li#pt-watchlist a').prepend('<div class="drop-icon"><i class="fa fa-th-list fa-fw"></i></div>')
   jQuery('li#pt-mycontris a').prepend('<div class="drop-icon"><i class="fa fa-smile-o fa-fw"></i></div>')
   jQuery('li#pt-logout a').prepend('<div class="drop-icon"><i class="fa fa-sign-out fa-fw"></i></div>')
-
+  jQuery('li#pt-login a').prepend('<div class="drop-icon"><i class="fa fa-sign-in fa-fw"></i></div>')
+  jQuery('li#pt-createaccount a').prepend('<div class="drop-icon"><i class="fa fa-lock fa-fw"></i></div>')
+  jQuery('li#pt-anonuserpage a').prepend('<div class="drop-icon"><i class="fa fa-user-secret fa-fw"></i></div>')
+  jQuery('li#pt-anontalk a').prepend('<div class="drop-icon"><i class="fa fa-commenting-o fa-fw"></i></div>')
+  
   jQuery('li#t-smwbrowselink a').prepend('<div class="drop-icon"><i class="fa fa-eye fa-fw"></i></div>')
   jQuery('li#t-whatlinkshere a').prepend('<div class="drop-icon"><i class="fa fa-arrows fa-fw"></i></div>')
   jQuery('li#t-blockip a').prepend('<div class="drop-icon"><i class="fa fa-ban fa-fw"></i></div>')
