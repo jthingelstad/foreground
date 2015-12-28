@@ -2,8 +2,7 @@
 
 [MediaWiki](http://www.mediawiki.org) skin that focuses on putting your content in the *foreground*. Supports responsive layouts and has classes predefined for [Semantic MediaWiki](http://semantic-mediawiki.org/wiki/Semantic_MediaWiki). Built on the [Zurb Foundation](http://foundation.zurb.com) CSS framework.
 
-[![Build Status](https://travis-ci.org/thingles/foreground.svg?branch=develop)](https://travis-ci.org/thingles/foreground) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/thingles/foreground/badges/quality-score.png?b=develop)](https://scrutinizer-ci.com/g/thingles/foreground/?branch=develop)
-
+[![Build Status](https://travis-ci.org/thingles/foreground.svg?branch=feature/foundation5)](https://travis-ci.org/thingles/foreground) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/thingles/foreground/badges/quality-score.png?b=feature/foundation5)](https://scrutinizer-ci.com/g/thingles/foreground/?branch=feature/foundation5)
 
 ## Download
 
@@ -88,6 +87,9 @@ With a setting like:
 A top navbar icon will be set using the current image set by `$wgLogo` in `LocalSettings.php`. See http://www.mediawiki.org/wiki/Manual:$wgLogo for more information about `$wgLogo`.
 
 The icon will be resized to fit into a maximum width of 64px x 36px wide or a 16:9 ratio.
+
+### Show Help under Tools
+This will add the help link under tools. To control what the help link will link to use the message page, `MediaWiki:Helppage` to set the link target. The link target can be a local page, Help:Contents, or an external URL, https://www.mediawiki.org/wiki/Help:Contents.
 
 ### AddThis Buttons
 
