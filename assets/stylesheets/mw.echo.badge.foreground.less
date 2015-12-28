@@ -1,0 +1,25 @@
+/* We have to include the #pt-notifications selector due to monobook */
+.mw-echo-notifications-badge {
+	#pt-notifications-alert &,
+	#pt-notifications-message & {
+		border-radius: 0.2em;
+		background-color: #d2d2d2;
+		font-size: 1.125em;
+		color: white;
+
+		&:hover,
+		&:active,
+		&:focus {
+			background-color: #c2c2c2;
+		}
+	}
+
+	&.mw-echo-unseen-notifications {
+		#pt-notifications-alert & {
+			background-color: #d11813;
+		}
+		#pt-notifications-message & {
+			background-color: #5d95ff;
+		}
+	}
+}

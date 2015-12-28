@@ -19,7 +19,8 @@
 		]
 	},
 	"AutoloadClasses": {
-		"SkinForeground": "Foreground.skin.php"
+		"SkinForeground": "Foreground.skin.php",
+		"foregroundTemplate": "Foreground.skin.php"
 	},
 	"ResourceModules": {
 		"skins.foreground.styles": {
@@ -33,31 +34,36 @@
 				"assets/stylesheets/jquery.autocomplete.css"
 			]
 		},
-		"skins.foreground.js": {
+		"skins.foreground.modernizr": {
 			"position": "top",
 			"scripts": [
-				"assets/scripts/vendor/jquery.cookie.foreground.js",
-				"assets/scripts/vendor/modernizr.js",
+				"assets/scripts/vendor/modernizr.js"
+			]
+		},
+		"skins.foreground.js": {
+			"position": "bottom",
+			"scripts": [
 				"assets/scripts/vendor/fastclick.js",
 				"assets/scripts/vendor/placeholder.js",
 				"assets/scripts/foundation/foundation.js",
-				"assets/scripts/foundation/foundation.topbar.js",
-				"assets/scripts/foundation/foundation.tooltip.js",
-				"assets/scripts/foundation/foundation.tab.js",
-				"assets/scripts/foundation/foundation.slider.js",
-				"assets/scripts/foundation/foundation.reveal.js",
-				"assets/scripts/foundation/foundation.orbit.js",
-				"assets/scripts/foundation/foundation.offcanvas.js",
-				"assets/scripts/foundation/foundation.magellan.js",
-				"assets/scripts/foundation/foundation.joyride.js",
-				"assets/scripts/foundation/foundation.interchange.js",
-				"assets/scripts/foundation/foundation.equalizer.js",
-				"assets/scripts/foundation/foundation.dropdown.js",
-				"assets/scripts/foundation/foundation.clearing.js",
-				"assets/scripts/foundation/foundation.alert.js",
 				"assets/scripts/foundation/foundation.accordion.js",
-				"assets/scripts/foundation/foundation.abide.js",
-				"foreground/assets/scripts/foreground.js"
+				"assets/scripts/foundation/foundation.alert.js",
+				"assets/scripts/foundation/foundation.clearing.js",
+				"assets/scripts/foundation/foundation.dropdown.js",
+				"assets/scripts/foundation/foundation.equalizer.js",
+				"assets/scripts/foundation/foundation.interchange.js",
+				"assets/scripts/foundation/foundation.joyride.js",
+				"assets/scripts/foundation/foundation.offcanvas.js",
+				"assets/scripts/foundation/foundation.orbit.js",
+				"assets/scripts/foundation/foundation.reveal.js",
+				"assets/scripts/foundation/foundation.tab.js",
+				"assets/scripts/foundation/foundation.tooltip.js",
+				"assets/scripts/foundation/foundation.topbar.js",
+				"assets/scripts/foreground.js"
+			],
+			"dependencies": [
+				"jquery.cookie",
+				"skins.foreground.modernizr"
 			]
 		}
 	},
@@ -65,7 +71,17 @@
 		"localBasePath": "",
 		"remoteSkinPath": "foreground"
 	},
-	"config": {},
+	"ResourceModuleSkinStyles": {
+		"foreground": {
+			"ext.echo.ui": "assets/stylesheets/mw.echo.ui.NotificationBadgeWidget.foreground.less",
+			"ext.echo.styles.badge": "assets/stylesheets/mw.echo.badge.foreground.less"
+		}
+	},
+	"config": {
+		"VisualEditorSupportedSkins": [
+			"foreground"
+		]
+	},
 	"manifest_version": 1
 }
 
