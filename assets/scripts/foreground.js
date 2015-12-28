@@ -11,13 +11,15 @@ jQuery(document).ready(function() {
   
   // The Echo extension puts an item in personal tools that Foreground really should have in the top menu
   // to make this easier, we move it here and loaded earlier to speed up transform
-  jQuery("#pt-notifications").prependTo("#echo-notifications");
-  jQuery("#pt-notifications-alert").prependTo("#echo-notifications");
+  jQuery("#pt-notifications").prependTo("#echo-notifications-alerts");
+  jQuery("#pt-notifications-message").prependTo("#echo-notifications-messages");
+  jQuery("#pt-notifications-alert").prependTo("#echo-notifications-alerts");
   
   // Append font-awesome icons
   jQuery('[id^=ca-nstab] a').prepend('<div class="drop-icon"><i class="fa fa-file fa-fw"></i></div>')
   jQuery('li#ca-talk a').prepend('<div class="drop-icon"><i class="fa fa-comments-o fa-fw"></i></div>')
   jQuery('li#ca-edit a').prepend('<div class="drop-icon"><i class="fa fa-pencil-square-o fa-fw"></i></div>')
+  jQuery('li#ca-ve-edit a').prepend('<div class="drop-icon"><i class="fa fa-pencil fa-fw"></i></div>')
   jQuery('li#ca-viewsource a').prepend('<div class="drop-icon"><i class="fa fa-book fa-fw"></i></div>')
   jQuery('li#ca-form_edit a').prepend('<div class="drop-icon"><i class="fa fa-pencil-square fa-fw"></i></div>')
   jQuery('li#ca-history a').prepend('<div class="drop-icon"><i class="fa fa-history fa-fw"></i></div>')
@@ -30,6 +32,7 @@ jQuery(document).ready(function() {
   jQuery('li#ca-purge a').prepend('<div class="drop-icon"><i class="fa fa-refresh fa-fw"></i></div>')
   jQuery('li#ca-undelete a').prepend('<div class="drop-icon"><i class="fa fa-undo fa-fw"></i></div>')
   jQuery('li#ca-ask_delete_permanently a').prepend('<div class="drop-icon"><i class="fa fa-cut fa-fw"></i></div>')
+  jQuery('li#t-cite a').prepend('<div class="drop-icon"><i class="fa fa-graduation-cap fa-fw"></i></div>')
 
 if ( jQuery( '#ca-addsection' ).length ) {
   jQuery('li#ca-addsection a').html('<div class="drop-icon"><i class="fa fa-plus fa-fw"></i></div>' + jQuery('li#ca-addsection a').attr('title').replace(/\[.+/g,""))
@@ -42,8 +45,12 @@ if ( jQuery( '#ca-addsection' ).length ) {
   jQuery('li#pt-preferences a').prepend('<div class="drop-icon"><i class="fa fa-ellipsis-h fa-fw"></i></div>')
   jQuery('li#pt-watchlist a').prepend('<div class="drop-icon"><i class="fa fa-th-list fa-fw"></i></div>')
   jQuery('li#pt-mycontris a').prepend('<div class="drop-icon"><i class="fa fa-smile-o fa-fw"></i></div>')
-  jQuery('li#pt-logout a').prepend('<div class="drop-icon"><i class="fa fa-power-off fa-fw"></i></div>')
-
+  jQuery('li#pt-logout a').prepend('<div class="drop-icon"><i class="fa fa-sign-out fa-fw"></i></div>')
+  jQuery('li#pt-login a').prepend('<div class="drop-icon"><i class="fa fa-sign-in fa-fw"></i></div>')
+  jQuery('li#pt-createaccount a').prepend('<div class="drop-icon"><i class="fa fa-lock fa-fw"></i></div>')
+  jQuery('li#pt-anonuserpage a').prepend('<div class="drop-icon"><i class="fa fa-user-secret fa-fw"></i></div>')
+  jQuery('li#pt-anontalk a').prepend('<div class="drop-icon"><i class="fa fa-commenting-o fa-fw"></i></div>')
+  
   jQuery('li#t-smwbrowselink a').prepend('<div class="drop-icon"><i class="fa fa-eye fa-fw"></i></div>')
   jQuery('li#t-whatlinkshere a').prepend('<div class="drop-icon"><i class="fa fa-arrows fa-fw"></i></div>')
   jQuery('li#t-blockip a').prepend('<div class="drop-icon"><i class="fa fa-ban fa-fw"></i></div>')
@@ -67,11 +74,11 @@ if ( jQuery( '#ca-addsection' ).length ) {
   jQuery('#mw-normal-catlinks ul li a').addClass('label');
 
   // Make the Page Action button respond to hover
-  jQuery('a.button.dropdown').mouseenter(function(){
-    jQuery('ul#drop1').addClass('open').addClass('right').css('top', '32px').css('left', '785px');
-  });
-  jQuery('ul#drop1').mouseleave(function(){
-    jQuery('ul#drop1').removeClass('open').css('top', '-9999px').css('left', '785px');
-  });
+  //jQuery('button.button').mouseenter(function(){
+  //  jQuery('ul#drop1').addClass('open').addClass('right').css('top', '32px').css('left', '785px');
+  //});
+  //jQuery('ul#drop1').mouseleave(function(){
+  //  jQuery('ul#drop1').removeClass('open').css('top', '-9999px').css('left', '785px');
+  //});
 
 });

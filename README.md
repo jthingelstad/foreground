@@ -60,7 +60,7 @@ These are the default values:
       'showFooterIcons' => 0,
       'addThisFollowPUBID' => ''
     );
-
+	
 ### Usage of NavWrapperType
 
 With a setting like:
@@ -88,6 +88,10 @@ With a setting like:
 A top navbar icon will be set using the current image set by `$wgLogo` in `LocalSettings.php`. See http://www.mediawiki.org/wiki/Manual:$wgLogo for more information about `$wgLogo`.
 
 The icon will be resized to fit into a maximum width of 64px x 36px wide or a 16:9 ratio.
+
+### Show Help under Tools
+
+This will add the help link under tools. To control what the help link will link to use the message page, `MediaWiki:Helppage` to set the link target. The link target can be a local page, Help:Contents, or an external URL, https://www.mediawiki.org/wiki/Help:Contents.
 
 ### AddThis Buttons
 
