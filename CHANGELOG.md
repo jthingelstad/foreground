@@ -10,7 +10,8 @@
 * [code] Actions button on_hover is using native Foundation 5 on_hover (regression in Foundation 5 caused move on_hover to left instead of bottom) 
 * [code] Echo div container divided with div for alerts and div for messages (MW Flow extension compatible)
 * [bug fix] Visual Editor z-index issue, toolbar and widget sizing
-* [code] z-index values for z-indexed elements re-indexed appropriately
+* [code] z-index values for z-indexed elements re-indexed 
+* [feature] Add support for mediawiki indicators.
 
 ## Version 1.2
 

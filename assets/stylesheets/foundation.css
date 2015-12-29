@@ -5530,31 +5530,11 @@ ul.off-canvas-list {
     .f-dropdown.drop-left > *:last-child {
       margin-bottom: 0; }
     .f-dropdown.drop-left:before {
-      border: inset 6px;
-      content: "";
-      display: block;
-      height: 0;
-      width: 0;
-      border-color: transparent transparent transparent #FFFFFF;
-      border-left-style: solid;
-      position: absolute;
-      top: 10px;
-      right: -12px;
-      left: auto;
-      z-index: 89; }
+      right: 10px;
+      left: auto; }
     .f-dropdown.drop-left:after {
-      border: inset 7px;
-      content: "";
-      display: block;
-      height: 0;
-      width: 0;
-      border-color: transparent transparent transparent #cccccc;
-      border-left-style: solid;
-      position: absolute;
-      top: 9px;
-      right: -14px;
-      left: auto;
-      z-index: 88; }
+      right: 10px;
+      left: auto; }
   .f-dropdown.drop-top {
     display: none;
     left: -9999px;

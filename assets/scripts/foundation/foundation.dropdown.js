@@ -370,7 +370,7 @@
           this.removeClass('drop-left');
         }
 
-        return {left : p.left - this.outerWidth(), top : p.top};
+        return {left : p.left - this.outerWidth() + t.outerWidth(), top : p.top + t.outerHeight()};
       },
 
       right : function (t, s) {

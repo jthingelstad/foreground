@@ -22,7 +22,7 @@ class Skinforeground extends SkinTemplate {
 			'wikiName' => &$GLOBALS['wgSitename'],
 			'navbarIcon' => false,
 			'IeEdgeCode' => 1,
-			'showFooterIcons' => 0,
+			'showFooterIcons' => true,
 			'addThisFollowPUBID' => ''
 		);
 		foreach ($wgForegroundFeaturesDefaults as $fgOption => $fgOptionValue) {
@@ -37,6 +37,8 @@ class Skinforeground extends SkinTemplate {
 			case 2:
 				if (isset($_SERVER['HTTP_USER_AGENT']) && (strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE') !== false))
 					header('X-UA-Compatible: IE=edge');
+				break;
+			default:
 				break;
 		}
 		$out->addModuleStyles('skins.foreground.styles');
@@ -84,8 +86,9 @@ class foregroundTemplate extends BaseTemplate {
 			default:
 				break;	
 		}
-?>
-<!-- START FOREGROUNDTEMPLATE -->
+		?>
+
+		<!-- START FOREGROUNDTEMPLATE -->
 		<nav class="top-bar" data-topbar role="navigation">
 			<ul class="title-area">
 				<li class="name">
@@ -107,7 +110,7 @@ class foregroundTemplate extends BaseTemplate {
 
 			<ul id="top-bar-left" class="left">
 				<li class="divider show-for-small"></li>
-					<?php foreach ( $this->getSidebar() as $boxName => $box ) { if ( ($box['header'] != wfMessage( 'toolbox' )->text())  ) { ?>
+					<?php foreach ( $this->getSidebar() as $boxName => $box ) { if ( ($box['header'] != wfMessage( 'toolbox' )->text()) ) { ?>
 				<li class="has-dropdown active"  id='<?php echo Sanitizer::escapeId( $box['id'] ) ?>'<?php echo Linker::tooltip( $box['id'] ) ?>>
 					<a href="#"><?php echo htmlspecialchars( $box['header'] ); ?></a>
 						<?php if ( is_array( $box['content'] ) ) { ?>
@@ -152,36 +155,42 @@ class foregroundTemplate extends BaseTemplate {
 		<?php if ($wgForegroundFeatures['NavWrapperType'] != '0') echo "</div>"; ?>
 		
 		<div id="page-content">
-		<div class="row">
-				<div class="large-12 columns">
-				<!--[if lt IE 9]>
-				<div id="siteNotice" class="sitenotice panel radius"><?php echo $this->text('sitename') . ' '. wfMessage( 'foreground-browsermsg' )->text(); ?></div>
-				<![endif]-->
+			<div class="row">
+					<div class="large-12 columns">
+					<!--[if lt IE 9]>
+					<div id="siteNotice" class="sitenotice panel radius"><?php echo $this->text('sitename') . ' '. wfMessage( 'foreground-browsermsg' )->text(); ?></div>
+					<![endif]-->
 
-				<?php if ( $this->data['sitenotice'] ) { ?><div id="siteNotice" class="sitenotice"><?php $this->html( 'sitenotice' ); ?></div><?php } ?>
-				<?php if ( $this->data['newtalk'] ) { ?><div id="usermessage" class="newtalk panel radius"><?php $this->html( 'newtalk' ); ?></div><?php } ?>
-				</div>
-		</div>
+					<?php if ( $this->data['sitenotice'] ) { ?><div id="siteNotice" class="sitenotice"><?php $this->html( 'sitenotice' ); ?></div><?php } ?>
+					<?php if ( $this->data['newtalk'] ) { ?><div id="usermessage" class="newtalk panel radius"><?php $this->html( 'newtalk' ); ?></div><?php } ?>
+					</div>
+			</div>
 
-		<div id="mw-js-message" style="display:none;"></div>
+			<div id="mw-js-message" style="display:none;"></div>
 
-		<div class="row">
+			<div class="row">
 				<div id="p-cactions" class="large-12 columns">
-					<?php if ($wgUser->isLoggedIn() || $wgForegroundFeatures['showActionsForAnon']): ?>
-						<a id="actions-button" href="#" data-dropdown="actions" data-options="align:left; is_hover: true; hover_timeout:700" class="button small secondary radius"><i class="fa fa-cog"><span class="show-for-medium-up">&nbsp;<?php echo wfMessage( 'actions' )->text() ?></span></i></a>
+					<?php if ($wgUser->isLoggedIn() || $wgForegroundFeatures['showActionsForAnon']) { ?>
+						<a id="actions-button" href="#" data-dropdown="actions" data-options="align:left; is_hover: true; hover_timeout:500" class="button dropdown small secondary radius"><i class="fa fa-cog"><span class="show-for-medium-up">&nbsp;<?php echo wfMessage( 'actions' )->text() ?></span></i></a>
 						<!--RTL -->
 						<ul id="actions" class="f-dropdown" data-dropdown-content>
 							<?php foreach( $this->data['content_actions'] as $key => $item ) { echo preg_replace(array('/\sprimary="1"/','/\scontext="[a-z]+"/','/\srel="archives"/'),'',$this->makeListItem($key, $item)); } ?>
-							<?php wfRunHooks( 'SkinTemplateToolboxEnd', array( &$this, true ) );  ?>
+							<?php
+							if ( version_compare( $GLOBALS['wgVersion'], '1.25c', '<' ) ) {
+								wfRunHooks( 'SkinTemplateToolboxEnd', array( &$this, true ) );
+							} else {
+								Hooks::run( 'SkinTemplateToolboxEnd', array( &$this, true ) );
+							}
+							?>
 						</ul>
 						<!--RTL -->
-						<?php if ($wgUser->isLoggedIn()): ?>
+						<?php if ($wgUser->isLoggedIn()) { ?>
 							<div id="echo-notifications">
 							<div id="echo-notifications-alerts"></div>
 							<div id="echo-notifications-messages"></div>
 							</div>
-						<?php endif; ?>
-					<?php endif;
+						<?php } ?>
+					<?php }
 					$namespace = str_replace('_', ' ', $this->getSkin()->getTitle()->getNsText());
 					$displaytitle = $this->data['title'];
 					if (!empty($namespace)) {
@@ -189,23 +198,58 @@ class foregroundTemplate extends BaseTemplate {
 						$newtitle = str_replace($namespace.':', '', $pagetitle);
 						$displaytitle = str_replace($pagetitle, $newtitle, $displaytitle);
 					?><h4 class="namespace label"><?php print $namespace; ?></h4><?php } ?>
-					<div id="content">
-					<h2  id="firstHeading" class="title"><?php print $displaytitle; ?></h2>
-					<?php if ( $this->data['isarticle'] ) { ?><h3 id="tagline"><?php $this->msg( 'tagline' ) ?></h3><?php } ?>
-					<h5 id="siteSub" class="subtitle"><?php $this->html('subtitle') ?></h5>
-					<div id="contentSub" class="clear_both"></div>
-					<div id="bodyContent" class="mw-bodytext">
-						<?php $this->html('bodytext') ?>
-						<div class="clear_both"></div>
+					<div id="content" class="mw-body" role="main">
+						<?php
+						if ( version_compare( $GLOBALS['wgVersion'], '1.25c', '>' ) ) {
+							if ( is_callable( array( $this, 'getIndicators' ) ) ) {
+								echo $this->getIndicators();
+							}
+						}
+						?>
+						<?php
+						if ( $this->data['title'] != '' ) {
+						?>
+						<h2 id="firstHeading" class="firstHeading" lang="<?php
+						$this->data['pageLanguage'] =
+							$this->getSkin()->getTitle()->getPageViewLanguage()->getHtmlCode();
+						$this->text( 'pageLanguage' );
+						?>"><?php print $displaytitle; ?></h2>
+						<?php
+						} ?>
+						<?php $this->html( 'prebodyhtml' ) ?>
+						<div id="bodyContent" class="mw-body-content">
+							<?php
+							if ( $this->data['isarticle'] ) {
+								?>
+								<div id="siteSub"><?php $this->msg( 'tagline' ) ?></div>
+							<?php
+							}
+							?>
+							<div id="contentSub"<?php $this->html( 'userlangattributes' ) ?>><?php
+								$this->html( 'subtitle' )
+							?></div>
+							<div id="contentSub" class="clear_both"></div>
+							<?php $this->html( 'bodycontent' ); ?>
+							<div class="clear_both"></div>
+							<?php
+							if ( $this->data['catlinks'] ) {
+								?>
+								<div class="group"><?php $this->html( 'catlinks' ); ?></div>
+								<?php
+							}
+							if ( $this->data['dataAfterContent'] ) {
+								$this->html( 'dataAfterContent' );
+							}
+							?>
+							<div class="visualClear"></div>
+							<?php $this->html( 'debughtml' ); ?>
+						</div>
 					</div>
-		    	<div class="group"><?php $this->html('catlinks'); ?></div>
-		    	<?php $this->html('dataAfterContent'); ?>
 				</div>
-		    </div>
-		</div>
+			</div>
 
 			<footer class="row">
-				<div id="footer">
+				<div id="footer" role="contentinfo"<?php $this->html( 'userlangattributes' ) ?>>
 					<?php if ($wgForegroundFeatures['addThisFollowPUBID'] != '') { ?>
 						<div class="social-footer large-12 small-12 columns">
 							<div class="social-links">
@@ -219,7 +263,7 @@ class foregroundTemplate extends BaseTemplate {
 					<ul id="footer-left">
 						<?php foreach ( $this->getFooterLinks( "flat" ) as $key ) { ?>
 							<li id="footer-<?php echo $key ?>"><?php $this->html( $key ) ?></li>
-						<?php } ?>									
+						<?php } ?>
 					</ul>
 					</div>	
 					<div id="footer-right-icons" class="<?php echo $footerRightClass;?>">
@@ -231,7 +275,7 @@ class foregroundTemplate extends BaseTemplate {
 							</li>
 						<?php } ?>
 					</ul>
-					</div>								
+					</div>
 				</div>
 			</footer>
 
@@ -246,4 +290,3 @@ class foregroundTemplate extends BaseTemplate {
 		wfRestoreWarnings();
 	}
 }
-?>
