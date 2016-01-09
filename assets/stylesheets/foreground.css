@@ -563,9 +563,9 @@ input[type="submit"] {
 }
 
 input#wpPreview {
-    background-color: #e9e9e9;
-    border-color: #d0d0d0;
-    color: black;
+    background-color: #5da423;
+    border-color: #457a1a;
+    color: white;
     -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
     -webkit-transition: background-color 300ms ease-out;
