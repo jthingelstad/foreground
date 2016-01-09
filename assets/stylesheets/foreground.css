@@ -759,6 +759,16 @@ body.mw-special-Userlogin h2.title {
     display: inline;
 }
 
+/* Add improved styling for the WikiEditor extension */
+
+.wikiEditor-ui-toolbar .page-characters div span {
+    border: none;
+}
+
+.label {
+    background-color: transparent;
+}
+
 /* Add improved styling for the Echo extension */
 
 #echo-notifications .mw-echo-ui-notificationBadgeButtonPopupWidget > .oo-ui-popupWidget  {
