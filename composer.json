@@ -4,7 +4,23 @@
 	},
 	"scripts": {
 		"test": [
-			"parallel-lint . --exclude vendor"
+			"parallel-lint . --exclude vendor",
+			"phpcs -p -s",
+			"npm test"
+		],
+		"post-install-cmd": [
+			"npm cache clean -f",
+			"node --version",
+			"npm --version",
+			"npm install npm -g",
+			"node -v"
+		],
+		"post-update-cmd": [
+			"npm cache clean -f",
+			"node --version",
+			"npm --version",
+			"npm install npm -g",
+			"node -v"
 		]
 	}
 }
