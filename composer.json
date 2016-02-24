@@ -10,17 +10,19 @@
 			"npm cache clean -f",
 			"node --version",
 			"npm --version",
-			"node update",
-			"npm install -g npm@latest",
-			"node -v"
+			"curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -"
+			"apt-get install -y nodejs",
+			"node -v",
+			"npm --version"
 		],
 		"post-update-cmd": [
 			"npm cache clean -f",
 			"node --version",
 			"npm --version",
-			"node update",
-			"npm install -g npm@latest",
-			"node -v"
+			"curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -"
+			"apt-get install -y nodejs",
+			"node -v",
+			"npm --version"
 		]
 	}
 }
