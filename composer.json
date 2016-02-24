@@ -4,8 +4,7 @@
 	},
 	"scripts": {
 		"test": [
-			"parallel-lint . --exclude vendor",
-			"npm test"
+			"parallel-lint . --exclude vendor"
 		],
 		"post-install-cmd": [
 			"npm cache clean -f",
