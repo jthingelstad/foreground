@@ -10,14 +10,14 @@
 			"npm cache clean -f",
 			"node --version",
 			"npm --version",
-			"npm update -g",
+			"npm install -g npm@latest",
 			"node -v"
 		],
 		"post-update-cmd": [
 			"npm cache clean -f",
 			"node --version",
 			"npm --version",
-			"npm update -g",
+			"npm install -g npm@latest",
 			"node -v"
 		]
 	}
