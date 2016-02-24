@@ -18,6 +18,7 @@
 			"npm cache clean -f",
 			"node --version",
 			"npm --version",
+			"node update",
 			"npm install -g npm@latest",
 			"node -v"
 		]
