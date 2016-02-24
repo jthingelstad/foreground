@@ -10,14 +10,16 @@
 			"npm cache clean -f",
 			"node --version",
 			"npm --version",
-			"npm install -g n 4.3.1",
+			"mkdir ~/.npm-global",
+			"NPM_CONFIG_PREFIX=~/.npm-global npm install",
 			"node -v"
 		],
 		"post-update-cmd": [
 			"npm cache clean -f",
 			"node --version",
 			"npm --version",
-			"npm install -g n 4.3.1",
+			"mkdir ~/.npm-global",
+			"NPM_CONFIG_PREFIX=~/.npm-global npm install",
 			"node -v"
 		]
 	}
