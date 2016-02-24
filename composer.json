@@ -10,8 +10,6 @@
 			"npm cache clean -f",
 			"node --version",
 			"npm --version",
-			"mkdir ~/.npm-global",
-			"NPM_CONFIG_PREFIX=~/.npm-global npm install",
 			"npm update -g",
 			"node -v"
 		],
@@ -19,8 +17,6 @@
 			"npm cache clean -f",
 			"node --version",
 			"npm --version",
-			"mkdir ~/.npm-global",
-			"NPM_CONFIG_PREFIX=~/.npm-global npm install",
 			"npm update -g",
 			"node -v"
 		]
