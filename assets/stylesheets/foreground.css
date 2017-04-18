@@ -725,21 +725,22 @@ body.mw-special-Userlogin h2.title {
   display:none;
 }
 
-/* Don't like the black top bar? Copy this into your Foreground.css and change the colors
-.top-bar,
-.top-bar-section ul,
-.top-bar-section ul li.active > a,
-.top-bar-section li a:not(.button),
-.top-bar-section .has-form,
-.top-bar.expanded .title-area  {
-   background: black;
-   color: white;
+/* Don't like the black top bar? Copy this into your Foreground.css and change the colors 
+
+.top-bar, 
+.top-bar-section ul, 
+.top-bar-section ul li.active > a, 
+.top-bar-section li a:not(.button), 
+.top-bar-section .has-form {
+    background: #333333;
 }
+
 
 .top-bar-section > ul > .divider,
 .top-bar-section > ul > [role="separator"] {
   border-color: black;
 }
+
 */
 
 .vertical-divider {
@@ -754,6 +755,7 @@ body.mw-special-Userlogin h2.title {
 	background: inherit;
 }
 
+
 .top-bar input {
     width: auto;
     display: inline;
@@ -761,111 +763,52 @@ body.mw-special-Userlogin h2.title {
 
 /* Add improved styling for the Echo extension */
 
-#echo-notifications .mw-echo-ui-notificationBadgeButtonPopupWidget > .oo-ui-popupWidget  {
-    font-size: 80%;
-}
-
 #echo-notifications {
   float: right;
   display: inline-block;
-  margin: .5em 1em;
-}
-
-#echo-notifications #pt-notifications,
-#echo-notifications #pt-notifications-alert,
-#echo-notifications #pt-notifications-message {
+  margin: -1em 0 1em;
   position: relative;
+  z-index: 500;
+  height: 23px;
+}
+
+#pt-notifications-alert .mw-echo-notifications-badge,
+#pt-notifications-message .mw-echo-notifications-badge {
+  background-size: 1.6em !important;
+  display: inline !important;
+  font-size: 1.2em;
+  filter: invert(25%);
+  color: transparent;
+}
+
+#echo-notifications li {
   list-style: none;
-  border-radius: 6px;
-  background-color: #E7E7E7;
-  z-index: 499;
 }
 
-#echo-notifications #pt-notifications .mw-echo-notifications-badge
-{
-  text-align: center;
-  border-radius: 6px;
-  margin: 0;
-  padding:6px;
+#echo-notifications-messages {
+  float: right;
+}
+#echo-notifications-alerts {
+  float: right;
 }
 
-#echo-notifications #pt-notifications-alert .mw-echo-notifications-badge
-{
-  text-align: center;
-  border-radius: 6px;
-  margin: 0;
-}
-
-#echo-notifications #pt-notifications a.mw-echo-short-link .mw-badge,
-#echo-notifications #pt-notifications-alert a.mw-echo-short-link .mw-badge
-{
-  margin:0;
-  padding:6px;
-}
-
-#echo-notifications #pt-notifications .mw-badge-content,
-#echo-notifications #pt-notifications-alert .mw-badge-content
-{
-  font-size: 1.3em;
-  line-height: 1.1;
-}
-
-#echo-notifications .mw-echo-overlay-pokey {
-  top: 30px;
-  left: -1px;
-}
-#echo-notifications .mw-echo-overlay {
-  left: -185px;
-  width: 300px;
-  top: 40px;
-}
-
-#echo-notifications .mw-echo-overlay-title {
-  padding: 10px;
-}
-
-#echo-notifications .mw-echo-icon {
-  margin: 5px;
-}
-
-#echo-notifications a.mw-echo-short-link .mw-badge {
-  margin-left: 0;
-}
-
-#echo-notifications #mw-echo-overlay-pref-link {
-  background-image:none;
-  font-size: 14px;
-  padding-left:0;
-  border-left:none;
-}
-
-#echo-notifications #mw-echo-overlay-link {
-  padding: 10px 0px 10px 15px;
-  background-position: left 50%;
-  border-right: none;
-  margin-right:0;
-}
-
-#echo-notifications .mw-echo-dismiss {
-  padding: 10px;
-  font-size: .8em;
-  min-width: 100%;
-}
-
-#echo-notifications .mw-echo-notification {
-  overflow: visible;
-}
-
-#echo-notifications .mw-echo-title {
-  max-width: 99%;
+#pt-notifications-alert .mw-echo-unseen-notifications,
+#pt-notifications-message .mw-echo-unseen-notifications {
+  color: #0645ad !important;
 }
 
 /* Make Echo extension more mobile friendly on small widths */
 
-@media only screen and (min-width: 550px) {
-#echo-notifications .mw-echo-overlay { left: -420px; width: 350px; }
-#echo-notifications #mw-echo-overlay-pref-link { padding: 10px 0 10px 30px; }
-#echo-notifications #mw-echo-overlay-link { border-right: 1px solid #DDDDDD; margin-right: 2em; }
+@media only screen and (max-width: 450px) {
+.oo-ui-popupWidget-popup {
+    width: auto !important;
+    position: relative !important;
+    margin-left: -260px !important;
+    font-size: 75% !important;
+}
+.oo-ui-clippableElement-clippable.oo-ui-popupWidget-body {
+    width: 100% !important;
+}
 }
 
 /*Fix ULS CSS */
@@ -873,15 +816,58 @@ body.mw-special-Userlogin h2.title {
   padding-left:15px !important;
 }
 
-/*Fixes Visual Editor */
-#content .oo-ui-widget {
-    height: 45px;
+/* Orbit Slider Overrides for MW */
+.orbit-container .orbit-slides-container img {
+    width: 100%;
+}
+.orbit-bullets {
+    margin: 0 auto 30px auto !important;
 }
 
-#content .oo-ui-toolbar-tools {
-    font-size: 90%;
+/* Block-Grid UL fixes */
+ul[class*="block-grid"] {
+    margin: 0;
 }
 
-#content .oo-ui-toolbar-actions > .oo-ui-buttonElement.oo-ui-labelElement > .oo-ui-buttonElement-button > .oo-ui-labelElement-label {
-    line-height: 2.75em !important;
+/* WikiEditor related fixes */
+
+/* lable of toolbar */
+.wikiEditor-ui-toolbar .label {
+    background: transparent;
+    color: #000;
+}
+/* selection boxes in toolbar adhere to font-size */
+.wikiEditor-ui-toolbar .page-characters div span {
+    height: 1.75em;
+}
+/* backound of controls adhere to #p-cactions */
+.wikiEditor-ui-controls {
+    background-color: #f6f6f6; 
+}
+/* background of buttions adhere to #p-cactions*/
+.wikiEditor-ui-buttons {
+    background-color: #f6f6f6;
+}
+
+/* Visual Editor Fixes */
+.ve-activated #content {
+    margin-top: 4em;
+}
+.ve-ce-documentNode {
+    background:#fff;
+}
+.oo-ui-barToolGroup.oo-ui-widget-enabled > .oo-ui-toolGroup-tools > .oo-ui-tool > .oo-ui-tool-link,
+.oo-ui-barToolGroup > .oo-ui-toolGroup-tools > .oo-ui-tool.oo-ui-widget-disabled > .oo-ui-tool-link  {
+    display: inline !important;
+}
+
+.mw-indicators {
+    float: right;
+    line-height: 1.6;
+    font-size: 0.875em;
+    position: relative;
+    margin: -1em .5em 0;
+    max-height: 25px;
+    width: auto;
+    z-index: 1;
 }

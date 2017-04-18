@@ -154,6 +154,15 @@ class foregroundTemplate extends BaseTemplate {
 		<div id="page-content">
 		<div class="row">
 				<div class="large-12 columns">
+					<!-- Output page indicators -->
+					<?php echo $this->getIndicators(); ?>
+					<!-- If user is logged in output echo location -->
+					<?php if ($wgUser->isLoggedIn()): ?>
+					<div id="echo-notifications">
+					<div id="echo-notifications-alerts"></div>
+					<div id="echo-notifications-messages"></div>
+					</div>
+					<?php endif; ?>
 				<!--[if lt IE 9]>
 				<div id="siteNotice" class="sitenotice panel radius"><?php echo $this->text('sitename') . ' '. wfMessage( 'foreground-browsermsg' )->text(); ?></div>
 				<![endif]-->
@@ -175,12 +184,6 @@ class foregroundTemplate extends BaseTemplate {
 							<?php wfRunHooks( 'SkinTemplateToolboxEnd', array( &$this, true ) );  ?>
 						</ul>
 						<!--RTL -->
-						<?php if ($wgUser->isLoggedIn()): ?>
-							<div id="echo-notifications">
-							<div id="echo-notifications-alerts"></div>
-							<div id="echo-notifications-messages"></div>
-							</div>
-						<?php endif; ?>
 					<?php endif;
 					$namespace = str_replace('_', ' ', $this->getSkin()->getTitle()->getNsText());
 					$displaytitle = $this->data['title'];
