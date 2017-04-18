@@ -1,3 +1,8 @@
+## Version 2.0.1
+
+* [code] Move Echo above Page Actions button
+* [feature] Add page indicator support
+
 ## Version 2.0
 
 * [feature] [b/c break] Upgrade to Foundation 5.5.3 (Foundation Tabs have a coding change to build tabs on pages)
