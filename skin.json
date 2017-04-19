@@ -1,14 +1,15 @@
 {
 	"name": "Foreground",
-	"version": "2.0.0 (Albert)",
+	"version": "2.0.1-alpha",
 	"author": [
 		"Garrick Van Buren",
 		"Jamie Thingelstad",
 		"Tom Hutchison",
 		"..."
 	],
-	"url": "http://foreground.thingelstad.com",
+	"url": "https://github.com/thingles/foreground",
 	"descriptionmsg": "foreground-desc",
+	"license-name": "BSD-2-Clause",
 	"type": "skin",
 	"ValidSkinNames": {
 		"foreground": "Foreground"
