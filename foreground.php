@@ -41,7 +41,6 @@ $wgAutoloadClasses['SkinForeground'] = __DIR__ . '/Foreground.skin.php';
 $wgAutoloadClasses['foregroundTemplate'] = __DIR__ . '/Foreground.skin.php';
 
 $wgMessagesDirs['SkinForeground'] = __DIR__ . '/i18n';
-$wgExtensionMessagesFiles['SkinForeground'] = __DIR__ . '/Foreground.i18n.php';
 
 $wgResourceModules['skins.foreground.styles'] = array(
 	'position'       => 'top',
