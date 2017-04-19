@@ -2,6 +2,10 @@
 
 * [code] Move Echo above Page Actions button
 * [feature] Add page indicator support
+* [feature] Add 'enableTabs' for tabs on page support
+* [language] Enable "Back" in mobile nav menu to be localised
+* [bug fix] RTL detection improved
+* [code] More CSS fixes for Orbit, Tabs, etc
 
 ## Version 2.0
 

@@ -19,6 +19,7 @@ class Skinforeground extends SkinTemplate {
 			'NavWrapperType' => 'divonly',
 			'showHelpUnderTools' => true,
 			'showRecentChangesUnderTools' => true,
+			'enableTabs' => false,
 			'wikiName' => &$GLOBALS['wgSitename'],
 			'navbarIcon' => false,
 			'IeEdgeCode' => 1,
@@ -59,6 +60,20 @@ class foregroundTemplate extends BaseTemplate {
 		global $wgForegroundFeatures;
 		wfSuppressWarnings();
 		$this->html('headelement');
+		switch ($wgForegroundFeatures['enableTabs']) {
+			case true:
+			    ob_start();
+				$this->html('bodytext');
+				$out = ob_get_contents();
+				ob_end_clean();
+				$markers = array("&lt;a", "&lt;/a", "&gt;");
+				$tags = array("<a", "</a", ">");
+				$body = str_replace($markers, $tags, $out);
+				break;	
+			default:
+				$body = '';
+				break;
+		}
 		switch ($wgForegroundFeatures['NavWrapperType']) {
 			case '0':
 				break;
@@ -86,7 +101,7 @@ class foregroundTemplate extends BaseTemplate {
 		}
 ?>
 <!-- START FOREGROUNDTEMPLATE -->
-		<nav class="top-bar" data-topbar role="navigation">
+		<nav class="top-bar" data-topbar role="navigation" data-options="back_text: <?php echo wfMessage( 'foreground-menunavback' )->text(); ?>">
 			<ul class="title-area">
 				<li class="name">
 					<h1 class="title-name">
@@ -198,7 +213,16 @@ class foregroundTemplate extends BaseTemplate {
 					<h5 id="siteSub" class="subtitle"><?php $this->html('subtitle') ?></h5>
 					<div id="contentSub" class="clear_both"></div>
 					<div id="bodyContent" class="mw-bodytext">
-						<?php $this->html('bodytext') ?>
+						<?php 
+							switch ($wgForegroundFeatures['enableTabs']) {
+								case true:
+									echo $body;
+									break;
+								default:
+								$this->html('bodytext');
+									break;
+							}
+						?>
 						<div class="clear_both"></div>
 					</div>
 		    	<div class="group"><?php $this->html('catlinks'); ?></div>
