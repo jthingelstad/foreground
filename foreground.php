@@ -6,7 +6,7 @@
  * @file
  * @ingroup Skins
  * @author Garrick Van Buren, Jamie Thingelstad, Tom Hutchison
- * @license 2-clause BSD
+ * @license BSD-2-Clause
  */
 
 if ( function_exists( 'wfLoadSkin' ) ) {
@@ -21,17 +21,18 @@ if ( function_exists( 'wfLoadSkin' ) ) {
 }
 
 $wgExtensionCredits['skin'][] = array(
-	'path'		 => __FILE__,
-	'name'		 => 'Foreground',
-	'url'		 => 'http://foreground.thingelstad.com/',
-	'author'	 => array(
+	'path' => __FILE__,
+	'name' => 'Foreground',
+	'url' => 'https://github.com/thingles/foreground',
+	'author' => array(
 		'Garrick Van Buren',
 		'Jamie Thingelstad',
 		'Tom Hutchison',
 		'...'
 	),
-	'version' => '2.0.0 (Albert)',
-	'descriptionmsg' => 'foreground-desc'
+	'version' => '2.0.1-alpha',
+	'descriptionmsg' => 'foreground-desc',
+	'license-name' => 'BSD-2-Clause'
 );
 
 $wgValidSkinNames['foreground'] = 'Foreground';
