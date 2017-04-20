@@ -1,5 +1,7 @@
 ## Version 2.1
 
+* [code] Moved icon appending for Visual Editor to `(window).load` function
+* [code] Improved styling of TOC
 * [code] [b/c break] Switch to MW 1.25+ extension registration mechanism
 * [code] [b/c break] Removed I18n shim for < MW 1.23
 * [code] Move Echo above Page Actions button
