@@ -29,6 +29,34 @@ a#actions-button { float:right; z-index: 499; }
 [dir=ltr] { direction: ltr; }
 [dir=rtl] { direction: rtl; }
 
+/* Style MW Table of Contents */
+.toctoggle,
+.toctoggle a { 
+  line-height: 2em;
+  display: inline;
+  vertical-align:top;
+}
+
+#toctitle h2 {
+  display: inline;
+  font-size: 1.8rem;
+}
+
+#toc, .toc {
+  padding: 1em 1em;
+  border: 1px solid #dddddd;
+  display: inline-block;
+  width: auto;
+  margin: 1.5em 0;
+}
+
+#toc ul, .toc ul {
+  list-style-type: none;
+  list-style-image: none;
+  padding: 0;
+  width: auto;
+}
+
 /* Hide the page actions button for special pages (cuz there's nothing in it) */
 .mw-special-FormEdit a#actions-button, .ns-special a#actions-button { display:none; }
 
