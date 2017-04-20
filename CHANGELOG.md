@@ -1,5 +1,7 @@
-## Version 2.0.1
+## Version 2.1
 
+* [code] [b/c break] Switch to MW 1.25+ extension registration mechanism
+* [code] [b/c break] Removed I18n shim for < MW 1.23
 * [code] Move Echo above Page Actions button
 * [feature] Add page indicator support
 * [feature] Add 'enableTabs' for tabs on page support
