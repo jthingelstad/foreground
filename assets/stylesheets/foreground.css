@@ -1005,8 +1005,13 @@ h2 span {
   display: inline-block;
 }
 
-h2.title {
+span.title {
   margin-bottom: 0.1em;
+}
+
+.title-name {
+  font-size: 1.3rem;
+  color: inherit;
 }
 
 h3#tagline {
