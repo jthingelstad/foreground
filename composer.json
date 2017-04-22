@@ -5,6 +5,23 @@
 	"scripts": {
 		"test": [
 			"parallel-lint . --exclude vendor"
+		],
+		"post-install-cmd": [
+			"npm cache clean -f",
+			"node --version",
+			"npm --version",
+			"apt-get install -y nodejs",
+			"node -v",
+			"npm --version"
+		],
+		"post-update-cmd": [
+			"npm cache clean -f",
+			"node --version",
+			"npm --version",
+			"apt-get install -y nodejs",
+			"node -v",
+			"npm --version"
 		]
 	}
 }
+
