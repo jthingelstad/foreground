@@ -104,14 +104,14 @@ class foregroundTemplate extends BaseTemplate {
 		<nav class="top-bar" data-topbar role="navigation" data-options="back_text: <?php echo wfMessage( 'foreground-menunavback' )->text(); ?>">
 			<ul class="title-area">
 				<li class="name">
-					<span class="title-name">
+					<div class="title-name">
 					<a href="<?php echo $this->data['nav_urls']['mainpage']['href']; ?>">
 					<?php if ($wgForegroundFeatures['navbarIcon'] != '0') { ?>
 						<img alt="<?php echo $this->text('sitename'); ?>" class="top-bar-logo" src="<?php echo $this->text('logopath') ?>">
 					<?php } ?>					
 					<div class="title-name" style="display: inline-block;"><?php echo $wgForegroundFeatures['wikiName']; ?></div>
 					</a>
-					</span>
+					</div>
 				</li>
 				<li class="toggle-topbar menu-icon">
 					<a href="#"><span><?php echo wfMessage( 'foreground-menutitle' )->text(); ?></span></a>
