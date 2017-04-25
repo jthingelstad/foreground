@@ -1690,37 +1690,6 @@ div.mw-htmlform-field-HTMLCheckField div.mw-label {
 
 /* END OTHER IE8 FIXES */
 
-
-/* UNTIL I CAN DETERMINE WHY toolboxend GENERATES AN EMPTY <li> IN THE MENU, I'M HIDING IT */
-
-#p-toolboxend {
-	display: none;
-}
-
-/* Jamie's Header Hider */
-
-body.page-Main_Page h1.firstHeading, body.page-Main_Page #siteSub, body.page-Extension_Main_Page h1.firstHeading, body.page-Extension_Main_Page #siteSub, body.page-Skin_Main_Page h1.firstHeading, body.page-Skin_Main_Page #siteSub, body.page-Farm_Main_Pageh1.firstHeading, body.page-Farm_Main_Page #siteSub, body.mw-special-Userlogin h2.title {
-	display: none;
-}
-
-/* Don't like the black top bar? Copy this into your Foreground.css and change the colors 
-
-.top-bar, 
-.top-bar-section ul, 
-.top-bar-section ul li.active > a, 
-.top-bar-section li a:not(.button), 
-.top-bar-section .has-form {
-    background: #333333;
-}
-
-
-.top-bar-section > ul > .divider,
-.top-bar-section > ul > [role="separator"] {
-  border-color: black;
-}
-
-*/
-
 .vertical-divider {
 	width: 100%;
 	display: block;
