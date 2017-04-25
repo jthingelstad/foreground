@@ -14,6 +14,7 @@ jQuery(document).ready(function() {
   jQuery("#pt-notifications").prependTo("#echo-notifications-alerts");
   jQuery("#pt-notifications-message").prependTo("#echo-notifications-messages");
   jQuery("#pt-notifications-alert").prependTo("#echo-notifications-alerts");
+  jQuery("#pt-notifications-notice").prependTo("#echo-notifications-notice");
   
   // Append font-awesome icons
   jQuery('[id^=ca-nstab] a').prepend('<div class="drop-icon"><i class="fa fa-file fa-fw"></i></div>')
