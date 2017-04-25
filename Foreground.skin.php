@@ -176,6 +176,7 @@ class foregroundTemplate extends BaseTemplate {
 					<div id="echo-notifications">
 					<div id="echo-notifications-alerts"></div>
 					<div id="echo-notifications-messages"></div>
+					<div id="echo-notifications-notice"></div>
 					</div>
 					<?php endif; ?>
 				<!--[if lt IE 9]>

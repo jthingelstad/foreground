@@ -1715,9 +1715,9 @@ div.mw-htmlform-field-HTMLCheckField div.mw-label {
 	height: 23px;
 }
 #pt-notifications-alert .mw-echo-notifications-badge, #pt-notifications-message .mw-echo-notifications-badge {
-	background-size: 1.6em !important;
+	background-size: 1.4em !important;
 	display: inline !important;
-	font-size: 1.2em;
+	font-size: 1.1em;
 	filter: invert(25%);
 	color: transparent;
 }
