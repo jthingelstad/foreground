@@ -1708,15 +1708,19 @@ div.mw-htmlform-field-HTMLCheckField div.mw-label {
 
 #echo-notifications {
 	float: right;
-	display: inline-block;
 	margin: -1em 0 1em;
 	position: relative;
 	z-index: 500;
-	height: 23px;
 }
+#echo-notifications-notice,
+#echo-notifications-alerts,
+#echo-notifications-messages,
+#echo-notifications {
+	display: inline-block;
+} 
+
 #pt-notifications-alert .mw-echo-notifications-badge, #pt-notifications-message .mw-echo-notifications-badge {
 	background-size: 1.4em !important;
-	display: inline !important;
 	font-size: 1.1em;
 	filter: invert(25%);
 	color: transparent;
@@ -1732,6 +1736,10 @@ div.mw-htmlform-field-HTMLCheckField div.mw-label {
 }
 #pt-notifications-alert .mw-echo-unseen-notifications, #pt-notifications-message .mw-echo-unseen-notifications {
 	color: #0645ad !important;
+}
+
+#echo-notifications li {
+    margin: 0 0 0 1em;
 }
 
 /* Make Echo extension more mobile friendly on small widths */
@@ -1814,7 +1822,7 @@ ul[class*="block-grid"] {
 	line-height: 1.6;
 	font-size: 0.875em;
 	position: relative;
-	margin: -1em .5em 0;
+	margin: -1em .5em 0 2em;
 	max-height: 30px;
 	width: auto;
 	z-index: 1;
