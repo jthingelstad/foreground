@@ -843,50 +843,6 @@ body.page-Main_Page h1.firstHeading, body.page-Main_Page #siteSub, body.page-Ext
 	display: inline;
 }
 
-/* Add improved styling for the Echo extension */
-
-#echo-notifications {
-	float: right;
-	display: inline-block;
-	margin: -1em 0 1em;
-	position: relative;
-	z-index: 500;
-	height: 23px;
-}
-#pt-notifications-alert .mw-echo-notifications-badge, #pt-notifications-message .mw-echo-notifications-badge {
-	background-size: 1.6em !important;
-	display: inline !important;
-	font-size: 1.2em;
-	filter: invert(25%);
-	color: transparent;
-}
-#echo-notifications li {
-	list-style: none;
-}
-#echo-notifications-messages {
-	float: right;
-}
-#echo-notifications-alerts {
-	float: right;
-}
-#pt-notifications-alert .mw-echo-unseen-notifications, #pt-notifications-message .mw-echo-unseen-notifications {
-	color: #0645ad !important;
-}
-
-/* Make Echo extension more mobile friendly on small widths */
-
-@media only screen and (max-width: 450px) {
-	.oo-ui-popupWidget-popup {
-		width: auto !important;
-		position: relative !important;
-		margin-left: -260px !important;
-		font-size: 75% !important;
-	}
-	.oo-ui-clippableElement-clippable.oo-ui-popupWidget-body {
-		width: 100% !important;
-	}
-}
-
 /*Fix ULS CSS */
 
 #pt-uls a.uls-trigger {
@@ -1040,6 +996,7 @@ span.title {
 	font-size: 1.3rem;
 	margin: 0 .5em;
 	color: #FFF;
+	line-height: 2em;
 }
 h3#tagline {
 	font-style: italic;
@@ -1708,9 +1665,11 @@ div.mw-htmlform-field-HTMLCheckField div.mw-label {
 
 #echo-notifications {
 	float: right;
-	margin: -1em 0 1em;
+	display: inline-block;
+	margin: -1em 1em 0;
 	position: relative;
 	z-index: 500;
+	max-height: 40px;
 }
 #echo-notifications-notice,
 #echo-notifications-alerts,
@@ -1724,6 +1683,8 @@ div.mw-htmlform-field-HTMLCheckField div.mw-label {
 	font-size: 1.1em;
 	filter: invert(25%);
 	color: transparent;
+	height: auto !important;
+	display: block !important;
 }
 #echo-notifications li {
 	list-style: none;
