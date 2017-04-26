@@ -1666,10 +1666,10 @@ div.mw-htmlform-field-HTMLCheckField div.mw-label {
 #echo-notifications {
 	float: right;
 	display: inline-block;
-	margin: -1em 1em 0;
+	margin: -1em 1em .5em;
 	position: relative;
 	z-index: 500;
-	max-height: 40px;
+	max-height: 30px;
 }
 #echo-notifications-notice,
 #echo-notifications-alerts,
@@ -1678,11 +1678,13 @@ div.mw-htmlform-field-HTMLCheckField div.mw-label {
 	display: inline-block;
 } 
 
-#pt-notifications-alert .mw-echo-notifications-badge, #pt-notifications-message .mw-echo-notifications-badge {
+#pt-notifications-notice .mw-echo-notifications-badge,
+#pt-notifications-alert .mw-echo-notifications-badge,
+#pt-notifications-message .mw-echo-notifications-badge {
 	background-size: 1.4em !important;
 	font-size: 1.1em;
-	filter: invert(25%);
 	color: transparent;
+	filter: invert(15%);
 	height: auto !important;
 	display: block !important;
 }
@@ -1783,7 +1785,7 @@ ul[class*="block-grid"] {
 	line-height: 1.6;
 	font-size: 0.875em;
 	position: relative;
-	margin: -1em .5em 0 2em;
+	margin: -1em .5em .5em 1em;
 	max-height: 30px;
 	width: auto;
 	z-index: 1;
