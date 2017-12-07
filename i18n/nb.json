@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jon Harald Søby"
+		]
+	},
+	"skinname-foreground": "Forgrunn",
+	"foreground-desc": "Tilbyr ei drakt som fokuserer på å putte innholdet ditt i forgrunnen",
+	"foreground-browsermsg": "vil kanskje ikke se ut som forventet i denne versjonen av Internet Explorer. Vi anbefaler at du oppgraderer til en nyere versjon av Internet Explorer eller bytter til en annen nettleser som Firefox eller Chrome.",
+	"foreground-menutitle": "Meny"
+}

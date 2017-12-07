@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"WikiPhoenix"
+		]
+	},
+	"skinname-foreground": "Förgrund",
+	"foreground-desc": "Tillhandahåller ett utseende som fokuserar på att lägga ditt innehåll i förgrunden",
+	"foreground-browsermsg": "kanske inte ser ut som förväntat i denna version av Internet Explorer. Vi rekommenderar att du uppgraderar till en nyare version av Internet Explorer eller byter till en webbläsare som Firefox eller Chrome.",
+	"foreground-menutitle": "Meny"
+}

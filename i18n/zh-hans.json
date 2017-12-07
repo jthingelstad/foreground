@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Liuxinyu970226"
+		]
+	},
+	"skinname-foreground": "前景",
+	"foreground-desc": "提供侧重于将您的内容放置在前景的皮肤",
+	"foreground-browsermsg": "在此版本Internet Explorer中可能无法按预期工作。我们建议您升级至新版本Internet Explorer，或切换为其他浏览器，例如Firefox或Chrome。",
+	"foreground-menutitle": "菜单"
+}
