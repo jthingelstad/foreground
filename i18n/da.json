@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joedalton"
+		]
+	},
+	"skinname-foreground": "Forgrund",
+	"foreground-desc": "Tilbyder et tema som fokuserer på at placere dit indhold i forgrunden",
+	"foreground-browsermsg": "ser måske ikke ud som forventet i denne version af Internet Explorer. Vi anbefaler, at du opgraderer til en nyere version af Internet Explorer eller skifter til en browser såsom Firefox eller Chrome.",
+	"foreground-menutitle": "Menu"
+}
