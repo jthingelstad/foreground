@@ -1,5 +1,6 @@
 ## Version 2.1
 
+* [compatibility] Remove IE 8 support entirely
 * [code] Moved icon appending for Visual Editor to `(window).load` function
 * [code] Improved styling of TOC
 * [code] [b/c break] Switch to MW 1.25+ extension registration mechanism
