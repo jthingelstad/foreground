@@ -1,8 +1,14 @@
+
 {
 	"@metadata": {
 		"authors": [
-			"Liuxinyu970226"
+			"Kghbln"
 		]
 	},
-	"foreground-menutitle": "{{Identical|Menu}}"
+	"skinname-foreground": "{{Notranslate}}\n\nThis this is the name of the skin.",
+	"foreground-desc": "{{desc|what=skin|name=Foreground|url=https://www.mediawiki.org/wiki/Skin:Foreground}}",
+	"foreground-browsermsg": "This is an error message.",
+	"foreground-menutitle": "This is a label.",
+	"foreground-menunavback": "This is a label."
 }
+
