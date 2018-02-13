@@ -43,10 +43,10 @@ Use following features in `LocalSettings.php` to change the behavior.
 - `wikiName => 'Alternate WikiName'` sets top navbar name to a different output of the wiki's name. Useful if your `$wgSitename` is long but need to keep it for other purposes.
 - `navbarIcon => true` to display an icon in the top navbar. See below for more information.
 - `IeEdgeCode => 1` will produce a meta tag with "X-UA-Compatible" content="IE=edge", `2` will sent a header, `0` nothing will be done
-- `showFooterIcons => 0` suppresses the output of footer icons. Set to `true` or `1` to display them.
-- `'addThisPUBID' => ''` empty string will not fire the AddThis script, `'ra-##-#######'` publisher ID will allow the run the AddThis script in async on content pages only.
-- `'useAddThisShare' => ''` default empty string, do not use AddThis share, `your_addthis_specific_div_class_string` will insert the share toolbox div directly under page title, but before the tagline with your custom div class.
-- `'useAddThisFollow' => ''` default empty string, do not use AddThis follow, `your_addthis_specific_div_class_string` will insert the follow toolbox div in the `footer` area before icon or text output with your custom div class.
+- `showFooterIcons => false` suppresses the output of footer icons. Set to `true` or `1` to display them.
+- `addThisPUBID => ''` empty string will not fire the AddThis script, `'ra-##-#######'` publisher ID will allow the run the AddThis script in async on content pages only.
+- `useAddThisShare => ''` default empty string, do not use AddThis share, `your_addthis_specific_div_class_string` will insert the share toolbox div directly under page title, but before the tagline with your custom div class.
+- `useAddThisFollow => ''` default empty string, do not use AddThis follow, `your_addthis_specific_div_class_string` will insert the follow toolbox div in the `footer` area before icon or text output with your custom div class.
 
 These are the default values:
 
@@ -59,8 +59,10 @@ These are the default values:
       'wikiName' => &$GLOBALS['wgSitename'],
       'navbarIcon' => false,
       'IeEdgeCode' => 1,
-      'showFooterIcons' => 0,
-      'addThisFollowPUBID' => ''
+      'showFooterIcons' => false,
+	  'addThisPUBID' => '',
+	  'useAddThisShare' => '',
+	  'useAddThisFollow' => ''
     );
 	
 ### Usage of NavWrapperType
