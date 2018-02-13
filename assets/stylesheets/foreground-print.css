@@ -1,37 +1,4 @@
-/* Show what will print */
-
-@media screen {
-	/* stop double border at bottom with print */
-	footer.row {
-		border: none;
-	}
-	/*make namespace labels stand out */
-	h4.namespace.label {
-    padding: 0.25em;
-    font-size: 1.4em !important;
-    font-weight: normal;
-    background-color: #777777 !important;
-	color: #fff !important;
-	}
-	/* hide actions button as it is not needed */
-	#p-cactions a.button.dropdown.small.secondary.radius {
-    display: none !important;
-	}
-	/* if addThis share is used, make sure to hide mobile content from js */
-	#at4m-dock, .at4-show,
-	#atstbx	{
-	display: none !important;
-	}
-	/* hide Echo if being used */
-	#echo-notifications {
-	display: none !important;
-	}
-	nav {
-    display: none !important;
-	}
-}
-
-/* Print what is shown */
+/* Control what will print */
 
 @media print {
 	/* stop double border at bottom with print */
@@ -60,6 +27,9 @@
 	display: none !important;
 	}
 	nav {
+    display: none !important;
+	}
+	a#actions-button {
     display: none !important;
 	}
 }
