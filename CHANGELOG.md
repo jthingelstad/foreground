@@ -1,5 +1,7 @@
 ## Version 2.1
 
+* [bug fix] AddThis div container #295
+* [enhancement] Hide AddThis on non content pages by disabling <script> from running
 * [bug fix] Fixes for VisualEditor changes in editor layout #313
 * [compatibilit] Remove IE 8 Support entirely
 * [code] CSS fixes for Issues #88, #172 and #196 (Print.css, firstHeading and Wikitable override by Foundation)

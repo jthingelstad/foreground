@@ -23,8 +23,10 @@ class Skinforeground extends SkinTemplate {
 			'wikiName' => &$GLOBALS['wgSitename'],
 			'navbarIcon' => false,
 			'IeEdgeCode' => 1,
-			'showFooterIcons' => 0,
-			'addThisFollowPUBID' => ''
+			'showFooterIcons' => false,
+			'addThisPUBID' => '',
+			'useAddThisShare' => '',
+			'useAddThisFollow' => ''
 		);
 		foreach ($wgForegroundFeaturesDefaults as $fgOption => $fgOptionValue) {
 			if ( !isset($wgForegroundFeatures[$fgOption]) ) {
@@ -210,6 +212,11 @@ class foregroundTemplate extends BaseTemplate {
 					?><h4 class="namespace label"><?php print $namespace; ?></h4><?php } ?>
 					<div id="content">
 					<h1  id="firstHeading" class="title"><?php print $displaytitle; ?></h1>
+						<?php if ($wgPivotFeatures['useAddThisShare'] !== '') { ?>
+						<!-- Go to www.addthis.com/dashboard to customize your tools -->
+						<div class="<?php echo $wgPivotFeatures['useAddThisShare']; ?> hide-for-print"></div>
+						<!-- Go to www.addthis.com/dashboard to customize your tools -->
+						<?php } ?>
 					<?php if ( $this->data['isarticle'] ) { ?><h3 id="tagline"><?php $this->msg( 'tagline' ) ?></h3><?php } ?>
 					<h5 id="siteSub" class="subtitle"><?php $this->html('subtitle') ?></h5>
 					<div id="contentSub" class="clear_both"></div>
@@ -234,12 +241,11 @@ class foregroundTemplate extends BaseTemplate {
 
 			<footer class="row">
 				<div id="footer">
-					<?php if ($wgForegroundFeatures['addThisFollowPUBID'] != '') { ?>
-						<div class="social-footer large-12 small-12 columns">
+					<?php if ($wgPivotFeatures['useAddThisFollow'] !== '') { ?>
+						<div class="social-follow hide-for-print">
 							<div class="social-links">
 							<!-- Go to www.addthis.com/dashboard to customize your tools -->
-							<div class="addthis_horizontal_follow_toolbox"></div>
-							<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=<?php echo $wgForegroundFeatures['addThisFollowPUBID'];?>"></script>
+							<div class="<?php echo $wgPivotFeatures['useAddThisFollow']; ?> hide-for-print"></div>
 							</div>
 						</div>
 					<?php } ?>
@@ -266,7 +272,9 @@ class foregroundTemplate extends BaseTemplate {
 		</div>
 		
 		<?php $this->printTrail(); ?>
-
+			<?php if ($this->data['isarticle'] && $wgPivotFeatures['addThisPUBID'] !== '') { ?>
+				<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=<?php echo $wgPivotFeatures['addThisPUBID']; ?>" async="async">></script>
+			<?php } ?>	
 		</body>
 		</html>
 
