@@ -240,35 +240,10 @@ footer.row ul.views.columns li {
 	list-style-type: none;
 }
 
-/* Make social footer center need overflow:hidden and other div classes */
+/* Make social follow float right */
 
-.social-footer {
-	margin: 0 0 1em;
-	font-size: 90%;
-	overflow: hidden;
-}
-
-/* Hide all text in p elements */
-
-.social-footer p {
-	display: none;
-}
-
-/* Outer wrap */
-
-.social-links {
-	position: relative;
-	left: 50%;
-	float: left;
-}
-
-/* addThis container (inner wrap) */
-
-.addthis_horizontal_follow_toolbox {
-	position: relative;
-	left: -50%;
-	float: left;
-	z-index: 100000;
+.social-follow {
+    float: right;
 }
 
 /* end social footer classes */

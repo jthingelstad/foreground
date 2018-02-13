@@ -212,9 +212,9 @@ class foregroundTemplate extends BaseTemplate {
 					?><h4 class="namespace label"><?php print $namespace; ?></h4><?php } ?>
 					<div id="content">
 					<h1  id="firstHeading" class="title"><?php print $displaytitle; ?></h1>
-						<?php if ($wgPivotFeatures['useAddThisShare'] !== '') { ?>
+						<?php if ($wgForegroundFeatures['useAddThisShare'] !== '') { ?>
 						<!-- Go to www.addthis.com/dashboard to customize your tools -->
-						<div class="<?php echo $wgPivotFeatures['useAddThisShare']; ?> hide-for-print"></div>
+						<div class="<?php echo $wgForegroundFeatures['useAddThisShare']; ?> hide-for-print"></div>
 						<!-- Go to www.addthis.com/dashboard to customize your tools -->
 						<?php } ?>
 					<?php if ( $this->data['isarticle'] ) { ?><h3 id="tagline"><?php $this->msg( 'tagline' ) ?></h3><?php } ?>
@@ -241,12 +241,10 @@ class foregroundTemplate extends BaseTemplate {
 
 			<footer class="row">
 				<div id="footer">
-					<?php if ($wgPivotFeatures['useAddThisFollow'] !== '') { ?>
+					<?php if ($wgForegroundFeatures['useAddThisFollow'] !== '') { ?>
 						<div class="social-follow hide-for-print">
-							<div class="social-links">
 							<!-- Go to www.addthis.com/dashboard to customize your tools -->
-							<div class="<?php echo $wgPivotFeatures['useAddThisFollow']; ?> hide-for-print"></div>
-							</div>
+							<div class="<?php echo $wgForegroundFeatures['useAddThisFollow']; ?> hide-for-print"></div>
 						</div>
 					<?php } ?>
 					<div id="footer-left" class="<?php echo $footerLeftClass;?>">
@@ -272,8 +270,8 @@ class foregroundTemplate extends BaseTemplate {
 		</div>
 		
 		<?php $this->printTrail(); ?>
-			<?php if ($this->data['isarticle'] && $wgPivotFeatures['addThisPUBID'] !== '') { ?>
-				<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=<?php echo $wgPivotFeatures['addThisPUBID']; ?>" async="async">></script>
+			<?php if ($this->data['isarticle'] && $wgForegroundFeatures['addThisPUBID'] !== '') { ?>
+				<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=<?php echo $wgForegroundFeatures['addThisPUBID']; ?>" async="async">></script>
 			<?php } ?>	
 		</body>
 		</html>
