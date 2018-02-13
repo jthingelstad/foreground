@@ -1,6 +1,7 @@
 ## Version 2.1
 
-* [compatibility] Remove IE 8 support entirely
+* [bug fix] Fixes for VisualEditor changes in editor layout #313
+* [code] CSS fixes for Issues #88, #172 and #196 (Print.css, firstHeading and Wikitable override by Foundation)
 * [code] Moved icon appending for Visual Editor to `(window).load` function
 * [code] Improved styling of TOC
 * [code] [b/c break] Switch to MW 1.25+ extension registration mechanism
