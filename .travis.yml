@@ -13,4 +13,13 @@ matrix:
   allow_failures:
   - php: hhvm
   - php: nightly
+
+sudo: false
+
+install:
+  - travis_retry composer update --no-progress --prefer-dist --profile
+
+script:
+  - composer test
+
   
