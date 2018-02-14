@@ -243,7 +243,11 @@ footer.row ul.views.columns li {
 /* Make social follow float right */
 
 .social-follow {
-    float: right;
+    text-align: center;
+}
+div.social-follow div[class*="addthis"] {
+    text-align: left;
+    display: inline-block;
 }
 
 /* end social footer classes */
