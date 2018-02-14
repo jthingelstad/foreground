@@ -1,5 +1,6 @@
 ## Version 2.1
 
+* [bug] Regression - Text footer alignment and social icons (follow) #319
 * [bug fix] AddThis div container #295
 * [enhancement] Hide AddThis on non content pages by disabling <script> from running
 * [bug fix] Fixes for VisualEditor changes in editor layout #313

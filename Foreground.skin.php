@@ -87,7 +87,7 @@ class foregroundTemplate extends BaseTemplate {
 				break;
 		}
 		// Set default variables for footer and switch them if 'showFooterIcons' => true
-		$footerLeftClass = 'small-8 large-centered columns text-center';
+		$footerLeftClass = 'small-12 large-centered columns text-center';
 		$footerRightClass = 'large-12 small-12 columns';
 		$poweredbyType = "nocopyright";
 		$poweredbyMakeType = 'withoutImage';
