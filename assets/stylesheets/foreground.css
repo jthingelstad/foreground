@@ -204,8 +204,53 @@ ul#actions.f-dropdown {
 	margin-bottom: .25em;
 	padding: .25em;
 }
-#mw-content-text ul {
-	margin: .5em 1.25em;
+
+dl {
+    margin-bottom: 0em;
+    margin-top: .75em;
+}
+
+/* Override MW legacy.module for all skins styling of ul and ol */
+.mw-content-ltr ul,
+.mw-content-rtl .mw-content-ltr ul {
+	/* @noflip */
+	margin: 0.5em 0 0 2em;
+	padding: 0;
+}
+	
+.mw-content-rtl ul,
+.mw-content-ltr .mw-content-rtl ul {
+	/* @noflip */
+	margin: 0.5em 2em 0 0;
+	padding: 0;
+}
+	
+.mw-content-ltr ol,
+.mw-content-rtl .mw-content-ltr ol {
+	/* @noflip */
+	margin: 0.5em 0 0 2em;
+	padding: 0;
+}
+	
+.mw-content-rtl ol,
+.mw-content-ltr .mw-content-rtl ol {
+	/* @noflip */
+	margin: 0.5em 2em 0 0;
+	padding: 0;
+}
+	
+/* @noflip */
+.mw-content-ltr dd,
+.mw-content-rtl .mw-content-ltr dd {
+	margin-left: 1.6em;
+	margin-right: 0;
+}
+	
+/* @noflip */
+.mw-content-rtl dd,
+.mw-content-ltr .mw-content-rtl dd {
+	margin-right: 1.6em;
+	margin-left: 0;
 }
 
 /* Tabs */
@@ -601,13 +646,15 @@ div.mw-htmlform-field-HTMLCheckField div.mw-label {
 
 /* firstHeading Fix */
 
+h1#firstHeading {
+    font-size: 2.125rem;
+	margin: 0;
+}
+
 @media only screen and (min-width: 40.0625em) {
 h1#firstHeading {
     font-size: 2.75rem;
 }
-}
-h1#firstHeading {
-    font-size: 2.125rem;
 }
 
 /* Don't like the black top bar? Copy this into your Foreground.css and change the colors 
@@ -840,18 +887,6 @@ div#userloginprompt, p#userloginlink {
 	font-size: 80%;
 }
 
-/* LISTS */
-
-ul#actions.f-dropdown {
-	margin-left: 0;
-	margin-top: .5em;
-	margin-bottom: .25em;
-	padding: .25em;
-}
-#mw-content-text ul {
-	margin: .5em 1.25em;
-}
-
 /* make sure orbit image slider has no margins */
 
 #mw-content-text .orbit-container ul {
@@ -1004,7 +1039,7 @@ ul.vcard {
 /* HEADERS */
 
 h1, h2, h3, h4, h5, h6 {
-	margin-top: 0em;
+	margin-top: .75em;
 	line-height: 1em;
 }
 .page-Special_SpecialPages h2 {
