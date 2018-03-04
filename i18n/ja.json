@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Yusuke1109"
+		]
+	},
+	"foreground-browsermsg": "このバージョンのInternet Explorerでは期待どおりに表示されないことがあります。新しいバージョンのInternet Explorerにアップグレードするか、FirefoxやChromeなどのブラウザに切り替えることをおすすめします。",
+	"foreground-menutitle": "メニュー"
+}

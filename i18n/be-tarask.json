@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Red Winged Duck"
+		]
+	},
+	"skinname-foreground": "Пярэдні плян",
+	"foreground-desc": "Забясьпечвае тэму афармленьня, якая факусуецца на разьмяшчэньні вашага зьместу на пярэднім пляне",
+	"foreground-browsermsg": "можа выглядаць ня так, як чакалася ў гэтай вэрсіі Internet Explorer. Мы рэкамэндуем абнавіцца да новай вэрсіі Internet Explorer або перайсьці на іншы браўзэр кшталту Firefox ці Chrome.",
+	"foreground-menutitle": "Мэню"
+}

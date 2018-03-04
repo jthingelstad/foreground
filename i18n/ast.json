@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Xuacu"
+		]
+	},
+	"skinname-foreground": "Frente",
+	"foreground-desc": "Ufre un aspeutu dedicáu a poner el conteníu en primer planu",
+	"foreground-browsermsg": "seique nun se vea como s'espera nesta versión d'Internet Explorer. Encamentamos que actualices a una versión más recién d'Internet Explorer o que cambies a un restolador como Firefox o Chrome.",
+	"foreground-menutitle": "Menú"
+}

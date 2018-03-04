@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mikel Ibaiba"
+		]
+	},
+	"skinname-foreground": "Lehen planoan",
+	"foreground-desc": "Aurrekariak zure edukia aurreko planoan jartzen duen azala ematen du",
+	"foreground-browsermsg": "agian ez da espero bezala ikusiko Internet Explorer-en bertsio honetan. Internet Explorer bertsio berriago batera eguneratzea gomendatzen dizugu edo Firefox edo Chrome bezalako arakatzaile batera aldatzeko.",
+	"foreground-menutitle": "Menua"
+}

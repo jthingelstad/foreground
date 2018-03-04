@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hedda"
+		]
+	},
+	"skinname-foreground": "Ön plan",
+	"foreground-desc": "İçeriğinizi ön plana koymaya odaklanan bir tema sağlar.",
+	"foreground-browsermsg": "Internet Explorer'ın bu sürümünde beklendiği gibi görünmeyebilir. Internet Explorer'ın daha yeni bir sürümüne geçmenizi veya Firefox veya Chrome gibi bir tarayıcıya geçmenizi öneririz.",
+	"foreground-menutitle": "Menü"
+}

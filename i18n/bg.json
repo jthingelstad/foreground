@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"StanProg",
+			"ShockD"
+		]
+	},
+	"skinname-foreground": "Основен цвят",
+	"foreground-desc": "Предоставя облик, който извежда на преден план съдържанието на страницата.",
+	"foreground-browsermsg": "може да не изглежда както очаквате на вашата версия на Internet Explorer. Препоръчваме ви да актуализирате версията си на Internet Explorer или да използвате друг браузър като Firefox или Chrome.",
+	"foreground-menutitle": "Меню"
+}

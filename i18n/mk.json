@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bjankuloski06"
+		]
+	},
+	"skinname-foreground": "Преднина",
+	"foreground-desc": "Дава руво чија задршка е ставање на вашата содржина во  преден план",
+	"foreground-browsermsg": "може да не изгледа според очекуваното во оваа верзија на Internet Explorer. Ви препорачуваме да го надградите на понова верзија, или да се префрлите на прелистувач како Firefox или Chrome",
+	"foreground-menutitle": "Мени"
+}
