@@ -19,11 +19,14 @@ class Skinforeground extends SkinTemplate {
 			'NavWrapperType' => 'divonly',
 			'showHelpUnderTools' => true,
 			'showRecentChangesUnderTools' => true,
+			'enableTabs' => false,
 			'wikiName' => &$GLOBALS['wgSitename'],
 			'navbarIcon' => false,
 			'IeEdgeCode' => 1,
-			'showFooterIcons' => 0,
-			'addThisFollowPUBID' => ''
+			'showFooterIcons' => false,
+			'addThisPUBID' => '',
+			'useAddThisShare' => '',
+			'useAddThisFollow' => ''
 		);
 		foreach ($wgForegroundFeaturesDefaults as $fgOption => $fgOptionValue) {
 			if ( !isset($wgForegroundFeatures[$fgOption]) ) {
@@ -47,7 +50,7 @@ class Skinforeground extends SkinTemplate {
 		parent::initPage($out);
 
 		$viewport_meta = 'width=device-width, user-scalable=yes, initial-scale=1.0';
-	  $out->addMeta('viewport', $viewport_meta);
+		$out->addMeta('viewport', $viewport_meta);
 		$out->addModules('skins.foreground.js');
 	}
 
@@ -59,6 +62,20 @@ class foregroundTemplate extends BaseTemplate {
 		global $wgForegroundFeatures;
 		wfSuppressWarnings();
 		$this->html('headelement');
+		switch ($wgForegroundFeatures['enableTabs']) {
+			case true:
+			    ob_start();
+				$this->html('bodytext');
+				$out = ob_get_contents();
+				ob_end_clean();
+				$markers = array("&lt;a", "&lt;/a", "&gt;");
+				$tags = array("<a", "</a", ">");
+				$body = str_replace($markers, $tags, $out);
+				break;	
+			default:
+				$body = '';
+				break;
+		}
 		switch ($wgForegroundFeatures['NavWrapperType']) {
 			case '0':
 				break;
@@ -70,7 +87,7 @@ class foregroundTemplate extends BaseTemplate {
 				break;
 		}
 		// Set default variables for footer and switch them if 'showFooterIcons' => true
-		$footerLeftClass = 'small-8 large-centered columns text-center';
+		$footerLeftClass = 'small-12 large-centered columns text-center';
 		$footerRightClass = 'large-12 small-12 columns';
 		$poweredbyType = "nocopyright";
 		$poweredbyMakeType = 'withoutImage';
@@ -86,17 +103,17 @@ class foregroundTemplate extends BaseTemplate {
 		}
 ?>
 <!-- START FOREGROUNDTEMPLATE -->
-		<nav class="top-bar">
+		<nav class="top-bar" data-topbar role="navigation" data-options="back_text: <?php echo wfMessage( 'foreground-menunavback' )->text(); ?>">
 			<ul class="title-area">
 				<li class="name">
-					<h1 class="title-name">
+					<div class="title-name">
 					<a href="<?php echo $this->data['nav_urls']['mainpage']['href']; ?>">
 					<?php if ($wgForegroundFeatures['navbarIcon'] != '0') { ?>
-						<img alt="<?php echo $this->text('sitename'); ?>" src="<?php echo $this->text('logopath') ?>" style="max-width: 64px;height:auto; max-height:36px; display: inline-block; vertical-align:middle;">
+						<img alt="<?php echo $this->text('sitename'); ?>" class="top-bar-logo" src="<?php echo $this->text('logopath') ?>">
 					<?php } ?>					
 					<div class="title-name" style="display: inline-block;"><?php echo $wgForegroundFeatures['wikiName']; ?></div>
 					</a>
-					</h1>
+					</div>
 				</li>
 				<li class="toggle-topbar menu-icon">
 					<a href="#"><span><?php echo wfMessage( 'foreground-menutitle' )->text(); ?></span></a>
@@ -106,7 +123,7 @@ class foregroundTemplate extends BaseTemplate {
 		<section class="top-bar-section">
 
 			<ul id="top-bar-left" class="left">
-				<li class="divider"></li>
+				<li class="divider show-for-small"></li>
 					<?php foreach ( $this->getSidebar() as $boxName => $box ) { if ( ($box['header'] != wfMessage( 'toolbox' )->text())  ) { ?>
 				<li class="has-dropdown active"  id='<?php echo Sanitizer::escapeId( $box['id'] ) ?>'<?php echo Linker::tooltip( $box['id'] ) ?>>
 					<a href="#"><?php echo htmlspecialchars( $box['header'] ); ?></a>
@@ -121,7 +138,7 @@ class foregroundTemplate extends BaseTemplate {
 			<ul id="top-bar-right" class="right">
 				<li class="has-form">
 					<form action="<?php $this->text( 'wgScript' ); ?>" id="searchform" class="mw-search">
-						<div class="row">
+						<div class="row collapse">
 						<div class="small-12 columns">
 							<?php echo $this->makeSearchInput(array('placeholder' => wfMessage('searchsuggest-search')->text(), 'id' => 'searchInput') ); ?>
 							<button type="submit" class="button search"><?php echo wfMessage( 'search' )->text() ?></button>
@@ -130,44 +147,40 @@ class foregroundTemplate extends BaseTemplate {
 					</form>
 				</li>
 				<li class="divider show-for-small"></li>
-				<li class="has-form">
 
 				<li class="has-dropdown active"><a href="#"><i class="fa fa-cogs"></i></a>
 					<ul id="toolbox-dropdown" class="dropdown">
 						<?php foreach ( $this->getToolbox() as $key => $item ) { echo $this->makeListItem($key, $item); } ?>
 						<?php if ($wgForegroundFeatures['showRecentChangesUnderTools']): ?><li id="n-recentchanges"><?php echo Linker::specialLink('Recentchanges') ?></li><?php endif; ?>
-						<?php if ($wgForegroundFeatures['showHelpUnderTools']): ?><li id="n-help" <?php echo Linker::tooltip('help') ?>><a href="/wiki/Help:Contents"><?php echo wfMessage( 'help' )->text() ?></a></li><?php endif; ?>
+						<?php if ($wgForegroundFeatures['showHelpUnderTools']): ?><li id="n-help" <?php echo Linker::tooltip('help') ?>><a href="<?php echo Skin::makeInternalOrExternalUrl( wfMessage( 'helppage' )->inContentLanguage()->text() )?>"><?php echo wfMessage( 'help' )->text() ?></a></li><?php endif; ?>
 					</ul>
 				</li>
 
-				<?php if ($wgUser->isLoggedIn()): ?>
 				<li id="personal-tools-dropdown" class="has-dropdown active"><a href="#"><i class="fa fa-user"></i></a>
 					<ul class="dropdown">
 						<?php foreach ( $this->getPersonalTools() as $key => $item ) { echo $this->makeListItem($key, $item); } ?>
 					</ul>
 				</li>
 
-						<?php else: ?>
-							<li>
-								<?php if (isset($this->data['personal_urls']['anonlogin'])): ?>
-								<a href="<?php echo $this->data['personal_urls']['anonlogin']['href']; ?>"><?php echo wfMessage( 'login' )->text() ?></a>
-								<?php elseif (isset($this->data['personal_urls']['login'])): ?>
-									<a href="<?php echo htmlspecialchars($this->data['personal_urls']['login']['href']); ?>"><?php echo wfMessage( 'login' )->text() ?></a>
-									<?php else: ?>
-										<?php echo Linker::link(Title::newFromText('Special:UserLogin'), wfMessage( 'login' )->text()); ?>
-									<?php endif; ?>
-							</li>
-
-				<?php endif; ?>
-
 			</ul>
 		</section>
 		</nav>
+		
 		<?php if ($wgForegroundFeatures['NavWrapperType'] != '0') echo "</div>"; ?>
 		
 		<div id="page-content">
 		<div class="row">
 				<div class="large-12 columns">
+					<!-- Output page indicators -->
+					<?php echo $this->getIndicators(); ?>
+					<!-- If user is logged in output echo location -->
+					<?php if ($wgUser->isLoggedIn()): ?>
+					<div id="echo-notifications">
+					<div id="echo-notifications-alerts"></div>
+					<div id="echo-notifications-messages"></div>
+					<div id="echo-notifications-notice"></div>
+					</div>
+					<?php endif; ?>
 				<!--[if lt IE 9]>
 				<div id="siteNotice" class="sitenotice panel radius"><?php echo $this->text('sitename') . ' '. wfMessage( 'foreground-browsermsg' )->text(); ?></div>
 				<![endif]-->
@@ -182,16 +195,13 @@ class foregroundTemplate extends BaseTemplate {
 		<div class="row">
 				<div id="p-cactions" class="large-12 columns">
 					<?php if ($wgUser->isLoggedIn() || $wgForegroundFeatures['showActionsForAnon']): ?>
-						<a href="#" data-dropdown="drop1" class="button dropdown small secondary radius"><i class="fa fa-cog"><span class="show-for-medium-up">&nbsp;<?php echo wfMessage( 'actions' )->text() ?></span></i></a>
+						<a id="actions-button" href="#" data-dropdown="actions" data-options="align:left; is_hover: true; hover_timeout:700" class="button small secondary radius"><i class="fa fa-cog"><span class="show-for-medium-up">&nbsp;<?php echo wfMessage( 'actions' )->text() ?></span></i></a>
 						<!--RTL -->
-						<ul id="drop1" class="views large-12 columns right f-dropdown">
+						<ul id="actions" class="f-dropdown" data-dropdown-content>
 							<?php foreach( $this->data['content_actions'] as $key => $item ) { echo preg_replace(array('/\sprimary="1"/','/\scontext="[a-z]+"/','/\srel="archives"/'),'',$this->makeListItem($key, $item)); } ?>
 							<?php wfRunHooks( 'SkinTemplateToolboxEnd', array( &$this, true ) );  ?>
 						</ul>
 						<!--RTL -->
-						<?php if ($wgUser->isLoggedIn()): ?>
-							<div id="echo-notifications"></div>
-						<?php endif; ?>
 					<?php endif;
 					$namespace = str_replace('_', ' ', $this->getSkin()->getTitle()->getNsText());
 					$displaytitle = $this->data['title'];
@@ -201,12 +211,26 @@ class foregroundTemplate extends BaseTemplate {
 						$displaytitle = str_replace($pagetitle, $newtitle, $displaytitle);
 					?><h4 class="namespace label"><?php print $namespace; ?></h4><?php } ?>
 					<div id="content">
-					<h2  id="firstHeading" class="title"><?php print $displaytitle; ?></h2>
+					<h1  id="firstHeading" class="title"><?php print $displaytitle; ?></h1>
+						<?php if ($wgForegroundFeatures['useAddThisShare'] !== '') { ?>
+						<!-- Go to www.addthis.com/dashboard to customize your tools -->
+						<div class="<?php echo $wgForegroundFeatures['useAddThisShare']; ?> hide-for-print"></div>
+						<!-- Go to www.addthis.com/dashboard to customize your tools -->
+						<?php } ?>
 					<?php if ( $this->data['isarticle'] ) { ?><h3 id="tagline"><?php $this->msg( 'tagline' ) ?></h3><?php } ?>
 					<h5 id="siteSub" class="subtitle"><?php $this->html('subtitle') ?></h5>
 					<div id="contentSub" class="clear_both"></div>
 					<div id="bodyContent" class="mw-bodytext">
-						<?php $this->html('bodytext') ?>
+						<?php 
+							switch ($wgForegroundFeatures['enableTabs']) {
+								case true:
+									echo $body;
+									break;
+								default:
+								$this->html('bodytext');
+									break;
+							}
+						?>
 						<div class="clear_both"></div>
 					</div>
 		    	<div class="group"><?php $this->html('catlinks'); ?></div>
@@ -217,13 +241,10 @@ class foregroundTemplate extends BaseTemplate {
 
 			<footer class="row">
 				<div id="footer">
-					<?php if ($wgForegroundFeatures['addThisFollowPUBID'] != '') { ?>
-						<div class="social-footer large-12 small-12 columns">
-							<div class="social-links">
+					<?php if ($wgForegroundFeatures['useAddThisFollow'] !== '') { ?>
+						<div class="social-follow hide-for-print">
 							<!-- Go to www.addthis.com/dashboard to customize your tools -->
-							<div class="addthis_horizontal_follow_toolbox"></div>
-							<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=<?php echo $wgForegroundFeatures['addThisFollowPUBID'];?>"></script>
-							</div>
+							<div class="<?php echo $wgForegroundFeatures['useAddThisFollow']; ?> hide-for-print"></div>
 						</div>
 					<?php } ?>
 					<div id="footer-left" class="<?php echo $footerLeftClass;?>">
@@ -249,7 +270,9 @@ class foregroundTemplate extends BaseTemplate {
 		</div>
 		
 		<?php $this->printTrail(); ?>
-
+			<?php if ($this->data['isarticle'] && $wgForegroundFeatures['addThisPUBID'] !== '') { ?>
+				<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=<?php echo $wgForegroundFeatures['addThisPUBID']; ?>" async="async">></script>
+			<?php } ?>	
 		</body>
 		</html>
 

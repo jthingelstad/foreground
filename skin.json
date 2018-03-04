@@ -1,15 +1,15 @@
 {
-	"@Note": "Note: Don't forget when updating to update the foreground.php file with the same change.",
 	"name": "Foreground",
-	"version": "1.2.0",
+	"version": "2.1.0",
 	"author": [
 		"Garrick Van Buren",
 		"Jamie Thingelstad",
 		"Tom Hutchison",
 		"..."
 	],
-	"url": "http://foreground.thingelstad.com",
+	"url": "https://github.com/thingles/foreground",
 	"descriptionmsg": "foreground-desc",
+	"license-name": "BSD-2-Clause",
 	"type": "skin",
 	"ValidSkinNames": {
 		"foreground": "Foreground"
@@ -20,7 +20,8 @@
 		]
 	},
 	"AutoloadClasses": {
-		"SkinForeground": "Foreground.skin.php"
+		"SkinForeground": "Foreground.skin.php",
+		"foregroundTemplate": "Foreground.skin.php"
 	},
 	"ResourceModules": {
 		"skins.foreground.styles": {
@@ -30,27 +31,39 @@
 				"assets/stylesheets/font-awesome.css",
 				"assets/stylesheets/foundation.css",
 				"assets/stylesheets/foreground.css",
-				"assets/stylesheets/foreground-print.css",
-				"assets/stylesheets/jquery.autocomplete.css",
-				"assets/stylesheets/responsive-tables.css"
+				"assets/stylesheets/foreground-print.css"
+			]
+		},
+		"skins.foreground.modernizr": {
+			"position": "top",
+			"scripts": [
+				"assets/scripts/vendor/modernizr.js"
 			]
 		},
 		"skins.foreground.js": {
-			"position": "top",
+			"position": "bottom",
 			"scripts": [
-				"assets/scripts/vendor/custom.modernizr.js",
 				"assets/scripts/vendor/fastclick.js",
-				"assets/scripts/vendor/responsive-tables.js",
+				"assets/scripts/vendor/placeholder.js",
 				"assets/scripts/foundation/foundation.js",
 				"assets/scripts/foundation/foundation.topbar.js",
 				"assets/scripts/foundation/foundation.dropdown.js",
-				"assets/scripts/foundation/foundation.section.js",
+				"assets/scripts/foundation/foundation.joyride.js",
+				"assets/scripts/foundation/foundation.accordion.js",
+				"assets/scripts/foundation/foundation.offcanvas.js",
+				"assets/scripts/foundation/foundation.alert.js",
 				"assets/scripts/foundation/foundation.clearing.js",
-				"assets/scripts/foundation/foundation.cookie.js",
-				"assets/scripts/foundation/foundation.placeholder.js",
-				"assets/scripts/foundation/foundation.forms.js",
-				"assets/scripts/foundation/foundation.alerts.js",
+				"assets/scripts/foundation/foundation.equalizer.js",
+				"assets/scripts/foundation/foundation.interchange.js",
+				"assets/scripts/foundation/foundation.orbit.js",
+				"assets/scripts/foundation/foundation.reveal.js",
+				"assets/scripts/foundation/foundation.tab.js",
+				"assets/scripts/foundation/foundation.tooltip.js",
 				"assets/scripts/foreground.js"
+			],
+			"dependencies": [
+				"jquery.cookie",
+				"skins.foreground.modernizr"
 			]
 		}
 	},
