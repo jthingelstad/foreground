@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Acamicamacaraca"
+			"Acamicamacaraca",
+			"BadDog"
 		]
 	},
-	"foreground-menutitle": "Мени"
+	"foreground-menutitle": "Мени",
+	"foreground-menunavback": "Назад"
 }
