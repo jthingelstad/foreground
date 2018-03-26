@@ -4,6 +4,9 @@
 			"Chrumps"
 		]
 	},
+	"skinname-foreground": "Pierwszy plan",
+	"foreground-desc": "Dostarcza skórkę, która koncentruje się na umieszczaniu treści na pierwszym planie",
+	"foreground-browsermsg": "może nie wyglądać zgodnie z oczekiwaniami w tej wersji przeglądarki Internet Explorer. Zalecamy uaktualnienie do nowszej wersji przeglądarki Internet Explorer lub przejście do przeglądarki takiej jak Firefox lub Chrome.",
 	"foreground-menutitle": "Menu",
 	"foreground-menunavback": "Wstecz"
 }
