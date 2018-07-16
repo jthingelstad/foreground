@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Piramidion"
+		]
+	},
+	"skinname-foreground": "Передній план",
+	"foreground-desc": "Тема оформлення, зосереджена на виведенні Вашого контенту на передній план",
+	"foreground-browsermsg": "Може виглядати не так, як задумано, в цій версії Internet Explorer. Рекомендуємо оновити Internet Explorer до новішої версії, або перейти на інший браузер, на кшталт Firefox або Chrome.",
+	"foreground-menutitle": "Меню",
+	"foreground-menunavback": "Назад"
+}
