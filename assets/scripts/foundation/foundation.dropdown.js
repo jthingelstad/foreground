@@ -396,7 +396,7 @@
       }
     },
 
-    // Insert rule to style psuedo elements
+    // Insert rule to style pseudo elements
     adjust_pip : function (dropdown, target, settings, position) {
       var sheet = Foundation.stylesheet,
           pip_offset_base = 8;
