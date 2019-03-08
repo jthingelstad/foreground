@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Athena in Wonderland"
+			"Athena in Wonderland",
+			"Banjo"
 		]
 	},
-	"foreground-menutitle": "Menú"
+	"skinname-foreground": "Primeiro plano",
+	"foreground-menutitle": "Menú",
+	"foreground-menunavback": "Volver"
 }

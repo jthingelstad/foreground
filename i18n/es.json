@@ -8,5 +8,6 @@
 	"skinname-foreground": "Foreground",
 	"foreground-desc": "Provee una apariencia que pone el contenido en primer plano",
 	"foreground-browsermsg": "puede mostrarse incorrectamente en esta versión de Internet Explorer. Recomendamos que se actualice a una versión más reciente o se cambie a un navegador como Firefox o Chrome.",
-	"foreground-menutitle": "Menú"
+	"foreground-menutitle": "Menú",
+	"foreground-menunavback": "Atrás"
 }

@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Aftabuzzaman"
+			"Aftabuzzaman",
+			"আফতাবুজ্জামান"
 		]
 	},
-	"foreground-menutitle": "মেনু"
+	"foreground-menutitle": "মেনু",
+	"foreground-menunavback": "পিছনে"
 }

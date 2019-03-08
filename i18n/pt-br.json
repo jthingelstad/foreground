@@ -1,11 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Hamilton Abreu",
-			"Athena in Wonderland"
+			"Eduardo Addad de Oliveira"
 		]
 	},
-	"skinname-foreground": "Primeiro plano",
+	"skinname-foreground": "Frente",
 	"foreground-desc": "Fornece um tema que se foca em colocar o seu conteúdo em primeiro plano",
 	"foreground-browsermsg": "pode não ter o aspeto esperado nesta versão do Internet Explorer. Recomendamos que atualize para uma versão mais recente do Internet Explorer ou mude para um browser como o Firefox ou o Chrome.",
 	"foreground-menutitle": "Menu",

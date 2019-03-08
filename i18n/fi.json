@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Pyscowicz"
+			"Pyscowicz",
+			"Nike"
 		]
 	},
 	"skinname-foreground": "Etuala",
-	"foreground-menutitle": "Valikko"
+	"foreground-menutitle": "Valikko",
+	"foreground-menunavback": "Takaisin"
 }

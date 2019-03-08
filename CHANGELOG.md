@@ -1,3 +1,6 @@
+## Version 2.2
+* [bug][compatibility] Fix for MW version 1.32 - wfRunHooks() to Hooks::run() 
+
 ## Version 2.1
 
 * [bug] Regression - Text footer alignment and social icons (follow) #319
