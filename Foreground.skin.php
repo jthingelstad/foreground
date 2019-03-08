@@ -199,7 +199,7 @@ class foregroundTemplate extends BaseTemplate {
 						<!--RTL -->
 						<ul id="actions" class="f-dropdown" data-dropdown-content>
 							<?php foreach( $this->data['content_actions'] as $key => $item ) { echo preg_replace(array('/\sprimary="1"/','/\scontext="[a-z]+"/','/\srel="archives"/'),'',$this->makeListItem($key, $item)); } ?>
-							<?php wfRunHooks( 'SkinTemplateToolboxEnd', array( &$this, true ) );  ?>
+							<?php Hooks::run( 'SkinTemplateToolboxEnd', array( &$this, true ) );  ?>
 						</ul>
 						<!--RTL -->
 					<?php endif;
