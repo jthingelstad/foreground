@@ -1,9 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Fitoschido"
+			"Fitoschido",
+			"Toniher"
 		]
 	},
+	"skinname-foreground": "Foreground",
+	"foreground-desc": "Proporciona un tema que se centra a posar el vostre contingut en primer pla",
+	"foreground-browsermsg": "podria no mostrar-se com s'espera en aquesta versió de l'Internet Explorer. Us recomanem que l'actualitzeu a una nova versió o bé que canvieu a un navegador com el Firefox o el Chrome.",
 	"foreground-menutitle": "Menú",
 	"foreground-menunavback": "Enrere"
 }

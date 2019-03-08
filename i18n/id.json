@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"William Surya Permana"
+		]
+	},
+	"skinname-foreground": "Latar depan",
+	"foreground-desc": "Menyediakan kulit yang berfokus pada peletakkan konten Anda di latar depan",
+	"foreground-browsermsg": "mungkin tidak terlihat sebagaimana mestinya pada versi Internet Explorer ini. Kami menyarankan Anda untuk memutakhirkannya ke versi Internet Explorer yang lebih baru atau beralih ke peramban seperti Firefox atau Chrome.",
+	"foreground-menutitle": "Menu",
+	"foreground-menunavback": "Kembali"
+}
