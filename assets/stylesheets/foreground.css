@@ -1161,6 +1161,9 @@ button.ui-button-icon-only {
 select {
 	width: auto;
 }
+input[type="search"] {
+    margin: 0;
+}
 input[type="checkbox"].createboxInput {
 	width: auto;
 }

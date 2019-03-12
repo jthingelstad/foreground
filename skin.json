@@ -43,7 +43,6 @@
 		"skins.foreground.js": {
 			"position": "bottom",
 			"scripts": [
-				"assets/scripts/vendor/fastclick.js",
 				"assets/scripts/vendor/placeholder.js",
 				"assets/scripts/foundation/foundation.js",
 				"assets/scripts/foundation/foundation.topbar.js",

@@ -1,3 +1,8 @@
+## Version 2.2.1
+* [bug, CSS] Addressing Issue #342 Search Button Alignment
+* [bug, compatibility] Removing fastclick.js as all modern touch devices handle delay now Issue #336
+* [code] Removing unused js from `/assets/scripts/vendor`
+
 ## Version 2.2
 * [bug][compatibility] Fix for MW version 1.32 - wfRunHooks() to Hooks::run() 
 
