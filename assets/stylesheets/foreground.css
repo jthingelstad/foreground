@@ -1158,7 +1158,6 @@ input[type="file"], select {
 button.ui-button-icon-only {
 	height: 2.24em !important;
 }
-}
 input[type="search"] {
     margin: 0;
 }
@@ -1168,17 +1167,19 @@ input[type="date"] {
 input[type="date"] {
     width: auto;
 }
-input[type="file"], select {
-    padding: 5px 20px 5px 5px;
+input[type="file"] {
     margin: .5rem 0;
 }
 input:not([type]), textarea, p.meta {
     margin: .5rem 0;
 }
 input[type="text"] {
+    padding: 5px 20px 5px 5px;
     margin: .5rem 0;
 }
 select {
+    padding: 5px 20px 5px 5px;
+    margin: .5rem 0;
     width: auto;
 }
 input[type="checkbox"].createboxInput {
