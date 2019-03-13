@@ -1158,11 +1158,28 @@ input[type="file"], select {
 button.ui-button-icon-only {
 	height: 2.24em !important;
 }
-select {
-	width: auto;
 }
 input[type="search"] {
     margin: 0;
+}
+input[type="date"] {
+    margin: .5rem 0;
+}
+input[type="date"] {
+    width: auto;
+}
+input[type="file"], select {
+    padding: 5px 20px 5px 5px;
+    margin: .5rem 0;
+}
+input:not([type]), textarea, p.meta {
+    margin: .5rem 0;
+}
+input[type="text"] {
+    margin: .5rem 0;
+}
+select {
+    width: auto;
 }
 input[type="checkbox"].createboxInput {
 	width: auto;
@@ -1176,12 +1193,6 @@ label.checkboxLabel {
 }
 input[type="radio"], input[type="checkbox"] {
 	display: inline;
-}
-input[type='file'] {
-	margin-top: 0.4em;
-}
-input:not([type]), textarea, p.meta {
-	margin-bottom: 4px;
 }
 label {
 	display: inline;
