@@ -1563,3 +1563,76 @@ td.htmlform-tip {
 	font-size: 90%;
 	margin-top: 1em;
 }
+
+/* Images the MediaWiki way */
+
+/* Images, Thumbs and Captions */
+.thumbinner {
+    border: 1px solid #c8ccd1;
+    padding: 3px;
+    background-color: #f8f9fa;
+    font-size: 94%;
+    text-align: center;
+    overflow: hidden;
+    margin: auto;
+    max-width: 100%;
+}
+.thumb.tright, .thumb.left {
+    max-width: 100%;
+}
+.thumbcaption {
+    border: 0;
+    line-height: 1.4em;
+    padding: 3px;
+    font-size: 94%;
+    text-align: left;
+}
+.magnify a {
+    display: block;
+    text-indent: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 15px;
+    height: 11px;
+}
+.mw-content-ltr .magnify a {
+    background-image: url(/w/resources/src/mediawiki.skinning/images/magnify-clip-ltr.png);
+}
+
+/* Float right and left styles - Make all MW images responsive for mobile when floated  */
+ 
+.floatright, .tright,
+table.floatright {
+    margin: 0 0 .5em .5em;
+    border: 0;
+}
+ 
+.floatleft,.tleft
+table.floatleft {
+    margin: 0 .5em .5em 0;
+    border: 0;
+}
+
+.tnone {
+    margin: .5rem 0;
+    border: 0;
+}
+
+.floatnone img {
+    margin: .5rem 0;
+}
+
+/* Kill the float for smaller screens and make them align center. */
+
+@media only screen and (max-width: 640px) { 
+    .floatright,
+    table.floatright,
+    .floatleft,
+    table.floatleft,
+    .thumb.tleft,
+    .thumb.tright {
+        text-align: center;
+        float: none !important;
+        margin: .5em auto;
+    }
+}
