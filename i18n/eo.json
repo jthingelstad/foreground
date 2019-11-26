@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mirin"
+		]
+	},
+	"skinname-foreground": "Foreground",
+	"foreground-desc": "Provizas etoson kiu fokuse metas vian enhavon sur malfonon",
+	"foreground-browsermsg": "la etoso eble ne funkcias ĝuste en via versio de Internet Explorer. Ni rekomendas ke vi ĝisdatigu vian version de Internet Explorer, aŭ ke vi uzu alian TTT-legilon, kiel Firefox aŭ Chrome.",
+	"foreground-menutitle": "Menuo",
+	"foreground-menunavback": "Reen"
+}

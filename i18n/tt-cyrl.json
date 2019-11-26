@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ильнар"
+			"Ильнар",
+			"Ерней"
 		]
 	},
 	"skinname-foreground": "Foreground",
 	"foreground-menutitle": "Меню",
-	"foreground-menunavback": "Артка"
+	"foreground-menunavback": "Кирегә"
 }
