@@ -1,3 +1,6 @@
+## Version 2.2.2
+* [bug] PR #350 Coding fix for missing </li> close
+
 ## Version 2.2.1
 * [bug, CSS] Addressing Issue #342 Search Button Alignment
 * [bug, compatibility] Removing fastclick.js as all modern touch devices handle delay now Issue #336
