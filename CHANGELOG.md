@@ -1,3 +1,17 @@
+## Version 2.2.3
+* [bug, compatibility] PR #352 Replace usge of wfSuppressWarnings and wfRestoreWarnings MW 1.34 compatibility
+
+
+## Version 2.2.2
+* [bug] PR #350 Coding fix for missing </li> close
+
+## Version 2.2.1
+* [bug, CSS] Addressing Issue #342 Search Button Alignment
+* [bug, compatibility] Removing fastclick.js as all modern touch devices handle delay now Issue #336
+* [code] Removing unused js from `/assets/scripts/vendor`
+* [CSS, enhancement] Images MW way which fixes Issue #345
+* [bug, js] Fix to foreground.js script, edit icon (temporary as a long term edit vs visual editor is needed with CSS)
+
 ## Version 2.2
 * [bug][compatibility] Fix for MW version 1.32 - wfRunHooks() to Hooks::run() 
 
