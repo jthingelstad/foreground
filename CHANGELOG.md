@@ -1,3 +1,7 @@
+## Version 2.2.3
+* [bug, compatibility] PR #352 Replace usge of wfSuppressWarnings and wfRestoreWarnings MW 1.34 compatibility
+
+
 ## Version 2.2.2
 * [bug] PR #350 Coding fix for missing </li> close
 
