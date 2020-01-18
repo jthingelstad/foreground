@@ -1,6 +1,6 @@
 {
 	"name": "Foreground",
-	"version": "2.2.4",
+	"version": "2.3.0",
 	"author": [
 		"Garrick Van Buren",
 		"Jamie Thingelstad",
@@ -13,6 +13,9 @@
 	"type": "skin",
 	"ValidSkinNames": {
 		"foreground": "Foreground"
+	},
+	"requires": {
+		"MediaWiki": ">= 1.34.0"
 	},
 	"MessagesDirs": {
 		"SkinForeground": [
