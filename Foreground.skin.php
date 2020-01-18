@@ -60,7 +60,7 @@ class foregroundTemplate extends BaseTemplate {
 	public function execute() {
 		global $wgUser;
 		global $wgForegroundFeatures;
-		Wikimedia\AtEase\AtEase::suppressWarnings();
+		wfSuppressWarnings();
 		$this->html('headelement');
 		switch ($wgForegroundFeatures['enableTabs']) {
 			case true:
@@ -278,7 +278,7 @@ class foregroundTemplate extends BaseTemplate {
 		</html>
 
 <?php
-		Wikimedia\AtEase\AtEase::suppressWarnings( true );
+		wfRestoreWarnings();
 	}
 }
 ?>

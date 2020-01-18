@@ -1,3 +1,7 @@
+## Version 2.2.4
+* [bug] PR #352 Breaks Compatibility with MW < 1.34 - Rollback for re-release as v2.3.0
+* [compatibility] Final Release v2.x.x requires MW <= 1.33
+
 ## Version 2.2.3
 * [bug, compatibility] PR #352 Replace usge of wfSuppressWarnings and wfRestoreWarnings MW 1.34 compatibility
 
