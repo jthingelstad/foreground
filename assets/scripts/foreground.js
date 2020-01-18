@@ -1,4 +1,3 @@
-
 jQuery(document).ready(function() {
 
   // Log errors
@@ -76,5 +75,4 @@ if ( jQuery( '#ca-addsection' ).length ) {
 jQuery(window).load(function() {
   jQuery('li#ca-ve-edit a').prepend('<div class="drop-icon"><i class="fa fa-pencil fa-fw"></i></div>')
   jQuery('li#ca-viewsource a').prepend('<div class="drop-icon"><i class="fa fa-book fa-fw"></i></div>')
-  jQuery('li#ca-edit a').prepend('<div class="drop-icon"><i class="fa fa-pencil-square-o fa-fw"></i></div>')
 });
