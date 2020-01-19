@@ -1,9 +1,3 @@
-## Version 2.3.0
-* [compatibility, deprecated] Fix for deprecated wfSuppressWarnings and wfRestoreWarnings with new Wikimedia\...
-* [bug, code] Remove duplicated prepend call in foreground.js
-* [b/c break] Version minor bump, MW >= 1.34 now required
-* [enhancement] Use of requires MW >= 1.34 in skin.json
-
 ## Version 2.2.4
 * [bug] PR #352 Breaks Compatibility with MW < 1.34 - Rollback for re-release as v2.3.0
 * [compatibility] Final Release v2.x.x requires MW <= 1.33
