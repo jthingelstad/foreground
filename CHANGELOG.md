@@ -1,3 +1,6 @@
+## Version 2.3.1
+* [b/c break,code] Version minor bump down to 1.31.0 required. Roll back to 1.31.0 from 1.34.0 in skin.json file as Wikimedia\suppressWarning() and Wikimedia\restoreWarning() is available from 1.30.0.
+
 ## Version 2.3.0
 * [compatibility, deprecated] Fix for deprecated wfSuppressWarnings and wfRestoreWarnings with new Wikimedia\...
 * [bug, code] Remove duplicated prepend call in foreground.js
