@@ -2205,14 +2205,14 @@ meta.foundation-mq-topbar {
       .top-bar-section .left li .dropdown li .dropdown {
         left: 100%; }
 
-  .no-js .top-bar-section ul li:hover > a {
+  .client-nojs .top-bar-section ul li:hover > a {
     background-color: #555555;
     background: #222222;
     color: #FFFFFF; }
-  .no-js .top-bar-section ul li:active > a {
+  .client-nojs .top-bar-section ul li:active > a {
     background: #008CBA;
     color: #FFFFFF; }
-  .no-js .top-bar-section .has-dropdown:hover > .dropdown {
+  .client-nojs .top-bar-section .has-dropdown:hover > .dropdown {
     position: static !important;
     height: auto;
     width: auto;
@@ -2220,7 +2220,7 @@ meta.foundation-mq-topbar {
     clip: auto;
     display: block;
     position: absolute !important; }
-  .no-js .top-bar-section .has-dropdown > a:focus + .dropdown {
+  .client-nojs .top-bar-section .has-dropdown > a:focus + .dropdown {
     position: static !important;
     height: auto;
     width: auto;
