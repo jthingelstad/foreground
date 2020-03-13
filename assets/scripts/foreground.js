@@ -29,6 +29,7 @@ jQuery(document).ready(function() {
   jQuery('li#ca-undelete a').prepend('<div class="drop-icon"><i class="fa fa-undo fa-fw"></i></div>')
   jQuery('li#ca-ask_delete_permanently a').prepend('<div class="drop-icon"><i class="fa fa-cut fa-fw"></i></div>')
   jQuery('li#t-cite a').prepend('<div class="drop-icon"><i class="fa fa-graduation-cap fa-fw"></i></div>')
+  jQuery('li#ca-mpdf a').prepend('<div class="drop-icon"><i class="fa fa-file-pdf-o fa-fw"></i></div>')
 
 if ( jQuery( '#ca-addsection' ).length ) {
   jQuery('li#ca-addsection a').html('<div class="drop-icon"><i class="fa fa-plus fa-fw"></i></div>' + jQuery('li#ca-addsection a').attr('title').replace(/\[.+/g,""))
