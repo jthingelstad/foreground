@@ -1,11 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
+			"1917 Ekim Devrimi",
 			"Mirzali",
 			"Orbot707"
 		]
 	},
 	"skinname-foreground": "Verplan",
+	"foreground-desc": "Zerreki pelan veri arden yew tema tedariq kena",
+	"foreground-browsermsg": "No versiyonê Internet Explorer belka zek aseno wuni niyo. Ma heruna şıma bê se raverêm deha berz yew versiyonê Internet Explorer yana browserê Firefox ya zi Chrome tewsiye keme",
 	"foreground-menutitle": "Menu",
 	"foreground-menunavback": "Peyser"
 }
