@@ -2,11 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Aefgh39622",
+			"Shirayuki",
 			"Yusuke1109"
 		]
 	},
 	"skinname-foreground": "フォアグラウンド",
-	"foreground-desc": "フォアグラウンドにコンテンツを配置することに焦点を当てたスキンを提供します",
+	"foreground-desc": "フォアグラウンドにコンテンツを配置することに焦点を当てた外装を提供します",
 	"foreground-browsermsg": "このバージョンのInternet Explorerでは期待どおりに表示されないことがあります。新しいバージョンのInternet Explorerにアップグレードするか、FirefoxやChromeなどのブラウザに切り替えることをおすすめします。",
 	"foreground-menutitle": "メニュー",
 	"foreground-menunavback": "戻る"
