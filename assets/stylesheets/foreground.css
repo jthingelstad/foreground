@@ -188,9 +188,11 @@ z-index: 100000;
 }
 /* end social footer classes */
 
-#footer-left {
-font-size: 90%;
-text-align: left;
+#footer-left, #footer-left-ul {
+	text-align: left;
+}
+#footer-left-ul {
+	font-size: 90%;
 }
 #footer-right-icons {
 font-size: 85%;
@@ -218,16 +220,17 @@ float: left;
 margin-right: 2em;
 }
 
-.text-center #footer-left li {
+.text-center #footer-left li, .text-center #footer-left-ul li {
 float: none;
 margin: 0;
 }
-.text-center #footer-left {
+.text-center #footer-left, .text-center #footer-left-ul {
 text-align: center;
 }
 
 @media only screen and (max-width: 768px) {
-#footer-left { font-size: 85%; text-align: center;}
+#footer-left {text-align: center;}
+#footer-left-ul {font-size: 85%;}
 #footer-right-icons { font-size: 80%;}
 li#footer-privacy { float: none; margin-right: 0;}
 li#footer-about { float: none; margin-right: 0;}
@@ -703,7 +706,6 @@ body.mw-special-Userlogin h2.title {
    background: black;
    color: white;
 }
-
 .top-bar-section > ul > .divider,
 .top-bar-section > ul > [role="separator"] {
   border-color: black;
