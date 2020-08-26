@@ -6,13 +6,15 @@
  * @file
  * @ingroup Skins
  */
- 
+
 
 class Skinforeground extends SkinTemplate {
 	public $skinname = 'foreground', $stylename = 'foreground', $template = 'foregroundTemplate', $useHeadElement = true;
 
-	public function setupSkinUserCss(OutputPage $out) {
-		parent::setupSkinUserCss($out);
+	/**
+	 * @inheritDoc
+	 */
+	public function getDefaultModules() {
 		global $wgForegroundFeatures;
 		$wgForegroundFeaturesDefaults = array(
 			'showActionsForAnon' => true,
@@ -35,14 +37,16 @@ class Skinforeground extends SkinTemplate {
 		}
 		switch ($wgForegroundFeatures['IeEdgeCode']) {
 			case 1:
-				$out->addHeadItem('ie-meta', '<meta http-equiv="X-UA-Compatible" content="IE=edge" />');
+				$this->getOutput()->addHeadItem('ie-meta', '<meta http-equiv="X-UA-Compatible" content="IE=edge" />');
 				break;
 			case 2:
 				if (isset($_SERVER['HTTP_USER_AGENT']) && (strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE') !== false))
 					header('X-UA-Compatible: IE=edge');
 				break;
 		}
-		$out->addModuleStyles('skins.foreground.styles');
+
+		$this->getOutput()->addModuleStyles('skins.foreground.styles');
+		return parent::getDefaultModules();
 	}
 
 	public function initPage( OutputPage $out ) {
@@ -71,7 +75,7 @@ class foregroundTemplate extends BaseTemplate {
 				$markers = array("&lt;a", "&lt;/a", "&gt;");
 				$tags = array("<a", "</a", ">");
 				$body = str_replace($markers, $tags, $out);
-				break;	
+				break;
 			default:
 				$body = '';
 				break;
@@ -99,7 +103,7 @@ class foregroundTemplate extends BaseTemplate {
 				$poweredbyMakeType = 'withImage';
 				break;
 			default:
-				break;	
+				break;
 		}
 ?>
 <!-- START FOREGROUNDTEMPLATE -->
@@ -110,7 +114,7 @@ class foregroundTemplate extends BaseTemplate {
 					<a href="<?php echo $this->data['nav_urls']['mainpage']['href']; ?>">
 					<?php if ($wgForegroundFeatures['navbarIcon'] != '0') { ?>
 						<img alt="<?php echo $this->text('sitename'); ?>" class="top-bar-logo" src="<?php echo $this->text('logopath') ?>">
-					<?php } ?>					
+					<?php } ?>
 					<div class="title-name" style="display: inline-block;"><?php echo $wgForegroundFeatures['wikiName']; ?></div>
 					</a>
 					</div>
@@ -125,7 +129,7 @@ class foregroundTemplate extends BaseTemplate {
 			<ul id="top-bar-left" class="left">
 				<li class="divider show-for-small"></li>
 				<?php foreach ( $this->getSidebar() as $boxName => $box ) { if ( ($box['header'] != wfMessage( 'toolbox' )->text())  ) { ?>
-					<li class="has-dropdown active"  id='<?php echo Sanitizer::escapeId( $box['id'] ) ?>'<?php echo Linker::tooltip( $box['id'] ) ?>>
+					<li class="has-dropdown active"  id='<?php echo Sanitizer::escapeIdForAttribute( $box['id'] ) ?>'<?php echo Linker::tooltip( $box['id'] ) ?>>
 						<a href="#"><?php echo htmlspecialchars( $box['header'] ); ?></a>
 						<?php if ( is_array( $box['content'] ) ) { ?>
 							<ul class="dropdown">
@@ -166,9 +170,9 @@ class foregroundTemplate extends BaseTemplate {
 			</ul>
 		</section>
 		</nav>
-		
+
 		<?php if ($wgForegroundFeatures['NavWrapperType'] != '0') echo "</div>"; ?>
-		
+
 		<div id="page-content">
 		<div class="row">
 				<div class="large-12 columns">
@@ -222,7 +226,7 @@ class foregroundTemplate extends BaseTemplate {
 					<h5 id="siteSub" class="subtitle"><?php $this->html('subtitle') ?></h5>
 					<div id="contentSub" class="clear_both"></div>
 					<div id="bodyContent" class="mw-bodytext">
-						<?php 
+						<?php
 							switch ($wgForegroundFeatures['enableTabs']) {
 								case true:
 									echo $body;
@@ -252,9 +256,9 @@ class foregroundTemplate extends BaseTemplate {
 					<ul id="footer-left">
 						<?php foreach ( $this->getFooterLinks( "flat" ) as $key ) { ?>
 							<li id="footer-<?php echo $key ?>"><?php $this->html( $key ) ?></li>
-						<?php } ?>									
+						<?php } ?>
 					</ul>
-					</div>	
+					</div>
 					<div id="footer-right-icons" class="<?php echo $footerRightClass;?>">
 					<ul id="poweredby">
 						<?php foreach ( $this->getFooterIcons( $poweredbyType ) as $blockName => $footerIcons ) { ?>
@@ -264,16 +268,16 @@ class foregroundTemplate extends BaseTemplate {
 							</li>
 						<?php } ?>
 					</ul>
-					</div>								
+					</div>
 				</div>
 			</footer>
 
 		</div>
-		
+
 		<?php $this->printTrail(); ?>
 			<?php if ($this->data['isarticle'] && $wgForegroundFeatures['addThisPUBID'] !== '') { ?>
 				<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=<?php echo $wgForegroundFeatures['addThisPUBID']; ?>" async="async">></script>
-			<?php } ?>	
+			<?php } ?>
 		</body>
 		</html>
 
