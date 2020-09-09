@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Zoranzoki21"
+		]
+	},
+	"skinname-foreground": "Prednji plan",
+	"foreground-desc": "Pruža temu koja se fokusira na stavljanje vašeg sadržaja u prednji plan",
+	"foreground-browsermsg": "možda neće izgledati očekivano u ovoj verziji Internet Explorer-a. Preporučujemo vam da ga nadogradite na noviju verziju ili da pređete na pregledač poput Firefox-a ili Chrome-a.",
+	"foreground-menutitle": "Meni",
+	"foreground-menunavback": "Nazad"
+}

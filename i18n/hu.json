@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dj"
+		]
+	},
+	"skinname-foreground": "Előtér",
+	"foreground-desc": "Olyan felület, amely a te tartalmadat helyezi előtérbe",
+	"foreground-menutitle": "Menü",
+	"foreground-menunavback": "Vissza"
+}

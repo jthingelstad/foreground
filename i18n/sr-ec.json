@@ -1,8 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Acamicamacaraca"
+			"Acamicamacaraca",
+			"BadDog"
 		]
 	},
-	"foreground-menutitle": "Мени"
+	"skinname-foreground": "Предњи план",
+	"foreground-desc": "Пружа тему која се фокусира на стављање вашег садржаја у предњи план",
+	"foreground-browsermsg": "можда неће изгледати очекивано у овој верзији Internet Explorer-а. Препоручујемо вам да га надоградите на новију верзију или да пређете на прегледач попут Firefox-а или Chrome-а.",
+	"foreground-menutitle": "Мени",
+	"foreground-menunavback": "Назад"
 }
