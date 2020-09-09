@@ -333,7 +333,6 @@ li#footer-disclaimer {
 .text-center #footer-left, .text-center #footer-left-ul {
 	text-align: center;
 }
-
 @media only screen and (max-width: 641px) {
 	#footer-left {
 		text-align: center;
