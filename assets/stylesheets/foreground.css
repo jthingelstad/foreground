@@ -334,30 +334,29 @@ li#footer-disclaimer {
 	text-align: center;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 641px) {
 	#footer-left {
-    text-align: center;
-  }
+		text-align: center;
+	}
 	#footer-left-ul {
-    font-size: 85%;
-  }
+		font-size: 85%;
+	}
 	#footer-right-icons {
-    font-size: 80%;
-  }
+		font-size: 80%;
+	}
 	li#footer-privacy {
-    float: none;
-    margin-right: 0;
-  }
+		float: none;
+		margin-right: 0;
+	}
 	li#footer-about {
-    float: none;
-    margin-right: 0;
-  }
+		float: none;
+		margin-right: 0;
+	}
 	li#footer-disclaimer {
-    float: none;
-    margin-right: 0;
-  }
+		float: none;
+		margin-right: 0;
+	}
 }
-
 .columns ul.special li {
 	float: none;
 	width: 100%;
@@ -1117,7 +1116,6 @@ table.wikitable>tr>th, table.wikitable>*>tr>th {
 table.wikitable>tr>th, table.wikitable>tr>td, table.wikitable>*>tr>th, table.wikitable>*>tr>td {
 	border: 3px #fff solid;
 	padding: 0.6em;
-
 }
 
 /* FORMS, INPUTS, FIELDSETS */
@@ -1645,4 +1643,3 @@ table.floatleft {
         margin: .5em auto;
     }
 }
-
