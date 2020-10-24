@@ -26,7 +26,8 @@ class Skinforeground extends SkinTemplate {
 			'showFooterIcons' => false,
 			'addThisPUBID' => '',
 			'useAddThisShare' => '',
-			'useAddThisFollow' => ''
+			'useAddThisFollow' => '',
+			'autocapitalizeSearchBar' => false
 		);
 		foreach ($wgForegroundFeaturesDefaults as $fgOption => $fgOptionValue) {
 			if ( !isset($wgForegroundFeatures[$fgOption]) ) {
@@ -141,7 +142,11 @@ class foregroundTemplate extends BaseTemplate {
 					<form action="<?php $this->text( 'wgScript' ); ?>" id="searchform" class="mw-search">
 						<div class="row collapse">
 						<div class="small-12 columns">
-							<?php echo $this->makeSearchInput(array('placeholder' => wfMessage('searchsuggest-search')->text(), 'id' => 'searchInput') ); ?>
+							<?php $attrs = array('placeholder' => wfMessage('searchsuggest-search')->text(), 'id' => 'searchInput');
+							if($wgForegroundFeatures['autocapitalizeSearchBar'] && in_array($wgForegroundFeatures['autocapitalizeSearchBar'], ['characters', 'none', 'off', 'on', 'sentences', 'words'])) {
+								$attrs['autocapitalize'] = $wgForegroundFeatures['autocapitalizeSearchBar'];
+							}
+							echo $this->makeSearchInput($attrs); ?>
 							<button type="submit" class="button search"><?php echo wfMessage( 'search' )->text() ?></button>
 						</div>
 						</div>
