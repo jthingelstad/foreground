@@ -1,11 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"Pyscowicz",
-			"Nike"
+			"01miki10",
+			"Nike",
+			"Pyscowicz"
 		]
 	},
-	"skinname-foreground": "Etuala",
+	"skinname-foreground": "Foreground",
+	"foreground-desc": "Tarjoaa ulkoasun, joka keskittyy sisällön asettamiseen etualalle",
+	"foreground-browsermsg": "ei saata näyttää odotetulta tässä Internet Explorerin versiossa. Suosittelemme päivitämään uudempaan Internet Explorerin versioon tai vaihtamaan toiseen selaimeen, kuten Firefox tai Chrome.",
 	"foreground-menutitle": "Valikko",
 	"foreground-menunavback": "Takaisin"
 }
