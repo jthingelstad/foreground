@@ -1,6 +1,6 @@
 {
 	"name": "Foreground",
-	"version": "2.3.0",
+	"version": "2.4.0-dev",
 	"author": [
 		"Garrick Van Buren",
 		"Jamie Thingelstad",
@@ -15,7 +15,7 @@
 		"foreground": "Foreground"
 	},
 	"requires": {
-		"MediaWiki": ">= 1.34.0"
+		"MediaWiki": ">= 1.35.0"
 	},
 	"MessagesDirs": {
 		"SkinForeground": [
@@ -32,6 +32,7 @@
 			"styles": [
 				"assets/stylesheets/normalize.css",
 				"assets/stylesheets/font-awesome.css",
+            	"assets/stylesheets/legacy.css",
 				"assets/stylesheets/foundation.css",
 				"assets/stylesheets/foreground.css",
 				"assets/stylesheets/foreground-print.css"
