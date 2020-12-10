@@ -297,10 +297,13 @@ div.social-follow div[class*="addthis"] {
 
 /* end social footer classes */
 
-#footer-left {
-	font-size: 90%;
+#footer-left, #footer-left-ul {
 	text-align: left;
 }
+#footer-left-ul {
+	font-size: 90%;
+}
+
 #footer-right-icons {
 	font-size: 85%;
 	text-align: center;
@@ -322,17 +325,20 @@ li#footer-disclaimer {
 	float: left;
 	margin-right: 2em;
 }
-.text-center #footer-left li {
+
+.text-center #footer-left li, .text-center #footer-left-ul li {
 	float: none;
 	margin: 0;
 }
-.text-center #footer-left {
+.text-center #footer-left, .text-center #footer-left-ul {
 	text-align: center;
 }
 @media only screen and (max-width: 641px) {
 	#footer-left {
-		font-size: 85%;
 		text-align: center;
+	}
+	#footer-left-ul {
+		font-size: 85%;
 	}
 	#footer-right-icons {
 		font-size: 80%;

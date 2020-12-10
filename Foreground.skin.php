@@ -249,7 +249,7 @@ class foregroundTemplate extends BaseTemplate {
 						</div>
 					<?php } ?>
 					<div id="footer-left" class="<?php echo $footerLeftClass;?>">
-					<ul id="footer-left">
+					<ul id="footer-left-ul">
 						<?php foreach ( $this->getFooterLinks( "flat" ) as $key ) { ?>
 							<li id="footer-<?php echo $key ?>"><?php $this->html( $key ) ?></li>
 						<?php } ?>									
