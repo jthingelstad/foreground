@@ -2,7 +2,7 @@
 
 [MediaWiki](https://www.mediawiki.org) skin that focuses on putting your content in the *foreground*. Supports responsive layouts and has classes predefined for [Semantic MediaWiki](https://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki). Built on the [Zurb Foundation](http://foundation.zurb.com) CSS framework.
 
-[![Build Status](https://travis-ci.org/thingles/foreground.svg?branch=develop)](https://travis-ci.org/thingles/foreground) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/thingles/foreground/badges/quality-score.png?b=develop)](https://scrutinizer-ci.com/g/thingles/foreground/?branch=develop)
+[![CircleCI](https://circleci.com/gh/thingles/foreground.svg?style=shield)](https://circleci.com/gh/thingles/foreground) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/thingles/foreground/badges/quality-score.png?b=develop)](https://scrutinizer-ci.com/g/thingles/foreground/?branch=develop)
 
 
 ## Download
