@@ -44,6 +44,7 @@
 #ca-undelete a:before {content: "\f0e2";}
 #ca-ask_delete_permanently a:before {content: "\f0c4";}
 #ca-addsection a:before {content: "\f067";}
+#ca-mpdf a:before {content: "\f1c1";}
 
 /* -- Usermenu -- */
 #pt-userpage a:before {content: "\f007";}
