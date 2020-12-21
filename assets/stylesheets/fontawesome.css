@@ -41,6 +41,7 @@
 #ca-viewsource a:before {content: "\f02d";}
 #ca-form_edit a:before {content: "\f14b";}
 #ca-purge a:before {content: "\f021";}
+#ca-purge-ext a:before {content: "\f021";}
 #ca-undelete a:before {content: "\f0e2";}
 #ca-ask_delete_permanently a:before {content: "\f0c4";}
 #ca-addsection a:before {content: "\f067";}
