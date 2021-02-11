@@ -1,0 +1,67 @@
+#p-cactions li a:before,
+#top-bar-right li a:before,
+#top-bar-left li a:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	margin-right: 5px;
+	display: inline-block;
+	width: 1em;
+
+}
+/* -- Navigation -- */
+#n-mainpage-description a:before {content: "\f015";}
+#n-recentchanges a:before {content: "\f0ae";}
+#n-randompage a:before {content: "\f074";}
+#n-help a:before {content: "\f128";}
+#n-help-mediawiki a:before {content: "\f128";}
+
+/* -- Toolbox -- */
+#t-whatlinkshere a:before {content: "\f047";}
+#t-recentchangeslinked a:before {content: "\f0c9";}
+#t-specialpages a:before {content: "\f0d0";}
+#t-print a:before {content: "\f02f";}
+#t-permalink a:before {content: "\f192";}
+#t-info a:before {content: "\f129";}
+
+/* -- Actions -- */
+#ca-nstab-main a:before {content: "\f015";}
+#ca-talk a:before {content: "\f0e6";}
+#ca-edit a:before {content: "\f044";}
+#ca-formedit a:before {content: "\f0f6";}
+#ca-history a:before {content: "\f1da";}
+#ca-delete a:before {content: "\f014";}
+#ca-move a:before {content: "\f0d1";}
+#ca-protect a:before {content: "\f132";}
+#ca-unprotect a:before {content: "\f132";}
+#ca-watch a:before {content: "\f006";}
+#ca-unwatch a:before {content: "\f005";}
+#ca-ve-edit a:before {content: "\f040";}
+#ca-viewsource a:before {content: "\f02d";}
+#ca-form_edit a:before {content: "\f14b";}
+#ca-purge a:before {content: "\f021";}
+#ca-purge-ext a:before {content: "\f021";}
+#ca-undelete a:before {content: "\f0e2";}
+#ca-ask_delete_permanently a:before {content: "\f0c4";}
+#ca-addsection a:before {content: "\f067";}
+#ca-mpdf a:before {content: "\f1c1";}
+
+/* -- Usermenu -- */
+#pt-userpage a:before {content: "\f007";}
+#pt-mytalk a:before {content: "\f086";}
+#pt-adminlinks a:before {content: "\f0e7";}
+#pt-preferences a:before {content: "\f141";}
+#pt-watchlist a:before {content: "\f00b";}
+#pt-mycontris a:before {content: "\f118";}
+#pt-logout a:before {content: "\f011";}
+#pt-uls a:before {content: "\f02d";}
+#t-smwbrowselink a:before {content: "\f06e";}
+#t-blockip a:before {content: "\f05e";}
+#t-contributions a:before {content: "\f118";}
+#t-log a:before {content: "\f0c9";}
+#t-emailuser a:before {content: "\f0e0";}
+#t-userrights a:before {content: "\f0e3";}
+#t-upload a:before {content: "\f093";}
+#t-cite a:before {content: "\f10d";}
+#feedlinks a:before {content: "\f09e";}

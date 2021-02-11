@@ -32,7 +32,8 @@
 			"styles": [
 				"assets/stylesheets/normalize.css",
 				"assets/stylesheets/font-awesome.css",
-            	"assets/stylesheets/legacy.css",
+				"assets/stylesheets/fontawesome.css",
+				"assets/stylesheets/legacy.css",
 				"assets/stylesheets/foundation.css",
 				"assets/stylesheets/foreground.css",
 				"assets/stylesheets/foreground-print.css"
