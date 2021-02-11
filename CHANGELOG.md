@@ -1,9 +1,10 @@
-## Version 2.4.0-dev
+## Version 2.4.0
 * [compatibility, b/c break] Requires MW >=1.35 in skin.json minor version bump
 * [deprecated] Avoid deprecated methods PR #373 - solves issue #371
 * [bug] Patching "footer-left" id duplicated PR #372 - Avoid setupSkinUserCss and escapeId, both of which were deprecated before MediaWiki 1.34.
 * [code] Add minus-x and update php-parallel-lint #374 - Remove the executable bit from a few files.
 * [bug, code] Legacy.css stylesheet to add back the CSS removed by MW Core in MW 1.35.
+* [language] Localization updates
 
 ## Version 2.3.0
 * [compatibility, deprecated] Fix for deprecated wfSuppressWarnings and wfRestoreWarnings with new Wikimedia\...

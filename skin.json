@@ -1,80 +1,80 @@
 {
-	"name": "Foreground",
-	"version": "2.4.0-dev",
-	"author": [
-		"Garrick Van Buren",
-		"Jamie Thingelstad",
-		"Tom Hutchison",
-		"..."
-	],
-	"url": "https://github.com/thingles/foreground",
-	"descriptionmsg": "foreground-desc",
-	"license-name": "BSD-2-Clause",
-	"type": "skin",
-	"ValidSkinNames": {
-		"foreground": "Foreground"
-	},
-	"requires": {
-		"MediaWiki": ">= 1.35.0"
-	},
-	"MessagesDirs": {
-		"SkinForeground": [
-			"i18n"
-		]
-	},
-	"AutoloadClasses": {
-		"SkinForeground": "Foreground.skin.php",
-		"foregroundTemplate": "Foreground.skin.php"
-	},
-	"ResourceModules": {
-		"skins.foreground.styles": {
-			"position": "top",
-			"styles": [
-				"assets/stylesheets/normalize.css",
-				"assets/stylesheets/font-awesome.css",
-				"assets/stylesheets/fontawesome.css",
-				"assets/stylesheets/legacy.css",
-				"assets/stylesheets/foundation.css",
-				"assets/stylesheets/foreground.css",
-				"assets/stylesheets/foreground-print.css"
-			]
-		},
-		"skins.foreground.modernizr": {
-			"position": "top",
-			"scripts": [
-				"assets/scripts/vendor/modernizr.js"
-			]
-		},
-		"skins.foreground.js": {
-			"position": "bottom",
-			"scripts": [
-				"assets/scripts/vendor/placeholder.js",
-				"assets/scripts/foundation/foundation.js",
-				"assets/scripts/foundation/foundation.topbar.js",
-				"assets/scripts/foundation/foundation.dropdown.js",
-				"assets/scripts/foundation/foundation.joyride.js",
-				"assets/scripts/foundation/foundation.accordion.js",
-				"assets/scripts/foundation/foundation.offcanvas.js",
-				"assets/scripts/foundation/foundation.alert.js",
-				"assets/scripts/foundation/foundation.clearing.js",
-				"assets/scripts/foundation/foundation.equalizer.js",
-				"assets/scripts/foundation/foundation.interchange.js",
-				"assets/scripts/foundation/foundation.orbit.js",
-				"assets/scripts/foundation/foundation.reveal.js",
-				"assets/scripts/foundation/foundation.tab.js",
-				"assets/scripts/foundation/foundation.tooltip.js",
-				"assets/scripts/foreground.js"
-			],
-			"dependencies": [
-				"jquery.cookie",
-				"skins.foreground.modernizr"
-			]
-		}
-	},
-	"ResourceFileModulePaths": {
-		"localBasePath": "",
-		"remoteSkinPath": "foreground"
-	},
-	"config": {},
-	"manifest_version": 1
+    "name": "Foreground",
+    "version": "2.4.0",
+    "author": [
+        "Garrick Van Buren",
+        "Jamie Thingelstad",
+        "Tom Hutchison",
+        "..."
+    ],
+    "url": "https://github.com/thingles/foreground",
+    "descriptionmsg": "foreground-desc",
+    "license-name": "BSD-2-Clause",
+    "type": "skin",
+    "ValidSkinNames": {
+        "foreground": "Foreground"
+    },
+    "requires": {
+        "MediaWiki": ">= 1.35.0"
+    },
+    "MessagesDirs": {
+        "SkinForeground": [
+            "i18n"
+        ]
+    },
+    "AutoloadClasses": {
+        "SkinForeground": "Foreground.skin.php",
+        "foregroundTemplate": "Foreground.skin.php"
+    },
+    "ResourceModules": {
+        "skins.foreground.styles": {
+            "position": "top",
+            "styles": [
+                "assets/stylesheets/normalize.css",
+                "assets/stylesheets/font-awesome.css",
+                "assets/stylesheets/fontawesome.css",
+                "assets/stylesheets/legacy.css",
+                "assets/stylesheets/foundation.css",
+                "assets/stylesheets/foreground.css",
+                "assets/stylesheets/foreground-print.css"
+            ]
+        },
+        "skins.foreground.modernizr": {
+            "position": "top",
+            "scripts": [
+                "assets/scripts/vendor/modernizr.js"
+            ]
+        },
+        "skins.foreground.js": {
+            "position": "bottom",
+            "scripts": [
+                "assets/scripts/vendor/placeholder.js",
+                "assets/scripts/foundation/foundation.js",
+                "assets/scripts/foundation/foundation.topbar.js",
+                "assets/scripts/foundation/foundation.dropdown.js",
+                "assets/scripts/foundation/foundation.joyride.js",
+                "assets/scripts/foundation/foundation.accordion.js",
+                "assets/scripts/foundation/foundation.offcanvas.js",
+                "assets/scripts/foundation/foundation.alert.js",
+                "assets/scripts/foundation/foundation.clearing.js",
+                "assets/scripts/foundation/foundation.equalizer.js",
+                "assets/scripts/foundation/foundation.interchange.js",
+                "assets/scripts/foundation/foundation.orbit.js",
+                "assets/scripts/foundation/foundation.reveal.js",
+                "assets/scripts/foundation/foundation.tab.js",
+                "assets/scripts/foundation/foundation.tooltip.js",
+                "assets/scripts/foreground.js"
+            ],
+            "dependencies": [
+                "jquery.cookie",
+                "skins.foreground.modernizr"
+            ]
+        }
+    },
+    "ResourceFileModulePaths": {
+        "localBasePath": "",
+        "remoteSkinPath": "foreground"
+    },
+    "config": {},
+    "manifest_version": 1
 }
