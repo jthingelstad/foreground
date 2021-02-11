@@ -1,3 +1,5 @@
+## Version 2.4.1-dev
+
 ## Version 2.4.0
 * [compatibility, b/c break] Requires MW >=1.35 in skin.json minor version bump
 * [deprecated] Avoid deprecated methods PR #373 - solves issue #371
