@@ -141,7 +141,7 @@ class foregroundTemplate extends BaseTemplate {
 					<form action="<?php $this->text( 'wgScript' ); ?>" id="searchform" class="mw-search">
 						<div class="row collapse">
 						<div class="small-12 columns">
-							<?php $attrs = [ 'placeholder' => wfMessage( 'searchsuggest-search' )->text(), 'id' => 'searchInput' ];
+							<?php $attrs = array( 'placeholder' => wfMessage( 'searchsuggest-search' )->text(), 'id' => 'searchInput' );
 							if( !$GLOBALS[ 'wgCapitalLinks' ] ) {
 								$attrs[ 'autocapitalize' ] = "none";
 							}
