@@ -26,8 +26,7 @@ class Skinforeground extends SkinTemplate {
 			'showFooterIcons' => false,
 			'addThisPUBID' => '',
 			'useAddThisShare' => '',
-			'useAddThisFollow' => '',
-			'autocapitalizeSearchBar' => false
+			'useAddThisFollow' => ''
 		);
 		foreach ($wgForegroundFeaturesDefaults as $fgOption => $fgOptionValue) {
 			if ( !isset($wgForegroundFeatures[$fgOption]) ) {
@@ -142,11 +141,11 @@ class foregroundTemplate extends BaseTemplate {
 					<form action="<?php $this->text( 'wgScript' ); ?>" id="searchform" class="mw-search">
 						<div class="row collapse">
 						<div class="small-12 columns">
-							<?php $attrs = array('placeholder' => wfMessage('searchsuggest-search')->text(), 'id' => 'searchInput');
-							if($wgForegroundFeatures['autocapitalizeSearchBar'] && in_array($wgForegroundFeatures['autocapitalizeSearchBar'], ['characters', 'none', 'off', 'on', 'sentences', 'words'])) {
-								$attrs['autocapitalize'] = $wgForegroundFeatures['autocapitalizeSearchBar'];
+							<?php $attrs = [ 'placeholder' => wfMessage( 'searchsuggest-search' )->text(), 'id' => 'searchInput' ];
+							if( !$GLOBALS[ 'wgCapitalLinks' ] ) {
+								$attrs[ 'autocapitalize' ] = "none";
 							}
-							echo $this->makeSearchInput($attrs); ?>
+							echo $this->makeSearchInput( $attrs ); ?>
 							<button type="submit" class="button search"><?php echo wfMessage( 'search' )->text() ?></button>
 						</div>
 						</div>
@@ -286,4 +285,3 @@ class foregroundTemplate extends BaseTemplate {
 		Wikimedia\suppressWarnings();
 	}
 }
-?>
