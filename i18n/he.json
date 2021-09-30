@@ -1,10 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
+			"Amire80",
 			"שניאור זלמן"
 		]
 	},
 	"skinname-foreground": "חזית",
+	"foreground-desc": "מספר עיצוב שמתמקד בהצבת התוכן שלך מקדימה",
+	"foreground-browsermsg": "ייתכן שלא יוצג באופן צפוי בגרסה הזאת של אינטרנט אקספלורר. אנחנו ממליצים לך לשדרג לגרסה חדשה יותר של אינטרנט אקספלורר או לעבור לדפדפן כמו פיירפוקס או כרום.",
 	"foreground-menutitle": "תפריט",
 	"foreground-menunavback": "חזרה"
 }
