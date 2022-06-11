@@ -110,7 +110,7 @@ Important, this feature uses the free or paid version of the https://addthis.com
 
 ### Notes on other skins
 
-As you build a wiki out with Foreground you will likely use the responsive grid from Foundation. This is key to making a responsive wiki, and is one of the largest _migration_ requirements when you want to move a wiki that ppreviously used Vector (and likely a lot of tables for layout) to Foreground. Once you do this, the ability of a user to select whatever skin will be removed. If you take full advantage of Foreground in your templates the lack of the Foundation grid will make viewing the wiki using [Vector](https://wikiapiary.com/wiki/Skin:Vector) or [MonoBook](https://wikiapiary.com/wiki/Skin:MonoBook) very difficult.
+As you build a wiki out with Foreground you will likely use the responsive grid from Foundation. This is key to making a responsive wiki, and is one of the largest _migration_ requirements when you want to move a wiki that previously used Vector (and likely a lot of tables for layout) to Foreground. Once you do this, the ability of a user to select whatever skin will be removed. If you take full advantage of Foreground in your templates the lack of the Foundation grid will make viewing the wiki using [Vector](https://wikiapiary.com/wiki/Skin:Vector) or [MonoBook](https://wikiapiary.com/wiki/Skin:MonoBook) very difficult.
 
 Because of this, it is suggested that you set the `$wgSkipSkins` variable to make sure that everyone sees the site as you intended it. This removes other skins from being user selectable options.
 
