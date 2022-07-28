@@ -62,9 +62,7 @@ class Skinforeground extends SkinTemplate {
 
 class foregroundTemplate extends BaseTemplate {
 	public function execute() {
-		global $wgUser;
 		global $wgForegroundFeatures;
-		Wikimedia\suppressWarnings();
 		$this->html('headelement');
 		switch ($wgForegroundFeatures['enableTabs']) {
 			case true:
@@ -179,7 +177,7 @@ class foregroundTemplate extends BaseTemplate {
 					<!-- Output page indicators -->
 					<?php echo $this->getIndicators(); ?>
 					<!-- If user is logged in output echo location -->
-					<?php if ($wgUser->isLoggedIn()): ?>
+					<?php if ( $this->get( 'loggedin' ) ): ?>
 					<div id="echo-notifications">
 					<div id="echo-notifications-alerts"></div>
 					<div id="echo-notifications-messages"></div>
@@ -199,7 +197,7 @@ class foregroundTemplate extends BaseTemplate {
 
 		<div class="row">
 				<div id="p-cactions" class="large-12 columns">
-					<?php if ($wgUser->isLoggedIn() || $wgForegroundFeatures['showActionsForAnon']): ?>
+					<?php if ( $this->get( 'loggedin' ) || $wgForegroundFeatures['showActionsForAnon']): ?>
 						<a id="actions-button" href="#" data-dropdown="actions" data-options="align:left; is_hover: true; hover_timeout:700" class="button small secondary radius"><i class="fa fa-cog"><span class="show-for-medium-up">&nbsp;<?php echo wfMessage( 'actions' )->text() ?></span></i></a>
 						<!--RTL -->
 						<ul id="actions" class="f-dropdown" data-dropdown-content>
@@ -282,7 +280,6 @@ class foregroundTemplate extends BaseTemplate {
 		</html>
 
 <?php
-		Wikimedia\suppressWarnings();
 	}
 }
 ?>
